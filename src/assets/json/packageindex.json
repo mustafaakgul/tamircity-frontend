@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "image": "package-01.jpg",
+        "country": "China",
+        "price": "Package Price : $150",
+        "days": "16 days",
+        "seats": "45 Seats Left",
+        "book": "Book now"
+    },
+    {
+        "id": 2,
+        "image": "package-02.jpg",
+        "country": "Singapore",
+        "price": "Package Price : $250",
+        "days": "25 days",
+        "seats": "20 Seats Left",
+        "book": "Book now"
+    },
+    {
+        "id": 3,
+        "image": "package-03.jpg",
+        "country": "Newyork",
+        "price": "Package Price : $350",
+        "days": "10 days",
+        "seats": "60 Seats Left",
+        "book": "Book now"
+    },
+    {
+        "id": 4,
+        "image": "package-04.jpg",
+        "country": "Paris",
+        "price": "Package Price : $450",
+        "days": "70 days",
+        "seats": "35 Seats Left",
+        "book": "Book now"
+    },
+    {
+        "id": 5,
+        "image": "package-05.jpg",
+        "country": "Germany",
+        "price": "Package Price : $550",
+        "days": "80 days",
+        "seats": "60 Seats Left",
+        "book": "Book now"
+    },
+    {
+        "id": 6,
+        "image": "package-06.jpg",
+        "country": "Taiwan",
+        "price": "Package Price : $200",
+        "days": "05 days",
+        "seats": "10 Seats Left",
+        "book": "Book now"
+    },
+    {
+        "id": 7,
+        "image": "package-07.jpg",
+        "country": "Japan",
+        "price": "Package Price : $400",
+        "days": "65 days",
+        "seats": "75 Seats Left",
+        "book": "Book now"
+    },
+    {
+        "id": 8,
+        "image": "package-08.jpg",
+        "country": "Australia",
+        "price": "Package Price : $800",
+        "days": "20 days",
+        "seats": "20 Seats Left",
+        "book": "Book now"
+    }
+]
