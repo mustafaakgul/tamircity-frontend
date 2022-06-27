@@ -1,4 +1,4 @@
-# truelysell-vuejs
+# Tamircity-Vue.js
 
 This is Vue 3 version
 
@@ -14,6 +14,7 @@ This is Vue 3 version
 ## Project setup
 ```
 npm install
+npm i --legacy-peer-deps
 ```
 
 ### Compiles and hot-reloads for development
