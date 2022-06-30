@@ -1,62 +1,72 @@
 <template>
 <!-- Home Banner -->
-<section class="banner-section">
+<section class="banner-section" >
     <div class="banner-img">
-        <img src="../../../assets/img/shapes/shape-09.png" class="shape-img1 aos" data-aos="fade-left" alt="">
-        <img src="../../../assets/img/shapes/shape-02.png" class="shape-img2 aos" data-aos="fade-right" alt="">
+        <img src="../../../assets/img/shapes/pngegg.png" class="shape-img1 aos" data-aos="fade-left" alt="">
+        <img src="../../../assets/img/shapes/pinpng.com-gears-png-505071.png" class="shape-img2 aos" data-aos="fade-right" alt="">
     </div>
-    <div class="banner-wrapper">
+    <div class="banner-wrapper" >
+        <!-- ......icon animation:begin......... -->
+        <div id="svgContainer">
+            <!-- GEAR -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -50 400 200">
+                <g class="gear">
+                        <circle class="gear-bg" fill="#39ADD1" cx="200" cy="50" r="90">				</circle>
+                    <path class="gear-icon" fill="#FFFFFF" d="M231.9,10.9c-1.8-0.6-3.6-0.6-5.1,0.3L216.2,17c-1.5-0.9-3-1.2-4.2-1.8l-3.1-11.5
+                c-0.6-1.8-1.8-3-3.3-3.9c-1.8-0.6-3.3-0.9-5.1-0.9c-1.8,0-3.3,0.3-5.1,0.9c-0.9,0.3-1.2,0.6-1.8,1.2s-1.2,1.8-1.5,2.7l-3,11.5
+                c-1.5,0.3-3,1.2-4.2,1.8L174,11.3c-1.5-0.9-3.3-0.9-5.1-0.3c-2.4,0.6-3.9,2.1-4.8,3c-1.5,1.5-2.4,3-3,4.2c-0.6,1.8-0.6,3.6,0.3,5.1
+                l5.8,10.6c-0.6,1.2-1.5,2.7-1.8,4.2l-11.8,3.4c-0.9,0.3-1.5,0.9-2.1,1.5c-0.6,0.6-1.2,1.2-1.2,1.8c-0.9,1.5-1.2,3-1.2,4.8
+                c0,2.4,0.3,3.9,1.2,5.4c0.3,1.5,1.8,3,3.3,3.3l11.5,3c0.6,1.8,1.5,3.3,2.1,4.5l-5.6,10.7c-0.9,1.5-0.9,3.3-0.3,5.1s1.8,3,3,4.2
+                c1.2,1.2,2.7,2.1,4.2,3c1.8,0.6,3.6,0.6,5.1-0.3l10.3-6.1c1.5,0.9,3,1.2,4.2,1.8l3.4,11.8c0.6,1.8,1.8,3,3.3,3.9
+                c1.8,0.6,3.3,0.9,5.1,0.9c1.8,0,3.6-0.6,5.1-0.9c0.6-0.6,1.5-0.9,2.1-1.5c0.6-0.6,1.2-1.8,1.5-2.7l3-11.5c1.5-0.3,3-1.2,4.2-1.8
+                l10.6,5.7c1.5,0.9,3.3,0.9,5.1,0.3c1.8-0.6,3.3-2.1,4.2-3c1.5-1.5,2.4-3,3-4.2c0.6-1.8,0.6-3.6-0.3-5.1l-5.8-10.6
+                c0.6-1.2,1.2-3,1.8-4.2l11.5-3.1c0.9-0.3,1.8-0.6,2.7-1.5c0.6-0.6,1.2-1.2,1.2-1.8c0.6-1.8,0.9-3.3,0.9-5.1c0-1.8-0.3-3.3-0.9-5.1
+                c-0.6-1.8-2.1-2.7-3.9-3.3l-11.5-3c-0.3-1.5-1.2-3-1.8-4.2l5.7-10.6c0.9-1.5,0.9-3.3,0.3-5.1c-0.6-1.8-1.8-3-3-4.2
+                C234.6,12.4,233.1,11.5,231.9,10.9z M211.4,38.8c6.1,6,6.1,16.4,0.1,22.4s-16.3,6.1-22.4,0c-6.1-6.1-6.1-16.4-0.1-22.4
+                S205,32.5,211.4,38.8z">
+                </path>
+                </g>
+            </svg>
+            
+            <!-- HAMMER -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -50 400 200">
+            <g class="hammer">
+                <circle class="hammer-bg" fill="#FFD466" cx="200" cy="50" r="90">		</circle>
+                <path class="hammer-icon" fill="#FFFFFF" d="M262,32.9l-6.7-6.9c-1.4-1.4-3.6-1.4-5-0.1l-2.8,2.8l-14.6-15c-7-7.2-20.3-18.5-30.1-16.4
+                c-1.6,0.3-5.6,3.1-5.6,3.1l19,19.5l-26.3,25.6l-1.5-1.6c-1.4-1.4-3.6-1.4-5-0.1l-39.3,38.3c-1.4,1.4-1.4,3.6-0.1,5l14.4,14.8
+                c1.4,1.4,3.6,1.4,5,0.1l39.3-38.3c1.4-1.4,1.4-3.6,0.1-5l-1.5-1.6l26.3-25.6l8.3,8.5l-2.8,2.8c-1.4,1.4-1.4,3.6-0.1,5l6.7,6.9
+                c1.4,1.4,3.6,1.4,5,0.1l17.3-16.9C263.3,36.5,263.4,34.3,262,32.9z">			</path>
+                </g>
+            </svg>
+            
+            <!-- HEART -->
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -50 400 200">
+                <g class="heart">
+                    <circle class="heart-bg" fill="#FF8EB4" cx="200" cy="50" r="90">		</circle>
+                    <path class="heart-icon" fill="#FFFFFF" d="M251.5,45.5c0-17.8-11.1-34.6-28.9-34.6c-9,0-16.6,6.3-22.4,12.7c-5.7-6.3-13-12.7-21.8-12.7 c-17.8,0-29.9,16.8-29.9,34.6c0,24.7,37.2,51.1,52.4,51.1C217.5,96.6,251.5,67.7,251.5,45.5z">						</path>
+                </g>
+            </svg> -->
+        </div>
+        <!-- ......icon animation:end......... -->
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-12 col-md-12">
-                    <div class="banner-content aos" data-aos="fade-up">
-                        <h4>Welcome to Truelysell</h4>
-                        <h2>Explore the world</h2>
-                    </div>
+                    
                     <div class="banner-list banner-tab aos" data-aos="fade-up">
                         <ul class="nav nav-tabs border-0" id="myTab" role="tablist">
                             <li class="nav-item" role="presentation">
                                 <a class="nav-link active" id="hire-guide" data-bs-toggle="tab" href="#hireguide" role="tab" aria-controls="hireguide" aria-selected="true">
                                     <img src="../../../assets/img/icons/banner-icon1.svg" alt="">
-                                    <p>Hire Guide</p>
+                                    <p>EKSPERTİZ HİZMETİ ALMAK İSTİYORUM</p>
                                 </a>
                             </li>
                             <li class="nav-item" role="presentation">
                                 <a class="nav-link" id="movie-ticket" data-bs-toggle="tab" href="#movieticket" role="tab" aria-controls="movieticket" aria-selected="false">
-                                    <img src="../../../assets/img/icons/banner-icon2.svg" alt="">
-                                    <p>Movie Ticket</p>
+                                    <img src="../../../assets/img/icons/signin-icon3.svg" alt="">
+                                    <p>TEKNİK SERVİS HİZMETİ ALMAK İSTİYORUM</p>
                                 </a>
                             </li>
-                            <li class="nav-item" role="presentation">
-                                <a class="nav-link" id="launch-ticket" data-bs-toggle="tab" href="#launchticket" role="tab" aria-controls="launchticket" aria-selected="false">
-                                    <img src="../../../assets/img/icons/banner-icon3.svg" alt="">
-                                    <p>Launch Ticket</p>
-                                </a>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <a class="nav-link" id="air-ticket" data-bs-toggle="tab" href="#airticket" role="tab" aria-controls="airticket" aria-selected="false">
-                                    <img src="../../../assets/img/icons/banner-icon4.svg" alt="">
-                                    <p>Air Ticket</p>
-                                </a>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <a class="nav-link" id="bus-ticket" data-bs-toggle="tab" href="#busticket" role="tab" aria-controls="busticket" aria-selected="false">
-                                    <img src="../../../assets/img/icons/banner-icon5.svg" alt="">
-                                    <p>Bus Ticket</p>
-                                </a>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <a class="nav-link" id="car-rent" data-bs-toggle="tab" href="#carrent" role="tab" aria-controls="carrent" aria-selected="false">
-                                    <img src="../../../assets/img/icons/banner-icon6.svg" alt="">
-                                    <p>Car Rent</p>
-                                </a>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <a class="nav-link" id="hotel-booking" data-bs-toggle="tab" href="#hotelbooking" role="tab" aria-controls="hotelbooking" aria-selected="false">
-                                    <img src="../../../assets/img/icons/banner-icon7.svg" alt="">
-                                    <p>Hotel Booking</p>
-                                </a>
-                            </li>
+                            
                         </ul>
                     </div>
                 </div>
@@ -70,7 +80,7 @@
                             <div class="row align-items-center justify-content-center">
                                 <div class="col-lg-3 col-md-6">
                                     <div class="form-group banner-form">
-                                        <label>Guide Name</label>
+                                        <label>MARKA</label>
                                         <input type="text" class="form-control" placeholder="Enter Guide Name...">
                                         <i class="feather-user"></i>
                                     </div>

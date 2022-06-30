@@ -17,11 +17,11 @@
             </div>
             <ul class="main-nav">
                 <li v-bind:class="{'active': currentPath == 'index' || currentPath == 'index'}">
-                    <router-link to="/">Home</router-link>
+                    <router-link to="/">Anasayfa</router-link>
                 </li>
                 <li class="has-submenu" :class=" userMenu ? 'active' : 'notactive'">
-                    <a href="javascript:void(0);">User <i class="fas fa-chevron-down"></i></a>
-                    <ul class="submenu">
+                    <a href="javascript:void(0);">KURUMSAL</a>
+                    <!-- <ul class="submenu">
                         <li :class="currentPath == 'user-dashboard' ? 'active' : 'notactive'"><router-link to="/user-dashboard">Dashboard</router-link></li>
                         <li :class="currentPath == 'user-notification' ? 'active' : 'notactive'"><router-link to="/user-notification">Notification</router-link></li>
                         <li :class="currentPath == 'user-chat' ? 'active' : 'notactive'"><router-link to="/user-chat">Chat</router-link></li>
@@ -30,11 +30,11 @@
                         <li :class="currentPath == 'user-wallet' ? 'active' : 'notactive'"><router-link to="/user-wallet">Wallet</router-link></li>
                         <li :class="currentPath == 'user-reviews' ? 'active' : 'notactive'"><router-link to="/user-reviews">Reviews</router-link></li>
                         <li :class="currentPath == 'user-payment' ? 'active' : 'notactive'"><router-link to="/user-payment">Payment</router-link></li>
-                    </ul>
+                    </ul> -->
                 </li>
                 <li class="has-submenu" :class=" guidMenu ? 'active' : 'notactive'">
-                    <a href="javascript:void(0);">Guide <i class="fas fa-chevron-down"></i></a>
-                    <ul class="submenu">
+                    <a href="javascript:void(0);">KAMPANYALAR </a>
+                    <!-- <ul class="submenu">
                         <li :class="currentPath == 'guide-dashboard' ? 'active' : 'notactive'"><router-link to="/guide-dashboard">Dashboard</router-link></li>
                         <li :class="currentPath == 'guide-notification' ? 'active' : 'notactive'"><router-link to="/guide-notification">Notification</router-link></li>
                         <li :class="currentPath == 'guide-chat' ? 'active' : 'notactive'"><router-link to="/guide-chat">Chat</router-link></li>
@@ -48,11 +48,11 @@
                         <li :class="currentPath == 'guide-availability' ? 'active' : 'notactive'"><router-link to="/guide-availability">Availability</router-link></li>
                         <li :class="currentPath == 'guide-reviews' ? 'active' : 'notactive'"><router-link to="/guide-reviews">Reviews</router-link></li>
                         <li :class="currentPath == 'guide-payment' ? 'active' : 'notactive'"><router-link to="/guide-payment">Payment</router-link></li>
-                    </ul>
+                    </ul> -->
                 </li>
                 <li class="has-submenu" :class=" pageMenu ? 'active' : 'notactive'">
-                    <a href="javascript:void(0);">Pages <i class="fas fa-chevron-down"></i></a>
-                    <ul class="submenu">
+                    <a href="javascript:void(0);">İLETİŞİM</a>
+                    <!-- <ul class="submenu">
                         <li :class="currentPath == 'about-us' ? 'active' : 'notactive'"><router-link to="/about-us">About Us</router-link></li>
                         <li :class="currentPath == 'booking' || currentPath == 'booking-wallet' ? 'active' : 'notactive'"><router-link to="/booking">Book a Guide</router-link></li>
                         <li :class="currentPath == 'guide-list' ? 'active' : 'notactive'"><router-link to="/guide-list">Guide List</router-link></li>
@@ -71,23 +71,24 @@
                             </ul>
                         </li>								
                         <li :class="currentPath == 'contact-us' ? 'active' : 'notactive'"><router-link to="/contact-us">Contact Us</router-link></li>
-                    </ul>
+                    </ul> -->
                 </li>
-                <li class="has-submenu" :class=" blogMenu ? 'active' : 'notactive'">
+                <!-- <li class="has-submenu" :class=" blogMenu ? 'active' : 'notactive'">
                     <a href="javascript:void(0);">Blog <i class="fas fa-chevron-down"></i></a>
                     <ul class="submenu">
                         <li :class="currentPath == 'blog-list' ? 'active' : 'notactive'"><router-link to="/blog-list">Blog List</router-link></li>
                         <li :class="currentPath == 'blog-grid' ? 'active' : 'notactive'"><router-link to="/blog-grid">Blog Grid</router-link></li>
                         <li :class="currentPath == 'blog-details' ? 'active' : 'notactive'"><router-link to="/blog-details">Blog Details</router-link></li>
                     </ul>
-                </li>
+                </li> -->
                 <li class="login-link">	<router-link to="/login">Sign in / Register</router-link></li>
             </ul>
         </div>		 
         <ul class="nav header-navbar-rht header-btns">
             <flag />
-            <li class="nav-item"><router-link to="/login" class="btn log-btn"><i class="fas fa-circle-user me-1"></i> Become a Guide</router-link></li>
-            <li class="nav-item"><router-link to="/register" class="btn reg-btn"><i class="fas fa-user-lock me-1"></i> Register / Login</router-link></li>
+            <li class="nav-item"><router-link to="/login" class="btn log-btn">SERVİS BAŞVURU </router-link></li>
+            <li class="nav-item"><router-link to="/login" class="btn log-btn"><i class="fas fa-circle-user me-1"></i>SERVİS GİRİŞİ </router-link></li>
+            <li class="nav-item"><router-link to="/register" class="btn reg-btn">Cihaz ve Rezervasyon Takibi</router-link></li>
         </ul>
     </nav>
 </header>
