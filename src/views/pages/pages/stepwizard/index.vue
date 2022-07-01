@@ -1,7 +1,6 @@
 <template>
     <div class="main-wrapper">
-       <layouts></layouts> <br>
-        <br>
+       <layouts></layouts> 
         <tabformwizard></tabformwizard>
         
       <footerind></footerind>
