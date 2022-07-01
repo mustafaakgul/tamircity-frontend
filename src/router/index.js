@@ -39,8 +39,19 @@ import userreviews from '../views/pages/users/user-reviews/index.vue'
 import usersettings from '../views/pages/users/user-settings/index.vue'
 import userwallet from '../views/pages/users/user-wallet/index.vue'
 import Termscondition from '../views/pages/pages/termscondition.vue'
+import Stepwizard from '../views/pages/pages/stepwizard/index'
+
+
 
 const routes = [
+    {
+        path: '/stepwizard',
+        name: 'stepwizard',
+        component: () => import('../views/pages/pages/stepwizard/index'),
+        meta: {
+        requiresAuth: true
+    }
+    },
     {
         path: '/login',
         name: 'login',

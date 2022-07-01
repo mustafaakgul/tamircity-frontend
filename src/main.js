@@ -143,6 +143,9 @@ import UsersWalletModal from './views/pages/users/user-wallet/walletmodal.vue'
 /*********Terms&Condition component**********/
 import Terms from './views/pages/breadcrumb/terms.vue'
 import TermsCondition from './views/pages/pages/termscondition.vue'
+/*********Stepwizard component**********/
+import TabFormWizard from './views/pages/pages/stepwizard/tabformwizard.vue'
+
 
 /*******Plugin import***********/
 import VueSelect from 'vue3-select2-component'
@@ -190,6 +193,11 @@ app.component('chat', Headchat);
 
 /*********Footer component**********/
 app.component('footerind', Footerindex);
+
+/*********StepWizard component**********/
+app.component('tabformwizard', TabFormWizard);
+
+
 
 /*********Aboutus component**********/
 app.component('aboutpage', Aboutpage);

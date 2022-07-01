@@ -55,25 +55,25 @@
                     <div class="banner-list banner-tab aos" data-aos="fade-up">
                         <ul class="nav nav-tabs border-0" id="myTab" role="tablist">
                             <li class="nav-item" role="presentation">
-                                <a class="nav-link active" id="hire-guide" data-bs-toggle="tab" href="#hireguide" role="tab" aria-controls="hireguide" aria-selected="true">
+                                <a class="nav-link " id="hire-guide" data-bs-toggle="tab" href="#hireguide" role="tab" aria-controls="hireguide" aria-selected="true">
                                     <img src="../../../assets/img/icons/banner-icon1.svg" alt="">
                                     <p>EKSPERTİZ HİZMETİ ALMAK İSTİYORUM</p>
                                 </a>
                             </li>
-                            <li class="nav-item" role="presentation">
-                                <a class="nav-link" id="movie-ticket" data-bs-toggle="tab" href="#movieticket" role="tab" aria-controls="movieticket" aria-selected="false">
-                                    <img src="../../../assets/img/icons/signin-icon3.svg" alt="">
+                            <li class="nav-item active" role="presentation">
+                                <router-link to="/stepwizard">
+                                <a class="nav-link ">
+                                    <img src="../../../assets/img/icons/banner-icon6.svg" alt="">
                                     <p>TEKNİK SERVİS HİZMETİ ALMAK İSTİYORUM</p>
                                 </a>
-                            </li>
-                            
+                            </router-link></li>
                         </ul>
                     </div>
                 </div>
             </div>
 
             <!-- Banner Tabs -->
-            <div class="tab-content" id="myTabContent">
+            <!-- <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="hireguide" role="tabpanel" aria-labelledby="hire-guide">
                     <div class="banner-search aos" data-aos="fade-up">
                         <form action="guide-details">
@@ -312,7 +312,7 @@
                         </form>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- /Banner Tabs -->
 
         </div>

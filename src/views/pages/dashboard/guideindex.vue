@@ -10,8 +10,7 @@
                 <div class="col-md-12">
                     <div class="section-header">
                         <div class="section-title aos" data-aos="fade-up">
-                            <p>Explore the greatest local guides our services. You won’t be disappointed</p>
-                            <h2>Meet Our Local Guides</h2>
+                            <h2>TİTLE</h2>
                         </div>
                         <div class="view-all aos" data-aos="fade-up">
                             <router-link to="/guide-list" class="btn btn-primary">View All <i class="fas fa-arrow-right"></i></router-link>
