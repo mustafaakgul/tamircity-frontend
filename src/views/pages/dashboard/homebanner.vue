@@ -50,8 +50,13 @@
         <!-- ......icon animation:end......... -->
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-12 col-md-12">
-                    
+                <div class="col-lg-12 col-md-12 text-center">
+                    <h1>BAŞLIK</h1>
+                </div>
+                 <div class="col-lg-12 col-md-12 text-center ">
+                    <h4>Alt Başlık</h4>
+                </div>
+                <div class="col-lg-12 col-md-12 mt-5">
                     <div class="banner-list banner-tab aos" data-aos="fade-up">
                         <ul class="nav nav-tabs border-0" id="myTab" role="tablist">
                             <li class="nav-item" role="presentation">
