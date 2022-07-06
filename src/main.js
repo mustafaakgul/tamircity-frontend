@@ -144,7 +144,7 @@ import UsersWalletModal from './views/pages/users/user-wallet/walletmodal.vue'
 import Terms from './views/pages/breadcrumb/terms.vue'
 import TermsCondition from './views/pages/pages/termscondition.vue'
 /*********Stepwizard component**********/
-import TabFormWizard from './views/pages/pages/stepwizard/tabformwizard.vue'
+import TabFormWizard from './views/pages/pages/stepwizard/wizardtabform/tabformwizard.vue'
 
 
 /*******Plugin import***********/

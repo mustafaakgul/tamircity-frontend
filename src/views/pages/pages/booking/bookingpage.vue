@@ -106,4 +106,4 @@
     mounted() {
     }
   }
-</Script>
+</script>

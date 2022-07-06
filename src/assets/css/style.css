@@ -1947,7 +1947,7 @@ label {
 	-webkit-transition: all 0.3s ease 0s;
 	-o-transition: all 0.3s ease 0s;
 	transition: all 0.3s ease 0s;
-	/* position: fixed; */
+	position: fixed; 
 	top: 0;
     display: block;
     width: 100%;
@@ -3362,7 +3362,7 @@ label.file-upload.image-btn {
 	background-color:blueviolet;
 }
 .banner-section {
-	
+	margin-top: 8%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;

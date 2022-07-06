@@ -1,10 +1,13 @@
 <template>
     <div class="main-wrapper">
-        <header></header>
+        <headertwo></headertwo>
+        <userbookings></userbookings>
+        <usersprofile></usersprofile>
         <!-- Page Content -->
-        <div class="content">
+        <div class="content content-bottom">
             <div class="container">
-                <tabformwizard></tabformwizard>
+                <userssettings></userssettings>
+                <usersbooking></usersbooking>
             </div>
         </div>
         <!-- /Page Content -->
@@ -20,6 +23,6 @@
     mounted() {
 
     },
-    name: 'user-notification'
+    name: 'user-bookings'
     }
 </Script>
