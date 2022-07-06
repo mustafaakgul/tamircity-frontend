@@ -11,438 +11,53 @@
             <div class="col-md-12">
                 <div class="section-header">
                     <div class="section-title aos" data-aos="fade-up">
-                        <p>Bringing business and community members together</p>
-                        <h2>Ticket Offers</h2>
+                        <h2>Tamircity Size Ne Sağlar ?</h2>
                     </div>
-                    <div class="view-all aos" data-aos="fade-up">
-                        <router-link to="/booking" class="btn btn-primary">View All <i class="fas fa-arrow-right"></i></router-link>
-                    </div>
+                   
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12 aos" data-aos="fade-up">
-                <div class="offer-slider guides-slider slider item-new slider-two">
-                    <div class="item">
-                        <div class="offer-widget">
-                            <div class="offer-card">
-                                <router-link to="/booking">
-                                    <div class="offer-img">
-                                        <img src="../../../assets/img/category/ticket-01.jpg" class="img-fluid" alt="">
-                                        <div class="offer-top">
-                                            <div class="offer-title">
-                                                <p><i class="feather-map-pin me-1"></i> Germany</p>
-                                            </div>
-                                            <div class="offer-rating rating">
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </router-link>
-                            </div>
-                            <div class="offer-info">
-                                <router-link to="/booking">Musical Feast</router-link>
-                                <p><span>$250</span> / person</p>
-                            </div>
-                            <div class="offer-bottom">
-                                <div class="offer-seats">
-                                    <p><i class="fas fa-chair me-1 chair-icon"></i> 42 Seats Left</p>
-                                </div>
-                                <div class="offer-seats">
-                                    <router-link to="/booking">Book Now <i class="fas fa-arrow-right"></i></router-link>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="offer-widget">
-                            <div class="offer-card">
-                                <router-link to="/booking">
-                                    <div class="offer-img">
-                                        <img src="../../../assets/img/category/ticket-02.jpg" class="img-fluid" alt="">
-                                        <div class="offer-top">
-                                            <div class="offer-title">
-                                                <p><i class="feather-map-pin me-1"></i> Italy</p>
-                                            </div>
-                                            <div class="offer-rating rating">
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </router-link>
-                            </div>
-                            <div class="offer-info">
-                                <router-link to="/booking">National Feast</router-link>
-                                <p><span>$180</span> / person</p>
-                            </div>
-                            <div class="offer-bottom">
-                                <div class="offer-seats">
-                                    <p><i class="fas fa-chair me-1 chair-icon"></i> 50 Seats Left</p>
-                                </div>
-                                <div class="offer-seats">
-                                    <router-link to="/booking">Book Now <i class="fas fa-arrow-right"></i></router-link>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="offer-widget">
-                            <div class="offer-card">
-                                <router-link to="/booking">
-                                    <div class="offer-img">
-                                        <img src="../../../assets/img/category/ticket-03.jpg" class="img-fluid" alt="">
-                                        <div class="offer-top">
-                                            <div class="offer-title">
-                                                <p><i class="feather-map-pin me-1"></i> India</p>
-                                            </div>
-                                            <div class="offer-rating rating">
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </router-link>
-                            </div>
-                            <div class="offer-info">
-                                <router-link to="/booking">Dj Night</router-link>
-                                <p><span>$150</span> / person</p>
-                            </div>
-                            <div class="offer-bottom">
-                                <div class="offer-seats">
-                                    <p><i class="fas fa-chair me-1 chair-icon"></i> 80 Seats Left</p>
-                                </div>
-                                <div class="offer-seats">
-                                    <router-link to="/booking">Book Now <i class="fas fa-arrow-right"></i></router-link>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="offer-widget">
-                            <div class="offer-card">
-                                <router-link to="/booking">
-                                    <div class="offer-img">
-                                        <img src="../../../assets/img/category/ticket-04.jpg" class="img-fluid" alt="">
-                                        <div class="offer-top">
-                                            <div class="offer-title">
-                                                <p><i class="feather-map-pin me-1"></i> Newyork</p>
-                                            </div>
-                                            <div class="offer-rating rating">
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </router-link>
-                            </div>
-                            <div class="offer-info">
-                                <router-link to="/booking">Holiday Tours</router-link>
-                                <p><span>$350</span> / person</p>
-                            </div>
-                            <div class="offer-bottom">
-                                <div class="offer-seats">
-                                    <p><i class="fas fa-chair me-1 chair-icon"></i> 60 Seats Left</p>
-                                </div>
-                                <div class="offer-seats">
-                                    <router-link to="/booking">Book Now <i class="fas fa-arrow-right"></i></router-link>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="offer-widget">
-                            <div class="offer-card">
-                                <router-link to="/booking">
-                                    <div class="offer-img">
-                                        <img src="../../../assets/img/category/ticket-01.jpg" class="img-fluid" alt="">
-                                        <div class="offer-top">
-                                            <div class="offer-title">
-                                                <p><i class="feather-map-pin me-1"></i> Germany</p>
-                                            </div>
-                                            <div class="offer-rating rating">
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </router-link>
-                            </div>
-                            <div class="offer-info">
-                                <router-link to="/booking">Musical Feast</router-link>
-                                <p><span>$250</span> / person</p>
-                            </div>
-                            <div class="offer-bottom">
-                                <div class="offer-seats">
-                                    <p><i class="fas fa-chair me-1 chair-icon"></i> 42 Seats Left</p>
-                                </div>
-                                <div class="offer-seats">
-                                    <router-link to="/booking">Book Now <i class="fas fa-arrow-right"></i></router-link>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="offer-widget">
-                            <div class="offer-card">
-                                <router-link to="/booking">
-                                    <div class="offer-img">
-                                        <img src="../../../assets/img/category/ticket-02.jpg" class="img-fluid" alt="">
-                                        <div class="offer-top">
-                                            <div class="offer-title">
-                                                <p><i class="feather-map-pin me-1"></i> Italy</p>
-                                            </div>
-                                            <div class="offer-rating rating">
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </router-link>
-                            </div>
-                            <div class="offer-info">
-                                <router-link to="/booking">National Feast</router-link>
-                                <p><span>$180</span> / person</p>
-                            </div>
-                            <div class="offer-bottom">
-                                <div class="offer-seats">
-                                    <p><i class="fas fa-chair me-1 chair-icon"></i> 50 Seats Left</p>
-                                </div>
-                                <div class="offer-seats">
-                                    <router-link to="/booking">Book Now <i class="fas fa-arrow-right"></i></router-link>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="offer-widget">
-                            <div class="offer-card">
-                                <router-link to="/booking">
-                                    <div class="offer-img">
-                                        <img src="../../../assets/img/category/ticket-03.jpg" class="img-fluid" alt="">
-                                        <div class="offer-top">
-                                            <div class="offer-title">
-                                                <p><i class="feather-map-pin me-1"></i> India</p>
-                                            </div>
-                                            <div class="offer-rating rating">
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </router-link>
-                            </div>
-                            <div class="offer-info">
-                                <router-link to="/booking">Dj Night</router-link>
-                                <p><span>$150</span> / person</p>
-                            </div>
-                            <div class="offer-bottom">
-                                <div class="offer-seats">
-                                    <p><i class="fas fa-chair me-1 chair-icon"></i> 80 Seats Left</p>
-                                </div>
-                                <div class="offer-seats">
-                                    <router-link to="/booking">Book Now <i class="fas fa-arrow-right"></i></router-link>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="offer-widget">
-                            <div class="offer-card">
-                                <router-link to="/booking">
-                                    <div class="offer-img">
-                                        <img src="../../../assets/img/category/ticket-04.jpg" class="img-fluid" alt="">
-                                        <div class="offer-top">
-                                            <div class="offer-title">
-                                                <p><i class="feather-map-pin me-1"></i> Newyork</p>
-                                            </div>
-                                            <div class="offer-rating rating">
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </router-link>
-                            </div>
-                            <div class="offer-info">
-                                <router-link to="/booking">Holiday Tours</router-link>
-                                <p><span>$350</span> / person</p>
-                            </div>
-                            <div class="offer-bottom">
-                                <div class="offer-seats">
-                                    <p><i class="fas fa-chair me-1 chair-icon"></i> 60 Seats Left</p>
-                                </div>
-                                <div class="offer-seats">
-                                    <router-link to="/booking">Book Now <i class="fas fa-arrow-right"></i></router-link>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="offer-widget">
-                            <div class="offer-card">
-                                <router-link to="/booking">
-                                    <div class="offer-img">
-                                        <img src="../../../assets/img/category/ticket-01.jpg" class="img-fluid" alt="">
-                                        <div class="offer-top">
-                                            <div class="offer-title">
-                                                <p><i class="feather-map-pin me-1"></i> Germany</p>
-                                            </div>
-                                            <div class="offer-rating rating">
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </router-link>
-                            </div>
-                            <div class="offer-info">
-                                <router-link to="/booking">Musical Feast</router-link>
-                                <p><span>$250</span> / person</p>
-                            </div>
-                            <div class="offer-bottom">
-                                <div class="offer-seats">
-                                    <p><i class="fas fa-chair me-1 chair-icon"></i> 42 Seats Left</p>
-                                </div>
-                                <div class="offer-seats">
-                                    <router-link to="/booking">Book Now <i class="fas fa-arrow-right"></i></router-link>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="offer-widget">
-                            <div class="offer-card">
-                                <router-link to="/booking">
-                                    <div class="offer-img">
-                                        <img src="../../../assets/img/category/ticket-02.jpg" class="img-fluid" alt="">
-                                        <div class="offer-top">
-                                            <div class="offer-title">
-                                                <p><i class="feather-map-pin me-1"></i> Italy</p>
-                                            </div>
-                                            <div class="offer-rating rating">
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </router-link>
-                            </div>
-                            <div class="offer-info">
-                                <router-link to="/booking">National Feast</router-link>
-                                <p><span>$180</span> / person</p>
-                            </div>
-                            <div class="offer-bottom">
-                                <div class="offer-seats">
-                                    <p><i class="fas fa-chair me-1 chair-icon"></i> 50 Seats Left</p>
-                                </div>
-                                <div class="offer-seats">
-                                    <router-link to="/booking">Book Now <i class="fas fa-arrow-right"></i></router-link>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="offer-widget">
-                            <div class="offer-card">
-                                <router-link to="/booking">
-                                    <div class="offer-img">
-                                        <img src="../../../assets/img/category/ticket-03.jpg" class="img-fluid" alt="">
-                                        <div class="offer-top">
-                                            <div class="offer-title">
-                                                <p><i class="feather-map-pin me-1"></i> India</p>
-                                            </div>
-                                            <div class="offer-rating rating">
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </router-link>
-                            </div>
-                            <div class="offer-info">
-                                <router-link to="/booking">Dj Night</router-link>
-                                <p><span>$150</span> / person</p>
-                            </div>
-                            <div class="offer-bottom">
-                                <div class="offer-seats">
-                                    <p><i class="fas fa-chair me-1 chair-icon"></i> 80 Seats Left</p>
-                                </div>
-                                <div class="offer-seats">
-                                    <router-link to="/booking">Book Now <i class="fas fa-arrow-right"></i></router-link>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="offer-widget">
-                            <div class="offer-card">
-                                <router-link to="/booking">
-                                    <div class="offer-img">
-                                        <img src="../../../assets/img/category/ticket-04.jpg" class="img-fluid" alt="">
-                                        <div class="offer-top">
-                                            <div class="offer-title">
-                                                <p><i class="feather-map-pin me-1"></i> Newyork</p>
-                                            </div>
-                                            <div class="offer-rating rating">
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </router-link>
-                            </div>
-                            <div class="offer-info">
-                                <router-link to="/booking">Holiday Tours</router-link>
-                                <p><span>$350</span> / person</p>
-                            </div>
-                            <div class="offer-bottom">
-                                <div class="offer-seats">
-                                    <p><i class="fas fa-chair me-1 chair-icon"></i> 60 Seats Left</p>
-                                </div>
-                                <div class="offer-seats">
-                                    <router-link to="/booking">Book Now <i class="fas fa-arrow-right"></i></router-link>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="col-lg-6 col-md-12 text-center">
+                <div class="package-item aos" data-aos="fade-up">
+                     <img src="../../../assets/img/shapes/success.png" class="img-fluid m-5" style="width:10%; heigth:10%;" alt="">
+                     <h3>Adreste Onarım Ve Ekspertiz</h3>
+                     <h4>Cihazınız arızalandığında ürününüzü servise götürmek veya kargo süreçleri uğraşmak zorunda kalmadan adresinizde onarım veya ekspertiz hizmeti alabilirsiniz. Randevu için gerekli alanları doldurduktan sonra seçmiş olduğunuz teknik servis randevu saatinde cihazınızı bulunduğunuz adreste tamir ve ekspertiz işlemlerini gerçekleştirir. </h4>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 text-center">
+                <div class="package-item aos" data-aos="fade-up">
+                     <img src="../../../assets/img/shapes/success.png" class="img-fluid m-5" style="width:10%; heigth:10%;" alt="">
+                     <h3>Servis Süreleri</h3>
+                     <h4>Hizmet almadan önce teknik servislerin ortalama onarım sürelerini önceden görebilir ve karşılaştırabilirsiniz. Ayrıca kurye, kargo, yerinde tamir ve serviste tamir gibi seçenekler sayesinde ihtiyaç duyduğunuz zaman dilimi içerisinde hizmet alabilirsiniz. </h4>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 text-center">
+                <div class="package-item aos" data-aos="fade-up">
+                     <img src="../../../assets/img/shapes/success.png" class="img-fluid m-5" style="width:10%; heigth:10%;" alt="">
+                     <h3>Kargo ve Kurye Hizmeti</h3>
+                     <h4>Eğer bulunduğunuz şehirdeki bir teknik servisten hizmet almak istiyorsanız servise gitmek zorunda kalmadan  </h4>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 text-center">
+                <div class="package-item aos" data-aos="fade-up">
+                     <img src="../../../assets/img/shapes/success.png" class="img-fluid m-5" style="width:10%; heigth:10%;" alt="">
+                     <h3>En Uygun Teknik Servis</h3>
+                     <h4>This is a block of text to provide more information about this section and why you should click the button. </h4>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 text-center">
+                <div class="package-item aos" data-aos="fade-up">
+                     <img src="../../../assets/img/shapes/success.png" class="img-fluid m-5" style="width:10%; heigth:10%;" alt="">
+                     <h3>Sigorta ve Kasko Paketleri</h3>
+                     <h4>This is a block of text to provide more information about this section and why you should click the button. </h4>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 text-center">
+                <div class="package-item aos" data-aos="fade-up">
+                     <img src="../../../assets/img/shapes/success.png" class="img-fluid m-5" style="width:10%; heigth:10%;" alt="">
+                     <h3>Yıllık Bakım Anlaşmaları</h3>
+                     <h4>This is a block of text to provide more information about this section and why you should click the button. </h4>
                 </div>
             </div>
         </div>
@@ -499,3 +114,9 @@
             }
         }
     </Script>
+     <style scoped>
+    .section-header .section-title{
+       margin-left: 35%;
+    }
+   
+    </style>

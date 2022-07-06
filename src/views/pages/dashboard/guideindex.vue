@@ -2,14 +2,14 @@
     <!-- Guides -->
     <section class="guides-section">
         <div class="banner-img">
-            <img src="../../../assets/img/shapes/shape-01.png" class="shape-img-01" alt="">
+            <img src="../../../assets/img/shapes/image1.png" class="shape-img-01" alt="">
             <img src="../../../assets/img/shapes/shape-03.png" class="shape-img3 aos" data-aos="fade-right" alt="">
         </div>
         <div class="container">
             <div class="row">
                 <div class="col-md-12  ">
                     <div class="section-header" >
-                        <div class="section-title aos" style="    margin-left: 43%;" data-aos="fade-up">
+                        <div class="section-title aos"  data-aos="fade-up">
                             <h2>Nasıl Çalışır?</h2>
                         </div>
                       
@@ -18,11 +18,12 @@
             </div>
             <div class="row">
                 <div class="col-md-12 aos" data-aos="fade-up">
-                    <img src="../../../assets/img/group1.png" class="img-fluid" alt="">
-                    <img src="../../../assets/img/group1.png" class="img-fluid" alt="">
-                    <img src="../../../assets/img/group1.png" class="img-fluid" alt="">
-                    <img src="../../../assets/img/group1.png" class="img-fluid" alt="">
-                    <img src="../../../assets/img/group1.png" class="img-fluid" alt="">
+                    <img src="../../../assets/img/group1.png" class="img-fluid" style="width:20%; heigth:20%;" alt="">
+                    <img src="../../../assets/img/group2.png" class="img-fluid" style="width:20%; heigth:20%;" alt="">
+                    <img src="../../../assets/img/group3.png" class="img-fluid" style="width:20%; heigth:20%;" alt="">
+                    <img src="../../../assets/img/group4.png" class="img-fluid" style="width:20%; heigth:20%;" alt="">
+                    <img src="../../../assets/img/group5.png" class="img-fluid" style="width:20%; heigth:20%;" alt="">
+
                 </div>
             </div>
         </div>
@@ -84,3 +85,9 @@
         }
     }
     </script>
+    <style scoped>
+    .section-header .section-title{
+       margin-left: 43%;
+    }
+   
+    </style>
