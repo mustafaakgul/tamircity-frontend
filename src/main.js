@@ -147,7 +147,8 @@ import Terms from './views/pages/breadcrumb/terms.vue'
 import TermsCondition from './views/pages/pages/termscondition.vue'
 /*********Stepwizard component**********/
 import TabFormWizard from './views/pages/pages/stepwizard/wizardtabform/tabformwizard.vue'
-
+import TabFormDevice from './views/pages/pages/stepwizard/tabform1-device/tabform-device.vue'
+import SettingsTabPaneMenu from './views/pages/pages/stepwizard/settingstabpanemenu.vue'
 
 /*******Plugin import***********/
 import VueSelect from 'vue3-select2-component'
@@ -198,6 +199,9 @@ app.component('footerind', Footerindex);
 
 /*********StepWizard component**********/
 app.component('tabformwizard', TabFormWizard);
+app.component('tabformdevice', TabFormDevice);
+app.component('settingstabpanemenu', SettingsTabPaneMenu);
+
 
 
 
