@@ -17,7 +17,7 @@
             </div>
             <ul class="main-nav">
                 <li v-bind:class="{'active': currentPath == 'index' || currentPath == 'index'}">
-                    <router-link to="/">Anasayfa</router-link>
+                    <router-link to="/">ANASAYFA</router-link>
                 </li>
                 <li class="has-submenu" :class=" userMenu ? 'active' : 'notactive'">
                     <a href="javascript:void(0);">KURUMSAL</a>
