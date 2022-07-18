@@ -2,7 +2,7 @@
     <div class="main-wrapper">
        <layouts></layouts>
        <homebanner></homebanner>
-       <tabformwizard></tabformwizard>
+       <!-- <tabformwizard></tabformwizard> -->
        <guideindex></guideindex>
        <packageindex></packageindex>
        <ticketoffer></ticketoffer>

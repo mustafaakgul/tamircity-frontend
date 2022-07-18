@@ -1,10 +1,13 @@
 <template>
     <div class="main-wrapper">
-        <header></header>
+        <headertwo></headertwo>
+        <usernotification></usernotification>
+        <dashboarduserprofile></dashboarduserprofile>
         <!-- Page Content -->
         <div class="content">
             <div class="container">
-                <tabformwizard></tabformwizard>
+                <userssettings></userssettings>
+                <usersnotification></usersnotification>
             </div>
         </div>
         <!-- /Page Content -->

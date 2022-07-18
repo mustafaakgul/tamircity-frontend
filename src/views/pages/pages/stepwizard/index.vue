@@ -2,7 +2,6 @@
     <div class="main-wrapper">
        <layouts></layouts> 
         <tabformwizard></tabformwizard>
-        
       <footerind></footerind>
     </div>
 </template>
