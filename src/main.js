@@ -1,4 +1,6 @@
 import { createApp } from 'vue';
+import axios from 'axios'
+import VueAxios from 'vue-axios'
 import App from "./App.vue";
 import { router } from './router';
 import Vue3Autocounter from 'vue3-autocounter';
@@ -374,5 +376,6 @@ app.component('termscondition', TermsCondition)
 app.component('vue3-autocounter', Vue3Autocounter)
 
 app.component('vue-select', VueSelect);
+app.use(VueAxios, axios)
 app.use(router)
 .mount('#app');
