@@ -13,7 +13,7 @@
                         <h4>Welcome to Truelysell</h4>
                         <h2></h2>
                     </div> -->
-                    <div class="banner-list banner-tab aos" data-aos="fade-up">
+                    <div class="banner-list banner-tab aos aos-init aos-animate" data-aos="fade-up">
                         <ul class="nav nav-tabs border-0" id="myTab" role="tablist">
                             <li class="nav-item" role="presentation">
                                 <a class="nav-link active" id="hire-guide" data-bs-toggle="tab" href="#hireguide" role="tab" aria-controls="hireguide" aria-selected="true">
@@ -64,8 +64,8 @@
 
             <!-- Banner Tabs -->
             <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="hireguide" role="tabpanel" aria-labelledby="hire-guide">
-                    <div class="banner-search aos" data-aos="fade-up">
+                <div class="tab-pane fade show active" id="hireguide" role="tabpanel" aria-labelledby="movie-ticket">
+                    <div class="banner-search">
                         <form action="guide-details">
                             <div class="row align-items-center justify-content-center">
                                 <div class="col-lg-3 col-md-6">
