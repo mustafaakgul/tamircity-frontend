@@ -3360,7 +3360,7 @@ label.file-upload.image-btn {
 -----------------------*/
 
 .banner-section {
-	background: url(../img//banner-bg.jpg);
+	/* background: url(../img//banner-bg.jpg); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
@@ -3370,7 +3370,7 @@ label.file-upload.image-btn {
 }
 .banner-section::after {
     content: '';
-    background: rgba(0, 58, 96, 0.52);
+    background: rgb(111 119 124 / 52%);
     position: absolute;
     top: 0;
     left: 0;
