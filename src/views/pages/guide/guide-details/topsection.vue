@@ -21,35 +21,15 @@
                             <i class="fas fa-star filled"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <p class="guide-pro-text">I speak <span>English, Malayalam</span></p>
+                        <p class="guide-pro-text"><span>Telefon Teknik Servis</span></p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-5 col-md-8 col-sm-8">
-                <div class="guide-pro-list">
-                    <ul>
-                        <li>
-                            <i class="feather-map-pin"></i>
-                            <p>Location</p>
-                            <h6>Germany</h6>
-                        </li>
-                        <li>
-                            <i class="feather-award"></i>
-                            <p>Experience</p>
-                            <h6>4+ years</h6>
-                        </li>
-                        <li>
-                            <i class="feather-star"></i>
-                            <p>Ratings</p>
-                            <h6>4.5</h6>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            
             <div class="col-lg-3 col-md-4 col-sm-4">
                 <div class="guide-pro-book">
-                    <h2>$250.60 <span>/ Per Day</span></h2>
-                    <router-link to="/booking" class="btn btn-secondary">Book Guide <i class="feather-arrow-right"></i></router-link>
+                    <!-- <h2>$250.60 <span>/ Per Day</span></h2> -->
+                    <router-link to="/booking" class="btn btn-secondary">Randevu Al <i class="feather-arrow-right"></i></router-link>
                 </div>
             </div>
         </div>
