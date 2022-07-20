@@ -1,6 +1,18 @@
 const state ={
-    deviceTypes:[]
+  deviceTypes: [
+    {id : 1, text : "TELEFON"} ,
+    {id : 2, text : "TABLET"},
+    {id : 3, text : "OYUN KONSOLU&TV"},
+    {id : 4, text : "PC"},
+    {id : 5, text : "DİJİTAL FOTOĞRAF MAKİNASI&KAMERA"},
+    {id : 6, text : "ELEKTRİKLİ EV/ENDÜSTRİYEL ALETLER"},
+  ]
 }
+const getters = {
+  getStateDeviceTypes(state) {
+    return state.deviceTypes;
+  },
+};
 
 const mutations = {
     getDeviceType(state, payload) {

@@ -1,7 +1,4 @@
-import Vue from "vue";
-import Vuex from "vuex";
-
-Vue.use(Vuex);
+import Vuex from 'vuex'
 
 import DeviceType from "./modules/DeviceType";
 import Brand from "./modules/Brand";
@@ -12,7 +9,18 @@ import * as mutations from "./mutations"
 import * as actions from "./actions"
 
 export const store = new Vuex.Store({
-    state:{},
+    state:{
+        tabDisabled :{
+            brand : true,
+            model : true,
+            fixType :true,
+            serviceType : true,
+            extra : true,
+            techService : true,
+            reservation: true
+        
+        }
+    },
     getters,
     mutations,
     actions,

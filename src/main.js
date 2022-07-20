@@ -2,6 +2,8 @@ import { createApp } from 'vue';
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import App from "./App.vue";
+import { store } from "./store/store"
+
 import { router } from './router';
 import Vue3Autocounter from 'vue3-autocounter';
 /*********Header component**********/
@@ -153,7 +155,7 @@ import TabFormWizard from './views/pages/pages/stepwizard/wizardtabform/tabformw
 /*******Plugin import***********/
 import VueSelect from 'vue3-select2-component'
 
-import jquery from 'jquery'; 
+import jquery from 'jquery';
 window.$ = jquery
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -199,11 +201,6 @@ app.component('footerind', Footerindex);
 
 /*********StepWizard component**********/
 app.component('tabformwizard', TabFormWizard);
-
-
-
-
-
 
 /*********Aboutus component**********/
 app.component('aboutpage', Aboutpage);
@@ -382,4 +379,6 @@ app.component('vue3-autocounter', Vue3Autocounter)
 app.component('vue-select', VueSelect);
 app.use(VueAxios, axios)
 app.use(router)
-.mount('#app');
+app.use(store)
+    .mount('#app');
+
