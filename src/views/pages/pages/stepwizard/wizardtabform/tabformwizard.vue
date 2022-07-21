@@ -36,7 +36,8 @@
                     role="tab"
                     aria-controls="brandTab"
                     aria-selected="false"
-                    :class="{ disabled: this.$store.state.tabDisabled.brand }"
+                    ref="brandd"
+                    :class="{ disabled: this.$store.state.tabDisabled.brand ,active}"
                   >
                     <img
                       src="../../../../../assets/img/icons/banner-icon2.svg"
@@ -168,6 +169,7 @@
         <div class="tab-content pb-5" id="myTabContent">
           <div
             class="tab-pane fade show active"
+            
             id="deviceTab"
             role="tabpanel"
             aria-labelledby="deviceTab"
@@ -179,8 +181,10 @@
                     <div class="form-group banner-form">
                       <label>Cihaz Seç</label>
                       <vue-select
+                        v-model="this.$store.state.selectedItems.device"
                         :options="getStateDeviceTypes"
                         @select="getBrands($event)"
+                        
                       />
                     </div>
                   </div>
@@ -200,7 +204,11 @@
                   <div class="col-lg-12">
                     <div class="form-group banner-form">
                       <label>Marka Seç</label>
-                      <vue-select :options="getStateBrands" />
+                      <vue-select
+                        v-model="this.$store.state.selectedItems.brand"
+                        :options="getStateBrands"
+                        @select="getModels($event)"
+                      />
                     </div>
                   </div>
                 </div>
@@ -219,7 +227,7 @@
                   <div class="col-lg-12">
                     <div class="form-group banner-form">
                       <label>Model Seç</label>
-                      <vue-select :options="models" />
+                      <vue-select :options="getStateModels" />
                     </div>
                   </div>
                 </div>
@@ -334,12 +342,13 @@ import Vue from "vue";
 import { mapGetters, mapMutations, mapActions } from "vuex";
 export default {
   methods: {
-    ...mapActions(["getBrands"]),
+    ...mapActions(["getBrands", "getModels"]),
   },
   computed: {
     ...mapGetters({
       getStateDeviceTypes: "getStateDeviceTypes",
       getStateBrands: "getStateBrands",
+      getStateModels: "getStateModels",
     }),
   },
   components: {},

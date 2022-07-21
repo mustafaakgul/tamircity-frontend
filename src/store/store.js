@@ -19,15 +19,25 @@ export const store = new Vuex.Store({
             techService : true,
             reservation: true
         
-        }
+        },
+        selectedItems:{
+            device : null,
+            brand : null,
+            model :null,
+            fixType : null,
+            serviceType : null,
+            extra : null,
+            techService : null
+        },
     },
     getters,
     mutations,
     actions,
-    modules:{
-        DeviceType,
-        Brand,
-        Model,
-        FixType
+    modules:{ 
+        DeviceType : DeviceType,
+        Brand : Brand,
+        Model : Model,
+        FixType : FixType
     }
+    // https://vuex.vuejs.org/guide/modules.html
 })

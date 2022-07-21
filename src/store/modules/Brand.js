@@ -13,9 +13,10 @@ const mutations = {
   getBrand(state, payload) {
     console.log("getBrand mutations worked.")
     console.log(payload)
+    state.brands=[];
     payload.forEach((item, index) => {
       //console.log(item + "-" + index)
-       let test = { id : index,text:item.Text}
+       let test = { id : index, text:item.Text }
       state.brands.push(test)
     })
     //state.brands = payload;
@@ -26,7 +27,10 @@ const mutations = {
 
 const actions = {
   getBrands({ commit, rootState }, payload) {
+    $("#brand")[0].click();
+   
     console.log("getBrands action worked " + payload.id + " " + payload.text)
+    console.log("Rootstate SelectedItem device : " +rootState.selectedItems.device)
     rootState.tabDisabled.brand = false;
     let brandList = [{ Id: 1, Text: "Apple" }, { Id: 2, Text: "Samsung" }]
     commit("getBrand", brandList);
