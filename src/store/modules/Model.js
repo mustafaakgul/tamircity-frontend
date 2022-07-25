@@ -12,13 +12,11 @@ const getters = {
 const mutations = {
   
     getModel(state, payload) {
-      console.log("getModel mutations worked.")
-      console.log(payload)
+      state.models = [];
       payload.forEach((item, index) => {
         let test = { id : index, text:item.Text }
         state.models.push(test)
       })
-      //state.models = payload;
       NextStep("brand", "model");
     },
    

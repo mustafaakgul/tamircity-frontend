@@ -12,15 +12,11 @@ const getters = {
 
 const mutations = {
   getBrand(state, payload) {
-    console.log("getBrand mutations worked.")
-    console.log(payload)
     state.brands = [];
     payload.forEach((item, index) => {
-      //console.log(item + "-" + index)
       let test = { id: index, text: item.Text }
       state.brands.push(test)
     })
-    //state.brands = payload;
     NextStep("device", "brand");
   },
 
