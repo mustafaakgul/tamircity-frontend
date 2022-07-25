@@ -1,3 +1,5 @@
+import NextStep from "../../mixins/StepMixins";
+
 const state ={
     models:[]
 }
@@ -17,6 +19,7 @@ const mutations = {
         state.models.push(test)
       })
       //state.models = payload;
+      NextStep("brand", "model");
     },
    
   };

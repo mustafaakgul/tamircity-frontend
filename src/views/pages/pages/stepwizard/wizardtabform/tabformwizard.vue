@@ -29,7 +29,7 @@
                 </li>
                 <li class="nav-item" role="presentation">
                   <a
-                    class="nav-link"
+                    class="nav-link disabled"
                     id="brand"
                     data-bs-toggle="tab"
                     href="#brandTab"
@@ -37,7 +37,7 @@
                     aria-controls="brandTab"
                     aria-selected="false"
                     ref="brandd"
-                    :class="{ disabled: this.$store.state.tabDisabled.brand ,active}"
+                   
                   >
                     <img
                       src="../../../../../assets/img/icons/banner-icon2.svg"
@@ -48,14 +48,13 @@
                 </li>
                 <li class="nav-item" role="presentation">
                   <a
-                    class="nav-link"
+                    class="nav-link disabled"
                     id="model"
                     data-bs-toggle="tab"
                     href="#modelTab"
                     role="tab"
                     aria-controls="modelTab"
                     aria-selected="false"
-                    :class="{ disabled: this.$store.state.tabDisabled.model }"
                   >
                     <img
                       src="../../../../../assets/img/icons/banner-icon3.svg"
@@ -66,14 +65,14 @@
                 </li>
                 <li class="nav-item" role="presentation">
                   <a
-                    class="nav-link"
+                    class="nav-link disabled"
                     id="fixType"
                     data-bs-toggle="tab"
                     href="#fixTypeTab"
                     role="tab"
                     aria-controls="fixTypeTab"
                     aria-selected="false"
-                    :class="{ disabled: this.$store.state.tabDisabled.fixType }"
+                    
                   >
                     <img
                       src="../../../../../assets/img/icons/banner-icon4.svg"
@@ -84,16 +83,14 @@
                 </li>
                 <li class="nav-item" role="presentation">
                   <a
-                    class="nav-link"
+                    class="nav-link disabled"
                     id="serviceType"
                     data-bs-toggle="tab"
                     href="#serviceTypeTab"
                     role="tab"
                     aria-controls="serviceTypeTab"
                     aria-selected="false"
-                    :class="{
-                      disabled: this.$store.state.tabDisabled.serviceType,
-                    }"
+                    
                   >
                     <img
                       src="../../../../../assets/img/icons/banner-icon5.svg"
@@ -104,16 +101,14 @@
                 </li>
                 <li class="nav-item" role="presentation">
                   <a
-                    class="nav-link"
+                    class="nav-link disabled"
                     id="techService"
                     data-bs-toggle="tab"
                     href="#techServiceTab"
                     role="tab"
                     aria-controls="techServiceTab"
                     aria-selected="false"
-                    :class="{
-                      disabled: this.$store.state.tabDisabled.techService,
-                    }"
+                    
                   >
                     <img
                       src="../../../../../assets/img/icons/banner-icon6.svg"
@@ -124,14 +119,14 @@
                 </li>
                 <li class="nav-item" role="presentation">
                   <a
-                    class="nav-link"
+                    class="nav-link disabled"
                     id="extra"
                     data-bs-toggle="tab"
                     href="#extraTab"
                     role="tab"
                     aria-controls="extraTab"
                     aria-selected="false"
-                    :class="{ disabled: this.$store.state.tabDisabled.extra }"
+                    
                   >
                     <img
                       src="../../../../../assets/img/icons/banner-icon7.svg"
@@ -142,16 +137,14 @@
                 </li>
                 <li class="nav-item" role="presentation">
                   <a
-                    class="nav-link"
+                    class="nav-link disabled"
                     id="reservation"
                     data-bs-toggle="tab"
                     href="#reservation"
                     role="tab"
                     aria-controls="reservation"
                     aria-selected="false"
-                    :class="{
-                      disabled: this.$store.state.tabDisabled.reservation,
-                    }"
+                    
                   >
                     <img
                       src="../../../../../assets/img/icons/banner-icon7.svg"
@@ -184,7 +177,7 @@
                         v-model="this.$store.state.selectedItems.device"
                         :options="getStateDeviceTypes"
                         @select="getBrands($event)"
-                        
+                        placeholder="Seçiniz..."
                       />
                     </div>
                   </div>
@@ -208,6 +201,8 @@
                         v-model="this.$store.state.selectedItems.brand"
                         :options="getStateBrands"
                         @select="getModels($event)"
+                        placeholder="Seçiniz..."
+
                       />
                     </div>
                   </div>
@@ -227,7 +222,12 @@
                   <div class="col-lg-12">
                     <div class="form-group banner-form">
                       <label>Model Seç</label>
-                      <vue-select :options="getStateModels" />
+                      <vue-select 
+                      v-model="this.$store.state.selectedItems.model"
+                      :options="getStateModels"
+                      @select="getFixTypes($event)"
+                        placeholder="Seçiniz..."
+                       />
                     </div>
                   </div>
                 </div>

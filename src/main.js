@@ -180,10 +180,9 @@ import './assets/js/slick.js';
 
 import './assets/plugins/simple-calendar/simple-calendar.css';
 
-
-
 import './assets/css/style.css';
 const app = createApp(App)
+
 
 /*********Header component**********/
 app.component('layouts', Header);
@@ -381,4 +380,20 @@ app.use(VueAxios, axios)
 app.use(router)
 app.use(store)
     .mount('#app');
+
+
+router.beforeEach((to, from) => {
+    if (from.name == "stepwizard" && to.name != "stepwizard") {
+        store.state.selectedItems = {
+            device: null,
+            brand: null,
+            model: null,
+            fixType: null,
+            serviceType: null,
+            extra: null,
+            techService: null
+        }
+    }
+
+})
 

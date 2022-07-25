@@ -41,3 +41,4 @@ export const store = new Vuex.Store({
     }
     // https://vuex.vuejs.org/guide/modules.html
 })
+
