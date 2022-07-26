@@ -286,12 +286,8 @@
                   <div class="col-lg-12">
                     <div class="form-group banner-form">
                       <label>Servis Seçimi</label>
-                      <vue-select 
-                       :options="getStateTechServices"
-                        v-model="this.$store.state.selectedItems.techService"
-                        placeholder="Seçiniz..."
-                        @select="getExtras($event)"
-                        />
+                      
+                      <services ></services>
                     </div>
                   </div>
                 </div>
@@ -347,6 +343,7 @@
 import Vue from "vue";
 
 import { mapGetters, mapMutations, mapActions } from "vuex";
+import Services from '../../services.vue';
 export default {
   methods: {
     ...mapActions(["getBrands", "getModels", "getFixTypes","getServiceTypes","getTechServices","getExtras"]),
@@ -362,7 +359,9 @@ export default {
       getStateExtras : "getStateExtras"
     }),
   },
-  components: {},
-  mounted() {},
+  components: {
+    services:Services
+  },
+  
 };
 </Script>
