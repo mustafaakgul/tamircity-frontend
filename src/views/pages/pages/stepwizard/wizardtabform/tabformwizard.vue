@@ -266,7 +266,7 @@
                         :options="getStateServiceTypes"
                         v-model="this.$store.state.selectedItems.serviceType"
                         placeholder="Seçiniz..."
-
+                        @select="getTechServices($event)"
                        />
                     </div>
                   </div>
@@ -286,7 +286,12 @@
                   <div class="col-lg-12">
                     <div class="form-group banner-form">
                       <label>Servis Seçimi</label>
-                      <vue-select :options="models" />
+                      <vue-select 
+                       :options="getStateTechServices"
+                        v-model="this.$store.state.selectedItems.techService"
+                        placeholder="Seçiniz..."
+                        @select="getExtras($event)"
+                        />
                     </div>
                   </div>
                 </div>
@@ -305,7 +310,7 @@
                   <div class="col-lg-12">
                     <div class="form-group banner-form">
                       <label>Ekstra</label>
-                      <vue-select :options="models" />
+                      <vue-select />
                     </div>
                   </div>
                 </div>
@@ -344,7 +349,7 @@ import Vue from "vue";
 import { mapGetters, mapMutations, mapActions } from "vuex";
 export default {
   methods: {
-    ...mapActions(["getBrands", "getModels", "getFixTypes","getServiceTypes"]),
+    ...mapActions(["getBrands", "getModels", "getFixTypes","getServiceTypes","getTechServices","getExtras"]),
   },
   computed: {
     ...mapGetters({
@@ -352,7 +357,9 @@ export default {
       getStateBrands: "getStateBrands",
       getStateModels: "getStateModels",
       getStateFixTypes: "getStateFixTypes",
-      getStateServiceTypes:"getStateServiceTypes"
+      getStateServiceTypes:"getStateServiceTypes",
+      getStateTechServices : "getStateTechServices",
+      getStateExtras : "getStateExtras"
     }),
   },
   components: {},

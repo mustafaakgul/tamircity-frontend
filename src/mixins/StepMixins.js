@@ -1,16 +1,16 @@
 import store from "../store/store"
 
-export default function NextStep(removeElementId, addElementId) {
-    console.log("Nextstep removeelement:" + removeElementId +" addelement: "+ addElementId)
-    let remove_element = "#" + removeElementId;
-    let remove_element_tab = "#" + removeElementId+"Tab";
-    let add_element = "#" + addElementId;
-    let add_element_tab = "#" + addElementId+"Tab";
+export default function NextStep(beforeStepId, nextStepId) {
+    console.log("Nextstep removeelement:" + beforeStepId +" addelement: "+ nextStepId)
+    let before_element = "#" + beforeStepId;
+    let before_element_tab = "#" + beforeStepId+"Tab";
+    let next_element = "#" + nextStepId;
+    let next_element_tab = "#" + nextStepId+"Tab";
 
-    $(add_element).removeClass("disabled")
-    $(remove_element).removeClass("active")
-    $(remove_element_tab).removeClass("active show")
-    $(add_element).addClass("active")
-    $(add_element_tab).addClass("active show")
+    $(next_element).removeClass("disabled")
+    $(before_element).removeClass("active")
+    $(before_element_tab).removeClass("active show")
+    $(next_element).addClass("active")
+    $(next_element_tab).addClass("active show")
 
 }
