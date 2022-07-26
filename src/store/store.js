@@ -4,6 +4,7 @@ import DeviceType from "./modules/DeviceType";
 import Brand from "./modules/Brand";
 import Model from "./modules/Model";
 import FixType from "./modules/FixType";
+import ServiceType from "./modules/ServiceType"
 import * as getters from "./getters"
 import * as mutations from "./mutations"
 import * as actions from "./actions"
@@ -37,7 +38,8 @@ export const store = new Vuex.Store({
         DeviceType : DeviceType,
         Brand : Brand,
         Model : Model,
-        FixType : FixType
+        FixType : FixType,
+        ServiceType : ServiceType
     }
     // https://vuex.vuejs.org/guide/modules.html
 })

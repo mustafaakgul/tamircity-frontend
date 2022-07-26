@@ -242,6 +242,7 @@
                         v-model="this.$store.state.selectedItems.fixType"
                         placeholder="Seçiniz..."
                         :options="getStateFixTypes"
+                        @select="getServiceTypes($event)"
                       />
                     </div>
                   </div>
@@ -261,7 +262,12 @@
                   <div class="col-lg-12">
                     <div class="form-group banner-form">
                       <label>Hizmet Türü</label>
-                      <vue-select :options="models" />
+                      <vue-select 
+                        :options="getStateServiceTypes"
+                        v-model="this.$store.state.selectedItems.serviceType"
+                        placeholder="Seçiniz..."
+
+                       />
                     </div>
                   </div>
                 </div>
@@ -338,7 +344,7 @@ import Vue from "vue";
 import { mapGetters, mapMutations, mapActions } from "vuex";
 export default {
   methods: {
-    ...mapActions(["getBrands", "getModels", "getFixTypes"]),
+    ...mapActions(["getBrands", "getModels", "getFixTypes","getServiceTypes"]),
   },
   computed: {
     ...mapGetters({
@@ -346,6 +352,7 @@ export default {
       getStateBrands: "getStateBrands",
       getStateModels: "getStateModels",
       getStateFixTypes: "getStateFixTypes",
+      getStateServiceTypes:"getStateServiceTypes"
     }),
   },
   components: {},
