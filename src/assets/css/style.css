@@ -7174,6 +7174,25 @@ label.file-upload.image-btn {
     -o-transition: 0.7s;
     transition: 0.7s;
 }
+.table-booking-btn .booking-btn-workTime {
+	color: #fff;
+	background: #000a82;
+	border: 1px solid #00825B;
+	box-shadow: inset 0 0 0 0 #fff;
+    -webkit-transition: 0.7s;
+    -moz-transition: 0.7s;
+    -o-transition: 0.7s;
+    transition: 0.7s;
+}
+.table-booking-btn .booking-btn-workTime:hover {
+	color: #000a82;
+	background: #fff;
+	box-shadow: inset 0 0 0 50px #fff;
+	-webkit-transition: 0.7s;
+    -moz-transition: 0.7s;
+    -o-transition: 0.7s;
+    transition: 0.7s;
+}
 .table-booking-completed span {
 	display: -webkit-box;
     display: -ms-flexbox;

@@ -1,8 +1,8 @@
 <template>
   <!-- Guide Bookings -->
-  <div class="row">
+
+  <div v-for="service in getStateTechServices" :key="service" class="row">
     <div class="col-md-12">
-      
       <div class="tab-content" id="myTabContent">
         <div
           class="tab-pane fade show active"
@@ -18,10 +18,9 @@
                     <tr>
                       <td>
                         <div class="table-booking d-flex align-items-center">
-                         
                           <div class="table-booking-info">
-                            <router-link to="/guide-settings">
-                              George Anderson
+                            <router-link to="">
+                              {{ service.text }}
                             </router-link>
                             <p>
                               <i class="fas fa-clock me-1"></i> 14 Nov 2022,
@@ -55,16 +54,18 @@
                         </div>
                       </td>
                       <td>
-                        <div
-                          class="
-                            table-booking-address
-                            d-flex
-                            align-items-center
-                          "
-                        >
-                          <span><i class="feather-phone-call"></i></span>
-                          +1 923 782 4575
-                        </div>
+                       <div class="table-booking-btn">
+                        <a
+                            href="javascript:void(0);"
+                            class="btn booking-btn-workTime"
+                            data-bs-toggle="modal" data-bs-target="#work-time"
+                          >
+                            <i class="far fa-circle-check me-1"></i> Saat Seçiniz
+                          </a>
+                         
+                       </div>           
+                          <!-- <work-time-modal></work-time-modal> -->
+                        
                       </td>
                       <td>
                         <div class="table-booking-payment">
@@ -100,3 +101,15 @@
   </div>
   <!-- /Guide Bookings -->
 </template>
+
+<script>
+import { mapGetters, mapMutations, mapActions } from "vuex";
+
+export default {
+  computed: {
+    ...mapGetters({
+      getStateTechServices: "getStateTechServices",
+    }),
+  },
+};
+</script>

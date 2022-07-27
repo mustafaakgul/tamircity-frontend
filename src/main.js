@@ -149,6 +149,8 @@ import Terms from './views/pages/breadcrumb/terms.vue'
 import TermsCondition from './views/pages/pages/termscondition.vue'
 /*********Stepwizard component**********/
 import TabFormWizard from './views/pages/pages/stepwizard/wizardtabform/tabformwizard.vue'
+import WorkTimeModal from './views/pages/pages/stepwizard/workTimeModal.vue'
+
 
 
 
@@ -200,6 +202,8 @@ app.component('footerind', Footerindex);
 
 /*********StepWizard component**********/
 app.component('tabformwizard', TabFormWizard);
+app.component('worktimeModal', WorkTimeModal);
+
 
 /*********Aboutus component**********/
 app.component('aboutpage', Aboutpage);
