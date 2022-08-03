@@ -1,6 +1,6 @@
 <template>
 <!-- Guide Details Section -->
-<section class="guide-details-section pb-0">
+<section class="guide-details-section pb-0" id="messageapp">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -23,40 +23,23 @@
             </div>
         </div>
         <div class="tab-content" id="myTabContent">
+            <!-- Hizmetler İçerik -->
             <div class="tab-pane fade show active pb-5" id="hizmetler" role="tabpanel" aria-labelledby="guide-details">
                 <div class="row">
                     <div class="col-lg-8 col-md-12 d-flex">
                         <div class="guide-info w-100">
-                            <p>Et Harum Quidem Rerum Facilis Est Et Expedita Distinctio. Nam Libero Tempore, Cum Soluta Nobis Est Eligendi Optio Cumque Nihil Impedit Quo Minus Id Quod Maxime Placeat Facere Possimus, Omnis Voluptas Assumenda Est, Omnis Dolor Repellendus. Temporibus Autem Quibusdam Et Aut Officiis Debitis Aut Rerum Necessitatibus Saepe Eveniet Ut Et Voluptates Repudiandae Sint Et Molestiae Non Recusandae.</p>
-                            <div class="row">
-                                <div class="col-lg-4 col-sm-4">
-                                    <div class="guide-img-list">
-                                        <a class="fancystyle" data-fancybox="gallery">
-                                            <img src="../../../../assets/img/guide-details-img1.jpg" alt="guide-img" class="img-fluid">
-                                        </a>
-                                    </div>
+                            <p>HZİMETLER SEKMESİ</p>
+                                <div class="guide-img-list">
+                                    <a class="fancystyle" data-fancybox="gallery">
+                                        <img src="../../../../assets/img/guide-details-img1.jpg" alt="guide-img" class="img-fluid">
+                                    </a>
                                 </div>
-                                <div class="col-lg-4 col-sm-4">
-                                    <div class="guide-img-list">
-                                        <a class="fancystyle" data-fancybox="gallery">
-                                            <img src="../../../../assets/img/guide-details-img2.jpg" alt="guide-img" class="img-fluid">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-sm-4">
-                                    <div class="guide-img-list">
-                                        <a class="fancystyle" data-fancybox="gallery">
-                                            <img src="../../../../assets/img/guide-details-img1.jpg" alt="guide-img" class="img-fluid">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="mb-0">Et Harum Quidem Rerum Facilis Est Et Expedita Distinctio. Nam Libero Tempore, Cum Soluta Nobis Est Eligendi Optio Cumque Nihil Impedit Quo Minus Id Quod Maxime Placeat Facere Possimus, Omnis Voluptas Assumenda Est, Omnis Dolor Repellendus. Temporibus Autem Quibusdam Et Aut Officiis Debitis Aut Rerum Necessitatibus Saepe Eveniet Ut Et Voluptates Repudiandae Sint Et Molestiae Non Recusandae.Et Harum Quidem Rerum Facilis Est Et Expedita Distinctio. Nam Libero Tempore, Cum Soluta Nobis Est Eligendi Optio Cumque Nihil Impedit Quo Minus Id Quod Maxime Placeat Facere Possimus, Omnis Voluptas Assumenda Est, Omnis Dolor Repellendus. Temporibus Autem Quibusdam Et Aut Officiis Debitis Aut Rerum Necessitatibus Saepe Eveniet Ut Et Voluptates Repudiandae Sint Et Molestiae Non Recusandae. Et Aut Officiis Debitis Aut Rerum Necessitatibus Saepe Eveniet Ut Et Voluptates Repudiandae Sint Et Molestiae Non Recusandae.</p>
+                           
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12 d-flex">
                         <div class="guide-right w-100">
-                            <div class="premium-guide-btn">
+                            <!-- <div class="premium-guide-btn">
                                 <ul class="nav">
                                     <li>
                                         <a href="javascript:void(0);" class="btn btn-premium">
@@ -88,17 +71,33 @@
                                         <li><span>Sunday</span>9:30 AM - 7:00 PM</li>
                                     </ul>
                                 </div>
-                            </div>
+                            </div> -->
+                           <section id="app" class="section container">
+                            <article class="message is-primary"   :class="accordionClasses" >
+                                <div class="message-header" @click="toggleAccordion">
+                                    <p>Hello World</p>
+                                </div>
+                                <div class="message-body">
+                                    <div class="message-content">
+                                        Lorem ipsum dolor sit amet,
+                                    </div>
+                                </div>
+                            </article>
+
+                           </section>
+                            
+                    
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Review Listing -->
+            <!-- /Hizmetler İçerik -->
+            <!-- Yorumlar İçerik -->
             <div class="tab-pane fade pb-5" id="comments" role="tabpanel" aria-labelledby="guide-reviews">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="guide-review review-listing">
+                            <h2>YORUMLAR SEKMESİ</h2>
                             <ul class="comments-list">
                                 <li>
                                     <div class="comment">
@@ -172,12 +171,13 @@
                     </div>
                 </div>
             </div>
-            <!-- /Review Listing -->
-            <!-- Randevu -->
+            <!-- /Yorumlar İçerik -->
+            <!-- Randevu İçerik-->
             <div class="tab-pane fade pb-5" id="meetings" role="tabpanel" aria-labelledby="guide-reviews">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="guide-review review-listing">
+                            <h2>RANDEVU SEKMESİ</h2>
                             <ul class="comments-list">
                                 <li>
                                     <div class="comment">
@@ -251,12 +251,13 @@
                     </div>
                 </div>
             </div>
-            <!-- /Randevu  -->
-             <!-- Bilgiler -->
+            <!-- /Randevu İçerik -->
+             <!-- Bilgiler İçerik-->
             <div class="tab-pane fade pb-5" id="informations" role="tabpanel" aria-labelledby="guide-reviews">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="guide-review review-listing">
+                            <h2>BİLGİLER SEKMESİ</h2>
                             <ul class="comments-list">
                                 <li>
                                     <div class="comment">
@@ -330,11 +331,68 @@
                     </div>
                 </div>
             </div>
-            <!-- /Bilgiler  -->
-
-
+            <!-- /Bilgiler  İçerik-->
         </div>
     </div>
 </section>
 <!-- /Guide Details Section -->
 </template>
+<style scoped>
+.message {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right:auto;
+}
+.message-header{
+    cursor: pointer;
+}
+.message-body {
+    padding: 0;
+    max-height: 10em;
+    overflow: hidden;
+    transition: 0.3s ease all;
+}
+.isclosed .message-body {
+    max-height: 0;
+}
+.message-content {
+    padding: 20px;
+}
+
+</style>
+
+<script>
+import { useFormValues } from 'vee-validate';
+// document.querySelector('.message-header')
+// .addEventListener('click',toggleAccordion);
+
+// function toggleAccordion() {
+//     document.querySelector('message').classList.add('is-closed')
+//     if(isOpen)
+//     document.querySelector('message').style.maxHeight = '0'
+//     else
+//      document.querySelector('message').style.maxHeight = '10em'
+// }
+export default {
+  data() {
+   isOpen: false
+  },
+
+  methods: {
+    toggleAccordion : function(){
+        this.isOpen= !this.isOpen;
+    }
+  },
+  computed: {
+    accordionClasses: function() {
+        return {
+            'is-closed': !this.isOpen,
+            'is-primary': this.isOpen,
+            'is-dark': !this.isOpen
+        };
+    }
+  }
+
+};
+</script>
+
