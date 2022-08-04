@@ -39,54 +39,7 @@
                     </div>
                     <div class="col-lg-4 col-md-12 d-flex">
                         <div class="guide-right w-100">
-                            <!-- <div class="premium-guide-btn">
-                                <ul class="nav">
-                                    <li>
-                                        <a href="javascript:void(0);" class="btn btn-premium">
-                                            <i class="fas fa-star me-2"></i> Premium Guide
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);" class="btn btn-language">
-                                            <img src="../../../../assets/img/icons/translate-icon.png" class="me-2" alt=""> Language Verified
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="card available-widget">
-                                <div class="card-header">
-                                    <h5 class="card-title">
-                                        <img src="../../../../assets/img/icons/available-icon.svg" class="me-2" alt=""> 
-                                        Guide Availability
-                                    </h5>
-                                </div>
-                                <div class="card-body">
-                                    <ul>
-                                        <li><span>Monday</span>9:30 AM - 7:00 PM</li>
-                                        <li><span>Tuesday</span>9:30 AM - 7:00 PM</li>
-                                        <li><span>Wednesday</span>9:30 AM - 7:00 PM</li>
-                                        <li><span>Thursday</span>9:30 AM - 7:00 PM</li>
-                                        <li><span>Friday</span>9:30 AM - 7:00 PM</li>
-                                        <li><span>Saturday</span>9:30 AM - 7:00 PM</li>
-                                        <li><span>Sunday</span>9:30 AM - 7:00 PM</li>
-                                    </ul>
-                                </div>
-                            </div> -->
-                           <section id="app" class="section container">
-                            <article class="message is-primary"   :class="accordionClasses" >
-                                <div class="message-header" @click="toggleAccordion">
-                                    <p>Hello World</p>
-                                </div>
-                                <div class="message-body">
-                                    <div class="message-content">
-                                        Lorem ipsum dolor sit amet,
-                                    </div>
-                                </div>
-                            </article>
-
-                           </section>
-                            
-                    
+                           
                         </div>
                     </div>
                 </div>
@@ -337,62 +290,4 @@
 </section>
 <!-- /Guide Details Section -->
 </template>
-<style scoped>
-.message {
-    max-width: 500px;
-    margin-left: auto;
-    margin-right:auto;
-}
-.message-header{
-    cursor: pointer;
-}
-.message-body {
-    padding: 0;
-    max-height: 10em;
-    overflow: hidden;
-    transition: 0.3s ease all;
-}
-.isclosed .message-body {
-    max-height: 0;
-}
-.message-content {
-    padding: 20px;
-}
-
-</style>
-
-<script>
-import { useFormValues } from 'vee-validate';
-// document.querySelector('.message-header')
-// .addEventListener('click',toggleAccordion);
-
-// function toggleAccordion() {
-//     document.querySelector('message').classList.add('is-closed')
-//     if(isOpen)
-//     document.querySelector('message').style.maxHeight = '0'
-//     else
-//      document.querySelector('message').style.maxHeight = '10em'
-// }
-export default {
-  data() {
-   isOpen: false
-  },
-
-  methods: {
-    toggleAccordion : function(){
-        this.isOpen= !this.isOpen;
-    }
-  },
-  computed: {
-    accordionClasses: function() {
-        return {
-            'is-closed': !this.isOpen,
-            'is-primary': this.isOpen,
-            'is-dark': !this.isOpen
-        };
-    }
-  }
-
-};
-</script>
 
