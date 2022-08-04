@@ -74,6 +74,7 @@ import Dashboardmodal from './views/pages/guide/guide-dashboard/dashboardmodal.v
 import GuideDetail from './views/pages/breadcrumb/guidedetail.vue'
 import TopSection from './views/pages/guide/guide-details/topsection.vue'
 import DetailSection from './views/pages/guide/guide-details/detailsection.vue'
+import FAQ from './views/pages/guide/guide-details/FAQ.vue'
 import GuideSection from './views/pages/guide/guide-details/guidesection.vue'
 /*********Guide List component**********/
 import ListGuide from './views/pages/breadcrumb/listguide.vue'
