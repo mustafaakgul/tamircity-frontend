@@ -25,21 +25,12 @@
         <div class="tab-content" id="myTabContent">
             <!-- Hizmetler İçerik -->
             <div class="tab-pane fade show active pb-5" id="hizmetler" role="tabpanel" aria-labelledby="guide-details">
+                <!-- TELEFON -->
                 <div class="row">
-                    <div class="col-lg-8 col-md-12 d-flex">
-                        <div class="guide-info w-100">
-                            <p>HZİMETLER SEKMESİ</p>
-                                <div class="guide-img-list">
-                                    <a class="fancystyle" data-fancybox="gallery">
-                                        <img src="../../../../assets/img/guide-details-img1.jpg" alt="guide-img" class="img-fluid">
-                                    </a>
-                                </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12 d-flex">
+                    <div class="col-md-12 d-flex">
                         <div class="guide-right w-100 services-vuecordion" id="app">
                            <header>
-                                <h1>VUE<span>CORDION</span></h1>
+                                <h1><span>TELEFON</span></h1>
                             </header>
                             <div class="faqs">
                             <FAQ 
@@ -54,6 +45,50 @@
                         </div>
                     </div>
                 </div>
+                <!-- TELEFON -->
+                <!-- TABLET -->
+                <!-- <div class="row">
+                    <div class="col-md-12 d-flex">
+                        <div class="guide-right w-100 services-vuecordion" id="app">
+                           <header>
+                                <h1><span>TABLET</span></h1>
+                            </header>
+                            <div class="faqs">
+                            <FAQ 
+                                v-for="(faq, i) in faqs" 
+                                :faq="faq" 
+                                :index="i" 
+                                :key="i"
+                                :open="faq.open"
+                                @toggleOpen="toggleOpen"
+                            />
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- TABLET -->
+                <!-- PC -->
+                <!-- <div class="row">
+                    <div class="col-md-12 d-flex">
+                        <div class="guide-right w-100 services-vuecordion" id="app">
+                           <header>
+                                <h1><span>PC</span></h1>
+                            </header>
+                            <div class="faqs">
+                            <FAQ 
+                                v-for="(faq, i) in faqs" 
+                                :faq="faq" 
+                                :index="i" 
+                                :key="i"
+                                :open="faq.open"
+                                @toggleOpen="toggleOpen"
+                            />
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- PC -->
+
             </div>
             <!-- /Hizmetler İçerik -->
             <!-- Yorumlar İçerik -->
@@ -314,18 +349,18 @@ export default {
     return {
       faqs: [
         {
-          question: "Who is the best Superhero?",
-          answer: "I'm not sure but we love him 3000",
+          vuecordion_phonebrand: "Apple",
+          vuecordion_phonemodel: "Iphone",
           open: false
         },
         {
-          question: "What is Goku's form called with White Hair?",
-          answer: "Mastered Ultra Instinct",
+          vuecordion_brand: "What is Goku's form called with White Hair?",
+          vuecordion_phonemodel: "Mastered Ultra Instinct",
           open: false
         },
         {
-          question: "Have you liked & subscried yet?",
-          answer: "YES",
+          vuecordion_brand: "Have you liked & subscried yet?",
+          vuecordion_phonemodel: "YES",
           open: false
         }
       ]
@@ -409,7 +444,7 @@ export default {
 .services-vuecordion .faq.open .question::after {
   transform: translateY(-50%) rotate(90deg);
 }
-.services-vuecordion .faq .answer {
+.services-vuecordion .faq .vuecordion_phonemodel {
   color: #3c3c3c;
   font-size: 18px;
   opacity: 0;
@@ -417,7 +452,7 @@ export default {
   overflow-y: hidden;
   transition: all 0.4s ease-out;
 }
-.services-vuecordion .faq.open .answer {
+.services-vuecordion .faq.open .vuecordion_phonemodel {
   opacity: 1;
   max-height: 1000px;
 }
