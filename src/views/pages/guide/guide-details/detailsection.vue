@@ -34,11 +34,10 @@
                                         <img src="../../../../assets/img/guide-details-img1.jpg" alt="guide-img" class="img-fluid">
                                     </a>
                                 </div>
-                           
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12 d-flex">
-                        <div class="guide-right w-100" id="app">
+                        <div class="guide-right w-100 services-vuecordion" id="app">
                            <header>
                                 <h1>VUE<span>CORDION</span></h1>
                             </header>
@@ -349,18 +348,7 @@ export default {
 </script>
 
 <style>
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
-body {
-	background-color: #EEE;
-	font-family: sans-serif;
-}
-
-header {
+.services-vuecordion header {
   background-color: #3c3c3c;
   display: flex;
   justify-content: center;
@@ -368,19 +356,19 @@ header {
   padding: 15px;
 }
 
-header h1 {
+.services-vuecordion header h1 {
   color: #EEE;
   font-size: 28px;
   font-weight: 300;
   text-transform: uppercase;
 }
 
-header h1 span {
+.services-vuecordion header h1 span {
   color: #56E3B8;
   font-weight: 900;
 }
 
-.faq {
+.services-vuecordion .faq {
   display: block;
   width: 100%;
   max-width: 768px;
@@ -391,14 +379,14 @@ header h1 span {
   background-color: #FFF;
 }
 
-.faq .question {
+.services-vuecordion .faq .question {
   position: relative;
   color: #3c3c3c;
   font-size: 20px;
   transition: all 0.4s linear;
 }
 
-.faq .question::after {
+.services-vuecordion .faq .question::after {
   content: '';
 
   position: absolute;
@@ -415,13 +403,13 @@ header h1 span {
   
   transition: all 0.2s linear;
 }
-.faq.open .question {
+.services-vuecordion .faq.open .question {
   margin-bottom: 15px;
 }
-.faq.open .question::after {
+.services-vuecordion .faq.open .question::after {
   transform: translateY(-50%) rotate(90deg);
 }
-.faq .answer {
+.services-vuecordion .faq .answer {
   color: #3c3c3c;
   font-size: 18px;
   opacity: 0;
@@ -429,7 +417,7 @@ header h1 span {
   overflow-y: hidden;
   transition: all 0.4s ease-out;
 }
-.faq.open .answer {
+.services-vuecordion .faq.open .answer {
   opacity: 1;
   max-height: 1000px;
 }
