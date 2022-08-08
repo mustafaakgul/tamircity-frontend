@@ -349,20 +349,43 @@ export default {
     return {
       faqs: [
         {
-          vuecordion_phonebrand: "Apple",
-          vuecordion_phonemodel: "Iphone",
+          vuecordion_phonebrand: "Alcatel ",
+          vuecordion_phonemodel: "Alcatel 1 2019",
+          vuecordion_phoneproblem: "Kablosuz Ağ/Bluetooth Bağlantı Sorunu",
           open: false
         },
-        {
-          vuecordion_brand: "What is Goku's form called with White Hair?",
-          vuecordion_phonemodel: "Mastered Ultra Instinct",
-          open: false
-        },
-        {
-          vuecordion_brand: "Have you liked & subscried yet?",
-          vuecordion_phonemodel: "YES",
-          open: false
-        }
+        // {
+        //   vuecordion_phonebrand: "Huawei",
+        //   vuecordion_phonemodel: "Huawei Mate 40 Pro",
+        //   vuecordion_phoneproblem: "sadsfdfd",
+        //   open: false
+        // },
+        // {
+        //   vuecordion_phonebrand: "Huawei",
+        //   vuecordion_phonemodel: "Huawei Mate 40 Pro",
+        //   vuecordion_phoneproblem: "sadsfdfd",
+        //   open: false
+        // },
+        // {
+        //   vuecordion_phonebrand: "Huawei",
+        //   vuecordion_phonemodel: "Huawei Mate 40 Pro",
+        //   vuecordion_phoneproblem: "sadsfdfd",
+        //   open: false
+        // },
+        // {
+        //   vuecordion_phonebrand: "Huawei",
+        //   vuecordion_phonemodel: "Huawei Mate 40 Pro",
+        //   vuecordion_phoneproblem: "sadsfdfd",
+        //   open: false
+        // },
+        // {
+        //   vuecordion_phonebrand: "Huawei",
+        //   vuecordion_phonemodel: "Huawei Mate 40 Pro",
+        //   vuecordion_phoneproblem: "sadsfdfd",
+        //   open: false
+        // },
+
+      
       ]
     }
   },
@@ -374,7 +397,6 @@ export default {
         } else {
           faq.open = false;
         }
-
         return faq;
       });
     }
@@ -383,6 +405,17 @@ export default {
 </script>
 
 <style>
+.choose-btn-sm {
+    height: 5px;
+
+
+}
+.bg-light-grey {
+	background-color: #6464642b;
+	padding: 1%;
+    border-radius: 10px;
+}
+
 .services-vuecordion header {
   background-color: #3c3c3c;
   display: flex;
@@ -399,7 +432,7 @@ export default {
 }
 
 .services-vuecordion header h1 span {
-  color: #56E3B8;
+  color: #ffffff;
   font-weight: 900;
 }
 
@@ -414,14 +447,14 @@ export default {
   background-color: #FFF;
 }
 
-.services-vuecordion .faq .question {
+.services-vuecordion .faq .vuecordion_phonebrand {
   position: relative;
   color: #3c3c3c;
   font-size: 20px;
   transition: all 0.4s linear;
 }
 
-.services-vuecordion .faq .question::after {
+.services-vuecordion .faq .vuecordion_phonebrand::after {
   content: '';
 
   position: absolute;
@@ -431,17 +464,17 @@ export default {
 
   width: 30px;
   height: 30px;
-  /* background-image: url('./arrow-down-mint.svg'); */
+  background-image: url('./arrow-down-mint.svg');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
   
   transition: all 0.2s linear;
 }
-.services-vuecordion .faq.open .question {
+.services-vuecordion .faq.open .vuecordion_phonebrand {
   margin-bottom: 15px;
 }
-.services-vuecordion .faq.open .question::after {
+.services-vuecordion .faq.open .vuecordion_phonebrand::after {
   transform: translateY(-50%) rotate(90deg);
 }
 .services-vuecordion .faq .vuecordion_phonemodel {
@@ -451,8 +484,21 @@ export default {
   max-height: 0px;
   overflow-y: hidden;
   transition: all 0.4s ease-out;
+  
+}
+.services-vuecordion .faq .vuecordion_phoneproblem {
+  color: #3c3c3c;
+  font-size: 18px;
+  opacity: 0;
+  max-height: 0px;
+  overflow-y: hidden;
+  transition: all 0.4s ease-out;
 }
 .services-vuecordion .faq.open .vuecordion_phonemodel {
+  opacity: 1;
+  max-height: 1000px;
+}
+.services-vuecordion .faq.open .vuecordion_phoneproblem {
   opacity: 1;
   max-height: 1000px;
 }
