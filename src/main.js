@@ -157,7 +157,8 @@ import WorkTimeModal from './views/pages/pages/stepwizard/workTimeModal.vue'
 
 /*******Plugin import***********/
 import VueSelect from 'vue3-select2-component'
-
+import Datepicker from '@vuepic/vue-datepicker';
+import '@vuepic/vue-datepicker/dist/main.css'
 import jquery from 'jquery';
 window.$ = jquery
 
@@ -204,7 +205,7 @@ app.component('footerind', Footerindex);
 /*********StepWizard component**********/
 app.component('tabformwizard', TabFormWizard);
 app.component('worktimeModal', WorkTimeModal);
-
+app.component('Datepicker', Datepicker);
 
 /*********Aboutus component**********/
 app.component('aboutpage', Aboutpage);

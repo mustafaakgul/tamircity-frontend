@@ -4,6 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
+                <Datepicker v-model="date"></Datepicker>
                 <div class="guide-tab">
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
