@@ -14,7 +14,7 @@ const mutations = {
     getModel(state, payload) {
       state.models = [];
       payload.forEach((item, index) => {
-        let test = { id : index, text:item.Text }
+        let test = { id : item.id, text:item.name }
         state.models.push(test)
       })
       NextStep("brand", "model");
@@ -24,17 +24,17 @@ const mutations = {
   
   const actions = {
     getModels({ commit, rootState }, payload) {
+      rootState.selectedItems.brand = payload;
       console.log("getModels action worked " + payload.id + " " + payload.text)
       console.log("Rootstate SelectedItem brand : " +rootState.selectedItems.brand)
+      console.log("Rootstate SelectedItem device : " +rootState.selectedItems.device.id)
       rootState.tabDisabled.model = false;
-      let modelList = [{ Id: 1, Text: "Iphone 11" }, { Id: 2, Text: "Iphone 12" }]
-      commit("getModel", modelList);
-    //     axios.get("http://localhost:8080/api/v1/model?brand_id="+payload.brand_id +"&device_type_id="+ payload.device_type_id)
-    //     .then(response => {
-    //         console.log("model response : " + response.data);
-    //         commit("getModel", response.data);
-    //     })
-    //     .catch(e => console.log(e));  
+        this.axios.get("http://167.172.105.3:8000/api/v1/models/query?brand_id="+payload.id +"&device_type_id="+ rootState.selectedItems.device.id)
+         .then(response => {
+             console.log("model response : " + response.data.data);
+            commit("getModel", response.data.data);
+        })
+         .catch(e => console.log(e));
       
     },
    

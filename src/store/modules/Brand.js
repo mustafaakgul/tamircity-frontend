@@ -26,7 +26,7 @@ const actions = {
   getBrands({ commit, rootState }, payload) {
     console.log("getBrands action worked " + payload.id + " " + payload.text)
     // console.log("Rootstate SelectedItem device : " + rootState.selectedItems.device)
-    // // rootState.tabDisabled.brand = false;
+     rootState.selectedItems.device = payload;
     // let brandList = [{ Id: 1, Text: "Apple" }, { Id: 2, Text: "Samsung" }]
     
     this.axios.get("http://167.172.105.3:8000/api/v1/brands/query?device_type_id="+ payload.id)
