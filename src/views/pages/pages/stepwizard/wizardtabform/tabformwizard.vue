@@ -153,6 +153,7 @@
         </div>
 
         <!-- Banner Tabs -->
+        
         <div class="tab-content pb-5" id="myTabContent">
           <div
             class="tab-pane fade show active"
@@ -167,14 +168,18 @@
                     <div class="form-group banner-form">
                       <label>Cihaz Seç</label>
                       <vue-select
-                        v-model="this.$store.state.selectedItems.device"
-                        :options="getDeviceTypes()"
+                       
+                        :options="getStateDeviceTypes"
                         @select="getBrands($event)"
                         placeholder="Seçiniz..."
                       />
+                      
                     </div>
                   </div>
                 </div>
+                <div>
+              
+        </div>
               </form>
             </div>
           </div>
@@ -362,6 +367,9 @@ export default {
   components: {
     services:Services
   },
-  
+  created(){
+    console.log("worked created hooks")
+    this.$store.dispatch("getDeviceTypes")
+  }
 };
 </Script>

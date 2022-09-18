@@ -14,7 +14,7 @@ const mutations = {
   getBrand(state, payload) {
     state.brands = [];
     payload.forEach((item, index) => {
-      let test = { id: index, text: item.Text }
+      let test = { id: item.id, text: item.name }
       state.brands.push(test)
     })
     NextStep("device", "brand");
@@ -25,16 +25,18 @@ const mutations = {
 const actions = {
   getBrands({ commit, rootState }, payload) {
     console.log("getBrands action worked " + payload.id + " " + payload.text)
-    console.log("Rootstate SelectedItem device : " + rootState.selectedItems.device)
-    // rootState.tabDisabled.brand = false;
-    let brandList = [{ Id: 1, Text: "Apple" }, { Id: 2, Text: "Samsung" }]
-    commit("getBrand", brandList);
-    // axios.get("http://localhost:8080/api/v1/brand?device_type_id="+ payload.device_type_id)
-    // .then(response => {
-    //     console.log("brand response : " + response.data);
-    //     commit("getBrand", response.data);
-    // })
-    // .catch(e => console.log(e));  
+    // console.log("Rootstate SelectedItem device : " + rootState.selectedItems.device)
+    // // rootState.tabDisabled.brand = false;
+    // let brandList = [{ Id: 1, Text: "Apple" }, { Id: 2, Text: "Samsung" }]
+    
+    this.axios.get("http://167.172.105.3:8000/api/v1/brands/query?device_type_id="+ payload.id)
+    
+    .then(response => {
+        console.log("brand response : " + response.data.data);
+        commit("getBrand", response.data.data);
+    })
+    .catch(e => console.log(e));  
+    
 
   },
 
