@@ -14,7 +14,7 @@ const mutations = {
   getFixType(state, payload) {
     state.fixTypes = [];
     payload.forEach((item, index) => {
-      let test = { id: index, text: item.Text }
+      let test = { id: item.id, text: item.description }
       state.fixTypes.push(test)
     })     
     NextStep("model", "fixType");
@@ -27,19 +27,14 @@ const actions = {
   getFixTypes({ commit, rootState }, payload) {
     console.log("getFixType action worked " + payload.id + " " + payload.text)
     console.log("Rootstate SelectedItem brand : " + rootState.selectedItems.fixTypes)
-    rootState.tabDisabled.fixTypes = false;
-    let fixTypeList = [{ Id: 1, Text: "Batarya Değişimi" }, { Id: 2, Text: "Şarj Soketi Değişimi" }]
-    commit("getFixType", fixTypeList);
-
-    // axios.get("http://localhost:8080/api/v1/brand?device_type_id="+ payload.device_type_id)
-    // .then(response => {
-    //     console.log("fixTypes response : " + response.data);
-    //     commit("getFixType", response.data);
-    // })
-    // .catch(e => console.log(e));  
-
+    rootState.selectedItems.model = payload;
+    this.axios.get("http://167.172.105.3:8000/api/v1/fix-types/query?device_type_Id="+ rootState.selectedItems.device.id)
+     .then(response => {
+        console.log("fixTypes response : " + response.data.data);
+        commit("getFixType", response.data.data);
+     })
+     .catch(e => console.log(e));
   },
-
 };
 
 export default {
