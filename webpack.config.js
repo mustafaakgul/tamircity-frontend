@@ -31,7 +31,11 @@ module.exports = (env = {}) => ({
         exclude: /node_modules/,
         loader: "babel-loader"
       },
-
+      {
+        test: /\.mjs$/,
+        include: /node_modules/,
+        type: "javascript/auto"
+      },
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],

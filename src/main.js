@@ -185,8 +185,8 @@ import './assets/js/slick.js';
 import './assets/plugins/simple-calendar/simple-calendar.css';
 
 import './assets/css/style.css';
+store.axios = axios;
 const app = createApp(App)
-
 
 /*********Header component**********/
 app.component('layouts', Header);
@@ -384,8 +384,7 @@ app.component('vue3-autocounter', Vue3Autocounter)
 app.component('vue-select', VueSelect);
 app.use(VueAxios, axios)
 app.use(router)
-app.use(store)
-    .mount('#app');
+app.use(store).mount('#app');
 
 
 router.beforeEach((to, from) => {

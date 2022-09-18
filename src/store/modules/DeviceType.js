@@ -1,11 +1,5 @@
 const state ={
   deviceTypes: [
-    {id : 1, text : "TELEFON"} ,
-    {id : 2, text : "TABLET"},
-    {id : 3, text : "OYUN KONSOLU&TV"},
-    {id : 4, text : "PC"},
-    {id : 5, text : "DİJİTAL FOTOĞRAF MAKİNASI&KAMERA"},
-    {id : 6, text : "ELEKTRİKLİ EV/ENDÜSTRİYEL ALETLER"},
   ]
 }
 const getters = {
@@ -23,9 +17,9 @@ const mutations = {
   
   const actions = {
     getDeviceTypes({ commit }) {
-        axios.get("http://localhost:8080/api/v1/device-type/active")
+      this.axios.get("http://167.172.105.3:8000/api/v1/device-types")
         .then(response => {
-            console.log("device type response : " +response.data);
+            console.log(response.data.data);
             commit("getDeviceType", response.data);
         })
         .catch(e => console.log(e));  

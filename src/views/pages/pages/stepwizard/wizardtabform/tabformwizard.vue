@@ -168,7 +168,7 @@
                       <label>Cihaz Seç</label>
                       <vue-select
                         v-model="this.$store.state.selectedItems.device"
-                        :options="getStateDeviceTypes"
+                        :options="getDeviceTypes()"
                         @select="getBrands($event)"
                         placeholder="Seçiniz..."
                       />
@@ -191,7 +191,7 @@
                     <div class="form-group banner-form">
                       <label>Marka Seç</label>
                       <vue-select
-                        v-model="this.$store.state.selectedItems.brand"
+                        
                         :options="getStateBrands"
                         @select="getModels($event)"
                         placeholder="Seçiniz..."
@@ -325,7 +325,7 @@
                   <div class="col-lg-12">
                     <div class="form-group banner-form">
                       <label>Ekstra</label>
-                      <vue-select :options="models" />
+                      <vue-select :options="getStateExtras" />
                     </div>
                   </div>
                 </div>
@@ -346,7 +346,7 @@ import { mapGetters, mapMutations, mapActions } from "vuex";
 import Services from '../../services.vue';
 export default {
   methods: {
-    ...mapActions(["getBrands", "getModels", "getFixTypes","getServiceTypes","getTechServices","getExtras"]),
+    ...mapActions(["getDeviceTypes","getBrands", "getModels", "getFixTypes","getServiceTypes","getTechServices","getExtras"]),
   },
   computed: {
     ...mapGetters({
