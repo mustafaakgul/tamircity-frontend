@@ -14,10 +14,9 @@ const mutations = {
     getTechService(state, payload) {
     state.techServices = [];
     payload.forEach((item, index) => {
-      let test = { id: index, text: item.Text }
+      let test = { id: index, text: item.name, address: item.address }
       state.techServices.push(test)
-    })     
-    console.log("asdsadsadsa")
+    })
     NextStep("serviceType", "techService");
 
   },
@@ -29,15 +28,13 @@ const actions = {
     console.log("getTechServices action worked " + payload.id + " " + payload.text)
     console.log("Rootstate SelectedItem serviceType : " + rootState.selectedItems.techService)
     rootState.tabDisabled.serviceType = false;
-    let techServiceList = [{ Id: 1, Text: "Teknik Servis 1" }, { Id: 2, Text: "Teknik Servis 2" }, { Id: 3, Text: "Teknik Servis 3" }, { Id: 4, Text: "Teknik Servis 4" }]
-    commit("getTechService", techServiceList);
-
-    // axios.get("http://localhost:8080/api/v1/brand?device_type_id="+ payload.device_type_id)
-    // .then(response => {
-    //     console.log("fixTypes response : " + response.data);
-    //     commit("getFixType", response.data);
-    // })
-    // .catch(e => console.log(e));  
+    rootState.selectedItems.serviceType = payload;
+     this.axios.get("http://167.172.105.3:8000/api/v1/technical-services/query?model_id="+ rootState.selectedItems.model.id)
+     .then(response => {
+         console.log("getTechService response : " + response.data.data[0].name);
+        commit("getTechService", response.data.data);
+     })
+     .catch(e => console.log(e));
 
   },
 

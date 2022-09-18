@@ -38,7 +38,7 @@
                           "
                         >
                           <span><i class="feather-map-pin"></i></span>
-                          Newyork, United States
+                          {{ service.address }}
                         </div>
                       </td>
                       <td>
