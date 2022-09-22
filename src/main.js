@@ -68,8 +68,8 @@ import GuideChatuserlist from './views/pages/guide/guide-chat/chatuserlist.vue'
 import GuideChatcontent from './views/pages/guide/guide-chat/chatcontent.vue'
 /*********Guide Dashboard component**********/
 import GuideDashboard from './views/pages/breadcrumb/guidedashboard.vue'
-import Guidedashboard from './views/pages/guide/guide-dashboard/dashboardguide.vue'
-import Dashboardmodal from './views/pages/guide/guide-dashboard/dashboardmodal.vue'
+import TechDashboard from './views/pages/TechPanel/tech-dashboard/dashboardtech.vue'
+import TechDashboardModal from './views/pages/TechPanel/tech-dashboard/dashboardmodal.vue'
 /*********Guide Details component**********/
 import GuideDetail from './views/pages/breadcrumb/guidedetail.vue'
 import TopSection from './views/pages/guide/guide-details/topsection.vue'
@@ -271,8 +271,8 @@ app.component('chatcontent', GuideChatcontent)
 
 /*********Guide Dashboard component**********/
 app.component('guidedashboard', GuideDashboard)
-app.component('dashboardguide', Guidedashboard)
-app.component('dashboardmodal', Dashboardmodal)
+app.component('techdashboard', TechDashboard)
+app.component('techdashboardmodal', TechDashboardModal)
 
 /*********Guide Details component**********/
 app.component('guidedetail', GuideDetail)

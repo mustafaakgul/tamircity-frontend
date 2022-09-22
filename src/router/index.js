@@ -14,7 +14,7 @@ import ExamResults from '../views/pages/guide/exam-results/index'
 import Guideavailability from '../views/pages/guide/guide-availability/index'
 import Guideboonkings from '../views/pages/guide/guide-bookings/index'
 import Guidechatcontent from '../views/pages/guide/guide-chat/index'
-import GuideDashboard from '../views/pages/guide/guide-dashboard/index'
+import GuideDashboard from '../views/pages/TechPanel/tech-dashboard/index'
 import GuideDetails from '../views/pages/guide/guide-details/index'
 import Guidelist from '../views/pages/guide/guide-list/index'
 import Guidenotification from '../views/pages/guide/guide-notification/index'
@@ -181,9 +181,9 @@ const routes = [
     }
     },
     {
-        path: '/guide-dashboard',
-        name: 'guide-dashboard',
-        component: () => import('../views/pages/guide/guide-dashboard/index'),
+        path: '/tech-dashboard',
+        name: 'tech-dashboard',
+        component: () => import('../views/pages/TechPanel/tech-dashboard/index'),
         meta: {
         requiresAuth: true
     }

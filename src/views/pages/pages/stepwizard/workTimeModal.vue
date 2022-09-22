@@ -63,7 +63,7 @@
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim ac
               luctus mattis quis nibh rhoncus vitae eget
             </p>
-            <router-link to="/guide-dashboard" class="btn btn-primary"
+            <router-link to="/tech-dashboard" class="btn btn-primary"
               >Back</router-link
             >
           </div>

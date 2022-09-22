@@ -6230,19 +6230,19 @@ label.file-upload.image-btn {
     color: #FF5F5F;
     border-bottom: 4px solid #FF5F5F;
 }
-.settings-menu .guide-dashboard-menu {
+.settings-menu .tech-dashboard-menu {
     border: 0;
     padding: 0;
     margin: 0;
     list-style: none;
     justify-content: space-between;
 }
-.settings-menu .guide-dashboard-menu li a {
+.settings-menu .tech-dashboard-menu li a {
 	font-size: 16px;
 	width: 120px;
     height: 108px;
 }
-.settings-menu .guide-dashboard-menu li a i {
+.settings-menu .tech-dashboard-menu li a i {
 	font-size: 20px;
 }
 .dash-widget {
@@ -6813,12 +6813,12 @@ label.file-upload.image-btn {
 .card .card-header .sub-title {
 	color: #333344;
 }
-.guide-dashboard-card .bookings-link {
+.tech-dashboard-card .bookings-link {
     font-weight: 600;
     color: #FF5F5F;
     border-bottom: 3px solid #FF5F5F;
 }
-.guide-dashboard-card .bookings-link:hover {
+.tech-dashboard-card .bookings-link:hover {
 	color: #333344;
 	border-bottom: 3px solid #333344;
 }
@@ -9126,10 +9126,10 @@ span.select2.select2-container.select2-container--default {
 	.settings-menu .dashboard-menu li a {
 		width: auto;
 	}
-	.settings-menu .guide-dashboard-menu {
+	.settings-menu .tech-dashboard-menu {
 		justify-content: center;
 	}
-	.settings-menu .guide-dashboard-menu li a {
+	.settings-menu .tech-dashboard-menu li a {
 		width: auto;
 	}
 	.guide-inner-details ul li {
@@ -10304,7 +10304,7 @@ span.select2.select2-container.select2-container--default {
 	.settings-menu .dashboard-menu li a.active {
 		border-bottom: 3px solid #FF5F5F;
 	}
-	.settings-menu .guide-dashboard-menu li a i {
+	.settings-menu .tech-dashboard-menu li a i {
 		font-size: 15px;
 	}
 	.dash-widget {

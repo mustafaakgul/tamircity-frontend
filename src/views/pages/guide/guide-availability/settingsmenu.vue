@@ -3,9 +3,9 @@
 <div class="row">
     <div class="col-md-12">
         <div class="widget settings-menu">
-            <ul class="guide-dashboard-menu dashboard-menu nav">
+            <ul class="tech-dashboard-menu dashboard-menu nav">
                 <li>
-                    <router-link :class="currentPath == 'guide-dashboard' ? 'active' : 'notactive'" to="/guide-dashboard">
+                    <router-link :class="currentPath == 'tech-dashboard' ? 'active' : 'notactive'" to="/tech-dashboard">
                         <div class="dashboard-box">
                             <i class="fas fa-layer-group"></i> <span>Dashboard</span>
                         </div>

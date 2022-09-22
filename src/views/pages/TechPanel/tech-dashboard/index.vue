@@ -7,13 +7,13 @@
         <div class="content content-bottom">
             <div class="container">
                 <settingsmenu></settingsmenu>
-                <dashboardguide></dashboardguide>
+                <techdashboard></techdashboard>
             </div>
         </div>
         <!-- /Page Content -->
         <footerind></footerind>
     </div>
-    <dashboardmodal></dashboardmodal>
+    <techdashboardmodal></techdashboardmodal>
 </template>
 <script>
  

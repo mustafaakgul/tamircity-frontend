@@ -7,7 +7,7 @@
         </span>
     </a>
     <div class="dropdown-menu dropdown-menu-end emp">
-        <router-link class="dropdown-item" to="/guide-dashboard">
+        <router-link class="dropdown-item" to="/tech-dashboard">
             <i class="fas fa-layer-group"></i> Dashboard
         </router-link>
         <router-link class="dropdown-item" to="/guide-notification">

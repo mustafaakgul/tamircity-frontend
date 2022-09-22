@@ -43,7 +43,7 @@
     </div>
     <div class="row">
         <div class="col-lg-6 col-md-12 d-flex">
-            <div class="card guide-dashboard-card w-100">
+            <div class="card tech-dashboard-card w-100">
                 <div class="card-header d-flex justify-content-between align-items-center">
                     <h5 class="card-title sub-title">My Bookings</h5>
                     <router-link to="/guide-bookings" class="bookings-link">View all</router-link>

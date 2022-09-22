@@ -151,7 +151,7 @@
 		  const Eresult= Pdata.find(({ email }) => email === values.email);
 		 if (Eresult) {
 		  if (Eresult.password === values.password) {
-		  router.push('/')  
+		  router.push('/tech-dashboard')  
 		  } else {
 			  document.getElementById("password").innerHTML = "Incorrect password"
 		  }

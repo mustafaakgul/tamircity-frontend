@@ -35,7 +35,7 @@
                 <li class="has-submenu" :class=" guidMenu ? 'active' : 'notactive'">
                     <a href="javascript:void(0);">KAMPANYALAR </a>
                     <!-- <ul class="submenu">
-                        <li :class="currentPath == 'guide-dashboard' ? 'active' : 'notactive'"><router-link to="/guide-dashboard">Dashboard</router-link></li>
+                        <li :class="currentPath == 'tech-dashboard' ? 'active' : 'notactive'"><router-link to="/tech-dashboard">Dashboard</router-link></li>
                         <li :class="currentPath == 'guide-notification' ? 'active' : 'notactive'"><router-link to="/guide-notification">Notification</router-link></li>
                         <li :class="currentPath == 'guide-chat' ? 'active' : 'notactive'"><router-link to="/guide-chat">Chat</router-link></li>
                         <li :class="currentPath == 'guide-bookings' ? 'active' : 'notactive'"><router-link to="/guide-bookings">Bookings</router-link></li>
@@ -171,7 +171,7 @@ $(document).on('click', '#menu_close', function() {
             return this.$route.name == 'user-dashboard' || this.$route.name == 'user-notification' || this.$route.name == 'user-chat' || this.$route.name == 'user-bookings' ||  this.$route.name == 'user-settings' ||  this.$route.name == 'user-wallet' ||  this.$route.name == 'user-reviews' ||  this.$route.name == 'user-payment';
         },
         guidMenu() {
-            return this.$route.name == 'guide-dashboard' || this.$route.name == 'guide-notification' || this.$route.name == 'guide-chat' || this.$route.name == 'guide-bookings' ||  this.$route.name == 'guide-settings' ||  this.$route.name == 'exam-details' ||  this.$route.name == 'exam-results' ||  this.$route.name == 'guide-wallet' ||  this.$route.name == 'guide-subscription' ||  this.$route.name == 'guide-withdrawn' ||  this.$route.name == 'guide-availability' ||  this.$route.name == 'guide-reviews' ||  this.$route.name == 'guide-payment';
+            return this.$route.name == 'tech-dashboard' || this.$route.name == 'guide-notification' || this.$route.name == 'guide-chat' || this.$route.name == 'guide-bookings' ||  this.$route.name == 'guide-settings' ||  this.$route.name == 'exam-details' ||  this.$route.name == 'exam-results' ||  this.$route.name == 'guide-wallet' ||  this.$route.name == 'guide-subscription' ||  this.$route.name == 'guide-withdrawn' ||  this.$route.name == 'guide-availability' ||  this.$route.name == 'guide-reviews' ||  this.$route.name == 'guide-payment';
         },
         pageMenu() {
             return this.$route.name == 'about-us' || this.$route.name == 'contact-us' || this.$route.name == 'booking' || this.$route.name == 'booking-wallet' || this.$route.name == 'guide-list' || this.$route.name == 'guide-details' ||  this.$route.name == 'services' ||  this.$route.name == 'how-it-works' ||  this.$route.name == 'term-condition' ||  this.$route.name == 'privacy-policy';
