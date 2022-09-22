@@ -10,7 +10,7 @@
         <router-link class="dropdown-item" to="/tech-dashboard">
             <i class="fas fa-layer-group"></i> Dashboard
         </router-link>
-        <router-link class="dropdown-item" to="/guide-notification">
+        <router-link class="dropdown-item" to="/tech-notification">
             <i class="fas fa-bell"></i> Notification
         </router-link>
         <router-link class="dropdown-item" to="/guide-bookings"> 

@@ -17,7 +17,7 @@ import Guidechatcontent from '../views/pages/guide/guide-chat/index'
 import GuideDashboard from '../views/pages/TechPanel/tech-dashboard/index'
 import GuideDetails from '../views/pages/guide/guide-details/index'
 import Guidelist from '../views/pages/guide/guide-list/index'
-import Guidenotification from '../views/pages/guide/guide-notification/index'
+import Guidenotification from '../views/pages/TechPanel/tech-notification/index'
 import Guidepayment from '../views/pages/guide/guide-payment/index'
 import Guidereview from '../views/pages/guide/guide-reviews/index'
 import Guidesettings from '../views/pages/guide/guide-settings/index'
@@ -205,9 +205,9 @@ const routes = [
     }
     },
     {
-        path: '/guide-notification',
-        name: 'guide-notification',
-        component: () => import('../views/pages/guide/guide-notification/index'),
+        path: '/tech-notification',
+        name: 'tech-notification',
+        component: () => import('../views/pages/TechPanel/tech-notification/index'),
         meta: {
         requiresAuth: true
     }
@@ -366,7 +366,7 @@ const routes = [
     },
 ];
 export const router = createRouter({
-    history: createWebHistory('template2'),
+    history: createWebHistory('tamircity'),
     linkActiveClass: 'active',
     routes
 });

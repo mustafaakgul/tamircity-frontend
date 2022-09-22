@@ -7014,27 +7014,27 @@ label.file-upload.image-btn {
     padding-bottom: 10px;
     margin-bottom: 20px;
 }
-.guide-notification {
+.tech-notification {
     padding-bottom: 30px;
 }
-.guide-notification-img {
+.tech-notification-img {
 	margin-right: 20px;
 	width: 50px;
 	height: 50px;
 	border-radius: 50px;
 }
-.guide-notification-img img {
+.tech-notification-img img {
 	width: 50px;
 	height: 50px;
 	border-radius: 50px;
 }
-.guide-notification-details p {
+.tech-notification-details p {
 	font-size: 20px;
 }
-.guide-notification-details p span {
+.tech-notification-details p span {
 	color: #333344;
 }
-.guide-notification-details .guide-notification-hours {
+.tech-notification-details .tech-notification-hours {
 	font-size: 15px;
 }
 .guide-bookings-tab {
@@ -10427,7 +10427,7 @@ span.select2.select2-container.select2-container--default {
 	.title-notification {
 		font-size: 16px;
 	}
-	.guide-notification-details p {
+	.tech-notification-details p {
 		font-size: 15px;
 	}
 	.guide-bookings-tab {

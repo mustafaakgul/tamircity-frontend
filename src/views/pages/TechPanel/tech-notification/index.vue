@@ -7,7 +7,7 @@
         <div class="content">
             <div class="container">
                 <settingsmenu></settingsmenu>
-                <notificationguide></notificationguide>
+                <notificationtech></notificationtech>
             </div>
         </div>
         <!-- /Page Content -->
@@ -23,6 +23,6 @@
     mounted() {
 
     },
-    name: 'guide-notification'
+    name: 'tech-notification'
   }
 </Script>

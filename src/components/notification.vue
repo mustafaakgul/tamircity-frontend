@@ -12,7 +12,7 @@
         <div class="noti-content">
             <ul class="notification-list">
                 <li class="notification-message">
-                    <router-link to="/guide-notification">
+                    <router-link to="/tech-notification">
                         <div class="media d-flex">
                             <span class="avatar avatar-sm flex-shrink-0">
                                 <img class="avatar-img rounded-circle" alt="User Image" src="../assets/img/users/user-07.jpg">
@@ -25,7 +25,7 @@
                     </router-link>
                 </li>
                 <li class="notification-message">
-                    <router-link to="/guide-notification">
+                    <router-link to="/tech-notification">
                         <div class="media d-flex">
                             <span class="avatar avatar-sm flex-shrink-0">
                                 <img class="avatar-img rounded-circle" alt="User Image" src="../assets/img/users/user-05.jpg">
@@ -38,7 +38,7 @@
                     </router-link>
                 </li>
                 <li class="notification-message">
-                    <router-link to="/guide-notification">
+                    <router-link to="/tech-notification">
                         <div class="media d-flex">
                             <span class="avatar avatar-sm flex-shrink-0">
                                 <img class="avatar-img rounded-circle" alt="User Image" src="../assets/img/users/user-08.jpg">
@@ -51,7 +51,7 @@
                     </router-link>
                 </li>
                 <li class="notification-message">
-                    <router-link to="/guide-notification">
+                    <router-link to="/tech-notification">
                         <div class="media d-flex">
                             <span class="avatar avatar-sm flex-shrink-0">
                                 <img class="avatar-img rounded-circle" alt="User Image" src="../assets/img/users/user-01.jpg">
@@ -64,7 +64,7 @@
                     </router-link>
                 </li>
                 <li class="notification-message">
-                    <router-link to="/guide-notification">
+                    <router-link to="/tech-notification">
                         <div class="media d-flex">
                             <span class="avatar avatar-sm flex-shrink-0">
                                 <img class="avatar-img rounded-circle" alt="User Image" src="../assets/img/users/user-10.jpg">
@@ -79,7 +79,7 @@
             </ul>
         </div>
         <div class="topnav-dropdown-footer">
-            <router-link to="/guide-notification">View More <i class="feather-arrow-right-circle"></i></router-link>
+            <router-link to="/tech-notification">View More <i class="feather-arrow-right-circle"></i></router-link>
         </div>
     </div>
 </li>

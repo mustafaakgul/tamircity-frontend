@@ -1,6 +1,6 @@
 <template> 
 <!-- Header -->
-<header class="header" v-if="currentPath == 'tech-dashboard' || currentPath == 'guide-notification' || currentPath == 'guide-chat' || currentPath == 'guide-bookings' || currentPath == 'guide-settings' || currentPath == 'exam-details' || currentPath == 'exam-results' || currentPath == 'guide-wallet' || currentPath == 'guide-subscription' || currentPath == 'guide-withdrawn' || currentPath == 'guide-availability' || currentPath == 'guide-reviews' || currentPath == 'guide-payment'">
+<header class="header" v-if="currentPath == 'tech-dashboard' || currentPath == 'tech-notification' || currentPath == 'guide-chat' || currentPath == 'guide-bookings' || currentPath == 'guide-settings' || currentPath == 'exam-details' || currentPath == 'exam-results' || currentPath == 'guide-wallet' || currentPath == 'guide-subscription' || currentPath == 'guide-withdrawn' || currentPath == 'guide-availability' || currentPath == 'guide-reviews' || currentPath == 'guide-payment'">
     <nav class="navbar navbar-expand-lg header-nav">
         <div class="navbar-header">
             <headertoggle />
@@ -36,7 +36,7 @@
                     <a href="javascript:void(0);">Guide <i class="fas fa-chevron-down"></i></a>
                     <ul class="submenu">
                         <li :class="currentPath == 'tech-dashboard' ? 'active' : 'notactive'"><router-link to="/tech-dashboard">Dashboard</router-link></li>
-                        <li :class="currentPath == 'guide-notification' ? 'active' : 'notactive'"><router-link to="/guide-notification">Notification</router-link></li>
+                        <li :class="currentPath == 'tech-notification' ? 'active' : 'notactive'"><router-link to="/tech-notification">Notification</router-link></li>
                         <li :class="currentPath == 'guide-chat' ? 'active' : 'notactive'"><router-link to="/guide-chat">Chat</router-link></li>
                         <li :class="currentPath == 'guide-bookings' ? 'active' : 'notactive'"><router-link to="/guide-bookings">Bookings</router-link></li>
                         <li :class="currentPath == 'guide-settings' ? 'active' : 'notactive'"><router-link to="/guide-settings">Settings</router-link></li>
@@ -133,7 +133,7 @@
                     <a href="javascript:void(0);">Guide <i class="fas fa-chevron-down"></i></a>
                     <ul class="submenu">
                         <li :class="currentPath == 'tech-dashboard' ? 'active' : 'notactive'"><router-link to="/tech-dashboard">Dashboard</router-link></li>
-                        <li :class="currentPath == 'guide-notification' ? 'active' : 'notactive'"><router-link to="/guide-notification">Notification</router-link></li>
+                        <li :class="currentPath == 'tech-notification' ? 'active' : 'notactive'"><router-link to="/tech-notification">Notification</router-link></li>
                         <li :class="currentPath == 'guide-chat' ? 'active' : 'notactive'"><router-link to="/guide-chat">Chat</router-link></li>
                         <li :class="currentPath == 'guide-bookings' ? 'active' : 'notactive'"><router-link to="/guide-bookings">Bookings</router-link></li>
                         <li :class="currentPath == 'guide-settings' ? 'active' : 'notactive'"><router-link to="/guide-settings">Settings</router-link></li>
@@ -276,7 +276,7 @@
                 return this.$route.name == 'user-dashboard' || this.$route.name == 'user-notification' || this.$route.name == 'user-chat' || this.$route.name == 'user-bookings' ||  this.$route.name == 'user-settings' ||  this.$route.name == 'user-wallet' ||  this.$route.name == 'user-reviews' ||  this.$route.name == 'user-payment';
             },
             guidMenu() {
-                return this.$route.name == 'tech-dashboard' || this.$route.name == 'guide-notification' || this.$route.name == 'guide-chat' || this.$route.name == 'guide-bookings' ||  this.$route.name == 'guide-settings' ||  this.$route.name == 'exam-details' ||  this.$route.name == 'exam-results' ||  this.$route.name == 'guide-wallet' ||  this.$route.name == 'guide-subscription' ||  this.$route.name == 'guide-withdrawn' ||  this.$route.name == 'guide-availability' ||  this.$route.name == 'guide-reviews' ||  this.$route.name == 'guide-payment';
+                return this.$route.name == 'tech-dashboard' || this.$route.name == 'tech-notification' || this.$route.name == 'guide-chat' || this.$route.name == 'guide-bookings' ||  this.$route.name == 'guide-settings' ||  this.$route.name == 'exam-details' ||  this.$route.name == 'exam-results' ||  this.$route.name == 'guide-wallet' ||  this.$route.name == 'guide-subscription' ||  this.$route.name == 'guide-withdrawn' ||  this.$route.name == 'guide-availability' ||  this.$route.name == 'guide-reviews' ||  this.$route.name == 'guide-payment';
             },
             pageMenu() {
                 return this.$route.name == 'about-us' || this.$route.name == 'contact-us' || this.$route.name == 'booking' || this.$route.name == 'booking-wallet' || this.$route.name == 'guide-list' || this.$route.name == 'guide-details' ||  this.$route.name == 'services' ||  this.$route.name == 'how-it-works' ||  this.$route.name == 'term-condition' ||  this.$route.name == 'privacy-policy';

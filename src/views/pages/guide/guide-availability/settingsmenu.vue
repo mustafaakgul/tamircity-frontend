@@ -12,7 +12,7 @@
                     </router-link>
                 </li>
                 <li>
-                    <router-link :class="currentPath == 'guide-notification' ? 'active' : 'notactive'" to="/guide-notification">
+                    <router-link :class="currentPath == 'tech-notification' ? 'active' : 'notactive'" to="/tech-notification">
                         <div class="dashboard-box">
                             <i class="fas fa-bell"></i> <span>Notification</span>
                         </div>

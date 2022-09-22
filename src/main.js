@@ -82,7 +82,7 @@ import GuideList from './views/pages/guide/guide-list/guidelist.vue'
 import GuideReport from './views/pages/guide/guide-list/report.vue'
 /*********Guide Notification component**********/
 import GuideNotification from './views/pages/breadcrumb/guidenotification.vue'
-import Notificationguide from './views/pages/guide/guide-notification/notificationguide.vue'
+import Notificationtech from './views/pages/TechPanel/tech-notification/notificationtech.vue'
 /*********Guide Payment component**********/
 import PaymentGuide from './views/pages/breadcrumb/paymentguide.vue'
 import GuidePayment from './views/pages/guide/guide-payment/guidepayment.vue'
@@ -287,7 +287,7 @@ app.component('report', GuideReport)
 
 /*********Guide Notification component**********/
 app.component('guidenotification', GuideNotification)
-app.component('notificationguide', Notificationguide)
+app.component('notificationtech', Notificationtech)
 
 /*********Guide Payment component**********/
 app.component('paymentguide', PaymentGuide)
