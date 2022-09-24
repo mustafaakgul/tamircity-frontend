@@ -40,10 +40,19 @@ import usersettings from '../views/pages/users/user-settings/index.vue'
 import userwallet from '../views/pages/users/user-wallet/index.vue'
 import Termscondition from '../views/pages/pages/termscondition.vue'
 import Stepwizard from '../views/pages/pages/stepwizard/index'
+import TechCandidate from '../views/pages/techcandidate/tech-candidate/formspage/index'
 
 
 
 const routes = [
+    {
+        path: '/techcandidate',
+        name: 'techcandidate',
+        component: () => import('../views/pages/techcandidate/tech-candidate/formspage/index'),
+        meta: {
+            requiresAuth: true
+        }
+    },
     {
         path: '/stepwizard',
         name: 'stepwizard',

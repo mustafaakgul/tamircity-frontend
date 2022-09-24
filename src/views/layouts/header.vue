@@ -86,7 +86,7 @@
         </div>		 
         <ul class="nav header-navbar-rht header-btns">
             <flag />
-            <li class="nav-item"><router-link to="/login" class="btn log-btn">SERVİS BAŞVURU </router-link></li>
+            <li class="nav-item"><router-link to="/techcandidate" class="btn log-btn">SERVİS BAŞVURU </router-link></li>
             <li class="nav-item"><router-link to="/login" class="btn log-btn"><i class="fas fa-circle-user me-1"></i>SERVİS GİRİŞİ </router-link></li>
             <li class="nav-item"><router-link to="/register" class="btn reg-btn">Cihaz ve Rezervasyon Takibi</router-link></li>
         </ul>

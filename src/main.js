@@ -152,6 +152,9 @@ import TermsCondition from './views/pages/pages/termscondition.vue'
 import TabFormWizard from './views/pages/pages/stepwizard/wizardtabform/tabformwizard.vue'
 import WorkTimeModal from './views/pages/pages/stepwizard/workTimeModal.vue'
 
+/*********TechCandidate component**********/
+import TechCandidateFormsPage from './views/pages/techcandidate/tech-candidate/formspage/techcandidateformspage.vue'
+
 
 
 
@@ -206,6 +209,9 @@ app.component('footerind', Footerindex);
 app.component('tabformwizard', TabFormWizard);
 app.component('worktimeModal', WorkTimeModal);
 app.component('Datepicker', Datepicker);
+
+/*********TechCandidate component**********/
+app.component('techcandidateformspage',TechCandidateFormsPage );
 
 /*********Aboutus component**********/
 app.component('aboutpage', Aboutpage);
