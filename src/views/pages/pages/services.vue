@@ -63,17 +63,17 @@
                     </td>
                     <td>
                       <div class="table-booking-payment">
-                      <span>$ 120/210</span>
+                        <span>$ 120/210</span>
                         <p>Partially Paid</p>
                       </div>
                     </td>
                     <td>
                       <div class="table-booking-btn">
                         <a href="javascript:void(0);" class="btn booking-btn-accept">
-                         Accept
+                          Accept
                         </a>
                         <a href="javascript:void(0);" class="btn booking-btn-cancel mb-0">
-                           Cancel
+                          Cancel
                         </a>
                       </div>
                     </td>
