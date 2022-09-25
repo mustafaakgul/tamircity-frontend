@@ -7,75 +7,75 @@
            Teknik Servis Başvuru Formu
           </div>
           <div class="booking-details">
-              <form action="booking-wallet">
+              <form method="POST" @submit.prevent="sendItem()">
                 <div class="row">
                   <div class="col-md-12">
                     <div class="form-group form-focus">
                       <label>Teknik Servis Adı<span class="text-danger">*</span></label>
-                      <input type="text" class="form-control floating" v-model="$store.state.application.techServiceName">
+                      <input type="text" class="form-control floating" v-model="techServiceName">
                       <label class="focus-label">Teknik Servis Adı</label>
                     </div>
                   </div>
                   <div class="col-md-12">
                     <div class="form-group form-focus">
                       <label>İşletme Türü<span class="text-danger">*</span></label>
-                      <input type="text" class="form-control floating" v-model="$store.state.application.businessType">
+                      <input type="text" class="form-control floating" v-model="businessType">
                       <label class="focus-label">İşletme Türü</label>
                     </div>
                   </div>
                   <div class="col-md-12">
                     <div class="form-group form-focus">
                       <label>Adres <span class="text-danger">*</span></label>
-                      <input type="text" class="form-control floating" v-model="$store.state.application.address">
+                      <input type="text" class="form-control floating" v-model="address">
                       <label class="focus-label">Adres</label>
                     </div>
                   </div>
                   <div class="col-md-12">
                     <div class="form-group form-focus">
                       <label>Şube Sayısı<span class="text-danger">*</span></label>
-                      <input type="text" class="form-control floating" v-model="$store.state.application.numberOfBranches">
+                      <input type="number" class="form-control floating" v-model="numberOfBranches">
                       <label class="focus-label">Şube Sayısı</label>
                     </div>
                   </div>
                   <div class="col-md-12">
                     <div class="form-group form-focus">
                       <label>Teknisyen Sayısı<span class="text-danger">*</span></label>
-                      <input type="text" class="form-control floating" v-model="$store.state.application.numberOfTechnicians">
+                      <input type="number" class="form-control floating" v-model="numberOfTechnicians">
                       <label class="focus-label">Teknisyen Sayısı</label>
                     </div>
                   </div>
                   <div class="col-md-12">
                     <div class="form-group form-focus">
                       <label>Ad<span class="text-danger">*</span></label>
-                      <input type="text" class="form-control floating" v-model="$store.state.application.name">
+                      <input type="text" class="form-control floating" v-model="name">
                       <label class="focus-label">Ad</label>
                     </div>
                   </div>
                   <div class="col-md-12">
                     <div class="form-group form-focus">
                       <label>Soyad<span class="text-danger">*</span></label>
-                      <input type="text" class="form-control floating" v-model="$store.state.application.surname">
+                      <input type="text" class="form-control floating" v-model="surname">
                       <label class="focus-label">Soyad</label>
                     </div>
                   </div>
                   <div class="col-md-12">
                     <div class="form-group form-focus">
                       <label>E-Posta<span class="text-danger">*</span></label>
-                      <input type="text" class="form-control floating" v-model="$store.state.application.email">
+                      <input type="text" class="form-control floating" v-model="email">
                       <label class="focus-label">E-Posta</label>
                     </div>
                   </div>
                   <div class="col-md-12">
                     <div class="form-group form-focus">
                       <label>Telefon<span class="text-danger">*</span></label>
-                      <input type="text" class="form-control floating" v-model="$store.state.application.phone">
+                      <input type="text" class="form-control floating" v-model="phone">
                       <label class="focus-label">Telefon</label>
                     </div>
                   </div>
                   <div class="col-md-12 text-end">
                     <div class="form-group form-focus mb-0">
                       <button type="submit" class="btn back-btn">İptal</button>
-                      <button type="submit" class="btn btn-primary next-btn" @click="saveApplication()">Başvuru Yap</button>
+                      <button type="submit" value="Submit" class="btn btn-primary next-btn">Başvuru Yap</button>
                     </div>
                   </div>
                 </div>
@@ -87,13 +87,71 @@
   </section>
 </template>
 
-<Script>
-import Vue from "vue";
-import { mapGetters, mapMutations, mapActions } from "vuex";
 
+<script>
+import axios from "axios";
+const appData = {
+  todolist: []
+}
 export default {
-  methods: {
-    ...mapActions(["saveApplication"]),
+  name: 'App',
+  data() {
+    return appData;
   },
-};
-</Script>
+  mounted: function() {
+  },
+  methods: {
+    sendItem: sendItem,
+  }
+}
+
+
+async function sendItem() {
+  const params = new URLSearchParams();
+  params.append('service_name', this.techServiceName);
+  params.append('business_type', this.businessType);
+  params.append('address', this.address);
+  params.append('number_of_branches', this.numberOfBranches);
+  params.append('number_of_technicians', this.numberOfTechnicians);
+  params.append('name', this.name);
+  params.append('surname', this.surname);
+  params.append('email', this.email);
+  params.append('phone_number', this.phone);
+
+  await axios.post("http://localhost:8888/api/v1/technical-services-candidate/apply",
+      {
+        service_name: this.techServiceName,
+        business_type: this.businessType,
+        address: this.address,
+        number_of_branches: this.numberOfBranches,
+        number_of_technicians: this.numberOfTechnicians,
+        name: this.name,
+        surname: this.surname,
+        email: this.email,
+        phone_number: this.phone
+      },
+      {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }
+  ).then((response) => {
+    this.thumbnailUrl = response.data.screenshot;
+  })
+      .catch((error) => {
+        window.alert(`The API returned an error: ${error}`);
+      });
+}
+
+</script>
+
+<!--<Script>-->
+<!--import Vue from "vue";-->
+<!--import { mapGetters, mapMutations, mapActions } from "vuex";-->
+
+<!--export default {-->
+<!--  methods: {-->
+<!--    ...mapActions(["saveApplication"]),-->
+<!--  },-->
+<!--};-->
+<!--</Script>-->
