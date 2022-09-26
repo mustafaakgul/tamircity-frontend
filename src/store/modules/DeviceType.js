@@ -37,7 +37,7 @@ const mutations = {
   
   const actions = {
     getDeviceTypes({ commit }) {
-      this.axios.get("http://167.172.105.3:8000/api/v1/device-types")
+      this.axios.get("/api/v1/device-types")
         .then(response => {
             console.log(response.data.data);
             commit("getDeviceType", response.data.data);

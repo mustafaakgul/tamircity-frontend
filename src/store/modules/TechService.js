@@ -29,9 +29,9 @@ const actions = {
     console.log("Rootstate SelectedItem serviceType : " + rootState.selectedItems.techService)
     rootState.tabDisabled.serviceType = false;
     rootState.selectedItems.serviceType = payload;
-     this.axios.get("http://167.172.105.3:8000/api/v1/technical-services/query?model_id="+ rootState.selectedItems.model.id)
+     this.axios.get("/api/v1/technical-services/query?model_id="+ rootState.selectedItems.model.id)
      .then(response => {
-         console.log("getTechService response : " + response.data.data[0].name);
+         console.log("getTechService response : " + JSON.stringify(response.data.data));
         commit("getTechService", response.data.data);
      })
      .catch(e => console.log(e));

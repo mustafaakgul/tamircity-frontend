@@ -69,12 +69,12 @@
                     </td>
                     <td>
                       <div class="table-booking-btn">
-                        <a href="javascript:void(0);" class="btn booking-btn-accept">
-                          Accept
+                        <a href="javascript:void(0);" @click="getExtras(service)" class="btn booking-btn-accept">
+                          Seç
                         </a>
-                        <a href="javascript:void(0);" class="btn booking-btn-cancel mb-0">
+                        <!-- <a href="javascript:void(0);" class="btn booking-btn-cancel mb-0">
                           Cancel
-                        </a>
+                        </a> -->
                       </div>
                     </td>
                   </tr>
@@ -100,5 +100,8 @@ export default {
       getStateTechServices: "getStateTechServices",
     }),
   },
+  methods:{
+    ...mapActions(["getExtras"])
+  }
 };
 </script>

@@ -29,7 +29,7 @@ const actions = {
      rootState.selectedItems.device = payload;
     // let brandList = [{ Id: 1, Text: "Apple" }, { Id: 2, Text: "Samsung" }]
     
-    this.axios.get("http://167.172.105.3:8000/api/v1/brands/query?device_type_id="+ payload.id)
+    this.axios.get("/api/v1/brands/query?device_type_id="+ payload.id)
     
     .then(response => {
         console.log("brand response : " + response.data.data);

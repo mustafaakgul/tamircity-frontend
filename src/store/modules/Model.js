@@ -29,7 +29,7 @@ const mutations = {
       console.log("Rootstate SelectedItem brand : " +rootState.selectedItems.brand)
       console.log("Rootstate SelectedItem device : " +rootState.selectedItems.device.id)
       rootState.tabDisabled.model = false;
-        this.axios.get("http://167.172.105.3:8000/api/v1/models/query?brand_id="+payload.id +"&device_type_id="+ rootState.selectedItems.device.id)
+        this.axios.get("/api/v1/models/query?brand_id="+payload.id +"&device_type_id="+ rootState.selectedItems.device.id)
          .then(response => {
              console.log("model response : " + response.data.data);
             commit("getModel", response.data.data);

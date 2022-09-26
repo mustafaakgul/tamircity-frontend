@@ -2,6 +2,7 @@ import { createApp } from 'vue';
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import App from "./App.vue";
+import config from "./public/config.json"
 import { store } from "./store/store"
 
 import { router } from './router';
@@ -188,6 +189,8 @@ import './assets/js/slick.js';
 import './assets/plugins/simple-calendar/simple-calendar.css';
 
 import './assets/css/style.css';
+
+axios.defaults.baseURL=config.api_base_url;
 store.axios = axios;
 const app = createApp(App)
 
@@ -388,6 +391,7 @@ app.component('termscondition', TermsCondition)
 app.component('vue3-autocounter', Vue3Autocounter)
 
 app.component('vue-select', VueSelect);
+
 app.use(VueAxios, axios)
 app.use(router)
 app.use(store).mount('#app');

@@ -28,7 +28,7 @@ const actions = {
     console.log("getServiceType action worked " + payload.id + " " + payload.text)
     console.log("Rootstate SelectedItem serviceType : " + rootState.selectedItems.serviceType)
     rootState.tabDisabled.serviceType = false;
-     this.axios.get("http://167.172.105.3:8000/api/v1/service-types")
+     this.axios.get("/api/v1/service-types")
      .then(response => {
         console.log("getServiceType response : " + response.data.data);
          commit("getServiceType", response.data.data);

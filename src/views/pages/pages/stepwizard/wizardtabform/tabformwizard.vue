@@ -291,7 +291,6 @@
                   <div class="col-lg-12">
                     <div class="form-group banner-form">
                       <label>Servis Seçimi</label>
-                      
                       <services ></services>
                     </div>
                   </div>
@@ -311,7 +310,7 @@
                   <div class="col-lg-12">
                     <div class="form-group banner-form">
                       <label>Ekstra</label>
-                      <vue-select />
+                      <vue-select/>
                     </div>
                   </div>
                 </div>
@@ -330,7 +329,7 @@
                   <div class="col-lg-12">
                     <div class="form-group banner-form">
                       <label>Ekstra</label>
-                      <vue-select :options="getStateExtras" />
+                      <vue-select @select="createReservation($event)" :options="getStateExtras" />
                     </div>
                   </div>
                 </div>
@@ -351,7 +350,7 @@ import { mapGetters, mapMutations, mapActions } from "vuex";
 import Services from '../../services.vue';
 export default {
   methods: {
-    ...mapActions(["getDeviceTypes","getBrands", "getModels", "getFixTypes","getServiceTypes","getTechServices","getExtras"]),
+    ...mapActions(["getDeviceTypes","getBrands", "getModels", "getFixTypes","getServiceTypes","getTechServices","getExtras","createReservation"]),
   },
   computed: {
     ...mapGetters({
@@ -369,6 +368,7 @@ export default {
   },
   created(){
     console.log("worked created hooks")
+    
     this.$store.dispatch("getDeviceTypes")
   }
 };
