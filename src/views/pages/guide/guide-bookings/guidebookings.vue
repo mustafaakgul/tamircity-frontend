@@ -5,16 +5,16 @@
         <div class="guide-bookings-tab">
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
-                    <a class="nav-link active" id="new-bookings" data-bs-toggle="tab" href="#new_bookings" role="tab" aria-controls="new_bookings" aria-selected="true">Bekleyenler</a>
+                    <a v-on:click="hello('pending')" class="nav-link active" id="new-bookings" data-bs-toggle="tab" href="#new_bookings" role="tab" aria-controls="new_bookings" aria-selected="true">Bekleyenler</a>
                 </li>
                 <li class="nav-item" role="presentation">
-                  <a class="nav-link" id="approved-booking" data-bs-toggle="tab" href="#approved_booking" role="tab" aria-controls="approved_booking" aria-selected="false">Onaylananlar</a>
+                    <a v-on:click="hello('approved')" class="nav-link" id="approved-booking" data-bs-toggle="tab" href="#approved_booking" role="tab" aria-controls="approved_booking" aria-selected="false">Onaylananlar</a>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="completed-booking" data-bs-toggle="tab" href="#completed_booking" role="tab" aria-controls="completed_booking" aria-selected="false">Tamamlananlar</a>
+                    <a v-on:click="hello('completed')" class="nav-link" id="completed-booking" data-bs-toggle="tab" href="#completed_booking" role="tab" aria-controls="completed_booking" aria-selected="false">Tamamlananlar</a>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="cancelled-booking" data-bs-toggle="tab" href="#cancelled_booking" role="tab" aria-controls="cancelled_booking" aria-selected="false">İptal Edilenler</a>
+                    <a v-on:click="hello('cancelled')" class="nav-link" id="cancelled-booking" data-bs-toggle="tab" href="#cancelled_booking" role="tab" aria-controls="cancelled_booking" aria-selected="false">İptal Edilenler</a>
                 </li>
             </ul>
         </div>
@@ -25,7 +25,7 @@
                         <div class="table-responsive">
                             <table class="table table-center mb-0">
                                 <tbody>
-                                    <tr>
+                                    <tr v-for="item in pendingBookings" :key="item.id">
                                         <td>
                                             <div class="table-booking d-flex align-items-center">
                                                 <div class="table-booking-img">
@@ -35,135 +35,33 @@
                                                 </div>
                                                 <div class="table-booking-info">
                                                     <router-link to="/guide-settings">
-                                                        George Anderson
+                                                        {{ item.full_name }}
                                                     </router-link>
-                                                    <p><i class="fas fa-clock me-1"></i> 14 Nov 2022, 10.00 AM</p>
+                                                    <p><i class="fas fa-clock me-1"></i>{{ item.reservation_date }}</p>
                                                 </div>
                                             </div>
                                         </td>
                                         <td>
                                             <div class="table-booking-address d-flex align-items-center">
                                                 <span><i class="feather-map-pin"></i></span>
-                                                Newyork, United States
+                                                {{ item.model_name}}
                                             </div>
                                         </td>
                                         <td>
                                             <div class="table-booking-address d-flex align-items-center">
                                                 <span><i class="feather-mail"></i></span>
-                                                georgeanderson@example.com
+                                                {{ item.email }}
                                             </div>
                                         </td>
                                         <td>
                                             <div class="table-booking-address d-flex align-items-center">
                                                 <span><i class="feather-phone-call"></i></span>
-                                                +1 923 782 4575
+                                                {{ item.phone_number }}
                                             </div>
                                         </td>
                                         <td>
                                             <div class="table-booking-payment">
                                                 <span>$ 120/210</span>
-                                                <p>Partially Paid</p>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="table-booking-btn">
-                                                <a href="javascript:void(0);" class="btn booking-btn-accept">
-                                                    <i class="far fa-circle-check me-1"></i> Accept
-                                                </a>
-                                                <a href="javascript:void(0);" class="btn booking-btn-cancel mb-0">
-                                                    <i class="far fa-circle-xmark me-1"></i> Cancel
-                                                </a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="table-booking d-flex align-items-center">
-                                                <div class="table-booking-img">
-                                                    <router-link to="/guide-settings">
-                                                        <img class="avatar me-2 avatar-img" src="../../../../assets/img/profiles/avatar-02.jpg" alt="User Image">
-                                                    </router-link>
-                                                </div>
-                                                <div class="table-booking-info">
-                                                    <router-link to="/guide-settings">
-                                                        James Harrem
-                                                    </router-link>
-                                                    <p><i class="fas fa-clock me-1"></i> 13 Aug 2022, 08.00 AM</p>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="table-booking-address d-flex align-items-center">
-                                                <span><i class="feather-map-pin"></i></span>
-                                                London, United Kingdom
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="table-booking-address d-flex align-items-center">
-                                                <span><i class="feather-mail"></i></span>
-                                                jamesharrem@example.com
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="table-booking-address d-flex align-items-center">
-                                                <span><i class="feather-phone-call"></i></span>
-                                                +1 823 782 4575
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="table-booking-payment">
-                                                <span>$ 600/450</span>
-                                                <p>Partially Paid</p>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="table-booking-btn">
-                                                <a href="javascript:void(0);" class="btn booking-btn-accept">
-                                                    <i class="far fa-circle-check me-1"></i> Accept
-                                                </a>
-                                                <a href="javascript:void(0);" class="btn booking-btn-cancel mb-0">
-                                                    <i class="far fa-circle-xmark me-1"></i> Cancel
-                                                </a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="table-booking d-flex align-items-center">
-                                                <div class="table-booking-img">
-                                                    <router-link to="/guide-settings">
-                                                        <img class="avatar me-2 avatar-img" src="../../../../assets/img/profiles/avatar-05.jpg" alt="User Image">
-                                                    </router-link>
-                                                </div>
-                                                <div class="table-booking-info">
-                                                    <router-link to="/guide-settings">
-                                                        Veronica
-                                                    </router-link>
-                                                    <p><i class="fas fa-clock me-1"></i> 01 Jan 2022, 12.00 PM</p>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="table-booking-address d-flex align-items-center">
-                                                <span><i class="feather-map-pin"></i></span>
-                                                Newyork, United States
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="table-booking-address d-flex align-items-center">
-                                                <span><i class="feather-mail"></i></span>
-                                                veronica@example.com
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="table-booking-address d-flex align-items-center">
-                                                <span><i class="feather-phone-call"></i></span>
-                                                +1 923 782 6852
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="table-booking-payment">
-                                                <span>$ 300/450</span>
                                                 <p>Partially Paid</p>
                                             </div>
                                         </td>
@@ -190,7 +88,7 @@
                   <div class="table-responsive">
                     <table class="table table-center mb-0">
                       <tbody>
-                      <tr>
+                      <tr v-for="item in approvedBookings" :key="item.id">
                         <td>
                           <div class="table-booking d-flex align-items-center">
                             <div class="table-booking-img">
@@ -200,28 +98,28 @@
                             </div>
                             <div class="table-booking-info">
                               <router-link to="/guide-settings">
-                                George Anderson
+                                {{ item.full_name }}
                               </router-link>
-                              <p><i class="fas fa-clock me-1"></i> 14 Nov 2022, 10.00 AM</p>
+                              <p><i class="fas fa-clock me-1"></i>{{ item.reservation_date }}</p>
                             </div>
                           </div>
                         </td>
                         <td>
                           <div class="table-booking-address d-flex align-items-center">
                             <span><i class="feather-map-pin"></i></span>
-                            Newyork, United States
+                              {{ item.model_name}}
                           </div>
                         </td>
                         <td>
                           <div class="table-booking-address d-flex align-items-center">
                             <span><i class="feather-mail"></i></span>
-                            georgeanderson@example.com
+                              {{ item.email }}
                           </div>
                         </td>
                         <td>
                           <div class="table-booking-address d-flex align-items-center">
                             <span><i class="feather-phone-call"></i></span>
-                            +1 923 782 4575
+                              {{ item.phone_number }}
                           </div>
                         </td>
                         <td>
@@ -232,105 +130,9 @@
                         </td>
                         <td>
                           <div class="table-booking-completed">
-                                                  <span>
-                                                      <i class="far fa-circle-check me-1"></i> Completed
-                                                  </span>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="table-booking d-flex align-items-center">
-                            <div class="table-booking-img">
-                              <router-link to="/guide-settings">
-                                <img class="avatar me-2 avatar-img" src="../../../../assets/img/profiles/avatar-02.jpg" alt="User Image">
-                              </router-link>
-                            </div>
-                            <div class="table-booking-info">
-                              <router-link to="/guide-settings">
-                                James Harrem
-                              </router-link>
-                              <p><i class="fas fa-clock me-1"></i> 13 Aug 2022, 08.00 AM</p>
-                            </div>
-                          </div>
-                        </td>
-                        <td>
-                          <div class="table-booking-address d-flex align-items-center">
-                            <span><i class="feather-map-pin"></i></span>
-                            London, United Kingdom
-                          </div>
-                        </td>
-                        <td>
-                          <div class="table-booking-address d-flex align-items-center">
-                            <span><i class="feather-mail"></i></span>
-                            jamesharrem@example.com
-                          </div>
-                        </td>
-                        <td>
-                          <div class="table-booking-address d-flex align-items-center">
-                            <span><i class="feather-phone-call"></i></span>
-                            +1 823 782 4575
-                          </div>
-                        </td>
-                        <td>
-                          <div class="table-booking-payment">
-                            <span>$ 600</span>
-                            <p>Fully Paid</p>
-                          </div>
-                        </td>
-                        <td>
-                          <div class="table-booking-completed">
-                                                  <span>
-                                                      <i class="far fa-circle-check me-1"></i> Completed
-                                                  </span>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="table-booking d-flex align-items-center">
-                            <div class="table-booking-img">
-                              <router-link to="/guide-settings">
-                                <img class="avatar me-2 avatar-img" src="../../../../assets/img/profiles/avatar-05.jpg" alt="User Image">
-                              </router-link>
-                            </div>
-                            <div class="table-booking-info">
-                              <router-link to="/guide-settings">
-                                Veronica
-                              </router-link>
-                              <p><i class="fas fa-clock me-1"></i> 01 Jan 2022, 12.00 PM</p>
-                            </div>
-                          </div>
-                        </td>
-                        <td>
-                          <div class="table-booking-address d-flex align-items-center">
-                            <span><i class="feather-map-pin"></i></span>
-                            Newyork, United States
-                          </div>
-                        </td>
-                        <td>
-                          <div class="table-booking-address d-flex align-items-center">
-                            <span><i class="feather-mail"></i></span>
-                            veronica@example.com
-                          </div>
-                        </td>
-                        <td>
-                          <div class="table-booking-address d-flex align-items-center">
-                            <span><i class="feather-phone-call"></i></span>
-                            +1 923 782 6852
-                          </div>
-                        </td>
-                        <td>
-                          <div class="table-booking-payment">
-                            <span>$ 300</span>
-                            <p>Fully Paid</p>
-                          </div>
-                        </td>
-                        <td>
-                          <div class="table-booking-completed">
-                                                  <span>
-                                                      <i class="far fa-circle-check me-1"></i> Completed
-                                                  </span>
+                            <span>
+                                <i class="far fa-circle-check me-1"></i> Completed
+                            </span>
                           </div>
                         </td>
                       </tr>
@@ -346,7 +148,7 @@
                         <div class="table-responsive">
                             <table class="table table-center mb-0">
                                 <tbody>
-                                    <tr>
+                                    <tr v-for="item in completedBookings" :key="item.id">
                                         <td>
                                             <div class="table-booking d-flex align-items-center">
                                                 <div class="table-booking-img">
@@ -356,129 +158,33 @@
                                                 </div>
                                                 <div class="table-booking-info">
                                                     <router-link to="/guide-settings">
-                                                        George Anderson
+                                                        {{ item.full_name }}
                                                     </router-link>
-                                                    <p><i class="fas fa-clock me-1"></i> 14 Nov 2022, 10.00 AM</p>
+                                                    <p><i class="fas fa-clock me-1"></i>{{ item.reservation_date}}</p>
                                                 </div>
                                             </div>
                                         </td>
                                         <td>
                                             <div class="table-booking-address d-flex align-items-center">
                                                 <span><i class="feather-map-pin"></i></span>
-                                                Newyork, United States
+                                                  {{ item.model_name}}
                                             </div>
                                         </td>
                                         <td>
                                             <div class="table-booking-address d-flex align-items-center">
                                                 <span><i class="feather-mail"></i></span>
-                                                georgeanderson@example.com
+                                                  {{ item.email }}
                                             </div>
                                         </td>
                                         <td>
                                             <div class="table-booking-address d-flex align-items-center">
                                                 <span><i class="feather-phone-call"></i></span>
-                                                +1 923 782 4575
+                                                  {{ item.phone_number }}
                                             </div>
                                         </td>
                                         <td>
                                             <div class="table-booking-payment">
                                                 <span>$ 120</span>
-                                                <p>Fully Paid</p>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="table-booking-completed">
-                                                <span>
-                                                    <i class="far fa-circle-check me-1"></i> Completed
-                                                </span>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="table-booking d-flex align-items-center">
-                                                <div class="table-booking-img">
-                                                    <router-link to="/guide-settings">
-                                                        <img class="avatar me-2 avatar-img" src="../../../../assets/img/profiles/avatar-02.jpg" alt="User Image">
-                                                    </router-link>
-                                                </div>
-                                                <div class="table-booking-info">
-                                                    <router-link to="/guide-settings">
-                                                        James Harrem
-                                                    </router-link>
-                                                    <p><i class="fas fa-clock me-1"></i> 13 Aug 2022, 08.00 AM</p>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="table-booking-address d-flex align-items-center">
-                                                <span><i class="feather-map-pin"></i></span>
-                                                London, United Kingdom
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="table-booking-address d-flex align-items-center">
-                                                <span><i class="feather-mail"></i></span>
-                                                jamesharrem@example.com
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="table-booking-address d-flex align-items-center">
-                                                <span><i class="feather-phone-call"></i></span>
-                                                +1 823 782 4575
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="table-booking-payment">
-                                                <span>$ 600</span>
-                                                <p>Fully Paid</p>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="table-booking-completed">
-                                                <span>
-                                                    <i class="far fa-circle-check me-1"></i> Completed
-                                                </span>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="table-booking d-flex align-items-center">
-                                                <div class="table-booking-img">
-                                                    <router-link to="/guide-settings">
-                                                        <img class="avatar me-2 avatar-img" src="../../../../assets/img/profiles/avatar-05.jpg" alt="User Image">
-                                                    </router-link>
-                                                </div>
-                                                <div class="table-booking-info">
-                                                    <router-link to="/guide-settings">
-                                                        Veronica
-                                                    </router-link>
-                                                    <p><i class="fas fa-clock me-1"></i> 01 Jan 2022, 12.00 PM</p>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="table-booking-address d-flex align-items-center">
-                                                <span><i class="feather-map-pin"></i></span>
-                                                Newyork, United States
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="table-booking-address d-flex align-items-center">
-                                                <span><i class="feather-mail"></i></span>
-                                                veronica@example.com
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="table-booking-address d-flex align-items-center">
-                                                <span><i class="feather-phone-call"></i></span>
-                                                +1 923 782 6852
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="table-booking-payment">
-                                                <span>$ 300</span>
                                                 <p>Fully Paid</p>
                                             </div>
                                         </td>
@@ -502,7 +208,7 @@
                         <div class="table-responsive">
                             <table class="table table-center mb-0">
                                 <tbody>
-                                    <tr>
+                                    <tr v-for="item in cancelledBookings" :key="item.id">
                                         <td>
                                             <div class="table-booking d-flex align-items-center">
                                                 <div class="table-booking-img">
@@ -512,129 +218,33 @@
                                                 </div>
                                                 <div class="table-booking-info">
                                                     <router-link to="/guide-settings">
-                                                        George Anderson
+                                                        {{ item.full_name }}
                                                     </router-link>
-                                                    <p><i class="fas fa-clock me-1"></i> 14 Nov 2022, 10.00 AM</p>
+                                                    <p><i class="fas fa-clock me-1"></i>{{ item.reservation_date }}</p>
                                                 </div>
                                             </div>
                                         </td>
                                         <td>
                                             <div class="table-booking-address d-flex align-items-center">
                                                 <span><i class="feather-map-pin"></i></span>
-                                                Newyork, United States
+                                                  {{ item.model_name}}
                                             </div>
                                         </td>
                                         <td>
                                             <div class="table-booking-address d-flex align-items-center">
                                                 <span><i class="feather-mail"></i></span>
-                                                georgeanderson@example.com
+                                                  {{ item.email }}
                                             </div>
                                         </td>
                                         <td>
                                             <div class="table-booking-address d-flex align-items-center">
                                                 <span><i class="feather-phone-call"></i></span>
-                                                +1 923 782 4575
+                                                  {{ item.phone_number }}
                                             </div>
                                         </td>
                                         <td>
                                             <div class="table-booking-payment">
                                                 <span>$ 30/10</span>
-                                                <p>Un Paid</p>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="table-booking-cancelled">
-                                                <span>
-                                                    <i class="far fa-circle-check me-1"></i> Cancelled
-                                                </span>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="table-booking d-flex align-items-center">
-                                                <div class="table-booking-img">
-                                                    <router-link to="/guide-settings">
-                                                        <img class="avatar me-2 avatar-img" src="../../../../assets/img/profiles/avatar-02.jpg" alt="User Image">
-                                                    </router-link>
-                                                </div>
-                                                <div class="table-booking-info">
-                                                    <router-link to="/guide-settings">
-                                                        James Harrem
-                                                    </router-link>
-                                                    <p><i class="fas fa-clock me-1"></i> 13 Aug 2022, 08.00 AM</p>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="table-booking-address d-flex align-items-center">
-                                                <span><i class="feather-map-pin"></i></span>
-                                                London, United Kingdom
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="table-booking-address d-flex align-items-center">
-                                                <span><i class="feather-mail"></i></span>
-                                                jamesharrem@example.com
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="table-booking-address d-flex align-items-center">
-                                                <span><i class="feather-phone-call"></i></span>
-                                                +1 823 782 4575
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="table-booking-payment">
-                                                <span>$ 10/60</span>
-                                                <p>Un Paid</p>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="table-booking-cancelled">
-                                                <span>
-                                                    <i class="far fa-circle-check me-1"></i> Cancelled
-                                                </span>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="table-booking d-flex align-items-center">
-                                                <div class="table-booking-img">
-                                                    <router-link to="/guide-settings">
-                                                        <img class="avatar me-2 avatar-img" src="../../../../assets/img/profiles/avatar-05.jpg" alt="User Image">
-                                                    </router-link>
-                                                </div>
-                                                <div class="table-booking-info">
-                                                    <router-link to="/guide-settings">
-                                                        Veronica
-                                                    </router-link>
-                                                    <p><i class="fas fa-clock me-1"></i> 01 Jan 2022, 12.00 PM</p>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="table-booking-address d-flex align-items-center">
-                                                <span><i class="feather-map-pin"></i></span>
-                                                Newyork, United States
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="table-booking-address d-flex align-items-center">
-                                                <span><i class="feather-mail"></i></span>
-                                                veronica@example.com
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="table-booking-address d-flex align-items-center">
-                                                <span><i class="feather-phone-call"></i></span>
-                                                +1 923 782 6852
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="table-booking-payment">
-                                                <span>$ 0/210</span>
                                                 <p>Un Paid</p>
                                             </div>
                                         </td>
@@ -657,3 +267,63 @@
 </div>
 <!-- /Guide Bookings -->   
 </template>
+
+<script>
+import axios from "axios";
+
+export default {
+    name: "GuideBookings",
+    data() {
+      return {
+        pendingBookings: [],
+        approvedBookings: [],
+        cancelledBookings: [],
+        completedBookings: [],
+      }
+    },
+    mounted () {
+      this.getBookingPending()
+    },
+    methods: {
+        getBookingApproved() {
+          axios.get('http://localhost:8888/api/v1/reservations/approved?technical_service_id=1')
+              .then(response => {
+                console.log(response.data.data)
+                this.approvedBookings = response.data.data
+              })
+        },
+        getBookingCancelled() {
+          axios.get('http://localhost:8888/api/v1/reservations/cancelled?technical_service_id=1')
+              .then(response => {
+                console.log(response.data.data)
+                this.cancelledBookings = response.data.data
+              })
+        },
+        getBookingPending() {
+          axios.get('http://localhost:8888/api/v1/reservations/pending?technical_service_id=1')
+              .then(response => {
+                console.log(response.data.data)
+                this.pendingBookings = response.data.data
+              })
+        },
+        getBookingCompleted() {
+          axios.get('http://localhost:8888/api/v1/reservations/completed?technical_service_id=1')
+              .then(response => {
+                console.log(response.data.data)
+                this.completedBookings = response.data.data
+              })
+        },
+        hello(message) {
+            if( message == "pending" ) {
+                this.getBookingPending()
+            } else if( message == "approved" ) {
+                this.getBookingApproved()
+            } else if( message == "completed" ) {
+                this.getBookingCompleted()
+            } else if( message == "cancelled" ) {
+                this.getBookingCancelled()
+            }
+        }
+    }
+}
+</script>
