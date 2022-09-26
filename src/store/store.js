@@ -11,6 +11,7 @@ import * as getters from "./getters"
 import * as mutations from "./mutations"
 import * as actions from "./actions"
 import reservation from './modules/reservation';
+import panelDashboard from './modules/panelDashboard';
 
 export const store = new Vuex.Store({
     state: {
@@ -45,7 +46,8 @@ export const store = new Vuex.Store({
         serviceType: serviceType,
         techService : techService,
         extra: extra,
-        reservation : reservation
+        reservation : reservation,
+        panelDashboard : panelDashboard
     }
     // https://vuex.vuejs.org/guide/modules.html
 })
