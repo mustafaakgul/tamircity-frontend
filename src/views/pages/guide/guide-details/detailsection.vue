@@ -8,16 +8,16 @@
                 <div class="guide-tab">
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <a class="nav-link active" id="guide-details" data-bs-toggle="tab" href="#hizmetler" role="tab" aria-controls="guidedetails" aria-selected="true">Hizmetler</a>
+                            <a class="nav-link active" id="guide-details" data-bs-toggle="tab" href="#servicestype" role="tab" aria-controls="servicestype" aria-selected="true">Hizmetler</a>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <a class="nav-link" id="guide-reviews" data-bs-toggle="tab" href="#comments" role="tab" aria-controls="guidereviews" aria-selected="false">Yorumlar</a>
+                            <a class="nav-link" id="guide-reviews" data-bs-toggle="tab" href="#comments" role="tab" aria-controls="comments" aria-selected="false">Yorumlar</a>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <a class="nav-link" id="guide-reviews" data-bs-toggle="tab" href="#meetings" role="tab" aria-controls="guidereviews" aria-selected="false">Randevu</a>
+                            <a class="nav-link" id="guide-reviews" data-bs-toggle="tab" href="#meetings" role="tab" aria-controls="meetings" aria-selected="false">Randevu</a>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <a class="nav-link" id="guide-reviews" data-bs-toggle="tab" href="#informations" role="tab" aria-controls="guidereviews" aria-selected="false">Bilgiler</a>
+                            <a class="nav-link" id="guide-reviews" data-bs-toggle="tab" href="#informations" role="tab" aria-controls="informations" aria-selected="false">Bilgiler</a>
                         </li>
                     </ul>
                 </div>
@@ -25,13 +25,13 @@
         </div>
         <div class="tab-content" id="myTabContent">
             <!-- Hizmetler İçerik -->
-            <div class="tab-pane fade show active pb-5" id="hizmetler" role="tabpanel" aria-labelledby="guide-details">
+            <div class="tab-pane fade show active pb-5" id="servicestype" role="tabpanel" aria-labelledby="guide-details">
                 <!-- TELEFON -->
                 <div class="row">
                     <div class="col-md-12 d-flex">
                         <div class="guide-right w-100 services-vuecordion" id="app">
                            <header>
-                                <h1><span>TELEFON</span></h1>
+                                <h2><span>TELEFON</span></h2>
                             </header>
                             <div class="faqs">
                             <FAQ 
@@ -418,11 +418,9 @@ export default {
 }
 
 .services-vuecordion header {
-  background-color: #3c3c3c;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 15px;
 }
 
 .services-vuecordion header h1 {
@@ -433,16 +431,14 @@ export default {
 }
 
 .services-vuecordion header h1 span {
-  color: #ffffff;
   font-weight: 900;
 }
 
 .services-vuecordion .faq {
   display: block;
   width: 100%;
-  max-width: 768px;
-  margin: 15px auto;
-  padding: 15px;
+  margin: 5px auto;
+  padding: 5px;
   border-radius: 8px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   background-color: #FFF;

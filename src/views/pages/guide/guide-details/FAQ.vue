@@ -11,7 +11,7 @@
 					<div class="col-md-3 align-middle">500 TL
 					</div>
 					<div class="col-md-3 ">
-					<button type="button" class="btn btn-secondary choose-btn-sm">SEÇ</button>
+					<!--<button type="button" class="btn btn-secondary choose-btn-sm">SEÇ</button>-->
 					</div>
 				</div>
 			</div>
