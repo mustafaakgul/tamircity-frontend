@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <Datepicker v-model="date"></Datepicker>
+
                 <div class="guide-tab">
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
@@ -178,6 +178,7 @@
                     <div class="col-md-12">
                         <div class="guide-review review-listing">
                             <h2>RANDEVU SEKMESİ</h2>
+                          <Datepicker v-model="date"></Datepicker>
                             <ul class="comments-list">
                                 <li>
                                     <div class="comment">
