@@ -23,15 +23,16 @@
                             {{ service.text }}
                           </router-link>
                           <p>14 Nov 2022, 10.00 AM</p>
-                          <div class="comment-date">
-                            <p class="text-primary mb-0"><i class="fas fa-clock me-1"></i> August 13, 2022 13:03 pm</p>
-                            <div class="review-count rating">
-                              <i class="fas fa-star filled"></i>
-                              <i class="fas fa-star filled"></i>
-                              <i class="fas fa-star filled"></i>
-                              <i class="fas fa-star filled"></i>
-                              <i class="fas fa-star"></i>
-                              <span class="d-inline-block average-rating">(04)</span>
+                          <div class="local-guides-inner">
+                            <div class="local-guides-profile">
+                              <div class="rating">
+                                <i class="fas fa-star filled"></i>
+                                <i class="fas fa-star filled"></i>
+                                <i class="fas fa-star filled"></i>
+                                <i class="fas fa-star filled"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="d-inline-block average-rating">(20 Reviews)</span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -39,7 +40,6 @@
                     </td>
                     <td>
                       <div class="table-booking-address d-flex align-items-center">
-                        Newyork, United States
                         <div
                             class="
                             table-booking-address
@@ -49,16 +49,6 @@
                         >
                           {{ service.address }}
                         </div>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="table-booking-address d-flex align-items-center">
-                        georgeanderson@example.com
-                      </div>
-                    </td>
-                    <td>
-                      <div class="table-booking-address d-flex align-items-center">
-                        +1 923 782 4575
                       </div>
                     </td>
                     <td>
@@ -72,9 +62,9 @@
                         <a href="javascript:void(0);" @click="getExtras(service)" class="btn booking-btn-accept">
                           Seç
                         </a>
-                        <!-- <a href="javascript:void(0);" class="btn booking-btn-cancel mb-0">
+                         <a href="javascript:void(0);" class="btn booking-btn-cancel mb-0">
                           Cancel
-                        </a> -->
+                        </a>
                       </div>
                     </td>
                   </tr>
