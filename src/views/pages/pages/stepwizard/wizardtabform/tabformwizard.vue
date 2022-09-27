@@ -116,11 +116,11 @@
                 <li class="nav-item" role="presentation">
                   <a
                     class="nav-link disabled"
-                    id="extra"
+                    id="extraProduct"
                     data-bs-toggle="tab"
-                    href="#extraTab"
+                    href="#extraProductTab"
                     role="tab"
-                    aria-controls="extraTab"
+                    aria-controls="extraProductTab"
                     aria-selected="false"
                   >
                     <img
@@ -135,7 +135,7 @@
                     class="nav-link disabled"
                     id="reservation"
                     data-bs-toggle="tab"
-                    href="#reservation"
+                    href="#reservationTab"
                     role="tab"
                     aria-controls="reservation"
                     aria-selected="false"
@@ -162,7 +162,7 @@
             aria-labelledby="deviceTab"
           >
             <div class="banner-search">
-              <form action="guide-details">
+              <form  >
                 <div class="row align-items-center justify-content-center">
                   <div class="col-lg-12">
                     <div class="form-group banner-form">
@@ -190,7 +190,7 @@
             aria-labelledby="brandTab"
           >
             <div class="banner-search">
-              <form action="guide-details">
+              <form  >
                 <div class="row align-items-center justify-content-center">
                   <div class="col-lg-12">
                     <div class="form-group banner-form">
@@ -214,7 +214,7 @@
             aria-labelledby="modelTab"
           >
             <div class="banner-search">
-              <form action="guide-details">
+              <form  >
                 <div class="row align-items-center justify-content-center">
                   <div class="col-lg-12">
                     <div class="form-group banner-form">
@@ -238,7 +238,7 @@
             aria-labelledby="air-ticket"
           >
             <div class="banner-search">
-              <form action="guide-details">
+              <form  >
                 <div class="row align-items-center justify-content-center">
                   <div class="col-lg-12">
                     <div class="form-group banner-form">
@@ -262,7 +262,7 @@
             aria-labelledby="bus-ticket"
           >
             <div class="banner-search">
-              <form action="guide-details">
+              <form  >
                 <div class="row align-items-center justify-content-center">
                   <div class="col-lg-12">
                     <div class="form-group banner-form">
@@ -286,7 +286,7 @@
             aria-labelledby="car-rent"
           >
             <div class="banner-search">
-              <form action="guide-details">
+              <form  >
                 <div class="row align-items-center justify-content-center">
                   <div class="col-lg-12">
                     <div class="form-group banner-form">
@@ -298,38 +298,40 @@
               </form>
             </div>
           </div>
+         
           <div
             class="tab-pane fade"
-            id="hotelbooking"
+            id="extraProductTab"
             role="tabpanel"
-            aria-labelledby="hotel-booking"
+            aria-labelledby="car-rent"
           >
             <div class="banner-search">
-              <form action="guide-details">
+              <form >
                 <div class="row align-items-center justify-content-center">
                   <div class="col-lg-12">
                     <div class="form-group banner-form">
                       <label>Ekstra</label>
-                      <vue-select/>
+                      <vue-select @select="createReservation($event)" :options="getStateExtras" />
                     </div>
                   </div>
                 </div>
               </form>
             </div>
           </div>
+
           <div
             class="tab-pane fade"
-            id="extraTab"
+            id="reservationTab"
             role="tabpanel"
             aria-labelledby="reservation"
           >
             <div class="banner-search">
-              <form action="guide-details">
+              <form  >
                 <div class="row align-items-center justify-content-center">
                   <div class="col-lg-12">
                     <div class="form-group banner-form">
-                      <label>Ekstra</label>
-                      <vue-select @select="createReservation($event)" :options="getStateExtras" />
+                      <label>Reservation</label>
+                      
                     </div>
                   </div>
                 </div>

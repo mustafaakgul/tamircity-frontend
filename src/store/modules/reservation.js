@@ -10,9 +10,9 @@ const getters = {
 };
 
 const mutations = {
-  getExtra(state, payload) {
+  createReservation(state, payload) {
+    
       
-    NextStep("extra", "reservation");
 
 
   },
@@ -23,7 +23,7 @@ const actions = {
     createReservation({ commit, rootState }, payload) {
     console.log("createReservation action worked")
     rootState.selectedItems.extra = payload;
-    NextStep("extra", "reservation");
+    NextStep("extraProduct", "reservation");
     // this.axios.get("/api/v1/extra-services")
     // .then(response => {
     //     console.log("extraService response : " + JSON.stringify(response.data));

@@ -17,7 +17,8 @@ const mutations = {
       let test = { id: index, text: item.description }
       state.extras.push(test)
     })     
-    NextStep("techService", "extra");
+    
+    NextStep("techService", "extraProduct");
 
 
   },
