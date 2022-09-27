@@ -62,8 +62,8 @@
                         <a href="javascript:void(0);" @click="getExtras(service)" class="btn booking-btn-accept">
                           Seç
                         </a>
-                         <a href="javascript:void(0);" class="btn booking-btn-cancel mb-0">
-                          Cancel
+                         <a href="javascript:void(0);" @click="isHidden = !isHidden" class="btn booking-btn-cancel mb-0">
+                          Hızlı incele
                         </a>
                       </div>
                     </td>
@@ -73,6 +73,14 @@
               </div>
             </div>
           </div>
+          <div class="card guide-booking-table mb-0" v-if="!isHidden">
+            <div class="card-body p-0">
+              <detailsection></detailsection>
+              <guidesection></guidesection>
+              <faq></faq>
+            </div>
+          </div>
+
         </div>
 
       </div>
@@ -85,13 +93,22 @@
 import { mapGetters, mapMutations, mapActions } from "vuex";
 
 export default {
+  data() {
+    return {
+      isHidden: true,
+    };
+  },
   computed: {
     ...mapGetters({
       getStateTechServices: "getStateTechServices",
     }),
   },
   methods:{
-    ...mapActions(["getExtras"])
+    ...mapActions(["getExtras"]),
+    log: function (e) {
+      console.log(e.currentTarget);
+      console.log(e);
+    }
   }
 };
 </script>
