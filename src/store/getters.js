@@ -1,7 +1,7 @@
-export const getBrandDisabled = (state) => {
-    return state.tabDisabled.brand;
+export const getSelectedModel = (state) => {
+    return state.selectedItems.model;
 }
 
-export const getModelDisabled = (state) => {
-    return state.tabDisabled.model;
+export const getSelectedFixType = (state) => {
+    return state.selectedItems.fixType;
 }

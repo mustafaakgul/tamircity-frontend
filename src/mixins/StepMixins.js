@@ -1,7 +1,6 @@
 import store from "../store/store"
 
 export default function NextStep(beforeStepId, nextStepId) {
-    console.log("Nextstep removeelement:" + beforeStepId +" addelement: "+ nextStepId)
     let before_element = "#" + beforeStepId;
     let before_element_tab = "#" + beforeStepId+"Tab";
     let next_element = "#" + nextStepId;

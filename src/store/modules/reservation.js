@@ -1,27 +1,17 @@
 import NextStep from "../../mixins/StepMixins";
 
 const state = {
-  userInfo:{
-  }
-}
-
-const getters = {
- 
+  userInfo: {},
 };
 
+const getters = {};
+
 const mutations = {
-  createReservation(state, payload) {
-    
-      
-
-
-  },
-
+  createReservation(state, payload) {},
 };
 
 const actions = {
-    createReservation({ commit, rootState }, payload) {
-    console.log("createReservation action worked")
+  createReservation({ commit, rootState }, payload) {
     rootState.selectedItems.extra = payload;
     NextStep("extraProduct", "reservation");
     // this.axios.get("/api/v1/extra-services")
@@ -29,10 +19,8 @@ const actions = {
     //     console.log("extraService response : " + JSON.stringify(response.data));
     //     commit("getExtra", response.data.data);
     // })
-    // .catch(e => console.log(e));  
-
+    // .catch(e => console.log(e));
   },
-
 };
 
 export default {

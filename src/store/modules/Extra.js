@@ -19,22 +19,14 @@ const mutations = {
     })     
     
     NextStep("techService", "extraProduct");
-
-
   },
-
 };
 
 const actions = {
     getExtras({ commit, rootState }, payload) {
-    //console.log("getExtra action worked selected tech service :" + JSON.stringify(payload))
     rootState.selectedItems.techService = payload;
-    // let extraList = [{ Id: 1, Text: "Cihaz Bakım Paketi" }, { Id: 2, Text: "Ekran Koruma" }]
-    // commit("getExtra", extraList);
-    http://167.172.105.3:8000/api/v1/extra-services
     this.axios.get("/api/v1/extra-services")
     .then(response => {
-        console.log("extraService response : " + JSON.stringify(response.data));
         commit("getExtra", response.data.data);
     })
     .catch(e => console.log(e));  

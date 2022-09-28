@@ -15,16 +15,6 @@ import panelDashboard from './modules/panelDashboard';
 
 export const store = new Vuex.Store({
     state: {
-        tabDisabled: {
-            brand: true,
-            model: true,
-            fixType: true,
-            serviceType: true,
-            techService: true,
-            extra: true,
-            reservation: true
-
-        },
         selectedItems: {
             device: null,
             brand: null,

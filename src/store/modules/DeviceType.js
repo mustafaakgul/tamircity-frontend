@@ -24,12 +24,8 @@ const mutations = {
       var arr = []
       payload.forEach((item) => {
         let test = { id : item.ID, text:item.Name }
-        console.log(test)
         arr.push(test)
         state.deviceTypes = arr;
-        console.log(arr)
-
-
       })
     },
    
@@ -39,7 +35,6 @@ const mutations = {
     getDeviceTypes({ commit }) {
       this.axios.get("/api/v1/device-types")
         .then(response => {
-            console.log(response.data.data);
             commit("getDeviceType", response.data.data);
         })
         .catch(e => console.log(e));  

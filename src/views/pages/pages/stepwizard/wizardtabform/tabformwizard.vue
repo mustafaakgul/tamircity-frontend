@@ -331,7 +331,7 @@
                   <div class="col-lg-12">
                     <div class="form-group banner-form">
                       <label>Reservation</label>
-                      
+                      <reservation></reservation>
                     </div>
                   </div>
                 </div>
@@ -350,6 +350,8 @@ import Vue from "vue";
 
 import { mapGetters, mapMutations, mapActions } from "vuex";
 import Services from '../../services.vue';
+import Reservation from '../../reservation.vue';
+
 export default {
   methods: {
     ...mapActions(["getDeviceTypes","getBrands", "getModels", "getFixTypes","getServiceTypes","getTechServices","getExtras","createReservation"]),
@@ -366,7 +368,8 @@ export default {
     }),
   },
   components: {
-    services:Services
+    services:Services,
+    reservation:Reservation
   },
   created(){
     console.log("worked created hooks")

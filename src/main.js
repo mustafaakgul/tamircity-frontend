@@ -156,6 +156,10 @@ import WorkTimeModal from './views/pages/pages/stepwizard/workTimeModal.vue'
 /*********TechCandidate component**********/
 import TechCandidateFormsPage from './views/pages/techcandidate/tech-candidate/formspage/techcandidateformspage.vue'
 
+/*********Reservation component**********/
+import Reservation from "./views/pages/pages/reservation.vue"
+
+
 
 
 
@@ -347,6 +351,9 @@ app.component('register', Register)
 /*********Services component**********/
 app.component('servicespage', Services)
 app.component('service', service)
+
+/*********Reservation component**********/
+app.component('reservation', Reservation)
 
 /*********users-bookings component**********/
 app.component('userbookings', UsersBreadcrumb)

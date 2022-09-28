@@ -288,14 +288,12 @@ export default {
         getBookingApproved() {
           axios.get('http://localhost:8888/api/v1/reservations/approved?technical_service_id=1')
               .then(response => {
-                console.log(response.data.data)
                 this.approvedBookings = response.data.data
               })
         },
         getBookingCancelled() {
           axios.get('http://localhost:8888/api/v1/reservations/cancelled?technical_service_id=1')
               .then(response => {
-                console.log(response.data.data)
                 this.cancelledBookings = response.data.data
               })
         },
