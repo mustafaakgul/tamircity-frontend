@@ -55,28 +55,28 @@
                             <div class="col-md-6">
                                 <div class="form-group form-focus">
                                     <label>Ad<span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control floating" v-model="Name">
+                                    <input type="text" class="form-control floating" v-model="profile.Name">
                                     <label class="focus-label">Ad</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group form-focus">
                                     <label>Soyad <span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control floating" v-model="Surname">
+                                    <input type="text" class="form-control floating" v-model="profile.Surname">
                                     <label class="focus-label">Soyad</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group form-focus">
                                     <label>E-Posta <span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control floating" v-model="Email">
+                                    <input type="text" class="form-control floating" v-model="profile.Email">
                                     <label class="focus-label">E-Posta</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group form-focus">
                                     <label>Telefon Numarası<span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control floating" v-model="PhoneNumber">
+                                    <input type="text" class="form-control floating" v-model="profile.PhoneNumber">
                                     <label class="focus-label">Telefon Numarası</label>
                                 </div>
                             </div>
@@ -97,7 +97,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label>Hakkımızda</label>
-                                    <textarea class="form-control" v-model="About"></textarea>
+                                    <textarea class="form-control" v-model="profile.About"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -134,7 +134,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label>Adres Alanı</label>
-                                    <textarea class="form-control" v-model="Address"></textarea>
+                                    <textarea class="form-control" v-model="profile.Address"></textarea>
                                 </div>
                             </div>
                             <div class="col-md-4">
@@ -349,12 +349,12 @@
       await axios.put("http://localhost:8888/api/v1/technical-services/2",
           {
              service_name: this.profile.ServiceName,
-             name: this.Name,
-             surname: this.Surname,
-             email: this.Email,
-             phone_number: this.PhoneNumber,
-             about: this.About,
-             address: this.Address
+             name: this.profile.Name,
+             surname: this.profile.Surname,
+             email: this.profile.Email,
+             phone_number: this.profile.PhoneNumber,
+             about: this.profile.About,
+             address: this.profile.Address
           },
           {
             headers: {
