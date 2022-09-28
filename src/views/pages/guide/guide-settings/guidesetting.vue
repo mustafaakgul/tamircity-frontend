@@ -7,19 +7,19 @@
                 <div id="sidebar-menu" class="sidebar-menu sidebar-body settings-box">
                     <ul>
                         <li>
-                            <a href="#basic_settings" class="active">Basic Settings <i class="feather-chevron-right"></i></a>
+                            <a href="#basic_settings" class="active">Temel Bilgiler <i class="feather-chevron-right"></i></a>
                         </li>
                         <li>
-                            <a href="#guide_details">Guide Details <i class="feather-chevron-right"></i></a>
+                            <a href="#guide_details">Teknik Servis Detayı <i class="feather-chevron-right"></i></a>
                         </li>
                         <li>
-                            <a href="#document_details">Document Details <i class="feather-chevron-right"></i></a>
+                            <a href="#document_details">Döküman Yükleme <i class="feather-chevron-right"></i></a>
                         </li>
                         <li>
-                            <a href="#address_details">Address Details <i class="feather-chevron-right"></i></a>
+                            <a href="#address_details">Adres Bilgileri <i class="feather-chevron-right"></i></a>
                         </li>
                         <li>
-                            <a href="#additional_details">Additional Details <i class="feather-chevron-right"></i></a>
+                            <a href="#additional_details">Ek Detaylar <i class="feather-chevron-right"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -39,71 +39,64 @@
                             <p>Max file size is 20mb</p>
                             <div class="settings-upload-btn">
                                 <input type="file" accept="image/*" name="image" class="hide-input image-upload">
-                                <label for="file" class="file-upload">Upload Image</label>
+                                <label for="file" class="file-upload">Fotoğraf Yükle</label><span class="text-danger">*</span>
                             </div>
                         </div>
                     </div>
                     <div class="settings-info">
                         <div class="row align-items-center">
+                          <div class="col-md-12">
+                            <div class="form-group form-focus">
+                              <label>İşletme Adı<span class="text-danger">*</span></label>
+                              <input type="text" class="form-control floating">
+                              <label class="focus-label">İşletme Adı</label>
+                            </div>
+                          </div>
                             <div class="col-md-6">
                                 <div class="form-group form-focus">
-                                    <label>First Name <span class="text-danger">*</span></label>
+                                    <label>Ad<span class="text-danger">*</span></label>
                                     <input type="text" class="form-control floating">
-                                    <label class="focus-label">Enter First Name</label>
+                                    <label class="focus-label">Ad</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group form-focus">
-                                    <label>Last Name <span class="text-danger">*</span></label>
+                                    <label>Soyad <span class="text-danger">*</span></label>
                                     <input type="text" class="form-control floating">
-                                    <label class="focus-label">Enter Last Name</label>
+                                    <label class="focus-label">Soyad</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group form-focus">
-                                    <label>Email <span class="text-danger">*</span></label>
+                                    <label>E-Posta <span class="text-danger">*</span></label>
                                     <input type="text" class="form-control floating">
-                                    <label class="focus-label">Enter Email Address</label>
+                                    <label class="focus-label">E-Posta</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group form-focus">
-                                    <label>Mobile Number <span class="text-danger">*</span></label>
+                                    <label>Telefon Numarası<span class="text-danger">*</span></label>
                                     <input type="text" class="form-control floating">
-                                    <label class="focus-label">Enter Mobile Number</label>
+                                    <label class="focus-label">Telefon Numarası</label>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="settings-info">
                         <div class="settings-title" id="guide_details">
-                            <h5 class="settings-sub-title">Guide Details</h5>
+                            <h5 class="settings-sub-title">Teknik Servis Detayı</h5>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>Date of birth <span class="text-danger">*</span></label>
+                                    <label>Doğum Tarihi <span class="text-danger">*</span></label>
                                     <vue-select :options="Birth" />
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label class="custom-control-gender">Gender <span class="text-danger">*</span></label>
-                                    <div class="custom-control-box">
-                                        <div class="custom-control custom-radios custom-control-inline">
-                                            <input class="custom-control-input" id="male" type="radio" name="stripe" value="phpmail" checked="">
-                                            <label class="custom-control-label" for="male">Male</label>
-                                        </div>
-                                        <div class="custom-control custom-radios custom-control-inline">
-                                            <input class="custom-control-input" id="female" type="radio" name="stripe" value="smtp">
-                                            <label class="custom-control-label" for="female">Female</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label>About me</label>
+                                    <label>Hakkımda</label>
                                     <textarea class="form-control"></textarea>
                                 </div>
                             </div>
@@ -111,22 +104,22 @@
                     </div>
                     <div class="settings-info" id="document_details">
                         <div class="settings-title">
-                            <h5 class="settings-sub-title">Document Details</h5>
+                            <h5 class="settings-sub-title">Döküman Yükleme</h5>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group form-focus">
-                                    <label>Select Document Type <span class="text-danger">*</span></label>
+                                    <label>Döküman Çeşitleri <span class="text-danger">*</span></label>
                                     <input type="text" class="form-control floating">
-                                    <label class="focus-label">Passport</label>
+                                    <label class="focus-label">Pasaport</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <div class="relative-form">
-                                        <span>ID/Passport Upload</span>
+                                        <span>Pasaport Numarası </span>
                                         <label class="relative-file-upload">
-                                            Upload Now <input type="file">
+                                            Yükle <input type="file">
                                         </label>
                                     </div> 
                                 </div>
@@ -135,36 +128,43 @@
                     </div>
                     <div class="settings-info" id="address_details">
                         <div class="settings-title">
-                            <h5 class="settings-sub-title">Address Details</h5>
+                            <h5 class="settings-sub-title">Adres Bilgileri</h5>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label>Street Address</label>
+                                    <label>Adres Alanı</label>
                                     <textarea class="form-control"></textarea>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <div class="form-group">
-                                    <div class="form-group">
-                                        <vue-select :options="City" />
+                                    <div class="form-group" >
+                                        <vue-select :options="İl" />
                                     </div> 
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <div class="form-group">
                                     <div class="form-group">
-                                        <vue-select :options="Country" />
+                                        <vue-select :options="İlçe" />
                                     </div> 
                                 </div>
+                            </div>
+                            <div class="col-md-4">
+                              <div class="form-group">
+                                <div class="form-group">
+                                  <vue-select :options="Mahalle" />
+                                </div>
+                              </div>
                             </div>
                         </div>
                     </div>
                     <div class="settings-info" id="additional_details">
                         <div class="settings-title">
-                            <h5 class="settings-sub-title">Additional Details</h5>
+                            <h5 class="settings-sub-title">Ek Detaylar</h5>
                         </div>
-                        <div class="row">
+                        <!--<div class="row">
                             <div class="col-md-6">
                                 <div class="form-group form-focus">
                                     <label>Experience <span class="text-danger">*</span></label>
@@ -179,97 +179,108 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <label class="mb-0">Language Test</label>
-                                </div>
-                            </div>
+                      <div class="row">
+                          <div class="col-md-12">
+                              <div class="form-group">
+                                  <label class="mb-0">Language Test</label>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row align-items-center">
+                          <div class="col-lg-3 col-md-6">
+                              <div class="form-group">
+                                  <div class="language-box">
+                                      <div class="language-details text-center">
+                                          <img src="../../../../assets/img/icons/english.png" alt="" class="img-fluid">
+                                          <h4>English</h4>
+                                          <div class="language-btn-groups">
+                                              <a href="javascript:void(0);" class="result-success me-1">View Details</a>
+                                              <a href="javascript:void(0);" class="result-success">Pass</a>
+                                          </div>
+                                          <span><i class="fas fa-check-circle text-success"></i></span>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6">
+                              <div class="form-group">
+                                  <div class="language-box">
+                                      <div class="language-details text-center">
+                                          <img src="../../../../assets/img/icons/turky.png" alt="" class="img-fluid">
+                                          <h4>Türkçe</h4>
+                                          <div class="language-btn-groups">
+                                              <a href="javascript:void(0);" class="result-warning me-1">Run Test</a>
+                                              <a href="javascript:void(0);" class="result-success">View Details</a>
+                                          </div>
+                                          <span><i class="fas fa-check-circle text-success"></i></span>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6">
+                              <div class="form-group">
+                                  <div class="language-box">
+                                      <div class="language-details text-center">
+                                          <img src="../../../../assets/img/icons/swedish.png" alt="" class="img-fluid">
+                                          <h4>বাংলা</h4>
+                                          <div class="language-btn-groups">
+                                              <a href="javascript:void(0);" class="result-warning me-1">Run Test</a>
+                                              <a href="javascript:void(0);" class="result-success">View Details</a>
+                                          </div>
+                                          <span><i class="fas fa-check-circle text-success"></i></span>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6">
+                              <div class="form-group">
+                                  <div class="language-main-btn">
+                                      <a href="javascript:void(0);" class="btn">
+                                          <img src="../../../../assets/img/icons/language-icon.png" alt="" class="me-2"> Language Verified
+                                      </a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>-->
+                      <div class="row">
+                          <div class="col-md-6">
+                              <div class="form-group">
+                                  <label>Ödeme Seçenekleri</label>
+                                  <vue-select :options="Botswanian" />
+                              </div>
+                          </div>
+                          <div class="col-md-6">
+                              <div class="form-group">
+                                  <label>Sertifikalar</label>
+                                  <input type="text" class="form-control">
+                              </div>
+                          </div>
+                          <div class="col-md-12">
+                              <div class="form-group">
+                                    <label>Banka Hesap Bilgileri</label>
+                              </div>
+                          </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label>Banka</label>
+                            <input type="text" class="form-control">
+                          </div>
                         </div>
-                        <div class="row align-items-center">
-                            <div class="col-lg-3 col-md-6">
-                                <div class="form-group">
-                                    <div class="language-box">
-                                        <div class="language-details text-center">
-                                            <img src="../../../../assets/img/icons/english.png" alt="" class="img-fluid">
-                                            <h4>English</h4>
-                                            <div class="language-btn-groups">
-                                                <a href="javascript:void(0);" class="result-success me-1">View Details</a>
-                                                <a href="javascript:void(0);" class="result-success">Pass</a>
-                                            </div>
-                                            <span><i class="fas fa-check-circle text-success"></i></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6">
-                                <div class="form-group">
-                                    <div class="language-box">
-                                        <div class="language-details text-center">
-                                            <img src="../../../../assets/img/icons/turky.png" alt="" class="img-fluid">
-                                            <h4>Türkçe</h4>
-                                            <div class="language-btn-groups">
-                                                <a href="javascript:void(0);" class="result-warning me-1">Run Test</a>
-                                                <a href="javascript:void(0);" class="result-success">View Details</a>
-                                            </div>
-                                            <span><i class="fas fa-check-circle text-success"></i></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6">
-                                <div class="form-group">
-                                    <div class="language-box">
-                                        <div class="language-details text-center">
-                                            <img src="../../../../assets/img/icons/swedish.png" alt="" class="img-fluid">
-                                            <h4>বাংলা</h4>
-                                            <div class="language-btn-groups">
-                                                <a href="javascript:void(0);" class="result-warning me-1">Run Test</a>
-                                                <a href="javascript:void(0);" class="result-success">View Details</a>
-                                            </div>
-                                            <span><i class="fas fa-check-circle text-success"></i></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6">
-                                <div class="form-group">
-                                    <div class="language-main-btn">
-                                        <a href="javascript:void(0);" class="btn">
-                                            <img src="../../../../assets/img/icons/language-icon.png" alt="" class="me-2"> Language Verified
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label> İban</label>
+                            <input type="text" class="form-control">
+                          </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label>Currency Code</label>
-                                    <vue-select :options="Botswanian" />
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label>Fees</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label>Location</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group mb-0 save-changes-btn float-end">
-                            <button type="submit" class="btn btn-primary">Update</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+                      </div>
+                      <div class="form-group mb-0 save-changes-btn float-end">
+                            <button type="submit" class="btn btn-primary">Kaydet</button>
+                      </div>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
 </div>
 <!-- /Guide Settings -->
 </template>
