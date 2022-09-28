@@ -286,7 +286,12 @@
 </template>
 <script>
     import Vue from 'vue'
+    import axios from "axios";
+    const appData = {
+      todolist: []
+    }
     export default {
+      //name: 'ProfileSettings',
        data() {
       return {
         Botswanian: ["Botswanian Dollar", "$", "₹", "£", "€"],
@@ -296,25 +301,49 @@
         Birth: ["Select Date", "August 13, 2022", "Septemper 08, 2022", "October 30, 2022", "December 12, 2022"]
       }
       },
+      methods: {
+        getProfile: getProfile,
+        updateProfile: updateProfile,
+      },
       components: {
      
       },
       mounted() {
         $('#sidebar-menu ul li a').click(function() {
-     var tghsh = $(this).attr('href').substring(1);
-     var headerHeight = $('.sidebar-menu').outerHeight();
-     var winwid = $(window).width();
-     var doffset = $('#'+tghsh).offset().top-110;
-     var doffset1 = $('#'+tghsh).offset().top-300;
-     if(winwid <= 991) {
-         doffset1 -= headerHeight;
-     $('html, body').animate({scrollTop:doffset1},700);
-     return false;
-     }
-     $('html, body').animate({scrollTop:doffset},700);
-     return false;
-});
+             var tghsh = $(this).attr('href').substring(1);
+             var headerHeight = $('.sidebar-menu').outerHeight();
+             var winwid = $(window).width();
+             var doffset = $('#'+tghsh).offset().top-110;
+             var doffset1 = $('#'+tghsh).offset().top-300;
+             if(winwid <= 991) {
+                 doffset1 -= headerHeight;
+             $('html, body').animate({scrollTop:doffset1},700);
+             return false;
+             }
+             $('html, body').animate({scrollTop:doffset},700);
+             return false;
+        });
 
       }
     }
+
+    function getProfile() {
+
+
+    }
+
+    async function updateProfile() {
+      await axios.put("http://localhost:8888/api/v1/technical-services/1"),
+          {
+             “service_name”: “servisyeni”,
+            “name”: “adyeni”,
+            “surname”: “soyadyeni”,
+            “email”: “teknik@gmail.com”,
+            “phone_number”: “55555532323",
+            “about”: “iyi bir teknik servisimdir”,
+            “address”: “beylikduzu beylkduzu”
+          }
+
+    }
+
   </Script>

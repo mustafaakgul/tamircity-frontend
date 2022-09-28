@@ -107,16 +107,6 @@ export default {
 
 
 async function sendItem() {
-  // const params = new URLSearchParams();
-  // params.append('service_name', this.techServiceName);
-  // params.append('business_type', this.businessType);
-  // params.append('address', this.address);
-  // params.append('number_of_branches', this.numberOfBranches);
-  // params.append('number_of_technicians', this.numberOfTechnicians);
-  // params.append('name', this.name);
-  // params.append('surname', this.surname);
-  // params.append('email', this.email);
-  // params.append('phone_number', this.phone);
 
   await axios.post("http://localhost:8888/api/v1/technical-services-candidate/apply",
       {
