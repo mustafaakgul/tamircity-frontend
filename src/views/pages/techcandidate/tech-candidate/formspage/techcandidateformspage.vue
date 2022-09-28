@@ -107,7 +107,6 @@ export default {
 
 
 async function sendItem() {
-
   await axios.post("http://localhost:8888/api/v1/technical-services-candidate/apply",
       {
         service_name: this.techServiceName,
@@ -134,14 +133,3 @@ async function sendItem() {
 }
 
 </script>
-
-<!--<Script>-->
-<!--import Vue from "vue";-->
-<!--import { mapGetters, mapMutations, mapActions } from "vuex";-->
-
-<!--export default {-->
-<!--  methods: {-->
-<!--    ...mapActions(["saveApplication"]),-->
-<!--  },-->
-<!--};-->
-<!--</Script>-->

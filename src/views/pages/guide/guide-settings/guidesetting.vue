@@ -29,7 +29,7 @@
     <div class="col-lg-9 col-md-12">
         <div class="card settings-card mb-0">
             <div class="card-body p-0" id="basic_settings">
-                <form action="javascript:void(0);">
+                <form method="POST" @submit.prevent="updateProfile()">
                     <div class="form-group mb-0 d-flex align-items-center">
                         <div class="settings-upload settings-upload-img mb-0">
                             <img src="../../../../assets/img/upload-img.png" alt="" id="imagepreview">
@@ -48,35 +48,35 @@
                           <div class="col-md-12">
                             <div class="form-group form-focus">
                               <label>İşletme Adı<span class="text-danger">*</span></label>
-                              <input type="text" class="form-control floating">
+                              <input type="text" class="form-control floating" v-model="profile.ServiceName">
                               <label class="focus-label">İşletme Adı</label>
                             </div>
                           </div>
                             <div class="col-md-6">
                                 <div class="form-group form-focus">
                                     <label>Ad<span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control floating">
+                                    <input type="text" class="form-control floating" v-model="Name">
                                     <label class="focus-label">Ad</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group form-focus">
                                     <label>Soyad <span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control floating">
+                                    <input type="text" class="form-control floating" v-model="Surname">
                                     <label class="focus-label">Soyad</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group form-focus">
                                     <label>E-Posta <span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control floating">
+                                    <input type="text" class="form-control floating" v-model="Email">
                                     <label class="focus-label">E-Posta</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group form-focus">
                                     <label>Telefon Numarası<span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control floating">
+                                    <input type="text" class="form-control floating" v-model="PhoneNumber">
                                     <label class="focus-label">Telefon Numarası</label>
                                 </div>
                             </div>
@@ -96,8 +96,8 @@
 
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label>Hakkımda</label>
-                                    <textarea class="form-control"></textarea>
+                                    <label>Hakkımızda</label>
+                                    <textarea class="form-control" v-model="About"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -134,7 +134,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label>Adres Alanı</label>
-                                    <textarea class="form-control"></textarea>
+                                    <textarea class="form-control" v-model="Address"></textarea>
                                 </div>
                             </div>
                             <div class="col-md-4">
@@ -274,7 +274,7 @@
                         </div>
                       </div>
                       <div class="form-group mb-0 save-changes-btn float-end">
-                            <button type="submit" class="btn btn-primary">Kaydet</button>
+                            <button type="submit" value="Submit" class="btn btn-primary">Kaydet</button>
                       </div>
                   </div>
               </form>
@@ -293,13 +293,14 @@
     export default {
       //name: 'ProfileSettings',
        data() {
-      return {
-        Botswanian: ["Botswanian Dollar", "$", "₹", "£", "€"],
-        Language: ["English", "Russian", "Arabic", "Italian"],
-        Country: ["Select Country", "Germany", "Romania", "Canada", "America"],
-        City: ["Select City", "Frankfurt", "Bucharest", "Toronto", "Newyork"],
-        Birth: ["Select Date", "August 13, 2022", "Septemper 08, 2022", "October 30, 2022", "December 12, 2022"]
-      }
+        return {
+          profile: {},
+          Botswanian: ["Botswanian Dollar", "$", "₹", "£", "€"],
+          Language: ["English", "Russian", "Arabic", "Italian"],
+          Country: ["Select Country", "Germany", "Romania", "Canada", "America"],
+          City: ["Select City", "Frankfurt", "Bucharest", "Toronto", "Newyork"],
+          Birth: ["Select Date", "August 13, 2022", "Septemper 08, 2022", "October 30, 2022", "December 12, 2022"]
+        }
       },
       methods: {
         getProfile: getProfile,
@@ -323,27 +324,48 @@
              $('html, body').animate({scrollTop:doffset},700);
              return false;
         });
-
+        this.getProfile();
       }
     }
 
     function getProfile() {
-
-
+      axios.get(
+          "http://localhost:8888/api/v1/technical-services/2",
+          {
+            headers: {
+              "Content-Type": "application/json",
+              //"Authorization": "Bearer " + localStorage.getItem("token")
+            }
+          }
+      ).then(
+          response => {
+            console.log(response.data.data);
+            this.profile = response.data.data;
+          }
+      )
     }
 
     async function updateProfile() {
-      await axios.put("http://localhost:8888/api/v1/technical-services/1"),
+      await axios.put("http://localhost:8888/api/v1/technical-services/2",
           {
-             “service_name”: “servisyeni”,
-            “name”: “adyeni”,
-            “surname”: “soyadyeni”,
-            “email”: “teknik@gmail.com”,
-            “phone_number”: “55555532323",
-            “about”: “iyi bir teknik servisimdir”,
-            “address”: “beylikduzu beylkduzu”
-          }
-
+             service_name: this.profile.ServiceName,
+             name: this.Name,
+             surname: this.Surname,
+             email: this.Email,
+             phone_number: this.PhoneNumber,
+             about: this.About,
+             address: this.Address
+          },
+          {
+            headers: {
+              "Content-Type": "application/json",
+              //"Authorization": "Bearer " + localStorage.getItem("token")
+            }
+          }).then((response) => {
+              console.log(response);
+      }).catch((error) => {
+        console.log(error);
+      });
     }
 
   </Script>
