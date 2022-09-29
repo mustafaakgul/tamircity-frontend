@@ -1,8 +1,8 @@
 import NextStep from "../../mixins/StepMixins";
 
 const state = {
-  fixTypes: []
-}
+  fixTypes: [],
+};
 
 const getters = {
   getStateFixTypes(state) {
@@ -14,26 +14,25 @@ const mutations = {
   getFixType(state, payload) {
     state.fixTypes = [];
     payload.forEach((item, index) => {
-      let test = { id: item.id, text: item.description }
-      state.fixTypes.push(test)
-    })     
+      let test = { id: item.id, text: item.description };
+      state.fixTypes.push(test);
+    });
     NextStep("model", "fixType");
-
   },
-
 };
 
 const actions = {
   getFixTypes({ commit, rootState }, payload) {
-    console.log("getFixType action worked " + payload.id + " " + payload.text)
-    console.log("Rootstate SelectedItem brand : " + rootState.selectedItems.fixTypes)
     rootState.selectedItems.model = payload;
-    this.axios.get("/api/v1/fix-types/query?device_type_Id="+ rootState.selectedItems.device.id)
-     .then(response => {
-        console.log("fixTypes response : " + response.data.data);
+    this.axios
+      .get(
+        "/api/v1/fix-types/query?device_type_Id=" +
+          rootState.selectedItems.device.id
+      )
+      .then((response) => {
         commit("getFixType", response.data.data);
-     })
-     .catch(e => console.log(e));
+      })
+      .catch((e) => console.log(e));
   },
 };
 
