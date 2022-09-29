@@ -7,27 +7,19 @@
                 <h5 class="settings-sub-title">Type of working</h5>
             </div>
         </div>
-        <form action="javascript:void(0);" class="days-form">
-            <div class="availability-radio-btns">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label class="custom_radio">
-                                <input type="radio" name="days" value="hours" checked>
-                                <span class="checkmark"></span> Hours
-                            </label>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label class="custom_radio">
-                                <input type="radio" name="days" value="days">
-                                <span class="checkmark"></span> Days
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <form method="POST" @submit.prevent="updateAvailability()" class="days-form">
+<!--            <div class="availability-radio-btns">-->
+<!--                <div class="row">-->
+<!--                    <div class="col-md-6">-->
+<!--                        <div class="form-group">-->
+<!--                            <label class="custom_radio">-->
+<!--                                <input type="radio" name="days" value="hours" checked>-->
+<!--                                <span class="checkmark"></span> Hours-->
+<!--                            </label>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
             <div class="availability-filter">
                 <div id="hours" class="availability-filter-col">
                     <div class="card availability-card">
@@ -47,12 +39,12 @@
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <vue-select :options="selecttime" />
+                                            <vue-select v-model="availability.start_of_shift_1" :options="selecttime" />
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <vue-select :options="selecttime" />
+                                            <vue-select v-model="availability.end_of_shift_1" :options="selecttime" />
                                         </div>
                                     </div>
                                 </div>
@@ -69,12 +61,12 @@
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <vue-select :options="selecttime" />
+                                            <vue-select v-model="availability.start_of_shift_2" :options="selecttime" />
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <vue-select :options="selecttime" />
+                                            <vue-select v-model="availability.end_of_shift_2" :options="selecttime" />
                                         </div>
                                     </div>
                                 </div>
@@ -91,12 +83,12 @@
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <vue-select :options="selecttime" />
+                                            <vue-select v-model="availability.start_of_shift_3" :options="selecttime" />
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <vue-select :options="selecttime" />
+                                            <vue-select v-model="availability.end_of_shift_3" :options="selecttime" />
                                         </div>
                                     </div>
                                 </div>
@@ -113,12 +105,12 @@
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <vue-select :options="selecttime" />
+                                            <vue-select v-model="availability.start_of_shift_4" :options="selecttime" />
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <vue-select :options="selecttime" />
+                                            <vue-select v-model="availability.end_of_shift_4" :options="selecttime" />
                                         </div>
                                     </div>
                                 </div>
@@ -134,11 +126,11 @@
                                         </div>
                                     </div>
                                     <div class="col-md-4">
-                                        <vue-select :options="selecttime" />
+                                        <vue-select v-model="availability.start_of_shift_5" :options="selecttime" />
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <vue-select :options="selecttime" />
+                                            <vue-select v-model="availability.end_of_shift_5" :options="selecttime" />
                                         </div>
                                     </div>
                                 </div>
@@ -155,12 +147,12 @@
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <vue-select :options="selecttime" />
+                                            <vue-select v-model="availability.start_of_shift_6" :options="selecttime" />
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <vue-select :options="selecttime" />
+                                            <vue-select v-model="availability.end_of_shift_6" :options="selecttime" />
                                         </div>
                                     </div>
                                 </div>
@@ -177,129 +169,12 @@
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <vue-select :options="selecttime" />
+                                            <vue-select v-model="availability.start_of_shift_7" :options="selecttime" />
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <vue-select :options="selecttime" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-                <div id="days" class="availability-filter-col">
-                    <div class="card availability-card">
-                        <div class="card-header border-0">
-                            <h5 class="card-title sub-title">Availability In Days</h5>
-                        </div>
-                        <div class="availability-card-body">
-                            <div class="availability-hours-list mb-0">
-                                <div class="row align-items-center">
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label class="mb-0">All Days</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label>From Time</label>
-                                            <vue-select :options="selecttime" />
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label>To Time</label>
-                                            <vue-select :options="selecttime" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body p-0">
-                            <div class="availability-hours-list availability-box mb-0">
-                                <div class="row align-items-center">
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label class="custom_check">
-                                                <input type="checkbox" name="days">
-                                                <span class="checkmark"></span> Monday
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="availability-hours-list availability-box mb-0">
-                                <div class="row align-items-center">
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label class="custom_check">
-                                                <input type="checkbox" name="days">
-                                                <span class="checkmark"></span> Tuesday
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="availability-hours-list availability-box mb-0">
-                                <div class="row align-items-center">
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label class="custom_check">
-                                                <input type="checkbox" name="days">
-                                                <span class="checkmark"></span> Wednesday
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="availability-hours-list availability-box mb-0">
-                                <div class="row align-items-center">
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label class="custom_check">
-                                                <input type="checkbox" name="days">
-                                                <span class="checkmark"></span> Thursday
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="availability-hours-list availability-box mb-0">
-                                <div class="row align-items-center">
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label class="custom_check">
-                                                <input type="checkbox" name="days">
-                                                <span class="checkmark"></span> Friday
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="availability-hours-list availability-box mb-0">
-                                <div class="row align-items-center">
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label class="custom_check">
-                                                <input type="checkbox" name="days">
-                                                <span class="checkmark"></span> Saturday
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="availability-hours-list availability-box mb-0 border-0">
-                                <div class="row align-items-center">
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label class="custom_check">
-                                                <input type="checkbox" name="days">
-                                                <span class="checkmark"></span> Sunday
-                                            </label>
+                                            <vue-select v-model="availability.end_of_shift_7" :options="selecttime" />
                                         </div>
                                     </div>
                                 </div>
@@ -309,30 +184,167 @@
                 </div>
             </div>
             <div class="form-group mb-0 save-changes-btn float-end">
-                <button type="submit" class="btn btn-primary">Update</button>
+                <button type="submit" value="Submit" class="btn btn-primary">Update</button>
             </div>
         </form>
     </div>
 </div>
 <!-- /Guide Availability -->
 </template>
+
 <script>
-    import Vue from 'vue'
-    export default {
-       data() {
-      return {
-        selecttime: ["select time", "00:00 AM", "01:00 AM", "02:00 AM", "03:00 AM", "04:00 AM", "05:00 AM", "06:00 AM", "07:00 AM", "08:00 AM", "09:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "01:00 PM", "02:00 PM", "03:00 PM", "04:00 PM", "05:00 PM", "06:00 PM", "07:00 PM", "08:00 PM", "09:00 PM", "10:00 PM", "11:00 PM"]
-      }
-      },
-      components: {
-     
-      },
-      mounted() {
+  import Vue from 'vue'
+  import axios from "axios";
+
+
+  export default {
+     //name: 'Availability',
+     data() {
+        return {
+          availability: {
+          },
+          selecttime: [
+            "select time",
+            "0:00",
+            '1:00',
+            '2:00',
+            '3:00',
+            "4:00",
+            "5:00",
+            "6:00",
+            "7:00",
+            "8:00",
+            "9:00",
+            "10:00",
+            "11:00",
+            "12:00",
+            "13:00",
+            "14:00",
+            "15:00",
+            "16:00",
+            "17:00",
+            "18:00",
+            "19:00",
+            "20:00",
+            "21:00",
+            "22:00",
+            "23:00"
+          ]
+        }
+     },
+     methods: {
+        getAvailability: getAvailability,
+        updateAvailability: updateAvailability
+     },
+     components: {
+
+     },
+    mounted() {
         $(document).on('click', '.availability-radio-btns input', function() {
-	    var availability_filter_col = $(this).val();
-	    $("div.availability-filter-col").hide();
-	    $("#" + availability_filter_col).show();
-	});
-      }
+        var availability_filter_col = $(this).val();
+        $("div.availability-filter-col").hide();
+        $("#" + availability_filter_col).show();
+    });
+    this.getAvailability();
     }
-  </Script>
+  }
+
+  function getAvailability() {
+     axios.get('http://localhost:8888/api/v1/technical-service-shifts/query?technical_service_id=1',
+         {
+            headers: {
+              "Content-Type": "application/json",
+              //'Authorization': 'Bearer ' + localStorage.getItem('token')
+            }
+         }
+     ).then(response => {
+       console.log(response.data.data);
+        this.availability = response.data.data
+     })
+  }
+
+  async function updateAvailability() {
+     axios.post('http://localhost:8888/api/v1/technical-service-shifts?technical_service_id=1',
+         [
+           {
+             day: 1,
+             start_of_shift: this.availability.start_of_shift_1,
+             end_of_shift: this.availability.end_of_shift_1
+           },
+           {
+             day: 2,
+             start_of_shift: this.availability.start_of_shift_2,
+              end_of_shift: this.availability.end_of_shift_2
+           },
+           {
+             day: 3,
+             start_of_shift: this.availability.start_of_shift_3,
+              end_of_shift: this.availability.end_of_shift_3
+           },
+           {
+             day: 4,
+             start_of_shift: this.availability.start_of_shift_4,
+              end_of_shift: this.availability.end_of_shift_4
+           },
+           {
+             day: 5,
+             start_of_shift: this.availability.start_of_shift_5,
+              end_of_shift: this.availability.end_of_shift_5
+           },
+           {
+             day: 6,
+             start_of_shift: this.availability.start_of_shift_6,
+              end_of_shift: this.availability.end_of_shift_6
+           },
+           {
+             day: 7,
+             start_of_shift: this.availability.start_of_shift_7,
+              end_of_shift: this.availability.end_of_shift_7
+           }
+         ],
+          {
+            headers: {
+              'Content-Type': 'application/json',
+              //'Authorization': 'Bearer ' + localStorage.getItem('token')
+            }
+          }
+     ).then(response => {
+       console.log(response)
+       console.log(response.data)
+     })
+  }
+
+//TODO:
+/*
+availability: {
+monday: {
+  start: '',
+  end: ''
+},
+tuesday: {
+  start: '',
+  end: ''
+},
+wednesday: {
+  start: '',
+  end: ''
+},
+thursday: {
+  start: '',
+  end: ''
+},
+friday: {
+  start: '',
+  end: ''
+},
+saturday: {
+  start: '',
+  end: ''
+},
+sunday: {
+  start: '',
+  end: ''
+}
+}
+*/
+</script>

@@ -284,12 +284,12 @@
 </div>
 <!-- /Guide Settings -->
 </template>
+
 <script>
     import Vue from 'vue'
     import axios from "axios";
-    const appData = {
-      todolist: []
-    }
+
+
     export default {
       //name: 'ProfileSettings',
        data() {
@@ -301,31 +301,31 @@
           City: ["Select City", "Frankfurt", "Bucharest", "Toronto", "Newyork"],
           Birth: ["Select Date", "August 13, 2022", "Septemper 08, 2022", "October 30, 2022", "December 12, 2022"]
         }
-      },
-      methods: {
-        getProfile: getProfile,
-        updateProfile: updateProfile,
-      },
-      components: {
-     
-      },
-      mounted() {
-        $('#sidebar-menu ul li a').click(function() {
-             var tghsh = $(this).attr('href').substring(1);
-             var headerHeight = $('.sidebar-menu').outerHeight();
-             var winwid = $(window).width();
-             var doffset = $('#'+tghsh).offset().top-110;
-             var doffset1 = $('#'+tghsh).offset().top-300;
-             if(winwid <= 991) {
-                 doffset1 -= headerHeight;
-             $('html, body').animate({scrollTop:doffset1},700);
-             return false;
-             }
-             $('html, body').animate({scrollTop:doffset},700);
-             return false;
-        });
-        this.getProfile();
-      }
+        },
+        methods: {
+          getProfile: getProfile,
+          updateProfile: updateProfile,
+        },
+        components: {
+
+        },
+        mounted() {
+          $('#sidebar-menu ul li a').click(function() {
+               var tghsh = $(this).attr('href').substring(1);
+               var headerHeight = $('.sidebar-menu').outerHeight();
+               var winwid = $(window).width();
+               var doffset = $('#'+tghsh).offset().top-110;
+               var doffset1 = $('#'+tghsh).offset().top-300;
+               if(winwid <= 991) {
+                   doffset1 -= headerHeight;
+               $('html, body').animate({scrollTop:doffset1},700);
+               return false;
+               }
+               $('html, body').animate({scrollTop:doffset},700);
+               return false;
+          });
+          this.getProfile();
+        }
     }
 
     function getProfile() {
@@ -367,5 +367,4 @@
         console.log(error);
       });
     }
-
-  </Script>
+</script>
