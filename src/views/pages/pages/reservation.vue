@@ -54,7 +54,7 @@
                 <div class="col-lg-12 col-md-12 d-flex">
                   <div class="card w-100">
                     <div class="card-body">
-                      <form action="javascript:void(0);" >
+                      <form method="POST" @submit.prevent="createReservation()" >
                         <div class="row align-items-center">
                             <div class="form-group form-focus">
                               
@@ -62,28 +62,35 @@
                                 <input
                                   type="text"
                                   class="form-control col-12"
-                                  v-model="techServiceName"
+                                  v-model="fullName"
                                   placeholder="İsim & Soyisim"
                                 />
 
                                 <input
                                   type="text"
                                   class="form-control mt-2"
-                                  v-model="techServiceName"
+                                  v-model="email"
                                   placeholder="Email"
                                 />
 
                                 <input
                                   type="text"
                                   class="form-control mt-2"
-                                  v-model="techServiceName"
+                                  v-model="phoneNumber"
                                   placeholder="Telefon"
                                 />
 
-                                <textarea class="form-control floating mt-2" placeholder="Yaşadığınız sorunu anlatın"></textarea>
+                                <input
+                                  type="text"
+                                  class="form-control mt-2"
+                                  v-model="phoneNumberSecondary"
+                                  placeholder="İkinci Telefon Numarası"
+                                />
+
+                                <textarea v-model="descriptionDetail" class="form-control floating mt-2" placeholder="Yaşadığınız sorunu anlatın"></textarea>
                      
                                
-                            <a href="" class="btn btn-outline-success mt-2">Rezervasyon Oluştur</a>
+                            <button type="submit" value="Submit" class="btn btn-outline-success mt-2">Rezervasyon Oluştur</button>
                             </div>
                     
                         </div>
@@ -99,29 +106,116 @@
     </div>
   </div>
 </template>
+
 <script>
 import Vue from "vue";
+import axios from "axios";
 
 export default {
   data() {
     return {
-       
     };
+  },
+  methods: {
+    createReservation: createReservation
   },
   computed: {
     getProductName() {
         let selectedProduct = this.$store.getters.getSelectedModel;
         if(selectedProduct != null)
             return selectedProduct.text;
-        return "";
+        return "Error";
     },
     getFixTypeName() {
         let selectedFixType = this.$store.getters.getSelectedFixType;
-        if(selectedFixType != null)
+        if( selectedFixType != null )
             return selectedFixType.text;
-        return "asd";
-    }
+        return "Error";
+    },
+    getDeviceTypeId() {
+        let selectedDeviceType = this.$store.getters.getSelectedDeviceType;
+        if( selectedDeviceType != null )
+          return selectedDeviceType.id;
+        return "Error";
+    },
+    getBrandId() {
+        let selectedBrand = this.$store.getters.getSelectedBrand;
+        if( selectedBrand != null )
+            return selectedBrand.id;
+          return "Error";
+    },
+    getModelId() {
+        let selectedModel = this.$store.getters.getSelectedModelId;
+        if( selectedModel != null )
+            return selectedModel.id;
+          return "Error";
+    },
+    getFixTypeId() {
+        let selectedFixType = this.$store.getters.getSelectedFixTypeId
+        if( selectedFixType != null )
+            return selectedFixType.id;
+          return "Error";
+    },
+    getServiceTypeId() {
+        let selectedServiceType = this.$store.getters.getSelectedServiceType;
+        if( selectedServiceType != null )
+            return selectedServiceType.id;
+          return "Error";
+    },
+    getExtraServiceId() {
+        let selectedExtraService = this.$store.getters.getSelectedExtraService;
+        if( selectedExtraService != null )
+            return selectedExtraService.id;
+          return "Error";
+    },
+    getTechnicalServiceId() {
+        let selectedTechnicalService = this.$store.getters.getSelectedTechnicalService;
+        if( selectedTechnicalService != null )
+            return selectedTechnicalService.id;
+          return "Error";
+    },
   },
   mounted() {},
 };
+
+async function createReservation(){
+  console.log(this.getDeviceTypeId);
+  console.log(this.getBrandId);
+  console.log(this.getModelId);
+  console.log(this.getFixTypeId);
+  console.log(this.getServiceTypeId);
+  console.log(this.getExtraServiceId);
+  console.log(this.getTechnicalServiceId);
+
+  axios.post('http://localhost:8888/api/v1/reservations',
+      {
+        device_type_id: parseInt(this.getDeviceTypeId),
+        brand_id: parseInt(this.getBrandId),
+        model_id: parseInt(this.getModelId),
+        fix_type_id: parseInt(this.getFixTypeId),
+        service_type_id: parseInt(this.getServiceTypeId),
+        extra_service_id: parseInt(this.getExtraServiceId),
+        technical_service_id: parseInt(this.getTechnicalServiceId),
+        reservation_date: "2023-09-21T02:30:45Z",
+        start_pf_hour: 2,
+        end_of_hour: 3,
+        price: 31,
+        full_name: this.fullName,
+        email: this.email,
+        phone_number: this.phoneNumber,
+        second_phone_number: this.phoneNumberSecondary,
+        description: this.descriptionDetail
+      },
+      {
+        headers: {
+          'Content-Type': 'application/json',
+          //'Authorization': 'Bearer ' + this.$store.getters.getToken
+        }
+      }
+  ).then( response => {
+    console.log(response);
+  }).catch( error => {
+    console.log(error);
+  });
+}
 </script>

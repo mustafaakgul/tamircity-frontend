@@ -12,10 +12,10 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-12 col-md-12 text-center">
-                    <h1>BAŞLIK</h1>
+                    <h1>Tamire Başla</h1>
                 </div>
                  <div class="col-lg-12 col-md-12 text-center ">
-                    <h4>Alt Başlık</h4>
+                    <h4>Cihazını Yenile</h4>
                 </div>
                 <div class="col-lg-12 col-md-12 mt-5">
                     <div class="banner-list banner-tab aos" data-aos="fade-up">

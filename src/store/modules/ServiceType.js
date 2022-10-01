@@ -14,7 +14,7 @@ const mutations = {
   getServiceType(state, payload) {
     state.serviceTypes = [];
     payload.forEach((item, index) => {
-      let test = { id: index, text: item.name };
+      let test = { id: item.id, text: item.name };
       state.serviceTypes.push(test);
     });
     NextStep("fixType", "serviceType");

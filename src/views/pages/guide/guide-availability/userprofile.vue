@@ -9,9 +9,8 @@
                         <img src="../../../../assets/img/provider/provider-04.jpg" alt="Image">
                     </div>
                     <div class="dashboard-info">
-                        <h2>James Harrem</h2>
-                        <p>Member Since Apr 2022</p>
-                        <span class="online-badge"><i class="fas fa-circle me-1"></i> Online</span>
+                        <h2>Merkez Teknik Servis</h2>
+                        <p>Bilgisayar Teknik Servis</p>
                     </div>
                 </div>
             </div>

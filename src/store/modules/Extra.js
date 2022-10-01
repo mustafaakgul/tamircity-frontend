@@ -14,7 +14,7 @@ const mutations = {
   getExtra(state, payload) {
     state.extras = [];
     payload.forEach((item, index) => {
-      let test = { id: index, text: item.description }
+      let test = { id: item.id, text: item.description }
       state.extras.push(test)
     })     
     

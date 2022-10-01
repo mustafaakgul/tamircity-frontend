@@ -193,61 +193,60 @@
 </template>
 
 <script>
-  import Vue from 'vue'
-  import axios from "axios";
+import Vue from 'vue'
+import axios from "axios";
 
+export default {
+   //name: 'Availability',
+   data() {
+      return {
+        availability: {
+        },
+        selecttime: [
+          "select time",
+          "0:00",
+          '1:00',
+          '2:00',
+          '3:00',
+          "4:00",
+          "5:00",
+          "6:00",
+          "7:00",
+          "8:00",
+          "9:00",
+          "10:00",
+          "11:00",
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00",
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "21:00",
+          "22:00",
+          "23:00"
+        ]
+      }
+   },
+   methods: {
+      getAvailability: getAvailability,
+      updateAvailability: updateAvailability
+   },
+   components: {
 
-  export default {
-     //name: 'Availability',
-     data() {
-        return {
-          availability: {
-          },
-          selecttime: [
-            "select time",
-            "0:00",
-            '1:00',
-            '2:00',
-            '3:00',
-            "4:00",
-            "5:00",
-            "6:00",
-            "7:00",
-            "8:00",
-            "9:00",
-            "10:00",
-            "11:00",
-            "12:00",
-            "13:00",
-            "14:00",
-            "15:00",
-            "16:00",
-            "17:00",
-            "18:00",
-            "19:00",
-            "20:00",
-            "21:00",
-            "22:00",
-            "23:00"
-          ]
-        }
-     },
-     methods: {
-        getAvailability: getAvailability,
-        updateAvailability: updateAvailability
-     },
-     components: {
-
-     },
-    mounted() {
-        $(document).on('click', '.availability-radio-btns input', function() {
-        var availability_filter_col = $(this).val();
-        $("div.availability-filter-col").hide();
-        $("#" + availability_filter_col).show();
-    });
-    this.getAvailability();
-    }
+   },
+  mounted() {
+      $(document).on('click', '.availability-radio-btns input', function() {
+      var availability_filter_col = $(this).val();
+      $("div.availability-filter-col").hide();
+      $("#" + availability_filter_col).show();
+  });
+  this.getAvailability();
   }
+}
 
   function getAvailability() {
      axios.get('http://localhost:8888/api/v1/technical-service-shifts/query?technical_service_id=1',

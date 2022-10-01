@@ -12,10 +12,10 @@
                     <!-- Footer Widget -->
                     <div class="footer-widget footer-about">
                         <div class="footer-logo">
-                            <img src="../../assets/img/logo.png" alt="logo">
+<!--                            <img src="../../assets/img/logo.png" alt="logo">-->
                         </div>
                         <div class="footer-about-content">
-                            <p>Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scel erisque the mattis,</p>
+                            <p>Teknik Servis ve Ekspertiz Platformu</p>
                         </div>
                     </div>
                     <!-- /Footer Widget -->

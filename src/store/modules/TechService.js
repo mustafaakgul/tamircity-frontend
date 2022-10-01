@@ -14,7 +14,7 @@ const mutations = {
   getTechService(state, payload) {
     state.techServices = [];
     payload.forEach((item, index) => {
-      let test = { id: index, text: item.name, address: item.address };
+      let test = { id: item.id, text: item.name, address: item.address };
       state.techServices.push(test);
     });
     NextStep("serviceType", "techService");
