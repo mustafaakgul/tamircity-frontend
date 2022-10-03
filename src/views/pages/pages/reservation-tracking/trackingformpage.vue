@@ -5,7 +5,8 @@
         <div class="col-xl-8 col-lg-12 col-md-12">
           <div class="booking-steps">Rezervasyon Takip Formu</div>
           <div class="booking-details">
-              <div class="row">
+            
+              <div class="row focus"  >
                 <div class="col-md-12">
                   <div class="form-group form-focus">
                     <label
@@ -13,7 +14,13 @@
                         >*</span
                       ></label
                     >
-                    <input type="text" class="form-control floating" v-model="this.$store.state.reservationTracking.reservationNumber"/>
+                    <input
+                      type="text"
+                      class="form-control floating"
+                      v-model="
+                        this.$store.state.reservationTracking.reservationNumber
+                      "
+                    />
                     <label class="focus-label">Rezervasyon Numarası</label>
                   </div>
                   <div class="col-md-12 text-end">
@@ -43,7 +50,5 @@ export default {
   methods: {
     ...mapActions(["getReservationInfos"]),
   },
-
-
 };
 </script>

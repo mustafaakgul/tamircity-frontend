@@ -88,7 +88,7 @@
             <flag />
             <li class="nav-item"><router-link to="/techcandidate" class="btn log-btn">SERVİS BAŞVURU </router-link></li>
             <li class="nav-item"><router-link to="/login" class="btn log-btn"><i class="fas fa-circle-user me-1"></i>SERVİS GİRİŞİ </router-link></li>
-            <li class="nav-item"><router-link to="/reservation-tracking" class="btn reg-btn">Cihaz ve Rezervasyon Takibi</router-link></li>
+            <li class="nav-item"><router-link to="/reservation-tracking" class="btn log-btn">Cihaz ve Rezervasyon Takibi</router-link></li>
         </ul>
     </nav>
 </header>
