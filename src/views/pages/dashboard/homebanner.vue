@@ -21,18 +21,21 @@
                     <div class="banner-list banner-tab aos" data-aos="fade-up">
                         <ul class="nav nav-tabs border-0" id="myTab" role="tablist">
                             <li class="nav-item" role="presentation">
-                                <a class="nav-link " id="ekspertise" data-bs-toggle="tab" href="#ekspertise" role="tab" aria-controls="ekspertiz" aria-selected="true">
+                              <router-link to="/ekspertiz">
+                                <a class="nav-link " id="expertise-service">
                                     <img src="../../../assets/img/icons/banner-icon1.svg" alt="">
                                     <p>EKSPERTİZ HİZMETİ ALMAK İSTİYORUM</p>
                                 </a>
+                              </router-link>
                             </li>
                             <li class="nav-item " role="presentation">
-                                <router-link to="/stepwizard">
+                              <router-link to="/stepwizard">
                                 <a class="nav-link" id="technical-service">
                                     <img src="../../../assets/img/icons/banner-icon6.svg" alt="">
                                     <p>TEKNİK SERVİS HİZMETİ ALMAK İSTİYORUM</p>
                                 </a>
-                            </router-link></li>
+                              </router-link>
+                            </li>
                         </ul>
                     </div>
                 </div>
