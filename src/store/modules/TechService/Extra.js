@@ -1,4 +1,4 @@
-import NextStep from "../../mixins/StepMixins";
+import NextStep from "../../../mixins/StepMixins";
 
 const state = {
   extras: []

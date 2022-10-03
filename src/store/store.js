@@ -1,16 +1,16 @@
 import Vuex from 'vuex'
 
-import deviceType from "./modules/deviceType";
-import brand from "./modules/brand";
-import model from "./modules/model";
-import fixType from "./modules/fixType";
-import serviceType from "./modules/serviceType"
-import techService from "./modules/techService"
-import extra from "./modules/extra"
+import deviceType from "./modules/TechService/DeviceType";
+import brand from "./modules/TechService/Brand";
+import model from "./modules/TechService/Model";
+import fixType from "./modules/TechService/FixType";
+import serviceType from "./modules/TechService/ServiceType"
+import techService from "./modules/TechService/TechService"
+import extra from "./modules/TechService/Extra"
 import * as getters from "./getters"
 import * as mutations from "./mutations"
 import * as actions from "./actions"
-import reservation from './modules/reservation';
+import reservation from './modules/TechService/Reservation';
 import panelDashboard from './modules/panelDashboard';
 
 export const store = new Vuex.Store({
