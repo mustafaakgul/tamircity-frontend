@@ -160,6 +160,10 @@ import TechCandidateFormsPage from './views/pages/techcandidate/tech-candidate/f
 /*********Reservation component**********/
 import Reservation from "./views/pages/pages/reservation.vue"
 
+/*********Reservation Tranckingcomponent**********/
+import TrackingFormPage from './views/pages/pages/reservation-tracking/trackingformpage.vue'
+
+
 
 
 
@@ -356,6 +360,9 @@ app.component('service', service)
 
 /*********Reservation component**********/
 app.component('reservation', Reservation)
+
+/*********Reservation Tracking component**********/
+app.component('trackingformpage', TrackingFormPage)
 
 /*********users-bookings component**********/
 app.component('userbookings', UsersBreadcrumb)

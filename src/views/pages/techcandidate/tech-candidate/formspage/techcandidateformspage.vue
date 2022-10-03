@@ -78,6 +78,7 @@
                       <button type="submit" value="Submit" class="btn btn-primary next-btn">Başvuru Yap</button>
                     </div>
                   </div>
+                  
                 </div>
               </form>
             </div>

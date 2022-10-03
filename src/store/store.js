@@ -20,6 +20,7 @@ import * as actions from "./actions"
 import reservationTech from './modules/TechService/Reservation';
 import reservation from './modules/ExpertiseService/Reservation';
 import panelDashboard from './modules/panelDashboard';
+import reservationTracking from './modules/reservationTracking';
 
 export const store = new Vuex.Store({
     state: {
@@ -53,6 +54,8 @@ export const store = new Vuex.Store({
         serviceType: serviceType,
         expertiseService : expertiseService,
         reservation : reservation,
+
+        reservationTracking:reservationTracking
     }
     // https://vuex.vuejs.org/guide/modules.html
 })
