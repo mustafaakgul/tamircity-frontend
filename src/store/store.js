@@ -1,16 +1,24 @@
 import Vuex from 'vuex'
 
-import deviceType from "./modules/TechService/DeviceType";
-import brand from "./modules/TechService/Brand";
-import model from "./modules/TechService/Model";
-import fixType from "./modules/TechService/FixType";
-import serviceType from "./modules/TechService/ServiceType"
-import techService from "./modules/TechService/TechService"
-import extra from "./modules/TechService/Extra"
+import deviceTypeTech from "./modules/TechService/DeviceType";
+import brandTech from "./modules/TechService/Brand";
+import modelTech from "./modules/TechService/Model";
+import fixTypeTech from "./modules/TechService/FixType";
+import serviceTypeTech from "./modules/TechService/ServiceType"
+import techServiceTech from "./modules/TechService/TechService"
+import extraTech from "./modules/TechService/Extra"
+
+import deviceType from "./modules/ExpertiseService/DeviceType";
+import brand from "./modules/ExpertiseService/Brand";
+import model from "./modules/ExpertiseService/Model";
+import serviceType from "./modules/ExpertiseService/ServiceType"
+import expertiseService from "./modules/ExpertiseService/ExpertiseService"
+
 import * as getters from "./getters"
 import * as mutations from "./mutations"
 import * as actions from "./actions"
-import reservation from './modules/TechService/Reservation';
+import reservationTech from './modules/TechService/Reservation';
+import reservation from './modules/ExpertiseService/Reservation';
 import panelDashboard from './modules/panelDashboard';
 
 export const store = new Vuex.Store({
@@ -29,15 +37,22 @@ export const store = new Vuex.Store({
     mutations,
     actions,
     modules: {
+        deviceTypeTech: deviceTypeTech,
+        brandTech: brandTech,
+        modelTech: modelTech,
+        fixTypeTech: fixTypeTech,
+        serviceTypeTech: serviceTypeTech,
+        techServiceTech : techServiceTech,
+        extraTech: extraTech,
+        reservationTech : reservationTech,
+        panelDashboard : panelDashboard,
+
         deviceType: deviceType,
         brand: brand,
         model: model,
-        fixType: fixType,
         serviceType: serviceType,
-        techService : techService,
-        extra: extra,
+        expertiseService : expertiseService,
         reservation : reservation,
-        panelDashboard : panelDashboard
     }
     // https://vuex.vuejs.org/guide/modules.html
 })

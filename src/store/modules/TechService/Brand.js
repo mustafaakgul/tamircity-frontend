@@ -4,13 +4,13 @@ const state = {
 };
 
 const getters = {
-  getStateBrands(state) {
+  getStateTechBrands(state) {
     return state.brands;
   },
 };
 
 const mutations = {
-  getBrand(state, payload) {
+  getTechBrand(state, payload) {
     state.brands = [];
     payload.forEach((item, index) => {
       let test = { id: item.id, text: item.name };
@@ -21,7 +21,7 @@ const mutations = {
 };
 
 const actions = {
-  getBrands({ commit, rootState }, payload) {
+  getTechBrands({ commit, rootState }, payload) {
     rootState.selectedItems.device = payload;
     this.axios
       .get("/api/v1/brands/query?device_type_id=" + payload.id)

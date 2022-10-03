@@ -5,12 +5,12 @@ const state = {
 };
 
 const getters = {
-  getStateModels(state) {
+  getStateTechModels(state) {
     return state.models;
   },
 };
 const mutations = {
-  getModel(state, payload) {
+  getTechModel(state, payload) {
     state.models = [];
     payload.forEach((item, index) => {
       let test = { id: item.id, text: item.name };
@@ -21,7 +21,7 @@ const mutations = {
 };
 
 const actions = {
-  getModels({ commit, rootState }, payload) {
+  getTechModels({ commit, rootState }, payload) {
     rootState.selectedItems.brand = payload;
     this.axios
       .get(

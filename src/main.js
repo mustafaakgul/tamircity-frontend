@@ -151,6 +151,7 @@ import Terms from './views/pages/breadcrumb/terms.vue'
 import TermsCondition from './views/pages/pages/termscondition.vue'
 /*********Stepwizard component**********/
 import TabFormWizard from './views/pages/pages/stepwizard/wizardtabform/tabformwizard.vue'
+import ExpertiseWizard from './views/pages/pages/expertice-funnel/wizardtabform/expertisewizard.vue'
 import WorkTimeModal from './views/pages/pages/stepwizard/workTimeModal.vue'
 
 /*********TechCandidate component**********/
@@ -214,6 +215,7 @@ app.component('footerind', Footerindex);
 
 /*********StepWizard component**********/
 app.component('tabformwizard', TabFormWizard);
+app.component('expertisewizard', ExpertiseWizard);
 app.component('worktimeModal', WorkTimeModal);
 app.component('Datepicker', Datepicker);
 

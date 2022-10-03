@@ -5,13 +5,13 @@ const state = {
 };
 
 const getters = {
-  getStateTechServices(state) {
+  getStateTechTechServices(state) {
     return state.techServices;
   },
 };
 
 const mutations = {
-  getTechService(state, payload) {
+  getTechTechService(state, payload) {
     state.techServices = [];
     payload.forEach((item, index) => {
       let test = { id: item.id, text: item.name, address: item.address };
@@ -22,7 +22,7 @@ const mutations = {
 };
 
 const actions = {
-  getTechServices({ commit, rootState }, payload) {
+  getTechTechServices({ commit, rootState }, payload) {
     rootState.selectedItems.serviceType = payload;
     this.axios
       .get(

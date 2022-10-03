@@ -5,13 +5,13 @@ const state = {
 };
 
 const getters = {
-  getStateFixTypes(state) {
+  getStateTechFixTypes(state) {
     return state.fixTypes;
   },
 };
 
 const mutations = {
-  getFixType(state, payload) {
+  getTechFixType(state, payload) {
     state.fixTypes = [];
     payload.forEach((item, index) => {
       let test = { id: item.id, text: item.description };
@@ -22,7 +22,7 @@ const mutations = {
 };
 
 const actions = {
-  getFixTypes({ commit, rootState }, payload) {
+  getTechFixTypes({ commit, rootState }, payload) {
     rootState.selectedItems.model = payload;
     this.axios
       .get(

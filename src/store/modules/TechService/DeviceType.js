@@ -2,13 +2,13 @@ const state ={
   deviceTypes: []
 }
 const getters = {
-  getStateDeviceTypes(state) {   
+  getStateTechDeviceTypes(state) {
     return state.deviceTypes;
   },
 };
 
 const mutations = {
-    getDeviceType(state, payload) {
+    getTechDeviceType(state, payload) {
 
       // let modelList = [
       // {id : 1, text : "TELEFON"} ,
@@ -32,7 +32,7 @@ const mutations = {
   };
   
   const actions = {
-    getDeviceTypes({ commit }) {
+    getTechDeviceTypes({ commit }) {
       this.axios.get("/api/v1/device-types")
         .then(response => {
             commit("getDeviceType", response.data.data);

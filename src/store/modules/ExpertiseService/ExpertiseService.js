@@ -1,36 +1,36 @@
 import NextStep from "../../../mixins/StepMixins";
 
 const state = {
-  techServices: [],
+  expertiseServices: [],
 };
 
 const getters = {
-  getStateTechServices(state) {
-    return state.techServices;
+  getStateExpertiseServices(state) {
+    return state.expertiseServices;
   },
 };
 
 const mutations = {
-  getTechService(state, payload) {
-    state.techServices = [];
+  getExpertiseService(state, payload) {
+    state.expertiseServices = [];
     payload.forEach((item, index) => {
       let test = { id: item.id, text: item.name, address: item.address };
-      state.techServices.push(test);
+      state.expertiseServices.push(test);
     });
-    NextStep("serviceType", "techService");
+    NextStep("serviceType", "expertiseService");
   },
 };
 
 const actions = {
-  getTechServices({ commit, rootState }, payload) {
+  getExpertiseServices({ commit, rootState }, payload) {
     rootState.selectedItems.serviceType = payload;
     this.axios
       .get(
-        "/api/v1/technical-services/query?model_id=" +
+        "/api/v1/expertise-services/query?model_id=" +
           rootState.selectedItems.model.id
       )
       .then((response) => {
-        commit("getTechService", response.data.data);
+        commit("getExpertiseService", response.data.data);
       })
       .catch((e) => console.log(e));
   },

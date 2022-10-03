@@ -7,11 +7,11 @@ const state = {
 const getters = {};
 
 const mutations = {
-  createReservation(state, payload) {},
+  createTechReservation(state, payload) {},
 };
 
 const actions = {
-  createReservation({ commit, rootState }, payload) {
+  createTechReservation({ commit, rootState }, payload) {
     rootState.selectedItems.extra = payload;
     NextStep("extraProduct", "reservation");
     // this.axios.get("/api/v1/extra-services")

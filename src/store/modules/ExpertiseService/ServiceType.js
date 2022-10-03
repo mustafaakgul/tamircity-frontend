@@ -17,13 +17,13 @@ const mutations = {
       let test = { id: item.id, text: item.name };
       state.serviceTypes.push(test);
     });
-    NextStep("fixType", "serviceType");
+    NextStep("model", "serviceType");
   },
 };
 
 const actions = {
   getServiceTypes({ commit, rootState }, payload) {
-    rootState.selectedItems.fixType = payload;
+    rootState.selectedItems.model = payload;
     this.axios
       .get("/api/v1/service-types")
       .then((response) => {

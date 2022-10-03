@@ -5,13 +5,13 @@ const state = {
 }
 
 const getters = {
-  getStateExtras(state) {
+  getStateTechExtras(state) {
     return state.extras;
   },
 };
 
 const mutations = {
-  getExtra(state, payload) {
+  getTechExtra(state, payload) {
     state.extras = [];
     payload.forEach((item, index) => {
       let test = { id: item.id, text: item.description }
@@ -23,7 +23,7 @@ const mutations = {
 };
 
 const actions = {
-    getExtras({ commit, rootState }, payload) {
+    getTechExtras({ commit, rootState }, payload) {
     rootState.selectedItems.techService = payload;
     this.axios.get("/api/v1/extra-services")
     .then(response => {

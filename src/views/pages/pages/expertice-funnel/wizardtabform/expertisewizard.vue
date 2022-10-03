@@ -65,23 +65,6 @@
                 <li class="nav-item" role="presentation">
                   <a
                     class="nav-link disabled"
-                    id="fixType"
-                    data-bs-toggle="tab"
-                    href="#fixTypeTab"
-                    role="tab"
-                    aria-controls="fixTypeTab"
-                    aria-selected="false"
-                  >
-                    <img
-                      src="../../../../../assets/img/icons/banner-icon4.svg"
-                      alt=""
-                    />
-                    <p>TAMİR TÜRÜ</p>
-                  </a>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <a
-                    class="nav-link disabled"
                     id="serviceType"
                     data-bs-toggle="tab"
                     href="#serviceTypeTab"
@@ -99,11 +82,11 @@
                 <li class="nav-item" role="presentation">
                   <a
                     class="nav-link disabled"
-                    id="techService"
+                    id="expertiseService"
                     data-bs-toggle="tab"
-                    href="#techServiceTab"
+                    href="#expertiseServiceTab"
                     role="tab"
-                    aria-controls="techServiceTab"
+                    aria-controls="expertiseServiceTab"
                     aria-selected="false"
                   >
                     <img
@@ -111,23 +94,6 @@
                       alt=""
                     />
                     <p>SERVİS SEÇİMİ</p>
-                  </a>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <a
-                    class="nav-link disabled"
-                    id="extraProduct"
-                    data-bs-toggle="tab"
-                    href="#extraProductTab"
-                    role="tab"
-                    aria-controls="extraProductTab"
-                    aria-selected="false"
-                  >
-                    <img
-                      src="../../../../../assets/img/icons/banner-icon7.svg"
-                      alt=""
-                    />
-                    <p>EKSTRA</p>
                   </a>
                 </li>
                 <li class="nav-item" role="presentation">
@@ -169,8 +135,8 @@
                       <label>Cihaz Seç</label>
                       <vue-select
                        
-                        :options="getStateTechDeviceTypes"
-                        @select="getTechBrands($event)"
+                        :options="getStateDeviceTypes"
+                        @select="getBrands($event)"
                         placeholder="Seçiniz..."
                       />
                       
@@ -197,8 +163,8 @@
                       <label>Marka Seç</label>
                       <vue-select
                         
-                        :options="getStateTechBrands"
-                        @select="getTechModels($event)"
+                        :options="getStateBrands"
+                        @select="getModels($event)"
                         placeholder="Seçiniz..."
                       />
                     </div>
@@ -221,33 +187,9 @@
                       <label>Model Seç</label>
                       <vue-select
                         v-model="this.$store.state.selectedItems.model"
-                        :options="getStateTechModels"
-                        @select="getTechFixTypes($event)"
+                        :options="getStateModels"
+                        @select="getServiceTypes($event)"
                         placeholder="Seçiniz..."
-                      />
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-          <div
-            class="tab-pane fade"
-            id="fixTypeTab"
-            role="tabpanel"
-            aria-labelledby="air-ticket"
-          >
-            <div class="banner-search">
-              <form  >
-                <div class="row align-items-center justify-content-center">
-                  <div class="col-lg-12">
-                    <div class="form-group banner-form">
-                      <label>Tamir Türü</label>
-                      <vue-select
-                        v-model="this.$store.state.selectedItems.fixType"
-                        placeholder="Seçiniz..."
-                        :options="getStateTechFixTypes"
-                        @select="getTechServiceTypes($event)"
                       />
                     </div>
                   </div>
@@ -268,10 +210,10 @@
                     <div class="form-group banner-form">
                       <label>Hizmet Türü</label>
                       <vue-select 
-                        :options="getStateTechServiceTypes"
+                        :options="getStateServiceTypes"
                         v-model="this.$store.state.selectedItems.serviceType"
                         placeholder="Seçiniz..."
-                        @select="getTechTechServices($event)"
+                        @select="getExpertiseServices($event)"
                        />
                     </div>
                   </div>
@@ -281,7 +223,7 @@
           </div>
           <div
             class="tab-pane fade"
-            id="techServiceTab"
+            id="expertiseServiceTab"
             role="tabpanel"
             aria-labelledby="car-rent"
           >
@@ -292,26 +234,6 @@
                     <div class="form-group banner-form">
                       <label>Servis Seçimi</label>
                       <services ></services>
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-         
-          <div
-            class="tab-pane fade"
-            id="extraProductTab"
-            role="tabpanel"
-            aria-labelledby="car-rent"
-          >
-            <div class="banner-search">
-              <form >
-                <div class="row align-items-center justify-content-center">
-                  <div class="col-lg-12">
-                    <div class="form-group banner-form">
-                      <label>Ekstra</label>
-                      <vue-select @select="createTechReservation($event)" :options="getStateTechExtras" />
                     </div>
                   </div>
                 </div>
@@ -354,17 +276,15 @@ import Reservation from '../../reservation.vue';
 
 export default {
   methods: {
-    ...mapActions(["getTechDeviceTypes","getTechBrands", "getTechModels", "getTechFixTypes","getTechServiceTypes","getTechTechServices","getTechExtras","createTechReservation"]),
+    ...mapActions(["getDeviceTypes","getBrands", "getModels","getServiceTypes","getExpertiseServices","createReservation"]),
   },
   computed: {
     ...mapGetters({
-      getStateDeviceTypes: "getStateTechDeviceTypes",
-      getStateBrands: "getStateTechBrands",
-      getStateModels: "getStateTechModels",
-      getStateFixTypes: "getStateTechFixTypes",
-      getStateServiceTypes:"getStateTechServiceTypes",
-      getStateTechServices : "getStateTechTechServices",
-      getStateExtras : "getStateTechExtras"
+      getStateDeviceTypes: "getStateDeviceTypes",
+      getStateBrands: "getStateBrands",
+      getStateModels: "getStateModels",
+      getStateServiceTypes:"getStateServiceTypes",
+      getStateExpertiseServices : "getStateExpertiseServices",
     }),
   },
   components: {

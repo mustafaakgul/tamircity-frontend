@@ -5,13 +5,13 @@ const state = {
 };
 
 const getters = {
-  getStateServiceTypes(state) {
+  getStateTechServiceTypes(state) {
     return state.serviceTypes;
   },
 };
 
 const mutations = {
-  getServiceType(state, payload) {
+  getTechServiceType(state, payload) {
     state.serviceTypes = [];
     payload.forEach((item, index) => {
       let test = { id: item.id, text: item.name };
@@ -22,7 +22,7 @@ const mutations = {
 };
 
 const actions = {
-  getServiceTypes({ commit, rootState }, payload) {
+  getTechServiceTypes({ commit, rootState }, payload) {
     rootState.selectedItems.fixType = payload;
     this.axios
       .get("/api/v1/service-types")

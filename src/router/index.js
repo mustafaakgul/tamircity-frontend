@@ -62,6 +62,14 @@ const routes = [
     }
     },
     {
+        path: '/ekspertiz',
+        name: 'expertise',
+        component: () => import('../views/pages/pages/expertice-funnel/index'),
+        meta: {
+            requiresAuth: true
+        }
+    },
+    {
         path: '/login',
         name: 'login',
         component: () => import('../views/pages/pages/auth/login/index'),
