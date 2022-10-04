@@ -63,7 +63,7 @@
                                         <p><i class="feather-phone-call"></i>0507 064 64 51</p>
                                     </div>
                                     <div class="footer-address mb-0">
-                                        <p><i class="feather-mail"></i> muhammed@tamircity.com</p>
+                                        <p><i class="feather-mail"></i>muhammed@tamircity.com</p>
                                     </div>
                                 </div>
                             </div>
@@ -121,20 +121,20 @@
                             </div>
                             <div class="col-lg-2 col-md-6">
                                 <div class="social-icon">
-                                    <ul>
-                                        <li>
-                                            <a href="javascript:void(0);" target="_blank"><i class="fab fa-facebook-f hi-icon"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0);" target="_blank"><i class="fab fa-twitter hi-icon"></i> </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0);" target="_blank"><i class="fab fa-youtube hi-icon"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0);" target="_blank"><i class="fab fa-linkedin-in hi-icon"></i></a>
-                                        </li>
-                                    </ul>
+                                  <ul>
+                                      <li>
+                                          <a href="https://facebook.com/tamircity" target="_blank"><i class="fab fa-facebook-f hi-icon"></i></a>
+                                      </li>
+                                      <li>
+                                          <a href="https://twitter.com/tamircity" target="_blank"><i class="fab fa-twitter hi-icon"></i> </a>
+                                      </li>
+                                      <li>
+                                          <a href="https://youtube.com/tamircity" target="_blank"><i class="fab fa-youtube hi-icon"></i></a>
+                                      </li>
+                                      <li>
+                                          <a href="https://linkedin.com/tamircity" target="_blank"><i class="fab fa-linkedin-in hi-icon"></i></a>
+                                      </li>
+                                  </ul>
                                 </div>
                             </div>
                         </div>

@@ -286,26 +286,26 @@ export default {
     },
     methods: {
         getBookingApproved() {
-          axios.get('http://localhost:8888/api/v1/reservations/approved?technical_service_id=1')
+          axios.get('http://localhost:8888/api/v1/reservations/approved?expertise_service_id=1')
               .then(response => {
                 this.approvedBookings = response.data.data
               })
         },
         getBookingCancelled() {
-          axios.get('http://localhost:8888/api/v1/reservations/cancelled?technical_service_id=1')
+          axios.get('http://localhost:8888/api/v1/reservations/cancelled?expertise_service_id=1')
               .then(response => {
                 this.cancelledBookings = response.data.data
               })
         },
         getBookingPending() {
-          axios.get('http://localhost:8888/api/v1/reservations/pending?technical_service_id=1')
+          axios.get('http://localhost:8888/api/v1/reservations/pending?expertise_service_id=1')
               .then(response => {
                 console.log(response.data.data)
                 this.pendingBookings = response.data.data
               })
         },
         getBookingCompleted() {
-          axios.get('http://localhost:8888/api/v1/reservations/completed?technical_service_id=1')
+          axios.get('http://localhost:8888/api/v1/reservations/completed?expertise_service_id=1')
               .then(response => {
                 console.log(response.data.data)
                 this.completedBookings = response.data.data
