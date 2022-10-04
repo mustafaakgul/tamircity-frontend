@@ -1,7 +1,7 @@
 <template>
   <!-- Guide Bookings -->
 
-  <div v-for="service in getStateTechServices" :key="service" class="row">
+  <div v-for="service in getStateExpertiseServices" :key="service" class="row">
     <div class="col-md-12">
       <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="new_bookings" role="tabpanel" aria-labelledby="new-bookings">
@@ -59,7 +59,7 @@
                     </td>
                     <td>
                       <div class="table-booking-btn">
-                        <a href="javascript:void(0);" @click="getExtras(service)" class="btn booking-btn-accept">
+                        <a href="javascript:void(0);" @click="createReservation(service)" class="btn booking-btn-accept">
                           Seç
                         </a>
                          <a href="javascript:void(0);" @click="isHidden = !isHidden" class="btn booking-btn-cancel mb-0">
@@ -100,11 +100,11 @@ export default {
   },
   computed: {
     ...mapGetters({
-      getStateTechServices: "getStateTechServices",
+      getStateExpertiseServices: "getStateExpertiseServices",
     }),
   },
   methods:{
-    ...mapActions(["getExtras"]),
+    ...mapActions(["createReservation"]),
     log: function (e) {
       console.log(e.currentTarget);
       console.log(e);

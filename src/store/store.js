@@ -30,7 +30,7 @@ export const store = new Vuex.Store({
             model: null,
             fixType: null,
             serviceType: null,
-            techService: null,
+            expertiseService: null,
             extra: null
         },
     },

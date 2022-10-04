@@ -33,3 +33,7 @@ export const getSelectedExtraService = (state) => {
 export const getSelectedTechnicalService = (state) => {
     return state.selectedItems.techService;
 }
+
+export const getSelectedExpertiseService = (state) => {
+    return state.selectedItems.expertiseService;
+}

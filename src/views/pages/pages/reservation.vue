@@ -24,7 +24,6 @@
                             <div class="form-group form-focus">
                               <label>Ürün : {{getProductName}}</label>
                               <br />
-                              <label>Hizmet : {{getFixTypeName}}</label>
                            <br />
                               <label>Tarih : </label>
                               <span class="text-danger"> tarih</span>
@@ -150,28 +149,28 @@ export default {
             return selectedModel.id;
           return "Error";
     },
-    getFixTypeId() {
-        let selectedFixType = this.$store.getters.getSelectedFixTypeId
-        if( selectedFixType != null )
-            return selectedFixType.id;
-          return "Error";
-    },
+    // getFixTypeId() {
+    //     let selectedFixType = this.$store.getters.getSelectedFixTypeId
+    //     if( selectedFixType != null )
+    //         return selectedFixType.id;
+    //       return "Error";
+    // },
     getServiceTypeId() {
         let selectedServiceType = this.$store.getters.getSelectedServiceType;
         if( selectedServiceType != null )
             return selectedServiceType.id;
           return "Error";
     },
-    getExtraServiceId() {
-        let selectedExtraService = this.$store.getters.getSelectedExtraService;
-        if( selectedExtraService != null )
-            return selectedExtraService.id;
-          return "Error";
-    },
-    getTechnicalServiceId() {
-        let selectedTechnicalService = this.$store.getters.getSelectedTechnicalService;
-        if( selectedTechnicalService != null )
-            return selectedTechnicalService.id;
+    // getExtraServiceId() {
+    //     let selectedExtraService = this.$store.getters.getSelectedExtraService;
+    //     if( selectedExtraService != null )
+    //         return selectedExtraService.id;
+    //       return "Error";
+    // },
+    getExpertiseServiceId() {
+        let selectedExpertiseService = this.$store.getters.getSelectedExpertiseService;
+        if( selectedExpertiseService != null )
+            return selectedExpertiseService.id;
           return "Error";
     },
   },
@@ -182,20 +181,16 @@ async function createReservation(){
   console.log(this.getDeviceTypeId);
   console.log(this.getBrandId);
   console.log(this.getModelId);
-  console.log(this.getFixTypeId);
   console.log(this.getServiceTypeId);
-  console.log(this.getExtraServiceId);
-  console.log(this.getTechnicalServiceId);
+  console.log(this.getExpertiseServiceId);
 
   axios.post('http://localhost:8888/api/v1/reservations',
       {
         device_type_id: parseInt(this.getDeviceTypeId),
         brand_id: parseInt(this.getBrandId),
         model_id: parseInt(this.getModelId),
-        fix_type_id: parseInt(this.getFixTypeId),
         service_type_id: parseInt(this.getServiceTypeId),
-        extra_service_id: parseInt(this.getExtraServiceId),
-        technical_service_id: parseInt(this.getTechnicalServiceId),
+        expertise_service_id: parseInt(this.getExpertiseServiceId),
         reservation_date: "2023-09-21T02:30:45Z",
         start_pf_hour: 2,
         end_of_hour: 3,

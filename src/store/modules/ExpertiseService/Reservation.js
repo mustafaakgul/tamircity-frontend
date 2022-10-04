@@ -12,14 +12,8 @@ const mutations = {
 
 const actions = {
   createReservation({ commit, rootState }, payload) {
-    rootState.selectedItems.extra = payload;
-    NextStep("extraProduct", "reservation");
-    // this.axios.get("/api/v1/extra-services")
-    // .then(response => {
-    //     console.log("extraService response : " + JSON.stringify(response.data));
-    //     commit("getExtra", response.data.data);
-    // })
-    // .catch(e => console.log(e));
+    rootState.selectedItems.expertiseService = payload;
+    NextStep("expertiseService", "reservation");
   },
 };
 

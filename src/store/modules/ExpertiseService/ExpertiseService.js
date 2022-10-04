@@ -26,8 +26,10 @@ const actions = {
     rootState.selectedItems.serviceType = payload;
     this.axios
       .get(
-        "/api/v1/expertise-services/query?model_id=" +
-          rootState.selectedItems.model.id
+        "/api/v1/expertise-services/query?brand_id=" +
+          rootState.selectedItems.brand.id +
+            "&device_type_id=" +
+          rootState.selectedItems.device.id
       )
       .then((response) => {
         commit("getExpertiseService", response.data.data);
