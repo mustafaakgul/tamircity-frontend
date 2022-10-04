@@ -15,7 +15,6 @@ const mutations = {
 
 const actions = {
   getReservationInfos({ commit, rootState, state }, payload) {
-    console.log("worked reservation infos")
     console.log("reservation number : "+ state.reservationNumber)
     // this.axios
     //   .get("/api/v1/reservations/pending?technical_service_id=1")
