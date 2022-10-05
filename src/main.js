@@ -157,6 +157,9 @@ import WorkTimeModal from './views/pages/pages/stepwizard/workTimeModal.vue'
 /*********TechCandidate component**********/
 import TechCandidateFormsPage from './views/pages/techcandidate/tech-candidate/formspage/techcandidateformspage.vue'
 
+/*********GetReservationInfos component**********/
+import GetReservationInfos from './views/pages/getreservation/getreservationinfos.vue'
+
 /*********Reservation component**********/
 import Reservation from "./views/pages/pages/reservation.vue"
 
@@ -225,6 +228,9 @@ app.component('Datepicker', Datepicker);
 
 /*********TechCandidate component**********/
 app.component('techcandidateformspage',TechCandidateFormsPage );
+
+/*********GetReservationInfos component**********/
+app.component('getreservationinfos',GetReservationInfos );
 
 /*********Aboutus component**********/
 app.component('aboutpage', Aboutpage);

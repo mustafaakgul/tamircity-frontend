@@ -42,10 +42,19 @@ import Termscondition from '../views/pages/pages/termscondition.vue'
 import Stepwizard from '../views/pages/pages/stepwizard/index'
 import TechCandidate from '../views/pages/techcandidate/tech-candidate/formspage/index'
 import TrackingFormPage from '../views/pages/pages/reservation-tracking/index.vue'
+import  GetReservation from '../views/pages/getreservation/index'
 
 
 
 const routes = [
+    {
+        path: '/getreservation',
+        name: 'getreservation',
+        component: () => import('../views/pages/getreservation/index'),
+        meta: {
+            requiresAuth: true
+        }
+    },
     {
         path: '/techcandidate',
         name: 'techcandidate',
