@@ -25,12 +25,12 @@
                   </div>
                   <div class="col-md-12 text-end">
                     <div class="form-group form-focus mb-0">
-                      <button
+                      <router-link to="/getreservationinfos"
                         @click="getReservationInfos"
                         class="btn btn-primary next-btn"
                       >
                         Sorgula
-                      </button>
+                      </router-link>
                     </div>
                   </div>
                 </div>

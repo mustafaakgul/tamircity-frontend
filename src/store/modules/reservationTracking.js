@@ -4,31 +4,35 @@ const state = {
 };
 
 const getters = {
+  getStateReservationInfo(state){
+    return state.reservationInfo ;
+  }
   
 };
 
 const mutations = {
   getReservationInfo(state, payload) {
-    state.pendingList = payload;
+    state.reservationInfo = payload;
+    console.log (state.reservationInfo)
   },
 };
 
 const actions = {
   getReservationInfos({ commit, rootState, state }, payload) {
     console.log("reservation number : "+ state.reservationNumber)
-    // this.axios
-    //   .get("/api/v1/reservations/pending?technical_service_id=1")
-    //   .then((response) => {
-    //     console.log(
-    //       "getPendingList response : " + JSON.stringify(response.data.data)
-    //     );
-    //     commit("getPendingList", response.data.data);
-    //   })
-    //   .catch((e) => console.log(e));
+    this.axios
+      .get("/api/v1/reservations/1")
+      .then((response) => {
+        console.log(
+          "getPendingList response : " + JSON.stringify(response.data.data)
+        );
+        commit("getReservationInfo", response.data.data);
+      })
+      .catch((e) => console.log(e));
   },
   getCompletedList({ commit, rootState }, payload) {
     this.axios
-      .get("/api/v1/reservations/completed?technical_service_id=1")
+      .get("/api/v1/reservations/1")
       .then((response) => {
         console.log(
           "getCompletedList response : " + JSON.stringify(response.data.data)

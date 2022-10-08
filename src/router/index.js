@@ -42,7 +42,7 @@ import Termscondition from '../views/pages/pages/termscondition.vue'
 import Stepwizard from '../views/pages/pages/stepwizard/index'
 import TechCandidate from '../views/pages/techcandidate/tech-candidate/formspage/index'
 import TrackingFormPage from '../views/pages/pages/reservation-tracking/index.vue'
-import  GetReservation from '../views/pages/getreservation/index'
+import GetReservation from '../views/pages/getreservation/index'
 
 
 
@@ -67,6 +67,14 @@ const routes = [
         path: '/reservation-tracking',
         name: 'trackingformpage',
         component: () => import('../views/pages/pages/reservation-tracking/index.vue'),
+        meta: {
+            requiresAuth: true
+        }
+    },
+    {
+        path: '/getreservationinfos',
+        name: 'getreservationinfos',
+        component: () => import('../views/pages/getreservation/getreservationinfos'),
         meta: {
             requiresAuth: true
         }
