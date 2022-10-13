@@ -247,6 +247,342 @@
                         <vue-select :options="fps" />
                       </div>
                     </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">Yüz Tanıma <span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="male" type="radio" name="stripe" value="phpmail" checked="">
+                            <label class="custom-control-label" for="male">Var</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="female" type="radio" name="stripe" value="smtp">
+                            <label class="custom-control-label" for="female">Yok</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">Slow Motion Video Çekimi<span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="male" type="radio" name="stripe" value="phpmail" checked="">
+                            <label class="custom-control-label" for="male">Var</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="female" type="radio" name="stripe" value="smtp">
+                            <label class="custom-control-label" for="female">Yok</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">Kamera Yapay Zeka Desteği <span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="male" type="radio" name="stripe" value="phpmail" checked="">
+                            <label class="custom-control-label" for="male">Var</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="female" type="radio" name="stripe" value="smtp">
+                            <label class="custom-control-label" for="female">Yok</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">Zamanlayıcı <span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="male" type="radio" name="stripe" value="phpmail" checked="">
+                            <label class="custom-control-label" for="male">Var</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="female" type="radio" name="stripe" value="smtp">
+                            <label class="custom-control-label" for="female">Yok</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">Otomatik Odaklama  <span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="male" type="radio" name="stripe" value="phpmail" checked="">
+                            <label class="custom-control-label" for="male">Var</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="female" type="radio" name="stripe" value="smtp">
+                            <label class="custom-control-label" for="female">Yok</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">Otomatik Odaklama  <span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="male" type="radio" name="stripe" value="phpmail" checked="">
+                            <label class="custom-control-label" for="male">Var</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="female" type="radio" name="stripe" value="smtp">
+                            <label class="custom-control-label" for="female">Yok</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">Coğrafi Konum Ekleme  <span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="male" type="radio" name="stripe" value="phpmail" checked="">
+                            <label class="custom-control-label" for="male">Var</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="female" type="radio" name="stripe" value="smtp">
+                            <label class="custom-control-label" for="female">Yok</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">Sesli Komut <span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="male" type="radio" name="stripe" value="phpmail" checked="">
+                            <label class="custom-control-label" for="male">Var</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="female" type="radio" name="stripe" value="smtp">
+                            <label class="custom-control-label" for="female">Yok</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <h4 class="mb-3 mt-1">Depolama</h4>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label>Dahili Depolama<span class="text-danger">*</span></label>
+                        <vue-select :options="internalstorage" />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label>Maksimum Hafıza Kartı Kapsitesi<span class="text-danger">*</span></label>
+                        <vue-select :options="maximummemorycardcapacity" />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">Hafıza Kartı Desteği <span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="male" type="radio" name="stripe" value="phpmail" checked="">
+                            <label class="custom-control-label" for="male">Var</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="female" type="radio" name="stripe" value="smtp">
+                            <label class="custom-control-label" for="female">Yok</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <h4 class="mb-3 mt-1">Batarya Özellikleri</h4>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">Şarj Tipi <span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="male" type="radio" name="stripe" value="phpmail" checked="">
+                            <label class="custom-control-label" for="male">USB Type-C</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="female" type="radio" name="stripe" value="smtp">
+                            <label class="custom-control-label" for="female">Micro-USB</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label>Batarya Kapsitesi <span class="text-danger">*</span></label>
+                        <vue-select :options="batterycapacity" />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">Kablosuz Şarj <span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="male" type="radio" name="stripe" value="phpmail" checked="">
+                            <label class="custom-control-label" for="male">Var</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="female" type="radio" name="stripe" value="smtp">
+                            <label class="custom-control-label" for="female">Yok</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">Hızlı Şarj <span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="male" type="radio" name="stripe" value="phpmail" checked="">
+                            <label class="custom-control-label" for="male">Var</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="female" type="radio" name="stripe" value="smtp">
+                            <label class="custom-control-label" for="female">Yok</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">Kablosuz Hızlı Şarj <span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="male" type="radio" name="stripe" value="phpmail" checked="">
+                            <label class="custom-control-label" for="male">Var</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="female" type="radio" name="stripe" value="smtp">
+                            <label class="custom-control-label" for="female">Yok</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">Çıkarılabilir Batarya <span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="male" type="radio" name="stripe" value="phpmail" checked="">
+                            <label class="custom-control-label" for="male">Var</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="female" type="radio" name="stripe" value="smtp">
+                            <label class="custom-control-label" for="female">Yok</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <h4 class="mb-3 mt-1">Bağlantılar</h4>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label>Wi-Fi Frekansı<span class="text-danger">*</span></label>
+                        <vue-select :options="wififrequency"/>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">NFC <span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="male" type="radio" name="stripe" value="phpmail" checked="">
+                            <label class="custom-control-label" for="male">Var</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="female" type="radio" name="stripe" value="smtp">
+                            <label class="custom-control-label" for="female">Yok</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">5G Desteği  <span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="male" type="radio" name="stripe" value="phpmail" checked="">
+                            <label class="custom-control-label" for="male">Var</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="female" type="radio" name="stripe" value="smtp">
+                            <label class="custom-control-label" for="female">Yok</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <h4 class="mb-3 mt-1">Ek Özellikler</h4>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label>Çıkış Yılı <span class="text-danger">*</span></label>
+                        <vue-select :options="releaseyear"/>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">Suya Dayanıklılık<span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="male" type="radio" name="stripe" value="phpmail" checked="">
+                            <label class="custom-control-label" for="male">Var</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="female" type="radio" name="stripe" value="smtp">
+                            <label class="custom-control-label" for="female">Yok</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">Toza Dayanıklılık<span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="male" type="radio" name="stripe" value="phpmail" checked="">
+                            <label class="custom-control-label" for="male">Var</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="female" type="radio" name="stripe" value="smtp">
+                            <label class="custom-control-label" for="female">Yok</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">Parmak İzi Okuyucu <span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="male" type="radio" name="stripe" value="phpmail" checked="">
+                            <label class="custom-control-label" for="male">Var</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="female" type="radio" name="stripe" value="smtp">
+                            <label class="custom-control-label" for="female">Yok</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">Çift SIM<span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="male" type="radio" name="stripe" value="phpmail" checked="">
+                            <label class="custom-control-label" for="male">Var</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="female" type="radio" name="stripe" value="smtp">
+                            <label class="custom-control-label" for="female">Yok</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
 
 
 
@@ -414,12 +750,12 @@ export default {
       cameraresolution: ["2MP",".....","200 MP"],
       frontcameraresolution: ["0-200 MP","..."],
       videorecordingresolution: ["4320p (Ultra HD) 8K","3384p (Ultra HD) 6K","2160p (Ultra HD) 4K"],
-      fps: ["60 fps","30 fps","24 fps"]
-
-
-
-
-
+      fps: ["60 fps","30 fps","24 fps"],
+      internalstorage: ["0-1024 GB"],
+      maximummemorycardcapacity: ["0-1024 GB"],
+      batterycapacity: ["batterycapacity2500mAh-7500mAh"],
+      wififrequency: ["Wi-Fi 6 (802.11 a/b/g/n/ac/ax)","Wi-Fi 5 (802.11 a/b/g/n/ac)","Wi-Fi 4 (802.11 a/b/g/n)","Wi-Fi 4 (802.11 b/g/n)"],
+      releaseyear: ["2023","2022","2021","2019","2018","2017","2016","2017","2016"],
 
 
 
