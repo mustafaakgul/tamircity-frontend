@@ -43,10 +43,18 @@ import Stepwizard from '../views/pages/pages/stepwizard/index'
 import TechCandidate from '../views/pages/techcandidate/tech-candidate/formspage/index'
 import TrackingFormPage from '../views/pages/pages/reservation-tracking/index.vue'
 import GetReservation from '../views/pages/getreservation/index'
-
+import FormPageExpertisephone from '../views/pages/expertiseform/expertisephone/index.vue'
 
 
 const routes = [
+    {
+        path: '/formpageexpertisephone',
+        name: 'formpageexpertisephone',
+        component: () => import('../views/pages/expertiseform/expertisephone/index'),
+        meta: {
+            requiresAuth: true
+        }
+    },
     {
         path: '/getreservation',
         name: 'getreservation',
