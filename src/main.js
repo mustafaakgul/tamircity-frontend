@@ -166,9 +166,8 @@ import Reservation from "./views/pages/pages/reservation.vue"
 /*********Reservation Tranckingcomponent**********/
 import TrackingFormPage from './views/pages/pages/reservation-tracking/trackingformpage.vue'
 
-
-
-
+/*********ExpertiseForm component**********/
+import FormPageExpertisephone from './views/pages/expertiseform/expertisephone/formpageexpertisephone.vue'
 
 
 /*******Plugin import***********/
@@ -313,6 +312,10 @@ app.component('report', GuideReport)
 /*********Guide Notification component**********/
 app.component('guidenotification', GuideNotification)
 app.component('notificationtech', Notificationtech)
+
+/*********ExpertiseForm component**********/
+app.component('formpageexpertisephone', FormPageExpertisephone)
+
 
 /*********Guide Payment component**********/
 app.component('paymentguide', PaymentGuide)
