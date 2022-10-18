@@ -44,9 +44,17 @@ import TechCandidate from '../views/pages/techcandidate/tech-candidate/formspage
 import TrackingFormPage from '../views/pages/pages/reservation-tracking/index.vue'
 import GetReservation from '../views/pages/getreservation/index'
 import FormPageExpertisephone from '../views/pages/expertiseform/expertisephone/index.vue'
-
+import FormPageExpertisepc from '../views/pages/expertiseform/expertisepc/index.vue'
 
 const routes = [
+    {
+        path: '/formpageexpertisepc',
+        name: 'formpageexpertisepc',
+        component: () => import('../views/pages/expertiseform/expertisepc/index'),
+        meta: {
+            requiresAuth: true
+        }
+    },
     {
         path: '/formpageexpertisephone',
         name: 'formpageexpertisephone',

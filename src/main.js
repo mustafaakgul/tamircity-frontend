@@ -168,6 +168,8 @@ import TrackingFormPage from './views/pages/pages/reservation-tracking/trackingf
 
 /*********ExpertiseForm component**********/
 import FormPageExpertisephone from './views/pages/expertiseform/expertisephone/formpageexpertisephone.vue'
+/*********ExpertiseForm component**********/
+import FormPageExpertisepc from './views/pages/expertiseform/expertisepc/formpageexpertisepc.vue'
 
 
 /*******Plugin import***********/
@@ -316,6 +318,8 @@ app.component('notificationtech', Notificationtech)
 /*********ExpertiseForm component**********/
 app.component('formpageexpertisephone', FormPageExpertisephone)
 
+/*********ExpertiseForm component**********/
+app.component('formpageexpertisepc', FormPageExpertisepc)
 
 /*********Guide Payment component**********/
 app.component('paymentguide', PaymentGuide)
