@@ -45,8 +45,25 @@ import TrackingFormPage from '../views/pages/pages/reservation-tracking/index.vu
 import GetReservation from '../views/pages/getreservation/index'
 import FormPageExpertisephone from '../views/pages/expertiseform/expertisephone/index.vue'
 import FormPageExpertisepc from '../views/pages/expertiseform/expertisepc/index.vue'
+import FormPageExpertiseconsole from '../views/pages/expertiseform/expertiseconsole/formpageexpertiseconsole.vue'
 
 const routes = [
+    {
+        path: '/formpageexpertiseconsole',
+        name: 'formpageexpertiseconsole',
+        component: () => import('../views/pages/expertiseform/expertiseconsole/index'),
+        meta: {
+            requiresAuth: true
+        }
+    },
+    {
+        path: '/formpageexpertisetv',
+        name: 'formpageexpertisetv',
+        component: () => import('../views/pages/expertiseform/expertisetv/index'),
+        meta: {
+            requiresAuth: true
+        }
+    },
     {
         path: '/formpageexpertisepc',
         name: 'formpageexpertisepc',
