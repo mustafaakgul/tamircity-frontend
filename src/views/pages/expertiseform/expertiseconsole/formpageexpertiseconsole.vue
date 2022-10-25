@@ -34,9 +34,10 @@
                     </div>
                   </div>
                   <div class="col-md-6">
-                    <div class="form-group">
-                      <label>Garanti süresi<span class="text-danger">*</span></label>
-                      <vue-select :options="guarantee" />
+                    <div class="form-group form-focus">
+                      <label>Garanti Süresi <span class="text-danger">*</span></label>
+                      <input type="text" class="form-control floating">
+                      <label class="focus-label">0 GB-2048 GB</label>
                     </div>
                   </div>
                   <div class="col-md-6">
@@ -78,8 +79,6 @@
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-md-6">
                   </div>
                 </div>
               </div>
@@ -152,29 +151,8 @@
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label class="custom-control-gender">HDR Desteği <span class="text-danger">*</span></label>
-                      <div class="custom-control-box">
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="hdry" type="radio" name="hdr" value="hdr" checked="">
-                          <label class="custom-control-label" for="hdry">Var</label>
-                        </div>
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="hdrz" type="radio" name="hdr" value="hdr">
-                          <label class="custom-control-label" for="hdrz">Yok</label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
                       <label>Bellek (Ram) <span class="text-danger">*</span></label>
                       <vue-select :options="preprocessorfrequency" />
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label>Ram Kapasitesi <span class="text-danger">*</span></label>
-                      <vue-select :options="ram" />
                     </div>
                   </div>
                   <div class="col-md-6">
@@ -208,6 +186,59 @@
                     </div>
                   </div>
                   <div class="col-md-6">
+                    <div class="form-group form-focus">
+                      <label>Ethernet Hızı<span class="text-danger">*</span></label>
+                      <input type="text" class="form-control floating">
+                      <label class="focus-label">100Mbit-1000Mbit</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>HDMI Standardı<span class="text-danger">*</span></label>
+                      <vue-select :options="hdmı" />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>USB Versiyonu <span class="text-danger">*</span></label>
+                      <vue-select :options="usbversion" />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Bluetooth Versiyonu<span class="text-danger">*</span></label>
+                      <vue-select :options="bluetoothversion" />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Oyun Kumandası Adedi<span class="text-danger">*</span></label>
+                      <vue-select :options="controllerquantity" />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Oyun Adedi<span class="text-danger">*</span></label>
+                      <vue-select :options="gamequantity"/>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="custom-control-gender">HDR Desteği <span class="text-danger">*</span></label>
+                      <div class="custom-control-box">
+                        <div class="custom-control custom-radios custom-control-inline">
+                          <input class="custom-control-input" id="hdry" type="radio" name="hdr" value="hdr" checked="">
+                          <label class="custom-control-label" for="hdry">Var</label>
+                        </div>
+                        <div class="custom-control custom-radios custom-control-inline">
+                          <input class="custom-control-input" id="hdrz" type="radio" name="hdr" value="hdr">
+                          <label class="custom-control-label" for="hdrz">Yok</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
                     <div class="form-group">
                       <label class="custom-control-gender">Ethernet <span class="text-danger">*</span></label>
                       <div class="custom-control-box">
@@ -220,19 +251,6 @@
                           <label class="custom-control-label" for="ethernetn">Yok</label>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group form-focus">
-                      <label>Ethernet Hızı<span class="text-danger">*</span></label>
-                      <input type="text" class="form-control floating">
-                      <label class="focus-label">100Mbit-1000Mbit</label>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label>HDMI Standardı<span class="text-danger">*</span></label>
-                      <vue-select :options="hdmı" />
                     </div>
                   </div>
                   <div class="col-md-6">
@@ -267,12 +285,6 @@
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label>USB Versiyonu <span class="text-danger">*</span></label>
-                      <vue-select :options="usbversion" />
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
                       <label class="custom-control-gender">Bluetooth<span class="text-danger">*</span></label>
                       <div class="custom-control-box">
                         <div class="custom-control custom-radios custom-control-inline">
@@ -284,12 +296,6 @@
                           <label class="custom-control-label" for="bluetoothz">Yok</label>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label>Bluetooth Versiyonu<span class="text-danger">*</span></label>
-                      <vue-select :options="bluetoothversion" />
                     </div>
                   </div>
                   <div class="col-md-6">
@@ -324,12 +330,6 @@
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label>Oyun Kumandası Adedi<span class="text-danger">*</span></label>
-                      <vue-select :options="controllerquantity" />
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
                       <label class="custom-control-gender">Oyun<span class="text-danger">*</span></label>
                       <div class="custom-control-box">
                         <div class="custom-control custom-radios custom-control-inline">
@@ -341,12 +341,6 @@
                           <label class="custom-control-label" for="gamez">Yok</label>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label>Oyun Adedi<span class="text-danger">*</span></label>
-                      <vue-select :options="gamequantity"/>
                     </div>
                   </div>
                 </div>
@@ -589,21 +583,6 @@
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label class="custom-control-gender">Kart Okuyucu <span class="text-danger">*</span></label>
-                      <div class="custom-control-box">
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="30" type="radio" name="question16" value="1" checked="">
-                          <label class="custom-control-label" for="30">Evet</label>
-                        </div>
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="31" type="radio" name="question16" value="0">
-                          <label class="custom-control-label" for="31">Hayır</label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
                       <label class="custom-control-gender">HDMI Girişi sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
                       <div class="custom-control-box">
                         <div class="custom-control custom-radios custom-control-inline">
@@ -667,7 +646,6 @@
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>

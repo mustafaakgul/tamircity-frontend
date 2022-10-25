@@ -34,9 +34,10 @@
                       </div>
                     </div>
                     <div class="col-md-6">
-                      <div class="form-group">
-                        <label>Garanti süresi<span class="text-danger">*</span></label>
-                        <vue-select :options="guarantee" />
+                      <div class="form-group form-focus">
+                        <label>Garanti Süresi <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control floating">
+                        <label class="focus-label">0 GB-2048 GB</label>
                       </div>
                     </div>
                     <div class="col-md-6">
@@ -78,8 +79,6 @@
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="col-md-6">
                     </div>
                   </div>
                 </div>
@@ -126,9 +125,9 @@
                       <div class="col-md-12">
                         <div class="form-group">
                           <div class="relative-form">
-                            <span>ID/Passport Upload</span>
+                            <span>Cihazın Kozmetik Durumu</span>
                             <label class="relative-file-upload">
-                              Upload Now <input type="file">
+                              Yükle<input type="file">
                             </label>
                           </div>
                         </div>
@@ -149,9 +148,10 @@
                   <div class="row align-items-center">
                     <h4 class="mb-3 mt-1">Ekran özellikleri</h4><hr>
                     <div class="col-md-6">
-                      <div class="form-group">
-                        <label>Ekran Boyutu <span class="text-danger">*</span></label>
-                        <vue-select :options="screensize" />
+                      <div class="form-group form-focus">
+                        <label>Ekran Boyutu<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control floating">
+                        <label class="focus-label">2.3-8 inç</label>
                       </div>
                     </div>
                     <div class="col-md-6">
@@ -189,15 +189,17 @@
                       </div>
                     </div>
                     <div class="col-md-6">
-                      <div class="form-group">
+                      <div class="form-group form-focus">
                         <label>İşlemci Frekansı<span class="text-danger">*</span></label>
-                        <vue-select :options="preprocessorfrequency" />
+                        <input type="text" class="form-control floating">
+                        <label class="focus-label">2.3-8 inç</label>
                       </div>
                     </div>
                     <div class="col-md-6">
-                      <div class="form-group">
-                        <label>Ram Kapasitesi <span class="text-danger">*</span></label>
-                        <vue-select :options="ram" />
+                      <div class="form-group form-focus">
+                        <label>Ram Kapasitesi<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control floating">
+                        <label class="focus-label">0-18 GB</label>
                       </div>
                     </div>
                     <div class="col-md-6">
@@ -213,22 +215,25 @@
                       </div>
                     </div>
                     <div class="col-md-6">
-                      <div class="form-group">
+                      <div class="form-group form-focus">
                         <label>İşlemci Çekirdek Sayısı <span class="text-danger">*</span></label>
-                        <vue-select :options="numberprocessorcores" />
+                        <input type="text" class="form-control floating">
+                        <label class="focus-label">4-12</label>
                       </div>
                     </div>
                     <h4 class="mb-3 mt-1">Kamera Özellikleri</h4><hr>
                     <div class="col-md-6">
-                      <div class="form-group">
-                        <label>Kamera Çözünürlüğü <span class="text-danger">*</span></label>
-                        <vue-select :options="cameraresolution" />
+                      <div class="form-group form-focus">
+                        <label>Kamera Çözünürlüğü<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control floating">
+                        <label class="focus-label">2-200 MP</label>
                       </div>
                     </div>
                     <div class="col-md-6">
-                      <div class="form-group">
-                        <label>Ön Kamera Çözünürlüğü <span class="text-danger">*</span></label>
-                        <vue-select :options="frontcameraresolution" />
+                      <div class="form-group form-focus">
+                        <label>Ön Kamera Çözünürlüğü<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control floating">
+                        <label class="focus-label">2-200 MP</label>
                       </div>
                     </div>
                     <div class="col-md-6">
@@ -350,15 +355,17 @@
                     </div>
                     <h4 class="mb-3 mt-1">Depolama</h4><hr>
                     <div class="col-md-6">
-                      <div class="form-group">
+                      <div class="form-group form-focus">
                         <label>Dahili Depolama<span class="text-danger">*</span></label>
-                        <vue-select :options="internalstorage" />
+                        <input type="text" class="form-control floating">
+                        <label class="focus-label">0-1024 GB</label>
                       </div>
                     </div>
                     <div class="col-md-6">
-                      <div class="form-group">
+                      <div class="form-group form-focus">
                         <label>Maksimum Hafıza Kartı Kapsitesi<span class="text-danger">*</span></label>
-                        <vue-select :options="maximummemorycardcapacity" />
+                        <input type="text" class="form-control floating">
+                        <label class="focus-label">0-1024 GB</label>
                       </div>
                     </div>
                     <div class="col-md-6">
@@ -393,9 +400,10 @@
                       </div>
                     </div>
                     <div class="col-md-6">
-                      <div class="form-group">
-                        <label>Batarya Kapsitesi <span class="text-danger">*</span></label>
-                        <vue-select :options="batterycapacity" />
+                      <div class="form-group form-focus">
+                        <label>Batarya Kapsitesi<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control floating">
+                        <label class="focus-label">2500mAh-7500mAh</label>
                       </div>
                     </div>
                     <div class="col-md-6">
@@ -903,23 +911,19 @@ export default {
     return {
       brand: ["Marka", "aaaaa", " bbbbb", "ccccccc"],
       model: ["Model","xxxx","yyy"],
-      guarantee: ["1","2","3","4","....","....","...","22","23","24"],
-      color: ["Siyah","Beyaz","Gümüş","Pembe","Mavi","....","...."],
+      color: ["Siyah","Beyaz","Altın","Gümüş","Mavi","Gri","Yeşil","Bordo","Mor","Mavi(Alaca)","Parlak Siyah","Sarı","Bakır","Kırmızı","Kahverengi","Turuncu","Bej","Pembe","Gün Doğumu","Lacivert"],
       screensize: ["2.3 inç","8 inç"],
-      displaytechnology: ["AMOLED","Dynamic AMOLED","Super AMOLED","IPS LCD","OLED","PLS","..."],
-      screenresolution: ["QHD+","QHD","FHD+"],
-      preprocessormodel: ["Qualcomm","MediaTek","Samsung","HiSilicon"],
+      displaytechnology: ["AMOLED","Dynamic AMOLED","Super AMOLED","IPS LCD","OLED","PLS","P-OLED","Super LCD","Super LCD 2","Super LCD 3","Super LCD 5","Super LCD 6","TFT LCD"],
+      screenresolution: ["QHD+","QHD","FHD+","FHD","HD+","HD"],
+      preprocessormodel: ["Qualcomm","MediaTek","Samsung","HiSilicon","SpreadtruM","Apple","Intel","Broadcom","Xiaomi","Unisoc","Google","JLQ"],
       preprocessorfrequency: ["0.5GHz","......","3.5GHz"],
       ram: ["2GB","4GB","...","18GB"],
-      operatingsystem: ["Android","Apple IOS","Blackberry OS"],
+      operatingsystem: ["Android","Apple IOS","Blackberry OS","Windows Phone OS"],
       operatingsystemversion: ["Android 7.0 (Nougat)","Android 7.1 (Nougat)","Android 11 (Go Edition)","iOS 11"],
       numberprocessorcores: ["4","..","12"],
       cameraresolution: ["2MP",".....","200 MP"],
-      frontcameraresolution: ["0-200 MP","..."],
-      videorecordingresolution: ["4320p (Ultra HD) 8K","3384p (Ultra HD) 6K","2160p (Ultra HD) 4K"],
+      videorecordingresolution: ["4320p (Ultra HD) 8K","3384p (Ultra HD) 6K","2160p (Ultra HD) 4K","1440p (Quad HD) 2K","1080p (Full HD)","720p (HD)"],
       fps: ["60 fps","30 fps","24 fps"],
-      internalstorage: ["0-1024 GB"],
-      maximummemorycardcapacity: ["0-1024 GB"],
       batterycapacity: ["batterycapacity2500mAh-7500mAh"],
       wififrequency: ["Wi-Fi 6 (802.11 a/b/g/n/ac/ax)","Wi-Fi 5 (802.11 a/b/g/n/ac)","Wi-Fi 4 (802.11 a/b/g/n)","Wi-Fi 4 (802.11 b/g/n)"],
       releaseyear: ["2023","2022","2021","2019","2018","2017","2016","2017","2016"],
