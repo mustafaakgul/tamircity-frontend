@@ -28,14 +28,28 @@
                     </div>
                   </div>
                   <div class="col-md-6">
-                    <div class="form-group">
-                      <label>Model <span class="text-danger">*</span></label>
-                      <vue-select :options="model" />
+                    <div class="form-group form-focus">
+                      <label>Model<span class="text-danger">*</span></label>
+                      <input type="text" class="form-control floating">
+                      <label class="focus-label">Model</label>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
                       <label>Garanti süresi<span class="text-danger">*</span></label>
+                      <vue-select :options="guarantee" />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group form-focus">
+                      <label>Garanti süresi<span class="text-danger">*</span></label>
+                      <input type="text" class="form-control floating">
+                      <label class="focus-label">Garanti süresi</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Garanti Türü<span class="text-danger">*</span></label>
                       <vue-select :options="guarantee" />
                     </div>
                   </div>
@@ -79,8 +93,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-md-6">
-                  </div>
+
                 </div>
               </div>
             </div>
@@ -98,9 +111,9 @@
                     <div class="col-md-12">
                       <div class="form-group">
                         <div class="relative-form">
-                          <span>ID/Passport Upload</span>
+                          <span>Cihazın Kozmetik Durumu</span>
                           <label class="relative-file-upload">
-                            Upload Now <input type="file">
+                            Yükle<input type="file">
                           </label>
                         </div>
                       </div>
@@ -110,6 +123,444 @@
               </div>
             </div>
           </div>
+          <div class="row justify-content-center card answer-card">
+            <div class="col-lg-12 col-md-12">
+              <div class="settings-info">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h3 class="mb-3 mt-1">Cihaz Özellikleri</h3>
+                  </div>
+                </div>
+                <div class="row align-items-center">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Panel Teknolojisi<span class="text-danger">*</span></label>
+                      <vue-select :options="paneltechnology"/>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>İşletim Sistemi<span class="text-danger">*</span></label>
+                      <vue-select :options="operatingsystem"/>
+                    </div>
+                  </div>
+
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Ekran Çözünürlüğü <span class="text-danger">*</span></label>
+                      <vue-select :options="screenresolution"/>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="custom-control-gender">Çizilmeye Karşı Dayanıklılık <span class="text-danger">*</span></label>
+                      <div class="custom-control-box">
+                        <div class="custom-control custom-radios custom-control-inline">
+                          <input class="custom-control-input" id="scratchy" type="radio" name="scratch" value="1" checked="">
+                          <label class="custom-control-label" for="scratchy">Var</label>
+                        </div>
+                        <div class="custom-control custom-radios custom-control-inline">
+                          <input class="custom-control-input" id="scratchn" type="radio" name="scratch" value="0">
+                          <label class="custom-control-label" for="scratchn">Yok</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <h4 class="mb-3 mt-1">Teknik Özellikler</h4><hr>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>İşlemci Modeli <span class="text-danger">*</span></label>
+                      <vue-select :options="preprocessormodel" />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group form-focus">
+                      <label>İşlemci Frekansı<span class="text-danger">*</span></label>
+                      <input type="text" class="form-control floating">
+                      <label class="focus-label">2.3-8 inç</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group form-focus">
+                      <label>Ram Kapasitesi<span class="text-danger">*</span></label>
+                      <input type="text" class="form-control floating">
+                      <label class="focus-label">0-18 GB</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>İşletim Sistemi<span class="text-danger">*</span></label>
+                      <vue-select :options="operatingsystem" />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>İşletim Sistemi Versiyonu <span class="text-danger">*</span></label>
+                      <vue-select :options="operatingsystemversion" />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group form-focus">
+                      <label>İşlemci Çekirdek Sayısı <span class="text-danger">*</span></label>
+                      <input type="text" class="form-control floating">
+                      <label class="focus-label">4-12</label>
+                    </div>
+                  </div>
+                  <h4 class="mb-3 mt-1">Kamera Özellikleri</h4><hr>
+                  <div class="col-md-6">
+                    <div class="form-group form-focus">
+                      <label>Kamera Çözünürlüğü<span class="text-danger">*</span></label>
+                      <input type="text" class="form-control floating">
+                      <label class="focus-label">2-200 MP</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group form-focus">
+                      <label>Ön Kamera Çözünürlüğü<span class="text-danger">*</span></label>
+                      <input type="text" class="form-control floating">
+                      <label class="focus-label">2-200 MP</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Video Kayıt Çözünürlüğü <span class="text-danger">*</span></label>
+                      <vue-select :options="videorecordingresolution" />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Video FPS Değeri<span class="text-danger">*</span></label>
+                      <vue-select :options="fps" />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="custom-control-gender">Yüz Tanıma <span class="text-danger">*</span></label>
+                      <div class="custom-control-box">
+                        <div class="custom-control custom-radios custom-control-inline">
+                          <input class="custom-control-input" id="recognitiony" type="radio" name="recognition" value="recognitiony" checked="">
+                          <label class="custom-control-label" for="recognitiony">Var</label>
+                        </div>
+                        <div class="custom-control custom-radios custom-control-inline">
+                          <input class="custom-control-input" id="recognitionn" type="radio" name="recognition" value="recognitionn">
+                          <label class="custom-control-label" for="recognitionn">Yok</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="custom-control-gender">Slow Motion Video Çekimi<span class="text-danger">*</span></label>
+                      <div class="custom-control-box">
+                        <div class="custom-control custom-radios custom-control-inline">
+                          <input class="custom-control-input" id="slowvideoy" type="radio" name="slowvideo" value="1" checked="">
+                          <label class="custom-control-label" for="slowvideoy">Var</label>
+                        </div>
+                        <div class="custom-control custom-radios custom-control-inline">
+                          <input class="custom-control-input" id="slowvideon" type="radio" name="slowvideo" value="0">
+                          <label class="custom-control-label" for="slowvideon">Yok</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="custom-control-gender">Kamera Yapay Zeka Desteği <span class="text-danger">*</span></label>
+                      <div class="custom-control-box">
+                        <div class="custom-control custom-radios custom-control-inline">
+                          <input class="custom-control-input" id="aiy" type="radio" name="ai" value="1" checked="">
+                          <label class="custom-control-label" for="aiy">Var</label>
+                        </div>
+                        <div class="custom-control custom-radios custom-control-inline">
+                          <input class="custom-control-input" id="ain" type="radio" name="ai" value="0">
+                          <label class="custom-control-label" for="ain">Yok</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="custom-control-gender">Zamanlayıcı <span class="text-danger">*</span></label>
+                      <div class="custom-control-box">
+                        <div class="custom-control custom-radios custom-control-inline">
+                          <input class="custom-control-input" id="timey" type="radio" name="time" value="1" checked="">
+                          <label class="custom-control-label" for="timey">Var</label>
+                        </div>
+                        <div class="custom-control custom-radios custom-control-inline">
+                          <input class="custom-control-input" id="timez" type="radio" name="time" value="0">
+                          <label class="custom-control-label" for="timez">Yok</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="custom-control-gender">Otomatik Odaklama<span class="text-danger">*</span></label>
+                      <div class="custom-control-box">
+                        <div class="custom-control custom-radios custom-control-inline">
+                          <input class="custom-control-input" id="autofocusy" type="radio" name="autofocus" value="1" checked="">
+                          <label class="custom-control-label" for="autofocusy">Var</label>
+                        </div>
+                        <div class="custom-control custom-radios custom-control-inline">
+                          <input class="custom-control-input" id="autofocusz" type="radio" name="autofocus" value="0">
+                          <label class="custom-control-label" for="autofocusz">Yok</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="custom-control-gender">Coğrafi Konum Ekleme  <span class="text-danger">*</span></label>
+                      <div class="custom-control-box">
+                        <div class="custom-control custom-radios custom-control-inline">
+                          <input class="custom-control-input" id="locationy" type="radio" name="location" value="location" checked="">
+                          <label class="custom-control-label" for="locationy">Var</label>
+                        </div>
+                        <div class="custom-control custom-radios custom-control-inline">
+                          <input class="custom-control-input" id="location" type="radio" name="location" value="location">
+                          <label class="custom-control-label" for="location">Yok</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="custom-control-gender">Sesli Komut <span class="text-danger">*</span></label>
+                      <div class="custom-control-box">
+                        <div class="custom-control custom-radios custom-control-inline">
+                          <input class="custom-control-input" id="voicecommandsy" type="radio" name="voicecommands" value="voicecommands" checked="">
+                          <label class="custom-control-label" for="voicecommandsy">Var</label>
+                        </div>
+                        <div class="custom-control custom-radios custom-control-inline">
+                          <input class="custom-control-input" id="voicecommandsz" type="radio" name="voicecommands" value="voicecommands">
+                          <label class="custom-control-label" for="voicecommandsz">Yok</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <h4 class="mb-3 mt-1">Depolama</h4><hr>
+                  <div class="col-md-6">
+                    <div class="form-group form-focus">
+                      <label>Dahili Depolama<span class="text-danger">*</span></label>
+                      <input type="text" class="form-control floating">
+                      <label class="focus-label">0-1024 GB</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group form-focus">
+                      <label>Maksimum Hafıza Kartı Kapsitesi<span class="text-danger">*</span></label>
+                      <input type="text" class="form-control floating">
+                      <label class="focus-label">0-1024 GB</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="custom-control-gender">Hafıza Kartı Desteği <span class="text-danger">*</span></label>
+                      <div class="custom-control-box">
+                        <div class="custom-control custom-radios custom-control-inline">
+                          <input class="custom-control-input" id="memoryy" type="radio" name="memory" value="memory" checked="">
+                          <label class="custom-control-label" for="memoryy">Var</label>
+                        </div>
+                        <div class="custom-control custom-radios custom-control-inline">
+                          <input class="custom-control-input" id="memoryz" type="radio" name="memory" value="memory">
+                          <label class="custom-control-label" for="memoryz">Yok</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <h4 class="mb-3 mt-1">Batarya Özellikleri</h4><hr>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="custom-control-gender">Şarj Tipi <span class="text-danger">*</span></label>
+                      <div class="custom-control-box">
+                        <div class="custom-control custom-radios custom-control-inline">
+                          <input class="custom-control-input" id="typey" type="radio" name="type" value="typey" checked="">
+                          <label class="custom-control-label" for="typey">USB Type-C</label>
+                        </div>
+                        <div class="custom-control custom-radios custom-control-inline">
+                          <input class="custom-control-input" id="typez" type="radio" name="type" value="typez">
+                          <label class="custom-control-label" for="typez">Micro-USB</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group form-focus">
+                      <label>Batarya Kapsitesi<span class="text-danger">*</span></label>
+                      <input type="text" class="form-control floating">
+                      <label class="focus-label">2500mAh-7500mAh</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="custom-control-gender">Kablosuz Şarj <span class="text-danger">*</span></label>
+                      <div class="custom-control-box">
+                        <div class="custom-control custom-radios custom-control-inline">
+                          <input class="custom-control-input" id="chargey" type="radio" name="charge" value="chargey" checked="">
+                          <label class="custom-control-label" for="chargey">Var</label>
+                        </div>
+                        <div class="custom-control custom-radios custom-control-inline">
+                          <input class="custom-control-input" id="chargez" type="radio" name="charge" value="chargez">
+                          <label class="custom-control-label" for="chargez">Yok</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="custom-control-gender">Hızlı Şarj <span class="text-danger">*</span></label>
+                      <div class="custom-control-box">
+                        <div class="custom-control custom-radios custom-control-inline">
+                          <input class="custom-control-input" id="fastchargey" type="radio" name="fastcharge" value="1" checked="">
+                          <label class="custom-control-label" for="fastchargey">Var</label>
+                        </div>
+                        <div class="custom-control custom-radios custom-control-inline">
+                          <input class="custom-control-input" id="fastchargez" type="radio" name="fastcharge" value="0">
+                          <label class="custom-control-label" for="fastchargez">Yok</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="custom-control-gender">Kablosuz Hızlı Şarj <span class="text-danger">*</span></label>
+                      <div class="custom-control-box">
+                        <div class="custom-control custom-radios custom-control-inline">
+                          <input class="custom-control-input" id="wirelessfastchargey" type="radio" name="wirelessfastcharge" value="1" checked="">
+                          <label class="custom-control-label" for="wirelessfastchargey">Var</label>
+                        </div>
+                        <div class="custom-control custom-radios custom-control-inline">
+                          <input class="custom-control-input" id="wirelessfastchargez" type="radio" name="wirelessfastcharge" value="0">
+                          <label class="custom-control-label" for="wirelessfastchargez">Yok</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="custom-control-gender">Çıkarılabilir Batarya <span class="text-danger">*</span></label>
+                      <div class="custom-control-box">
+                        <div class="custom-control custom-radios custom-control-inline">
+                          <input class="custom-control-input" id="bateryy" type="radio" name="batery" value="1" checked="">
+                          <label class="custom-control-label" for="bateryy">Var</label>
+                        </div>
+                        <div class="custom-control custom-radios custom-control-inline">
+                          <input class="custom-control-input" id="bateryz" type="radio" name="batery" value="0">
+                          <label class="custom-control-label" for="bateryz">Yok</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <h4 class="mb-3 mt-1">Bağlantılar</h4><hr>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Wi-Fi Frekansı<span class="text-danger">*</span></label>
+                      <vue-select :options="wififrequency"/>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="custom-control-gender">NFC <span class="text-danger">*</span></label>
+                      <div class="custom-control-box">
+                        <div class="custom-control custom-radios custom-control-inline">
+                          <input class="custom-control-input" id="nfcy" type="radio" name="nfc" value="1" checked="">
+                          <label class="custom-control-label" for="nfcy">Var</label>
+                        </div>
+                        <div class="custom-control custom-radios custom-control-inline">
+                          <input class="custom-control-input" id="nfcz" type="radio" name="nfc" value="0">
+                          <label class="custom-control-label" for="nfcz">Yok</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="custom-control-gender">5G Desteği  <span class="text-danger">*</span></label>
+                      <div class="custom-control-box">
+                        <div class="custom-control custom-radios custom-control-inline">
+                          <input class="custom-control-input" id="5gy" type="radio" name="5g" value="1" checked="">
+                          <label class="custom-control-label" for="5gy">Var</label>
+                        </div>
+                        <div class="custom-control custom-radios custom-control-inline">
+                          <input class="custom-control-input" id="female" type="radio" name="5g" value="0">
+                          <label class="custom-control-label" for="female">Yok</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <h4 class="mb-3 mt-1">Ek Özellikler</h4><hr>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Çıkış Yılı <span class="text-danger">*</span></label>
+                      <vue-select :options="releaseyear"/>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="custom-control-gender">Suya Dayanıklılık<span class="text-danger">*</span></label>
+                      <div class="custom-control-box">
+                        <div class="custom-control custom-radios custom-control-inline">
+                          <input class="custom-control-input" id="waterprofy" type="radio" name="waterprof" value="1" checked="">
+                          <label class="custom-control-label" for="waterprofy">Var</label>
+                        </div>
+                        <div class="custom-control custom-radios custom-control-inline">
+                          <input class="custom-control-input" id="waterprofz" type="radio" name="waterprof" value="0">
+                          <label class="custom-control-label" for="waterprofz">Yok</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="custom-control-gender">Toza Dayanıklılık<span class="text-danger">*</span></label>
+                      <div class="custom-control-box">
+                        <div class="custom-control custom-radios custom-control-inline">
+                          <input class="custom-control-input" id="dustprofy" type="radio" name="dustprof" value="1" checked="">
+                          <label class="custom-control-label" for="dustprofy">Var</label>
+                        </div>
+                        <div class="custom-control custom-radios custom-control-inline">
+                          <input class="custom-control-input" id="dustprofz" type="radio" name="dustprof" value="0">
+                          <label class="custom-control-label" for="dustprofz">Yok</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="custom-control-gender">Parmak İzi Okuyucu <span class="text-danger">*</span></label>
+                      <div class="custom-control-box">
+                        <div class="custom-control custom-radios custom-control-inline">
+                          <input class="custom-control-input" id="fingerreadery" type="radio" name="fingerreader" value="1" checked="">
+                          <label class="custom-control-label" for="fingerreadery">Var</label>
+                        </div>
+                        <div class="custom-control custom-radios custom-control-inline">
+                          <input class="custom-control-input" id="fingerreaderz" type="radio" name="fingerreader" value="0">
+                          <label class="custom-control-label" for="fingerreaderz">Yok</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="custom-control-gender">Çift SIM<span class="text-danger">*</span></label>
+                      <div class="custom-control-box">
+                        <div class="custom-control custom-radios custom-control-inline">
+                          <input class="custom-control-input" id="simy" type="radio" name="sim" value="1" checked="">
+                          <label class="custom-control-label" for="simy">Var</label>
+                        </div>
+                        <div class="custom-control custom-radios custom-control-inline">
+                          <input class="custom-control-input" id="simz" type="radio" name="sim" value="0">
+                          <label class="custom-control-label" for="simz">Yok</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div class="row justify-content-center card answer-card">
             <div class="col-lg-12 col-md-12">
               <div class="settings-info">
@@ -727,17 +1178,19 @@ import Vue from 'vue'
 export default {
   data() {
     return {
-      brand: ["Marka", "aaaaa", " bbbbb", "ccccccc"],
-      model: ["Model","xxxx","yyy"],
+      brand: ["Samsung", "LG", "Philips", "Vestel"," Sony"," Arçelik"," Altus"," Awox"," Axen","Beko","Digipol","Finlux","Fivo","Goldmaster","Grundig","Hi-Level","Hitachi","Jameson","JVC","Kamosonic","Luxor","Navitech ","Next","Nordmende","Panasonic","Premier","Profilo","Regal"," Rowell"," SEG"," Sharp"," Skytech","Sunny"," Techwood"," Telefox"," Telefunken "," Toshiba"," Woon"," Botech"," Redline"," Blaupunkt"," Daewoo"," Dijitsu"," DijiTv"," Dikom","Elton","Hello"," Keysmart"," Morio"," Nexon"," Olimpia"," Onvo"," PEAQ"," Practica"," Quax"," Saba","Sheen"," Strong"," TCL"," Telenova","Ventus"," Weston"," Xiaomi"],
       guarantee: ["1","2","3","4","....","....","...","22","23","24"],
       color: ["Siyah","Beyaz","Gümüş","Pembe","Mavi","....","...."],
       screensize: ["2.3 inç","8 inç"],
-      displaytechnology: ["AMOLED","Dynamic AMOLED","Super AMOLED","IPS LCD","OLED","PLS","..."],
+      paneltechnology: ["Led TV","Lcd TV","Oled TV","Qled TV","OLED","NanoCell TV"],
+      operatingsystem:["WebOS","Tizen","Android","Roku","Amazon Fire"],
+
+
       screenresolution: ["QHD+","QHD","FHD+"],
       preprocessormodel: ["Qualcomm","MediaTek","Samsung","HiSilicon"],
       preprocessorfrequency: ["0.5GHz","......","3.5GHz"],
       ram: ["2GB","4GB","...","18GB"],
-      operatingsystem: ["Android","Apple IOS","Blackberry OS"],
+
       operatingsystemversion: ["Android 7.0 (Nougat)","Android 7.1 (Nougat)","Android 11 (Go Edition)","iOS 11"],
       numberprocessorcores: ["4","..","12"],
       cameraresolution: ["2MP",".....","200 MP"],
