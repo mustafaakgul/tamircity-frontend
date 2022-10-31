@@ -224,6 +224,13 @@
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
+                      <label>USB Giriş Adedi <span class="text-danger">*</span></label>
+                      <vue-select :options="usbquantity" />
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
                       <label class="custom-control-gender">HDR Desteği <span class="text-danger">*</span></label>
                       <div class="custom-control-box">
                         <div class="custom-control custom-radios custom-control-inline">
@@ -264,21 +271,6 @@
                         <div class="custom-control custom-radios custom-control-inline">
                           <input class="custom-control-input" id="usbz" type="radio" name="usb" value="0">
                           <label class="custom-control-label" for="usbz">Yok</label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label class="custom-control-gender">USB Giriş Adedi <span class="text-danger">*</span></label>
-                      <div class="custom-control-box">
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="usbentery" type="radio" name="usbenter" value="1" checked="">
-                          <label class="custom-control-label" for="usbentery">Var</label>
-                        </div>
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="usbenterz" type="radio" name="usbenter" value="0">
-                          <label class="custom-control-label" for="usbenterz">Yok</label>
                         </div>
                       </div>
                     </div>
@@ -677,8 +669,7 @@ export default {
       bluetoothversion:["Bluetooth 2.0","Bluetooth 2.1","Bluetooth 4.0","Bluetooth 4.1","Bluetooth 5.0"],
       controllerquantity: ["1","2","3","4"],
       gamequantity:["1","2","3","4","5+"],
-
-
+      usbquantity:["1","2","3","4","5"],
     }
   },
 
