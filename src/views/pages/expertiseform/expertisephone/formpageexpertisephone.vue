@@ -37,7 +37,7 @@
                       <div class="form-group form-focus">
                         <label>Garanti Süresi <span class="text-danger">*</span></label>
                         <input type="text" class="form-control floating">
-                        <label class="focus-label">0 GB-2048 GB</label>
+                        <label class="focus-label">1-24 aya kadar</label>
                       </div>
                     </div>
                     <div class="col-md-6">
