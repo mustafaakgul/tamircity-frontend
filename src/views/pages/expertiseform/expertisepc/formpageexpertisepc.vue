@@ -1098,7 +1098,6 @@
 </template>
 
 <script>
-import Vue from 'vue'
 export default {
   data() {
     return {
@@ -1130,31 +1129,6 @@ export default {
       usb2enterquantity: ["1","2","3","4"],
       usb3enterquantity: ["1","2","3","4"],
       typec: ["1","2","3","4","5"],
-
-
-
-
-
-
-
-
-      preprocessormodel: ["Qualcomm","MediaTek","Samsung","HiSilicon"],
-      preprocessorfrequency: ["0.5GHz","......","3.5GHz"],
-      operatingsystemversion: ["Android 7.0 (Nougat)","Android 7.1 (Nougat)","Android 11 (Go Edition)","iOS 11"],
-      numberprocessorcores: ["4","..","12"],
-      cameraresolution: ["2MP",".....","200 MP"],
-      frontcameraresolution: ["0-200 MP","..."],
-      videorecordingresolution: ["4320p (Ultra HD) 8K","3384p (Ultra HD) 6K","2160p (Ultra HD) 4K"],
-      fps: ["60 fps","30 fps","24 fps"],
-      internalstorage: ["0-1024 GB"],
-      maximummemorycardcapacity: ["0-1024 GB"],
-      batterycapacity: ["batterycapacity2500mAh-7500mAh"],
-      wififrequency: ["Wi-Fi 6 (802.11 a/b/g/n/ac/ax)","Wi-Fi 5 (802.11 a/b/g/n/ac)","Wi-Fi 4 (802.11 a/b/g/n)","Wi-Fi 4 (802.11 b/g/n)"],
-      releaseyear: ["2023","2022","2021","2019","2018","2017","2016","2017","2016"],
-
-
-
-
     }
   },
 
@@ -1162,7 +1136,7 @@ export default {
 }
 </Script>
 
-<style scope>
+<style scoped>
 .banner-wrapper {
   padding: 150px 0 0 !important;
 }

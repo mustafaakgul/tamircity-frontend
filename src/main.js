@@ -171,6 +171,8 @@ import FormPageExpertisephone from './views/pages/expertiseform/expertisephone/f
 import FormPageExpertisepc from './views/pages/expertiseform/expertisepc/formpageexpertisepc.vue'
 import FormPageExpertisetv from './views/pages/expertiseform/expertisetv/formpageexpertisetv.vue'
 import FormPageExpertiseconsole from './views/pages/expertiseform/expertiseconsole/formpageexpertiseconsole.vue'
+import FormPageExpertisesmartwatch from './views/pages/expertiseform/expertisesmartwatch/formpageexpertisesmartwatch.vue'
+
 
 
 /*******Plugin import***********/
@@ -318,15 +320,10 @@ app.component('notificationtech', Notificationtech)
 
 /*********ExpertiseForm component**********/
 app.component('formpageexpertisephone', FormPageExpertisephone)
-
-/*********ExpertiseForm component**********/
 app.component('formpageexpertisepc', FormPageExpertisepc)
-
-/*********ExpertiseForm component**********/
 app.component('formpageexpertisetv', FormPageExpertisetv)
-
-/*********ExpertiseForm component**********/
 app.component('formpageexpertiseconsole', FormPageExpertiseconsole)
+app.component('formpageexpertisesmartwatch', FormPageExpertisesmartwatch)
 
 /*********Guide Payment component**********/
 app.component('paymentguide', PaymentGuide)

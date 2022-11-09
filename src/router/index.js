@@ -46,8 +46,17 @@ import GetReservation from '../views/pages/getreservation/index'
 import FormPageExpertisephone from '../views/pages/expertiseform/expertisephone/index.vue'
 import FormPageExpertisepc from '../views/pages/expertiseform/expertisepc/index.vue'
 import FormPageExpertiseconsole from '../views/pages/expertiseform/expertiseconsole/formpageexpertiseconsole.vue'
+import FormPageExpertisesmartwatch from '../views/pages/expertiseform/expertisesmartwatch/formpageexpertisesmartwatch.vue'
 
 const routes = [
+    {
+        path: '/formpageexpertisesmartwatch',
+        name: 'formpageexpertisesmartwatch',
+        component: () => import('../views/pages/expertiseform/expertisesmartwatch/index'),
+        meta: {
+            requiresAuth: true
+        }
+    },
     {
         path: '/formpageexpertiseconsole',
         name: 'formpageexpertiseconsole',
@@ -117,8 +126,8 @@ const routes = [
         name: 'stepwizard',
         component: () => import('../views/pages/pages/stepwizard/index'),
         meta: {
-        requiresAuth: true
-    }
+            requiresAuth: true
+        }
     },
     {
         path: '/ekspertiz',
@@ -133,312 +142,312 @@ const routes = [
         name: 'login',
         component: () => import('../views/pages/pages/auth/login/index'),
         meta: {
-        requiresAuth: true
-    }
+            requiresAuth: true
+        }
     },
     {
         path: '/',
         name: 'index',
         component: () => import('../views/pages/dashboard/index'),
         meta: {
-        requiresAuth: true
-    }
+            requiresAuth: true
+        }
     },
     {
         path: '/about-us',
         name: 'about-us',
         component: () => import('../views/pages/pages/aboutus/index'),
         meta: {
-        requiresAuth: true
-    }
+            requiresAuth: true
+        }
     },
     {
         path: '/blog-details',
         name: 'blog-details',
         component: () => import('../views/pages/blogs/blogdetails/index'),
         meta: {
-        requiresAuth: true
-    }
+            requiresAuth: true
+        }
     },
     {
         path: '/blog-grid',
         name: 'blog-grid',
         component: () => import('../views/pages/blogs/blog-grid/index'),
         meta: {
-        requiresAuth: true
-    }
+            requiresAuth: true
+        }
     },
     {
         path: '/blog-list',
         name: 'blog-list',
         component: () => import('../views/pages/blogs/blog-list/index'),
         meta: {
-        requiresAuth: true
-    }
+            requiresAuth: true
+        }
     },
     {
         path: '/booking',
         name: 'booking',
         component: () => import('../views/pages/pages/booking/index'),
         meta: {
-        requiresAuth: true
-    }
+            requiresAuth: true
+        }
     },
     {
         path: '/booking-wallet',
         name: 'booking-wallet',
         component: () => import('../views/pages/pages/booking-wallet/index'),
         meta: {
-        requiresAuth: true
-    }
+            requiresAuth: true
+        }
     },
     {
         path: '/change-password',
         name: 'change-password',
         component: () => import('../views/pages/pages/auth/change-password/index'),
         meta: {
-        requiresAuth: true
-    }
+            requiresAuth: true
+        }
     },
     {
         path: '/contact-us',
         name: 'contact-us',
         component: () => import('../views/pages/pages/contact-us/index'),
         meta: {
-        requiresAuth: true
-    }
+            requiresAuth: true
+        }
     },
     {
         path: '/exam-details',
         name: 'exam-details',
         component: () => import('../views/pages/guide/exam-details/index'),
         meta: {
-        requiresAuth: true
-    }
+            requiresAuth: true
+        }
     },
     {
         path: '/exam-results',
         name: 'exam-results',
         component: () => import('../views/pages/guide/exam-results/index'),
         meta: {
-        requiresAuth: true
-    }
+            requiresAuth: true
+        }
     },
     {
         path: '/forgot-password',
         name: 'forgot-password',
         component: () => import('../views/pages/pages/auth/forgot-password/index'),
         meta: {
-        requiresAuth: true
-    }
+            requiresAuth: true
+        }
     },
     {
         path: '/guide-availability',
         name: 'guide-availability',
         component: () => import('../views/pages/guide/guide-availability/index'),
         meta: {
-        requiresAuth: true
-    }
+            requiresAuth: true
+        }
     },
     {
         path: '/guide-bookings',
         name: 'guide-bookings',
         component: () => import('../views/pages/guide/guide-bookings/index'),
         meta: {
-        requiresAuth: true
-    }
+            requiresAuth: true
+        }
     },
     {
         path: '/guide-chat',
         name: 'guide-chat',
         component: () => import('../views/pages/guide/guide-chat/index'),
         meta: {
-        requiresAuth: true
-    }
+            requiresAuth: true
+        }
     },
     {
         path: '/tech-dashboard',
         name: 'tech-dashboard',
         component: () => import('../views/pages/TechPanel/tech-dashboard/index'),
         meta: {
-        requiresAuth: true
-    }
+            requiresAuth: true
+        }
     },
     {
         path: '/guide-details',
         name: 'guide-details',
         component: () => import('../views/pages/guide/guide-details/index'),
         meta: {
-        requiresAuth: true
-    }
+            requiresAuth: true
+        }
     },
     {
         path: '/guide-list',
         name: 'guide-list',
         component: () => import('../views/pages/guide/guide-list/index'),
         meta: {
-        requiresAuth: true
-    }
+            requiresAuth: true
+        }
     },
     {
         path: '/tech-notification',
         name: 'tech-notification',
         component: () => import('../views/pages/TechPanel/tech-notification/index'),
         meta: {
-        requiresAuth: true
-    }
+            requiresAuth: true
+        }
     },
     {
         path: '/guide-payment',
         name: 'guide-payment',
         component: () => import('../views/pages/guide/guide-payment/index'),
         meta: {
-        requiresAuth: true
-    }
+            requiresAuth: true
+        }
     },
     {
         path: '/guide-reviews',
         name: 'guide-reviews',
         component: () => import('../views/pages/guide/guide-reviews/index'),
         meta: {
-        requiresAuth: true
-    }
+            requiresAuth: true
+        }
     },
     {
         path: '/guide-settings',
         name: 'guide-settings',
         component: () => import('../views/pages/guide/guide-settings/index'),
         meta: {
-        requiresAuth: true
-    }
+            requiresAuth: true
+        }
     },
     {
         path: '/guide-subscription',
         name: 'guide-subscription',
         component: () => import('../views/pages/guide/guide-subscription/index'),
         meta: {
-        requiresAuth: true
-    }
+            requiresAuth: true
+        }
     },
     {
         path: '/guide-wallet',
         name: 'guide-wallet',
         component: () => import('../views/pages/guide/guide-wallet/index'),
         meta: {
-        requiresAuth: true
-    }
+            requiresAuth: true
+        }
     },
     {
         path: '/guide-withdrawn',
         name: 'guide-withdrawn',
         component: () => import('../views/pages/guide/guide-withdrawn/index'),
         meta: {
-        requiresAuth: true
-    }
+            requiresAuth: true
+        }
     },
     {
         path: '/how-it-works',
         name: 'how-it-works',
         component: () => import('../views/pages/pages/how-it-works'),
         meta: {
-        requiresAuth: true
-    }
+            requiresAuth: true
+        }
     },
     {
         path: '/privacy-policy',
         name: 'privacy-policy',
         component: () => import('../views/pages/pages/privacy-policy'),
         meta: {
-        requiresAuth: true
-    }
+            requiresAuth: true
+        }
     },
     {
         path: '/services',
         name: 'services',
         component: () => import('../views/pages/pages/services'),
         meta: {
-        requiresAuth: true
-    }
+            requiresAuth: true
+        }
     },
     {
         path: '/register',
         name: 'register',
         component: () => import('../views/pages/pages/auth/register'),
         meta: {
-        requiresAuth: true
-    }
+            requiresAuth: true
+        }
     },
     {
         path: '/user-bookings',
         name: 'user-bookings',
         component: () => import('../views/pages/users/user-bookings/index'),
         meta: {
-        requiresAuth: true
-    }
+            requiresAuth: true
+        }
     },
     {
         path: '/user-chat',
         name: 'user-chat',
         component: () => import('../views/pages/users/user-chat/index'),
         meta: {
-        requiresAuth: true
-    }
+            requiresAuth: true
+        }
     },
     {
         path: '/user-dashboard',
         name: 'user-dashboard',
         component: () => import('../views/pages/users/user-dashboard/index'),
         meta: {
-        requiresAuth: true
-    }
+            requiresAuth: true
+        }
     },
     {
         path: '/user-notification',
         name: 'user-notification',
         component: () => import('../views/pages/users/user-notification/index'),
         meta: {
-        requiresAuth: true
-    }
+            requiresAuth: true
+        }
     },
     {
         path: '/user-payment',
         name: 'user-payment',
         component: () => import('../views/pages/users/user-payment/index'),
         meta: {
-        requiresAuth: true
-    }
+            requiresAuth: true
+        }
     },
     {
         path: '/user-reviews',
         name: 'user-reviews',
         component: () => import('../views/pages/users/user-reviews/index'),
         meta: {
-        requiresAuth: true
-    }
+            requiresAuth: true
+        }
     },
     {
         path: '/user-settings',
         name: 'user-settings',
         component: () => import('../views/pages/users/user-settings/index'),
         meta: {
-        requiresAuth: true
-    }
+            requiresAuth: true
+        }
     },
     {
         path: '/user-wallet',
         name: 'user-wallet',
         component: () => import('../views/pages/users/user-wallet/index'),
         meta: {
-        requiresAuth: true
-    }
+            requiresAuth: true
+        }
     },
     {
         path: '/term-condition',
         name: 'term-condition',
         component: () => import('../views/pages/pages/termscondition'),
         meta: {
-        requiresAuth: true
-    }
+            requiresAuth: true
+        }
     },
 ];
 export const router = createRouter({
