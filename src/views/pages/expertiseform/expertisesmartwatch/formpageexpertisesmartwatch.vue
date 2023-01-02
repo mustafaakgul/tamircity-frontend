@@ -155,9 +155,9 @@
                       </div>
                       <div class="col-md-6">
                         <div class="form-group form-focus">
-                          <label>Ekran Çözünürlüğü<span class="text-danger">*</span></label>
+                          <label>Ekran Boyutu<span class="text-danger">*</span></label>
                           <input type="text" class="form-control floating">
-                          <label class="focus-label">200-600 piksel</label>
+                          <label class="focus-label">1 inç-2 inç</label>
                         </div>
                       </div>
                     </div>
@@ -185,9 +185,29 @@
                           <label class="custom-control-label" for="microphoney">Var</label>
                         </div>
                         <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="microphonez" type="radio" name="microphoney" value="0">
+                          <input class="custom-control-input" id="microphonez" type="radio" name="microphone" value="0">
                           <label class="custom-control-label" for="microphonez">Yok</label>
                         </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="custom-control-gender">Uyumlu İşletim Sistemi (Checkbox) <span class="text-danger">*</span></label>
+                      <div class="custom-control-box">
+                        <div class="custom-control custom-radios custom-control-inline">
+                          <input class="custom-control-input" id="android" type="radio" name="a" value="1" checked="">
+                          <label class="custom-control-label" for="android">Android</label>
+                        </div>
+                        <div class="custom-control custom-radios custom-control-inline">
+                          <input class="custom-control-input" id="ios" type="radio" name="a" value="2">
+                          <label class="custom-control-label" for="ios">İOS</label>
+                        </div>
+                        <div class="custom-control custom-radios custom-control-inline">
+                          <input class="custom-control-input" id="harmonyos" type="radio" name="a" value="3">
+                          <label class="custom-control-label" for="harmonyos">HarmonyOS</label>
+                        </div>
+
                       </div>
                     </div>
                   </div>
