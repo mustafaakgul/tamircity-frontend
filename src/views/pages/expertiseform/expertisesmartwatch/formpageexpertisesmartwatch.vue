@@ -150,7 +150,7 @@
                         <div class="form-group form-focus">
                           <label>Ekran Çözünürlüğü<span class="text-danger">*</span></label>
                           <input type="text" class="form-control floating">
-                          <label class="focus-label">190-500 piksel</label>
+                          <label class="focus-label">190-500/200-600 piksel</label>
                         </div>
                       </div>
                       <div class="col-md-6">
@@ -194,20 +194,26 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <label class="custom-control-gender">Uyumlu İşletim Sistemi (Checkbox) <span class="text-danger">*</span></label>
+
                       <div class="custom-control-box">
                         <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="android" type="radio" name="a" value="1" checked="">
-                          <label class="custom-control-label" for="android">Android</label>
+                          <label class="custom_check w-100">
+                            <input type="checkbox" name="location">
+                            <span class="checkmark"></span> Android
+                          </label>
                         </div>
                         <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="ios" type="radio" name="a" value="2">
-                          <label class="custom-control-label" for="ios">İOS</label>
+                          <label class="custom_check w-100">
+                            <input type="checkbox" name="location">
+                            <span class="checkmark"></span> iOS
+                          </label>
                         </div>
                         <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="harmonyos" type="radio" name="a" value="3">
-                          <label class="custom-control-label" for="harmonyos">HarmonyOS</label>
+                          <label class="custom_check w-100">
+                            <input class="custom-control-input" type="checkbox" name="location">
+                            <span class="checkmark"></span> HarmonyOS
+                          </label>
                         </div>
-
                       </div>
                     </div>
                   </div>
@@ -221,7 +227,7 @@
                         </div>
                         <div class="custom-control custom-radios custom-control-inline">
                           <input class="custom-control-input" id="wifiz" type="radio" name="wifi" value="0">
-                          <label class="custom-control-label" for="wifiz">Yok</label>
+                          <label   for="wifiz">Yok</label>
                         </div>
                       </div>
                     </div>
@@ -334,12 +340,12 @@
                       <label class="custom-control-gender">Dokunmatik ekran sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
                       <div class="custom-control-box">
                         <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="05" type="radio" name="question3" value="1" checked="">
-                          <label class="custom-control-label" for="05">Evet</label>
+                          <input class="custom-control-input" id="050" type="radio" name="question3" value="1" checked="">
+                          <label class="custom-control-label" for="050">Evet</label>
                         </div>
                         <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="06" type="radio" name="question3" value="0">
-                          <label class="custom-control-label" for="06">Hayır</label>
+                          <input class="custom-control-input" id="060" type="radio" name="question3" value="0">
+                          <label class="custom-control-label" for="060">Hayır</label>
                         </div>
                       </div>
                     </div>
