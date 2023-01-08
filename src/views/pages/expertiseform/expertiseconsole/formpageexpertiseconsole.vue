@@ -428,12 +428,12 @@
                       <label class="custom-control-gender">Cihaz kumanda kolunda tuş takımı sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
                       <div class="custom-control-box">
                         <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="05" type="radio" name="question3" value="1" checked="">
-                          <label class="custom-control-label" for="05">Evet</label>
+                          <input class="custom-control-input" id="055" type="radio" name="question3" value="1" checked="">
+                          <label class="custom-control-label" for="055">Evet</label>
                         </div>
                         <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="06" type="radio" name="question3" value="0">
-                          <label class="custom-control-label" for="06">Hayır</label>
+                          <input class="custom-control-input" id="066" type="radio" name="question3" value="0">
+                          <label class="custom-control-label" for="066">Hayır</label>
                         </div>
                       </div>
                     </div>
@@ -670,6 +670,7 @@ export default {
       controllerquantity: ["1","2","3","4"],
       gamequantity:["1","2","3","4","5+"],
       usbquantity:["1","2","3","4","5"],
+      preprocessorfrequency: ["512 MB","4 GB","8 GB","10 GB","12 GB","16 GB"]
     }
   },
 
