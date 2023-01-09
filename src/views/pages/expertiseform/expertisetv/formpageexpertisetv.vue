@@ -1,114 +1,116 @@
 <template>
   <div class="banner-wrapper">
-    <div class="container  ">
-      <div class="row justify-content-center">
-        <div class="col-xl-8 col-lg-12 col-md-12">
-          <div class="row ">
-            <div class="col-md-12">
-              <div class="questions-card">
-                <div class="questions-header">
-                  <h2 class="mb-0 ">Televizyon Ekspertiz Formu</h2>
+    <div class="container">
+      <section class="guides-section">
+        <div class="row justify-content-center">
+          <div class="col-xl-8 col-lg-12 col-md-12">
+            <div class="row ">
+              <div class="col-md-12">
+                <div class="questions-card">
+                  <div class="questions-header">
+                    <h2 class="mb-0 ">Televizyon Ekspertiz Formu</h2>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="row justify-content-center card answer-card">
-            <div class="col-lg-12 col-md-12">
-              <div class="settings-info">
-                <div class="row">
-                  <div class="col-md-12">
-                    <h3 class="mb-3 mt-1">Genel Bilgiler</h3>
-                  </div>
-                </div>
-                <div class="row align-items-center">
-                  <div class="col-md-6">
-                    <div class="form-group input-group-sm">
-                      <label>Marka <span class="text-danger">*</span></label>
-                      <vue-select :options="brand" id="inputGroup-sizing-sm"/>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group form-focus">
-                      <label>Model<span class="text-danger">*</span></label>
-                      <input type="text" class="form-control floating">
-                      <label class="focus-label">Model</label>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group form-focus">
-                      <label>Garanti süresi<span class="text-danger">*</span></label>
-                      <input type="text" class="form-control floating">
-                      <label class="focus-label">1-24</label>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label>Garanti Türü<span class="text-danger">*</span></label>
-                      <vue-select :options="guarantee" />
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label>Renk<span class="text-danger">*</span></label>
-                      <vue-select :options="color" />
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label class="custom-control-gender">Fatura <span class="text-danger">*</span></label>
-                          <div class="custom-control-box">
-                            <div class="custom-control custom-radios custom-control-inline">
-                              <input class="custom-control-input" id="billy" type="radio" name="bill" value="billy" checked="">
-                              <label class="custom-control-label" for="billy">Var</label>
-                            </div>
-                            <div class="custom-control custom-radios custom-control-inline">
-                              <input class="custom-control-input" id="billn" type="radio" name="bill" value="billn">
-                              <label class="custom-control-label" for="billn">Yok</label>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label class="custom-control-gender">Kutu <span class="text-danger">*</span></label>
-                          <div class="custom-control-box">
-                            <div class="custom-control custom-radios custom-control-inline">
-                              <input class="custom-control-input" id="boxy" type="radio" name="stripe" value="1" checked="">
-                              <label class="custom-control-label" for="boxy">Var</label>
-                            </div>
-                            <div class="custom-control custom-radios custom-control-inline">
-                              <input class="custom-control-input" id="boxn" type="radio" name="stripe" value="0">
-                              <label class="custom-control-label" for="boxn">Yok</label>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row justify-content-center card answer-card">
-            <div class="col-lg-12 col-md-12">
-              <div class="settings-info">
-                <div class="row">
-                  <div class="col-md-12">
-                    <h3 class="mb-3 mt-1">Cihazın Kozmetik Durumu</h3>
-                  </div>
-                </div>
-                <div class="row align-items-center">
+            <div class="row justify-content-center card answer-card">
+              <div class="col-lg-12 col-md-12">
+                <div class="settings-info">
                   <div class="row">
                     <div class="col-md-12">
+                      <h3 class="mb-3 mt-1">Genel Bilgiler</h3>
+                    </div>
+                  </div>
+                  <div class="row align-items-center">
+                    <div class="col-md-6">
+                      <div class="form-group input-group-sm">
+                        <label>Marka <span class="text-danger">*</span></label>
+                        <vue-select :options="brand" id="inputGroup-sizing-sm"/>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group form-focus">
+                        <label>Model<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control floating">
+                        <label class="focus-label">Model</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group form-focus">
+                        <label>Garanti süresi<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control floating">
+                        <label class="focus-label">1-24</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
                       <div class="form-group">
-                        <div class="relative-form">
-                          <span>Cihazın Kozmetik Durumu</span>
-                          <label class="relative-file-upload">
-                            Yükle<input type="file">
-                          </label>
+                        <label>Garanti Türü<span class="text-danger">*</span></label>
+                        <vue-select :options="guarantee" />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label>Renk<span class="text-danger">*</span></label>
+                        <vue-select :options="color" />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label class="custom-control-gender">Fatura <span class="text-danger">*</span></label>
+                            <div class="custom-control-box">
+                              <div class="custom-control custom-radios custom-control-inline">
+                                <input class="custom-control-input" id="billy" type="radio" name="bill" value="billy" checked="">
+                                <label class="custom-control-label" for="billy">Var</label>
+                              </div>
+                              <div class="custom-control custom-radios custom-control-inline">
+                                <input class="custom-control-input" id="billn" type="radio" name="bill" value="billn">
+                                <label class="custom-control-label" for="billn">Yok</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label class="custom-control-gender">Kutu <span class="text-danger">*</span></label>
+                            <div class="custom-control-box">
+                              <div class="custom-control custom-radios custom-control-inline">
+                                <input class="custom-control-input" id="boxy" type="radio" name="stripe" value="1" checked="">
+                                <label class="custom-control-label" for="boxy">Var</label>
+                              </div>
+                              <div class="custom-control custom-radios custom-control-inline">
+                                <input class="custom-control-input" id="boxn" type="radio" name="stripe" value="0">
+                                <label class="custom-control-label" for="boxn">Yok</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row justify-content-center card answer-card">
+              <div class="col-lg-12 col-md-12">
+                <div class="settings-info">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <h3 class="mb-3 mt-1">Cihazın Kozmetik Durumu</h3>
+                    </div>
+                  </div>
+                  <div class="row align-items-center">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <div class="relative-form">
+                            <span>Cihazın Kozmetik Durumu</span>
+                            <label class="relative-file-upload">
+                              Yükle<input type="file">
+                            </label>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -116,278 +118,278 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="row justify-content-center card answer-card">
-            <div class="col-lg-12 col-md-12">
-              <div class="settings-info">
-                <div class="row">
-                  <div class="col-md-12">
-                    <h3 class="mb-3 mt-1">Cihaz Özellikleri</h3>
-                  </div>
-                </div>
-                <div class="row align-items-center">
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label>Panel Teknolojisi<span class="text-danger">*</span></label>
-                      <vue-select :options="paneltechnology"/>
+            <div class="row justify-content-center card answer-card">
+              <div class="col-lg-12 col-md-12">
+                <div class="settings-info">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <h3 class="mb-3 mt-1">Cihaz Özellikleri</h3>
                     </div>
                   </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label>İşletim Sistemi<span class="text-danger">*</span></label>
-                      <vue-select :options="operatingsystem"/>
+                  <div class="row align-items-center">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label>Panel Teknolojisi<span class="text-danger">*</span></label>
+                        <vue-select :options="paneltechnology"/>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label>Ekran Çözünürlüğü <span class="text-danger">*</span></label>
-                      <vue-select :options="screenresolution"/>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label>İşletim Sistemi<span class="text-danger">*</span></label>
+                        <vue-select :options="operatingsystem"/>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group form-focus">
-                      <label>Ekran Boyutu<span class="text-danger">*</span></label>
-                      <input type="text" class="form-control floating">
-                      <label class="focus-label">19 inç(48 Ekran)-77 inç (195 Ekran)</label>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label>Ekran Çözünürlüğü <span class="text-danger">*</span></label>
+                        <vue-select :options="screenresolution"/>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group form-focus">
-                      <label>Ekran Yenileme Hızı <span class="text-danger">*</span></label>
-                      <input type="text" class="form-control floating">
-                      <label class="focus-label">... Hz.</label>
+                    <div class="col-md-6">
+                      <div class="form-group form-focus">
+                        <label>Ekran Boyutu<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control floating">
+                        <label class="focus-label">19 inç(48 Ekran)-77 inç (195 Ekran)</label>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group form-focus">
-                      <label>Çıkış Yılı<span class="text-danger">*</span></label>
-                      <input type="text" class="form-control floating">
-                      <label class="focus-label">2010-2023</label>
+                    <div class="col-md-6">
+                      <div class="form-group form-focus">
+                        <label>Ekran Yenileme Hızı <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control floating">
+                        <label class="focus-label">... Hz.</label>
+                      </div>
                     </div>
-                  </div>
+                    <div class="col-md-6">
+                      <div class="form-group form-focus">
+                        <label>Çıkış Yılı<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control floating">
+                        <label class="focus-label">2010-2023</label>
+                      </div>
+                    </div>
 
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label class="custom-control-gender">Smart TV<span class="text-danger">*</span></label>
-                      <div class="custom-control-box">
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="smarty" type="radio" name="smart" value="1" checked="">
-                          <label class="custom-control-label" for="smarty">Var</label>
-                        </div>
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="smartn" type="radio" name="smart" value="0">
-                          <label class="custom-control-label" for="smartn">Yok</label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label class="custom-control-gender">Kavisli ekran  <span class="text-danger">*</span></label>
-                      <div class="custom-control-box">
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="screeny" type="radio" name="screen" value="1" checked="">
-                          <label class="custom-control-label" for="screeny">Var</label>
-                        </div>
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="screenn" type="radio" name="screen" value="0">
-                          <label class="custom-control-label" for="screenn">Yok</label>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">Smart TV<span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="smarty" type="radio" name="smart" value="1" checked="">
+                            <label class="custom-control-label" for="smarty">Var</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="smartn" type="radio" name="smart" value="0">
+                            <label class="custom-control-label" for="smartn">Yok</label>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label class="custom-control-gender">Dahili Uydu Alıcısı<span class="text-danger">*</span></label>
-                      <div class="custom-control-box">
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="satellitey" type="radio" name="satellite" value="1" checked="">
-                          <label class="custom-control-label" for="satellitey">Var</label>
-                        </div>
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="satelliten" type="radio" name="satellite" value="0">
-                          <label class="custom-control-label" for="satelliten">Yok</label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label class="custom-control-gender">Ambilight<span class="text-danger">*</span></label>
-                      <div class="custom-control-box">
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="ambilighty" type="radio" name="ambilight" value="location" checked="">
-                          <label class="custom-control-label" for="ambilighty">Var</label>
-                        </div>
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="ambilightn" type="radio" name="ambilight" value="location">
-                          <label class="custom-control-label" for="ambilightn">Yok</label>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">Kavisli ekran  <span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="screeny" type="radio" name="screen" value="1" checked="">
+                            <label class="custom-control-label" for="screeny">Var</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="screenn" type="radio" name="screen" value="0">
+                            <label class="custom-control-label" for="screenn">Yok</label>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label class="custom-control-gender">HDR<span class="text-danger">*</span></label>
-                      <div class="custom-control-box">
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="hdry" type="radio" name="hdr" value="1" checked="">
-                          <label class="custom-control-label" for="hdry">Var</label>
-                        </div>
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="hdrn" type="radio" name="hdr" value="0">
-                          <label class="custom-control-label" for="hdrn">Yok</label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label class="custom-control-gender">Full Array<span class="text-danger">*</span></label>
-                      <div class="custom-control-box">
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="arrayy" type="radio" name="array" value="1" checked="">
-                          <label class="custom-control-label" for="arrayy">Var</label>
-                        </div>
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="arrayn" type="radio" name="array" value="0">
-                          <label class="custom-control-label" for="arrayn">Yok</label>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">Dahili Uydu Alıcısı<span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="satellitey" type="radio" name="satellite" value="1" checked="">
+                            <label class="custom-control-label" for="satellitey">Var</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="satelliten" type="radio" name="satellite" value="0">
+                            <label class="custom-control-label" for="satelliten">Yok</label>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label class="custom-control-gender">Hafıza Kartı Desteği <span class="text-danger">*</span></label>
-                      <div class="custom-control-box">
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="memoryy" type="radio" name="memory" value="memory" checked="">
-                          <label class="custom-control-label" for="memoryy">Var</label>
-                        </div>
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="memoryz" type="radio" name="memory" value="memory">
-                          <label class="custom-control-label" for="memoryz">Yok</label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <h4 class="mb-3 mt-1">Bağlantı/Arayüz</h4><hr>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label class="custom-control-gender">Screen Share <span class="text-danger">*</span></label>
-                      <div class="custom-control-box">
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="ssy" type="radio" name="ss" value="1" checked="">
-                          <label class="custom-control-label" for="ssy">Var</label>
-                        </div>
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="ssn" type="radio" name="ss" value="0">
-                          <label class="custom-control-label" for="ssn">Yok</label>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">Ambilight<span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="ambilighty" type="radio" name="ambilight" value="location" checked="">
+                            <label class="custom-control-label" for="ambilighty">Var</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="ambilightn" type="radio" name="ambilight" value="location">
+                            <label class="custom-control-label" for="ambilightn">Yok</label>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label class="custom-control-gender">WiFi<span class="text-danger">*</span></label>
-                      <div class="custom-control-box">
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="wifiy" type="radio" name="wifi" value="1" checked="">
-                          <label class="custom-control-label" for="wifiy">Var</label>
-                        </div>
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="wifin" type="radio" name="wifi" value="0">
-                          <label class="custom-control-label" for="wifin">Yok</label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label class="custom-control-gender">RF Girişi<span class="text-danger">*</span></label>
-                      <div class="custom-control-box">
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="rfy" type="radio" name="rf" value="1" checked="">
-                          <label class="custom-control-label" for="rfy">Var</label>
-                        </div>
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="rfn" type="radio" name="rf" value="0">
-                          <label class="custom-control-label" for="rfn">Yok</label>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">HDR<span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="hdry" type="radio" name="hdr" value="1" checked="">
+                            <label class="custom-control-label" for="hdry">Var</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="hdrn" type="radio" name="hdr" value="0">
+                            <label class="custom-control-label" for="hdrn">Yok</label>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label class="custom-control-gender">LAN<span class="text-danger">*</span></label>
-                      <div class="custom-control-box">
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="lany" type="radio" name="lan" value="1" checked="">
-                          <label class="custom-control-label" for="lany">Var</label>
-                        </div>
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="lann" type="radio" name="lan" value="0">
-                          <label class="custom-control-label" for="lann">Yok</label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label class="custom-control-gender">Kulaklık Çıkışı<span class="text-danger">*</span></label>
-                      <div class="custom-control-box">
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="eary" type="radio" name="ear" value="1" checked="">
-                          <label class="custom-control-label" for="eary">Var</label>
-                        </div>
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="earn" type="radio" name="ear" value="0">
-                          <label class="custom-control-label" for="earn">Yok</label>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">Full Array<span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="arrayy" type="radio" name="array" value="1" checked="">
+                            <label class="custom-control-label" for="arrayy">Var</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="arrayn" type="radio" name="array" value="0">
+                            <label class="custom-control-label" for="arrayn">Yok</label>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label class="custom-control-gender">Bluetooth<span class="text-danger">*</span></label>
-                      <div class="custom-control-box">
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="bluetoothy" type="radio" name="bluetooth" value="1" checked="">
-                          <label class="custom-control-label" for="bluetoothy">Var</label>
-                        </div>
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="bluetoothn" type="radio" name="bluetooth" value="0">
-                          <label class="custom-control-label" for="bluetoothn">Yok</label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label class="custom-control-gender">HDMI Girişi<span class="text-danger">*</span></label>
-                      <div class="custom-control-box">
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="hdmıentery" type="radio" name="hdmıenter" value="1" checked="">
-                          <label class="custom-control-label" for="hdmıentery">Var</label>
-                        </div>
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="hdmıentern" type="radio" name="hdmıenter" value="0">
-                          <label class="custom-control-label" for="hdmıentern">Yok</label>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">Hafıza Kartı Desteği <span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="memoryy" type="radio" name="memory" value="memory" checked="">
+                            <label class="custom-control-label" for="memoryy">Var</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="memoryz" type="radio" name="memory" value="memory">
+                            <label class="custom-control-label" for="memoryz">Yok</label>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label class="custom-control-gender">USB Girişi<span class="text-danger">*</span></label>
-                      <div class="custom-control-box">
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="usbentery" type="radio" name="usbenter" value="1" checked="">
-                          <label class="custom-control-label" for="usbentery">Var</label>
+                    <h4 class="mb-3 mt-1">Bağlantı/Arayüz</h4><hr>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">Screen Share <span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="ssy" type="radio" name="ss" value="1" checked="">
+                            <label class="custom-control-label" for="ssy">Var</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="ssn" type="radio" name="ss" value="0">
+                            <label class="custom-control-label" for="ssn">Yok</label>
+                          </div>
                         </div>
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="usbentern" type="radio" name="usbenter" value="0">
-                          <label class="custom-control-label" for="usbentern">Yok</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">WiFi<span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="wifiy" type="radio" name="wifi" value="1" checked="">
+                            <label class="custom-control-label" for="wifiy">Var</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="wifin" type="radio" name="wifi" value="0">
+                            <label class="custom-control-label" for="wifin">Yok</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">RF Girişi<span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="rfy" type="radio" name="rf" value="1" checked="">
+                            <label class="custom-control-label" for="rfy">Var</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="rfn" type="radio" name="rf" value="0">
+                            <label class="custom-control-label" for="rfn">Yok</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">LAN<span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="lany" type="radio" name="lan" value="1" checked="">
+                            <label class="custom-control-label" for="lany">Var</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="lann" type="radio" name="lan" value="0">
+                            <label class="custom-control-label" for="lann">Yok</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">Kulaklık Çıkışı<span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="eary" type="radio" name="ear" value="1" checked="">
+                            <label class="custom-control-label" for="eary">Var</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="earn" type="radio" name="ear" value="0">
+                            <label class="custom-control-label" for="earn">Yok</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">Bluetooth<span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="bluetoothy" type="radio" name="bluetooth" value="1" checked="">
+                            <label class="custom-control-label" for="bluetoothy">Var</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="bluetoothn" type="radio" name="bluetooth" value="0">
+                            <label class="custom-control-label" for="bluetoothn">Yok</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">HDMI Girişi<span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="hdmıentery" type="radio" name="hdmıenter" value="1" checked="">
+                            <label class="custom-control-label" for="hdmıentery">Var</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="hdmıentern" type="radio" name="hdmıenter" value="0">
+                            <label class="custom-control-label" for="hdmıentern">Yok</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">USB Girişi<span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="usbentery" type="radio" name="usbenter" value="1" checked="">
+                            <label class="custom-control-label" for="usbentery">Var</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="usbentern" type="radio" name="usbenter" value="0">
+                            <label class="custom-control-label" for="usbentern">Yok</label>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -395,297 +397,297 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="row justify-content-center card answer-card">
-            <div class="col-lg-12 col-md-12">
-              <div class="settings-info">
-                <div class="row">
-                  <div class="col-md-12">
-                    <h3 class="mb-3 mt-1">Çalışma Durumu</h3>
+            <div class="row justify-content-center card answer-card">
+              <div class="col-lg-12 col-md-12">
+                <div class="settings-info">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <h3 class="mb-3 mt-1">Çalışma Durumu</h3>
+                    </div>
                   </div>
-                </div>
-                <div class="row align-items-center">
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label class="custom-control-gender">Ekranda bölgesel veya tamamen kararma var mı ? <span class="text-danger">*</span></label>
-                      <div class="custom-control-box">
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="01" type="radio" name="question1" value="1" checked="">
-                          <label class="custom-control-label" for="01">Evet</label>
-                        </div>
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="02" type="radio" name="question1" value="0">
-                          <label class="custom-control-label" for="02">Hayır</label>
+                  <div class="row align-items-center">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">Ekranda bölgesel veya tamamen kararma var mı ? <span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="01" type="radio" name="question1" value="1" checked="">
+                            <label class="custom-control-label" for="01">Evet</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="02" type="radio" name="question1" value="0">
+                            <label class="custom-control-label" for="02">Hayır</label>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label class="custom-control-gender">Ekranda ölü piksel arızası var mı ? <span class="text-danger">*</span></label>
-                      <div class="custom-control-box">
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="03" type="radio" name="question2" value="1" checked="">
-                          <label class="custom-control-label" for="03">Evet</label>
-                        </div>
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="04" type="radio" name="question2" value="0">
-                          <label class="custom-control-label" for="04">Hayır</label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label class="custom-control-gender">Ekranda kırık/çatlak/leke var mı ?<span class="text-danger">*</span></label>
-                      <div class="custom-control-box">
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="06" type="radio" name="question4" value="1" checked="">
-                          <label class="custom-control-label" for="06">Evet</label>
-                        </div>
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="07" type="radio" name="question4" value="0">
-                          <label class="custom-control-label" for="07">Hayır</label>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">Ekranda ölü piksel arızası var mı ? <span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="03" type="radio" name="question2" value="1" checked="">
+                            <label class="custom-control-label" for="03">Evet</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="04" type="radio" name="question2" value="0">
+                            <label class="custom-control-label" for="04">Hayır</label>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label class="custom-control-gender">Ekranda darbeye bağlı çökme var mı ?<span class="text-danger">*</span></label>
-                      <div class="custom-control-box">
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="08" type="radio" name="question5" value="1" checked="">
-                          <label class="custom-control-label" for="08">Evet</label>
-                        </div>
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="09" type="radio" name="question5" value="0">
-                          <label class="custom-control-label" for="09">Hayır</label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label class="custom-control-gender">Ekranda yatay ve dikey bant arızası var mı ?<span class="text-danger">*</span></label>
-                      <div class="custom-control-box">
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="10" type="radio" name="question6" value="1" checked="">
-                          <label class="custom-control-label" for="10">Evet</label>
-                        </div>
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="11" type="radio" name="question6" value="0">
-                          <label class="custom-control-label" for="11">Hayır</label>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">Ekranda kırık/çatlak/leke var mı ?<span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="06" type="radio" name="question4" value="1" checked="">
+                            <label class="custom-control-label" for="06">Evet</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="07" type="radio" name="question4" value="0">
+                            <label class="custom-control-label" for="07">Hayır</label>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label class="custom-control-gender">Görüntüde donma var mı ?<span class="text-danger">*</span></label>
-                      <div class="custom-control-box">
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="05" type="radio" name="question3" value="1" checked="">
-                          <label class="custom-control-label" for="05">Evet</label>
-                        </div>
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="06" type="radio" name="question3" value="0">
-                          <label class="custom-control-label" for="06">Hayır</label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label class="custom-control-gender">Cihazda aşırı ısınma sorunu var mı ?<span class="text-danger">*</span></label>
-                      <div class="custom-control-box">
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="12" type="radio" name="question7" value="1" checked="">
-                          <label class="custom-control-label" for="12">Evet</label>
-                        </div>
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="13" type="radio" name="question7" value="0">
-                          <label class="custom-control-label" for="13">Hayır</label>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">Ekranda darbeye bağlı çökme var mı ?<span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="08" type="radio" name="question5" value="1" checked="">
+                            <label class="custom-control-label" for="08">Evet</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="09" type="radio" name="question5" value="0">
+                            <label class="custom-control-label" for="09">Hayır</label>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label class="custom-control-gender">Cihaz çalışma esnasında normalin dışında sesler çıkarıyor mu ?<span class="text-danger">*</span></label>
-                      <div class="custom-control-box">
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="14" type="radio" name="question8" value="1" checked="">
-                          <label class="custom-control-label" for="14">Evet</label>
-                        </div>
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="15" type="radio" name="question8" value="0">
-                          <label class="custom-control-label" for="15">Hayır</label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label class="custom-control-gender">Dahili uydu alıcısı sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
-                      <div class="custom-control-box">
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="16" type="radio" name="question9" value="1" checked="">
-                          <label class="custom-control-label" for="16">Evet</label>
-                        </div>
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="17" type="radio" name="question9" value="0">
-                          <label class="custom-control-label" for="17">Hayır</label>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">Ekranda yatay ve dikey bant arızası var mı ?<span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="10" type="radio" name="question6" value="1" checked="">
+                            <label class="custom-control-label" for="10">Evet</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="11" type="radio" name="question6" value="0">
+                            <label class="custom-control-label" for="11">Hayır</label>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label class="custom-control-gender">Hoparlör sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
-                      <div class="custom-control-box">
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="18" type="radio" name="question10" value="1" checked="">
-                          <label class="custom-control-label" for="18">Evet</label>
-                        </div>
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="19" type="radio" name="question10" value="0">
-                          <label class="custom-control-label" for="19">Hayır</label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label class="custom-control-gender">Screen Share sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
-                      <div class="custom-control-box">
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="20" type="radio" name="question11" value="1" checked="">
-                          <label class="custom-control-label" for="20">Evet</label>
-                        </div>
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="21" type="radio" name="question11" value="0">
-                          <label class="custom-control-label" for="21">Hayır</label>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">Görüntüde donma var mı ?<span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="05" type="radio" name="question3" value="1" checked="">
+                            <label class="custom-control-label" for="05">Evet</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="06" type="radio" name="question3" value="0">
+                            <label class="custom-control-label" for="06">Hayır</label>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label class="custom-control-gender">WiFi sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
-                      <div class="custom-control-box">
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="22" type="radio" name="question12" value="1" checked="">
-                          <label class="custom-control-label" for="22">Evet</label>
-                        </div>
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="23" type="radio" name="question12" value="0">
-                          <label class="custom-control-label" for="23">Hayır</label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label class="custom-control-gender">RF Girişi sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
-                      <div class="custom-control-box">
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="24" type="radio" name="question13" value="1" checked="">
-                          <label class="custom-control-label" for="24">Evet</label>
-                        </div>
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="25" type="radio" name="question13" value="0">
-                          <label class="custom-control-label" for="25">Hayır</label>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">Cihazda aşırı ısınma sorunu var mı ?<span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="12" type="radio" name="question7" value="1" checked="">
+                            <label class="custom-control-label" for="12">Evet</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="13" type="radio" name="question7" value="0">
+                            <label class="custom-control-label" for="13">Hayır</label>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label class="custom-control-gender">Ethernet girişi sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
-                      <div class="custom-control-box">
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="26" type="radio" name="question14" value="1" checked="">
-                          <label class="custom-control-label" for="26">Evet</label>
-                        </div>
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="27" type="radio" name="question14" value="0">
-                          <label class="custom-control-label" for="27">Hayır</label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label class="custom-control-gender">Kulaklık Çıkışı sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
-                      <div class="custom-control-box">
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="28" type="radio" name="question15" value="1" checked="">
-                          <label class="custom-control-label" for="28">Evet</label>
-                        </div>
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="29" type="radio" name="question15" value="0">
-                          <label class="custom-control-label" for="29">Hayır</label>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">Cihaz çalışma esnasında normalin dışında sesler çıkarıyor mu ?<span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="14" type="radio" name="question8" value="1" checked="">
+                            <label class="custom-control-label" for="14">Evet</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="15" type="radio" name="question8" value="0">
+                            <label class="custom-control-label" for="15">Hayır</label>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label class="custom-control-gender">Bluetooth sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
-                      <div class="custom-control-box">
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="30" type="radio" name="question16" value="1" checked="">
-                          <label class="custom-control-label" for="30">Evet</label>
-                        </div>
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="31" type="radio" name="question16" value="0">
-                          <label class="custom-control-label" for="31">Hayır</label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label class="custom-control-gender">HDMI Girişleri sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
-                      <div class="custom-control-box">
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="32" type="radio" name="question17" value="1" checked="">
-                          <label class="custom-control-label" for="32">Evet</label>
-                        </div>
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="33" type="radio" name="question17" value="0">
-                          <label class="custom-control-label" for="33">Hayır</label>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">Dahili uydu alıcısı sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="16" type="radio" name="question9" value="1" checked="">
+                            <label class="custom-control-label" for="16">Evet</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="17" type="radio" name="question9" value="0">
+                            <label class="custom-control-label" for="17">Hayır</label>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label class="custom-control-gender">USB Girişleri sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
-                      <div class="custom-control-box">
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="34" type="radio" name="question18" value="1" checked="">
-                          <label class="custom-control-label" for="34">Evet</label>
-                        </div>
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="35" type="radio" name="question18" value="0">
-                          <label class="custom-control-label" for="35">Hayır</label>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">Hoparlör sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="18" type="radio" name="question10" value="1" checked="">
+                            <label class="custom-control-label" for="18">Evet</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="19" type="radio" name="question10" value="0">
+                            <label class="custom-control-label" for="19">Hayır</label>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label class="custom-control-gender">Cihaz uzaktan kumandası sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
-                      <div class="custom-control-box">
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="36" type="radio" name="question19" value="1" checked="">
-                          <label class="custom-control-label" for="36">Evet</label>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">Screen Share sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="20" type="radio" name="question11" value="1" checked="">
+                            <label class="custom-control-label" for="20">Evet</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="21" type="radio" name="question11" value="0">
+                            <label class="custom-control-label" for="21">Hayır</label>
+                          </div>
                         </div>
-                        <div class="custom-control custom-radios custom-control-inline">
-                          <input class="custom-control-input" id="37" type="radio" name="question19" value="0">
-                          <label class="custom-control-label" for="37">Hayır</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">WiFi sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="22" type="radio" name="question12" value="1" checked="">
+                            <label class="custom-control-label" for="22">Evet</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="23" type="radio" name="question12" value="0">
+                            <label class="custom-control-label" for="23">Hayır</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">RF Girişi sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="24" type="radio" name="question13" value="1" checked="">
+                            <label class="custom-control-label" for="24">Evet</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="25" type="radio" name="question13" value="0">
+                            <label class="custom-control-label" for="25">Hayır</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">Ethernet girişi sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="26" type="radio" name="question14" value="1" checked="">
+                            <label class="custom-control-label" for="26">Evet</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="27" type="radio" name="question14" value="0">
+                            <label class="custom-control-label" for="27">Hayır</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">Kulaklık Çıkışı sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="28" type="radio" name="question15" value="1" checked="">
+                            <label class="custom-control-label" for="28">Evet</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="29" type="radio" name="question15" value="0">
+                            <label class="custom-control-label" for="29">Hayır</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">Bluetooth sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="30" type="radio" name="question16" value="1" checked="">
+                            <label class="custom-control-label" for="30">Evet</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="31" type="radio" name="question16" value="0">
+                            <label class="custom-control-label" for="31">Hayır</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">HDMI Girişleri sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="32" type="radio" name="question17" value="1" checked="">
+                            <label class="custom-control-label" for="32">Evet</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="33" type="radio" name="question17" value="0">
+                            <label class="custom-control-label" for="33">Hayır</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">USB Girişleri sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="34" type="radio" name="question18" value="1" checked="">
+                            <label class="custom-control-label" for="34">Evet</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="35" type="radio" name="question18" value="0">
+                            <label class="custom-control-label" for="35">Hayır</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="custom-control-gender">Cihaz uzaktan kumandası sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
+                        <div class="custom-control-box">
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="36" type="radio" name="question19" value="1" checked="">
+                            <label class="custom-control-label" for="36">Evet</label>
+                          </div>
+                          <div class="custom-control custom-radios custom-control-inline">
+                            <input class="custom-control-input" id="37" type="radio" name="question19" value="0">
+                            <label class="custom-control-label" for="37">Hayır</label>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -693,29 +695,36 @@
                 </div>
               </div>
             </div>
-          </div>
-
-          <div class="row justify-content-center card answer-card  ">
-            <div class="col-lg-12 col-md-12">
-              <div class="settings-info">
-                <div class="row">
-                  <div class="col-md-12">
-                    <h2 class="mb-3 mt-1">5- Cihaz ile İlgili Uzman Notları   </h2>
+            <div class="row justify-content-center card answer-card">
+              <div class="col-lg-12 col-md-12">
+                <div class="settings-info">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <h2 class="mb-3 mt-1">5- Cihaz ile İlgili Uzman Notları   </h2>
+                    </div>
                   </div>
-                </div>
-                <div class="row align-items-center">
-                  <div class="col-md-12">
-                    <div class="form-group form-focus">
-                      <textarea class="form-control floating"></textarea>
+                  <div class="row align-items-center">
+                    <div class="col-md-12">
+                      <div class="form-group form-focus">
+                        <textarea class="form-control floating"></textarea>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
 
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="guides-load-more">
+                  <a href="javascript:void(0);" class="btn btn-primary me-3">İptal</a>
+                  <a href="javascript:void(0);" class="btn btn-secondary me-3">Kaydet</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   </div>
 </template>
