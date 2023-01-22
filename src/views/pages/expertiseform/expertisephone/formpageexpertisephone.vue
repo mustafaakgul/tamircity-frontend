@@ -1,4 +1,5 @@
 <template>
+  <form method="POST" @submit.prevent="requestExpertisePhoneInfo()">
     <div class="banner-wrapper">
       <div class="container  ">
         <section class="guides-section">
@@ -903,7 +904,7 @@
                 <div class="col-md-12">
                   <div class="guides-load-more">
                     <a href="javascript:void(0);" class="btn btn-primary me-3">İptal</a>
-                    <a href="javascript:void(0);" class="btn btn-secondary me-3">Kaydet</a>
+                    <button type="submit" value="Submit" class="btn btn-secondary me-3">Kaydet</button>
                   </div>
                 </div>
               </div>
@@ -912,11 +913,17 @@
         </section>
       </div>
     </div>
+  </form>
 </template>
 
 <script>
-import Vue from 'vue'
+import axios from "axios";
+const appData = {
+  expertisePhoneInfo: []
+}
+
 export default {
+  name: 'App',
   data() {
     return {
       brand: ["Marka", "aaaaa", " bbbbb", "ccccccc"],
@@ -937,22 +944,105 @@ export default {
       batterycapacity: ["batterycapacity2500mAh-7500mAh"],
       wififrequency: ["Wi-Fi 6 (802.11 a/b/g/n/ac/ax)","Wi-Fi 5 (802.11 a/b/g/n/ac)","Wi-Fi 4 (802.11 a/b/g/n)","Wi-Fi 4 (802.11 b/g/n)"],
       releaseyear: ["2023","2022","2021","2019","2018","2017","2016","2017","2016"],
-
-
-
-
-
+      appData
     }
   },
 
+  mounted: function () {
 
+  },
+
+  methods: {
+    requestExpertisePhoneInfo: requestExpertisePhoneInfo
+  }
 }
-</Script>
+
+async function requestExpertisePhoneInfo() {
+  await axios.post(
+      "http://157.230.124.187:8888/api/v1/expertise_phone_infos",
+      {
+        reservation_id : 1,
+        invoice : true,
+        box : true,
+        guarantee_term : 1,
+        color : "red",
+        imei_registration : "imei",
+        e_devlet_registration : "edev",
+        screen_size : 2.4,
+        screen_technology : "screen_technology",
+        screen_resolution : "res",
+        scratch_resistance : true,
+        cpu_model : "cpu",
+        cpu_frequency : 123,
+        ram : 1,
+        os_type : "ost",
+        os_type_version : "os",
+        cpu_core_number : 8,
+        camera_resolution : 123,
+        front_camera_resolution : 12,
+        video_record_resolution : "video",
+        video_fps : 12,
+        face_recognition : true,
+        slow_motion_video : true,
+        camera_ai : false,
+        timer : true,
+        automatic_focus : false,
+        geographic_location : true,
+        voice_control : false,
+        internal_storage : 6,
+        external_storage : 24,
+        max_external_storage : 512,
+        battery_type : "type",
+        battery_capacity : 20,
+        battery_wireless_charge : true,
+        battery_fast_charge : false,
+        battery_wireless_fast_charge : true,
+        battery_detachable : false,
+        wifi_frequency : "wifi",
+        nfc : false,
+        g5_support : true,
+        release_year : 2016,
+        resistance_o_water : true,
+        resistance_of_dust : false,
+        finger_print :true,
+        double_sim : false,
+        antutu_score : 450,
+        is_screen_has_broken_problem : true,
+        is_screen_has_obscuration_problem : false,
+        is_touch_screen_has_problem : true,
+        is_screen_has_dead_pixel_problem : false,
+        is_device_has_case_problem : true,
+        is_device_has_cover_problem : false,
+        is_device_has_cameras_problem : true,
+        is_device_has_speaker_problem : false,
+        is_device_has_hight_heat_problem : true,
+        is_device_has_charge_socket_problem : false,
+        is_device_has_power_button_problem : true,
+        is_device_has_opened_case_problem : false,
+        is_device_has_side_button_problem : true,
+        is_device_has_freezing_problem : false,
+        is_device_has_bluetooth_problem : true,
+        is_device_has_wifi_problem : false,
+        is_device_has_microphone_problem : true,
+        is_device_has_cellular_problem : false,
+        is_device_has_sound_transfer_problem : true
+      },
+      {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }
+  ).then((response) => {
+    this.thumbnailUrl = response.data.screenshot;
+    console.log(response)
+  }).catch((error) => {
+    console.log(error)
+  });
+}
+</script>
 
 <style scope>
 .banner-wrapper {
   padding: 150px 0 0 !important;
 }
-
-
 </style>
