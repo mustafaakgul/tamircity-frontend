@@ -1,4 +1,5 @@
 <template>
+  <form method="POST" @submit.prevent="requestExpertisePCInfo()">
   <div class="banner-wrapper">
     <div class="container">
       <section class="guides-section">
@@ -1083,7 +1084,7 @@
               <div class="col-md-12">
                 <div class="guides-load-more">
                   <a href="javascript:void(0);" class="btn btn-primary me-3">İptal</a>
-                  <a href="javascript:void(0);" class="btn btn-secondary me-3">Kaydet</a>
+                  <button type="submit" value="Submit" class="btn btn-secondary me-3">Kaydet</button>
                 </div>
               </div>
             </div>
@@ -1094,10 +1095,17 @@
 
     </div>
   </div>
+  </form>
 </template>
 
 <script>
+import axios from 'axios';
+const appData = {
+  expertisePCInfo: []
+}
+
 export default {
+  name: 'App',
   data() {
     return {
       brand: ["Acer", "Apple", " Asus ", "Asus Rog","Casper","Dell","HP","Huawei","Lenovo","Microsoft","Monster","MSI","Samsung", "Toshiba"],
@@ -1128,18 +1136,121 @@ export default {
       usb2enterquantity: ["1","2","3","4"],
       usb3enterquantity: ["1","2","3","4"],
       typec: ["1","2","3","4","5"],
-      frequency: [" 2.5 GHz "," 2.6 GHz "," 2.7 GHz "," 2.8 GHz "," 2.9 GHz "," 3.0 GHz ", " 3.1 GHz "," 3.2 GHz "," 3.3 GHz "," 3.4 GHz "," 3.5 GHz "," 3.6 GHz "," 3.7 GHz "," 3.8 GHz "," 3.9 GHz "," 4.0 GHz", " 4.1 GHz "," 4.3 GHz "," 4.50 GHz "," 4.7 GHz " ]
+      frequency: [" 2.5 GHz "," 2.6 GHz "," 2.7 GHz "," 2.8 GHz "," 2.9 GHz "," 3.0 GHz ", " 3.1 GHz "," 3.2 GHz "," 3.3 GHz "," 3.4 GHz "," 3.5 GHz "," 3.6 GHz "," 3.7 GHz "," 3.8 GHz "," 3.9 GHz "," 4.0 GHz", " 4.1 GHz "," 4.3 GHz "," 4.50 GHz "," 4.7 GHz " ],
+      appData
     }
   },
 
+  mounted: function () {
 
+  },
+
+  methods: {
+    requestExpertisePCInfo: requestExpertisePCInfo
+  }
 }
-</Script>
+
+async function requestExpertisePCInfo() {
+  await axios.post(
+      "http://157.230.124.187:8888/api/v1/expertise_pc_infos",
+      {
+        reservation_id : 1,
+        invoice : true,
+        box : false,
+        guarantee_term : 5,
+        phone_color : "red",
+        screen_size :20,
+        screen_resolution : "asd",
+        screen_resolution_type : "res",
+        screen_panel_type : "pal",
+        operating_system : "op",
+        card_reader : true,
+        camera : true,
+        finger_print_reader: true,
+        touch_screen : true,
+        keyboard_backlight : false,
+        cpu : "asd",
+        cpu_serie : "asd",
+        cpu_base_frequency :25,
+        cpu_core_number : 4,
+        cpu_ram : 12,
+        intel_turba_boost : true,
+        ram : 16,
+        ram_frequency : "asd",
+        ram_type : "asd",
+        hdd_capacity : 512,
+        ssd : true,
+        ssd_capacity : 200,
+        external_graphics_card : true,
+        external_graphics_card_brand : "asd",
+        external_graphics_card_series : "asd",
+        external_graphics_card_memory : "memo",
+        external_graphics_card_bit: 5,
+        external_graphics_card_core_speed : 3,
+        internal_graphics_card_cpu : "asd",
+        graphic_base_frequency : 5,
+        graphic_max_dynamic_frequency :5,
+        four_k : true,
+        directx : true,
+        open_gl : 20,
+        supperted_screen_number :2,
+        ethernet : true,
+        ethernet_version : true,
+        wifi_version : "asd",
+        hdmi : true,
+        bluetooth : false,
+        usb_2_number : 2,
+        usb_3_number : 2,
+        usb_type_c_number :1,
+        is_screen_has_broken_problem               :false,
+        is_screen_has_loss_problem                 :true,
+        is_screen_has_dead_pixel_problem           :false,
+        is_device_has_case_problem                 :true,
+        is_device_has_cover_problem                :false,
+        is_device_has_broken_key_problem           :true,
+        is_device_has_function_less_key_problem    :false,
+        is_device_has_charge_socket_problem        :true,
+        is_device_has_touch_pad_problem            :false,
+        is_device_has_speaker_problem              :true,
+        is_device_has_high_heat_problem            :false,
+        is_device_has_high_sound_problem           :true,
+        is_device_has_dvd_driver_problem           :false,
+        is_device_has_usb_input_problem            :true,
+        is_device_has_usb_type_c_problem           :false,
+        is_device_has_card_reader_problem          :true,
+        is_device_has_camera_problem               :false,
+        is_device_has_finger_print_problem         :true,
+        is_device_has_mother_board_problem         :false,
+        is_device_has_ram_problem                  :true,
+        is_device_has_hdd_problem                  :false,
+        is_device_has_ssd_problem                  :true,
+        is_device_has_external_graphic_card_problem:false,
+        is_device_has_internal_graphic_card_problem:true,
+        is_device_has_optical_reader_problem       :false,
+        is_device_has_ethernet_connection_problem  :true,
+        is_device_has_wifi_problem                 :false,
+        is_device_has_hdmi_problem                 :true,
+        is_device_has_bluetooth_problem            :false,
+        is_device_has_head_phone_socket_problem    :true,
+        is_device_has_touch_screen_problem         :false,
+        is_device_has_keyboard_backlight_problem   :true
+      },
+      {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }
+  ).then((response) => {
+    this.thumbnailUrl = response.data.screenshot;
+    console.log(response)
+  }).catch((error) => {
+    console.log(error)
+  });
+}
+</script>
 
 <style scoped>
 .banner-wrapper {
   padding: 150px 0 0 !important;
 }
-
-
 </style>
