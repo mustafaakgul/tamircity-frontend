@@ -542,7 +542,6 @@
 </template>
 
 <script>
-
 import axios from "axios";
 const appData = {
   expertiseWatchInfo: []
@@ -573,7 +572,6 @@ export default {
 async function requestExpertiseWatchInfo() {
   await axios.post(
       "http://157.230.124.187:8888/api/v1/expertise_watch_infos",
-
       {
         reservation_id : 2,
         invoice : true,
@@ -608,7 +606,6 @@ async function requestExpertiseWatchInfo() {
         is_microphone_has_problem: false,
         is_device_has_cellular_problem: true
       },
-
       {
         headers: {
           'Content-Type': 'application/json'
@@ -621,13 +618,10 @@ async function requestExpertiseWatchInfo() {
     console.log(error)
   });
 }
-
 </script>
 
 <style scoped>
 .banner-wrapper {
   padding: 150px 0 0 !important;
 }
-
-
 </style>
