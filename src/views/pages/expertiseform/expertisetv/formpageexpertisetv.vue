@@ -1,4 +1,5 @@
 <template>
+  <form method="POST" @submit.prevent="requestExpertiseTVInfo()">
   <div class="banner-wrapper">
     <div class="container">
       <section class="guides-section">
@@ -718,7 +719,7 @@
               <div class="col-md-12">
                 <div class="guides-load-more">
                   <a href="javascript:void(0);" class="btn btn-primary me-3">İptal</a>
-                  <a href="javascript:void(0);" class="btn btn-secondary me-3">Kaydet</a>
+                  <button type="submit" value="Submit" class="btn btn-secondary me-3">Kaydet</button>
                 </div>
               </div>
             </div>
@@ -727,11 +728,17 @@
       </section>
     </div>
   </div>
+  </form>
 </template>
 
 <script>
-import Vue from 'vue'
+import axios from 'axios';
+const appData = {
+  expertiseTVInfo: []
+}
+
 export default {
+  name: 'App',
   data() {
     return {
       brand: ["Samsung", "LG", "Philips", "Vestel"," Sony"," Arçelik"," Altus"," Awox"," Axen","Beko","Digipol","Finlux","Fivo","Goldmaster","Grundig","Hi-Level","Hitachi","Jameson","JVC","Kamosonic","Luxor","Navitech ","Next","Nordmende","Panasonic","Premier","Profilo","Regal"," Rowell"," SEG"," Sharp"," Skytech","Sunny"," Techwood"," Telefox"," Telefunken "," Toshiba"," Woon"," Botech"," Redline"," Blaupunkt"," Daewoo"," Dijitsu"," DijiTv"," Dikom","Elton","Hello"," Keysmart"," Morio"," Nexon"," Olimpia"," Onvo"," PEAQ"," Practica"," Quax"," Saba","Sheen"," Strong"," TCL"," Telenova","Ventus"," Weston"," Xiaomi"],
@@ -757,22 +764,85 @@ export default {
       batterycapacity: ["batterycapacity2500mAh-7500mAh"],
       wififrequency: ["Wi-Fi 6 (802.11 a/b/g/n/ac/ax)","Wi-Fi 5 (802.11 a/b/g/n/ac)","Wi-Fi 4 (802.11 a/b/g/n)","Wi-Fi 4 (802.11 b/g/n)"],
       releaseyear: ["2023","2022","2021","2019","2018","2017","2016","2017","2016"],
-
-
-
-
-
+      appData
     }
   },
 
+  mounted: function () {
 
+  },
+
+  methods: {
+    requestExpertiseTVInfo: requestExpertiseTVInfo
+  }
 }
-</Script>
+
+async function requestExpertiseTVInfo() {
+  await axios.post(
+      "http://157.230.124.187:8888/api/v1/expertise_tv_infos",
+      {
+        reservation_id : 1,
+        invoice : true,
+        box : false,
+        guarantee_term : 5,
+        guarantee_term_type : "qua",
+        color :"pink",
+        smart_tv : true,
+        panel_technology : "panel",
+        curved_screen : true,
+        os_type : "os",
+        internal_satallite_recevier : true,
+        screen_size : 3.4,
+        ambilight : true,
+        hdr : true,
+        full_array : false,
+        screen_resolution : "asd",
+        refresh_rate : 4,
+        release_year :25,
+        screen_share : true,
+        wifi : false,
+        rfi_input : true,
+        lan : false,
+        head_phone_jack : true,
+        bluetooth : false,
+        hdmi : true,
+        usb : false,
+        is_screen_has_obscuration_problem              :true,
+        is_screen_has_dead_pixel_problem                 :false,
+        is_screen_has_broken_problem           :true,
+        is_screen_has_down_fall_problem                 :false,
+        is_screen_has_band_problem                :true,
+        is_screen_has_freezing_problem           :false,
+        is_device_has_high_heat_problem    :true,
+        is_device_has_sound_problem        :false,
+        is_device_has_internal_receiver_problem            :true,
+        is_device_has_speaker_problem              :false,
+        is_screen_share_has_problem            :true,
+        is_wifi_has_problem           :false,
+        is_rfi_input_has_problem           :true,
+        is_ethernet_has_problem            :false,
+        is_head_phone_jack_has_problem           :true,
+        is_bluetooth_has_problem          :false,
+        is_hdmi_has_problem               :true,
+        is_usb_has_problem         :false,
+        is_remote_control_has_problem         :true
+      },
+      {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }
+  ).then((response) => {
+    this.thumbnailUrl = response.data.screenshot;
+    console.log(response)
+  }).catch((error) => {
+    console.log(error)
+  });
+}
+</script>
 
 <style scope>
 .banner-wrapper {
   padding: 150px 0 0 !important;
 }
-
-
 </style>
