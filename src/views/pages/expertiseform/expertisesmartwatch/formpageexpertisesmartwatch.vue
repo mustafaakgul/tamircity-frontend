@@ -129,7 +129,7 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label>İşletim Sistemi <span class="text-danger">*</span></label>
-                          <vue-select :options="operatingsystem"/>
+                          <vue-select :options="operatingsystem" v-model="osTypeModel"/>
                         </div>
                       </div>
                       <div class="col-md-6">
@@ -577,16 +577,16 @@ async function requestExpertiseWatchInfo() {
         invoice : this.invoiceModel,
         box : this.boxModel,
         guarantee_term : this.guaranteeTermModel,
-        phone_color : "yellow",
+        phone_color : this.phoneColorModel,
         microphone : this.microphoneModel,
-        screen_size : 3,
-        memory : 2000,
+        screen_size : this.screenSizeModel,
+        memory : this.memoryModel,
         screen_type : this.screenTypeModel,
-        os_type : "intel",
-        os_type_compatiple : "asdasf",
-        screen_resolution : "1234",
-        cpu_frequency : 5,
-        battery_capacity : 3,
+        os_type : this.osTypeModel,
+        os_type_compatiple : this.osTypeCompatipleModel,
+        screen_resolution : this.screenResolutionModel,
+        cpu_frequency : this.cpuFrequencyModel,
+        battery_capacity : this.batteryCapacityModel,
         wifi : this.wifiModel,
         speaker : this.speakerModel,
         sim_support : this.simSupportModel,
