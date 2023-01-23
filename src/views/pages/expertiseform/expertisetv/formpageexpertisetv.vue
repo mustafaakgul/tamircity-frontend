@@ -62,11 +62,11 @@
                             <label class="custom-control-gender">Fatura <span class="text-danger">*</span></label>
                             <div class="custom-control-box">
                               <div class="custom-control custom-radios custom-control-inline">
-                                <input class="custom-control-input" id="billy" type="radio" name="bill" value="billy" checked="">
+                                <input class="custom-control-input" id="billy" type="radio" name="bill" :value=true>
                                 <label class="custom-control-label" for="billy">Var</label>
                               </div>
                               <div class="custom-control custom-radios custom-control-inline">
-                                <input class="custom-control-input" id="billn" type="radio" name="bill" value="billn">
+                                <input class="custom-control-input" id="billn" type="radio" name="bill" :value=false>
                                 <label class="custom-control-label" for="billn">Yok</label>
                               </div>
                             </div>
@@ -77,11 +77,11 @@
                             <label class="custom-control-gender">Kutu <span class="text-danger">*</span></label>
                             <div class="custom-control-box">
                               <div class="custom-control custom-radios custom-control-inline">
-                                <input class="custom-control-input" id="boxy" type="radio" name="stripe" value="1" checked="">
+                                <input class="custom-control-input" id="boxy" type="radio" name="stripe" :value=true>
                                 <label class="custom-control-label" for="boxy">Var</label>
                               </div>
                               <div class="custom-control custom-radios custom-control-inline">
-                                <input class="custom-control-input" id="boxn" type="radio" name="stripe" value="0">
+                                <input class="custom-control-input" id="boxn" type="radio" name="stripe" :value=false>
                                 <label class="custom-control-label" for="boxn">Yok</label>
                               </div>
                             </div>
@@ -173,11 +173,11 @@
                         <label class="custom-control-gender">Smart TV<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="smarty" type="radio" name="smart" value="1" checked="">
+                            <input class="custom-control-input" id="smarty" type="radio" name="smart" :value=true>
                             <label class="custom-control-label" for="smarty">Var</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="smartn" type="radio" name="smart" value="0">
+                            <input class="custom-control-input" id="smartn" type="radio" name="smart" :value=false>
                             <label class="custom-control-label" for="smartn">Yok</label>
                           </div>
                         </div>
@@ -188,11 +188,11 @@
                         <label class="custom-control-gender">Kavisli ekran  <span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="screeny" type="radio" name="screen" value="1" checked="">
+                            <input class="custom-control-input" id="screeny" type="radio" name="screen" :value=true>
                             <label class="custom-control-label" for="screeny">Var</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="screenn" type="radio" name="screen" value="0">
+                            <input class="custom-control-input" id="screenn" type="radio" name="screen" :value=false>
                             <label class="custom-control-label" for="screenn">Yok</label>
                           </div>
                         </div>
@@ -203,11 +203,11 @@
                         <label class="custom-control-gender">Dahili Uydu Alıcısı<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="satellitey" type="radio" name="satellite" value="1" checked="">
+                            <input class="custom-control-input" id="satellitey" type="radio" name="satellite" :value=true>
                             <label class="custom-control-label" for="satellitey">Var</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="satelliten" type="radio" name="satellite" value="0">
+                            <input class="custom-control-input" id="satelliten" type="radio" name="satellite" :value=false>
                             <label class="custom-control-label" for="satelliten">Yok</label>
                           </div>
                         </div>
@@ -218,11 +218,11 @@
                         <label class="custom-control-gender">Ambilight<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="ambilighty" type="radio" name="ambilight" value="location" checked="">
+                            <input class="custom-control-input" id="ambilighty" type="radio" name="ambilight" :value=true>
                             <label class="custom-control-label" for="ambilighty">Var</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="ambilightn" type="radio" name="ambilight" value="location">
+                            <input class="custom-control-input" id="ambilightn" type="radio" name="ambilight" :value=false>
                             <label class="custom-control-label" for="ambilightn">Yok</label>
                           </div>
                         </div>
@@ -233,11 +233,11 @@
                         <label class="custom-control-gender">HDR<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="hdry" type="radio" name="hdr" value="1" checked="">
+                            <input class="custom-control-input" id="hdry" type="radio" name="hdr" :value=true>
                             <label class="custom-control-label" for="hdry">Var</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="hdrn" type="radio" name="hdr" value="0">
+                            <input class="custom-control-input" id="hdrn" type="radio" name="hdr" :value=false>
                             <label class="custom-control-label" for="hdrn">Yok</label>
                           </div>
                         </div>
@@ -248,11 +248,11 @@
                         <label class="custom-control-gender">Full Array<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="arrayy" type="radio" name="array" value="1" checked="">
+                            <input class="custom-control-input" id="arrayy" type="radio" name="array" :value=true>
                             <label class="custom-control-label" for="arrayy">Var</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="arrayn" type="radio" name="array" value="0">
+                            <input class="custom-control-input" id="arrayn" type="radio" name="array" :value=false>
                             <label class="custom-control-label" for="arrayn">Yok</label>
                           </div>
                         </div>
@@ -263,11 +263,11 @@
                         <label class="custom-control-gender">Hafıza Kartı Desteği <span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="memoryy" type="radio" name="memory" value="memory" checked="">
+                            <input class="custom-control-input" id="memoryy" type="radio" name="memory" :value=true>
                             <label class="custom-control-label" for="memoryy">Var</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="memoryz" type="radio" name="memory" value="memory">
+                            <input class="custom-control-input" id="memoryz" type="radio" name="memory" :value=false>
                             <label class="custom-control-label" for="memoryz">Yok</label>
                           </div>
                         </div>
@@ -279,11 +279,11 @@
                         <label class="custom-control-gender">Screen Share <span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="ssy" type="radio" name="ss" value="1" checked="">
+                            <input class="custom-control-input" id="ssy" type="radio" name="ss" :value=true>
                             <label class="custom-control-label" for="ssy">Var</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="ssn" type="radio" name="ss" value="0">
+                            <input class="custom-control-input" id="ssn" type="radio" name="ss" :value=false>
                             <label class="custom-control-label" for="ssn">Yok</label>
                           </div>
                         </div>
@@ -294,11 +294,11 @@
                         <label class="custom-control-gender">WiFi<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="wifiy" type="radio" name="wifi" value="1" checked="">
+                            <input class="custom-control-input" id="wifiy" type="radio" name="wifi" :value=true>
                             <label class="custom-control-label" for="wifiy">Var</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="wifin" type="radio" name="wifi" value="0">
+                            <input class="custom-control-input" id="wifin" type="radio" name="wifi" :value=false>
                             <label class="custom-control-label" for="wifin">Yok</label>
                           </div>
                         </div>
@@ -309,11 +309,11 @@
                         <label class="custom-control-gender">RF Girişi<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="rfy" type="radio" name="rf" value="1" checked="">
+                            <input class="custom-control-input" id="rfy" type="radio" name="rf" :value=true>
                             <label class="custom-control-label" for="rfy">Var</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="rfn" type="radio" name="rf" value="0">
+                            <input class="custom-control-input" id="rfn" type="radio" name="rf" :value=false>
                             <label class="custom-control-label" for="rfn">Yok</label>
                           </div>
                         </div>
@@ -324,11 +324,11 @@
                         <label class="custom-control-gender">LAN<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="lany" type="radio" name="lan" value="1" checked="">
+                            <input class="custom-control-input" id="lany" type="radio" name="lan" :value=true>
                             <label class="custom-control-label" for="lany">Var</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="lann" type="radio" name="lan" value="0">
+                            <input class="custom-control-input" id="lann" type="radio" name="lan" :value=false>
                             <label class="custom-control-label" for="lann">Yok</label>
                           </div>
                         </div>
@@ -339,11 +339,11 @@
                         <label class="custom-control-gender">Kulaklık Çıkışı<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="eary" type="radio" name="ear" value="1" checked="">
+                            <input class="custom-control-input" id="eary" type="radio" name="ear" :value=true>
                             <label class="custom-control-label" for="eary">Var</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="earn" type="radio" name="ear" value="0">
+                            <input class="custom-control-input" id="earn" type="radio" name="ear" :value=false>
                             <label class="custom-control-label" for="earn">Yok</label>
                           </div>
                         </div>
@@ -354,11 +354,11 @@
                         <label class="custom-control-gender">Bluetooth<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="bluetoothy" type="radio" name="bluetooth" value="1" checked="">
+                            <input class="custom-control-input" id="bluetoothy" type="radio" :value=true>
                             <label class="custom-control-label" for="bluetoothy">Var</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="bluetoothn" type="radio" name="bluetooth" value="0">
+                            <input class="custom-control-input" id="bluetoothn" type="radio" :value=false>
                             <label class="custom-control-label" for="bluetoothn">Yok</label>
                           </div>
                         </div>
@@ -369,11 +369,11 @@
                         <label class="custom-control-gender">HDMI Girişi<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="hdmıentery" type="radio" name="hdmıenter" value="1" checked="">
+                            <input class="custom-control-input" id="hdmıentery" type="radio" :value=true>
                             <label class="custom-control-label" for="hdmıentery">Var</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="hdmıentern" type="radio" name="hdmıenter" value="0">
+                            <input class="custom-control-input" id="hdmıentern" type="radio" :value=false>
                             <label class="custom-control-label" for="hdmıentern">Yok</label>
                           </div>
                         </div>
@@ -384,11 +384,11 @@
                         <label class="custom-control-gender">USB Girişi<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="usbentery" type="radio" name="usbenter" value="1" checked="">
+                            <input class="custom-control-input" id="usbentery" type="radio" :value=true>
                             <label class="custom-control-label" for="usbentery">Var</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="usbentern" type="radio" name="usbenter" value="0">
+                            <input class="custom-control-input" id="usbentern" type="radio" :value=false>
                             <label class="custom-control-label" for="usbentern">Yok</label>
                           </div>
                         </div>
@@ -412,11 +412,11 @@
                         <label class="custom-control-gender">Ekranda bölgesel veya tamamen kararma var mı ? <span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="01" type="radio" name="question1" value="1" checked="">
+                            <input class="custom-control-input" id="01" type="radio" :value=true>
                             <label class="custom-control-label" for="01">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="02" type="radio" name="question1" value="0">
+                            <input class="custom-control-input" id="02" type="radio" :value=false>
                             <label class="custom-control-label" for="02">Hayır</label>
                           </div>
                         </div>
@@ -427,11 +427,11 @@
                         <label class="custom-control-gender">Ekranda ölü piksel arızası var mı ? <span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="03" type="radio" name="question2" value="1" checked="">
+                            <input class="custom-control-input" id="03" type="radio" :value=true>
                             <label class="custom-control-label" for="03">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="04" type="radio" name="question2" value="0">
+                            <input class="custom-control-input" id="04" type="radio" :value=false>
                             <label class="custom-control-label" for="04">Hayır</label>
                           </div>
                         </div>
@@ -442,11 +442,11 @@
                         <label class="custom-control-gender">Ekranda kırık/çatlak/leke var mı ?<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="06" type="radio" name="question4" value="1" checked="">
+                            <input class="custom-control-input" id="06" type="radio" :value=true>
                             <label class="custom-control-label" for="06">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="07" type="radio" name="question4" value="0">
+                            <input class="custom-control-input" id="07" type="radio" :value=false>
                             <label class="custom-control-label" for="07">Hayır</label>
                           </div>
                         </div>
@@ -457,11 +457,11 @@
                         <label class="custom-control-gender">Ekranda darbeye bağlı çökme var mı ?<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="08" type="radio" name="question5" value="1" checked="">
+                            <input class="custom-control-input" id="08" type="radio" :value=true>
                             <label class="custom-control-label" for="08">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="09" type="radio" name="question5" value="0">
+                            <input class="custom-control-input" id="09" type="radio" :value=false>
                             <label class="custom-control-label" for="09">Hayır</label>
                           </div>
                         </div>
@@ -472,11 +472,11 @@
                         <label class="custom-control-gender">Ekranda yatay ve dikey bant arızası var mı ?<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="10" type="radio" name="question6" value="1" checked="">
+                            <input class="custom-control-input" id="10" type="radio" :value=true>
                             <label class="custom-control-label" for="10">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="11" type="radio" name="question6" value="0">
+                            <input class="custom-control-input" id="11" type="radio" :value=false>
                             <label class="custom-control-label" for="11">Hayır</label>
                           </div>
                         </div>
@@ -487,11 +487,11 @@
                         <label class="custom-control-gender">Görüntüde donma var mı ?<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="05" type="radio" name="question3" value="1" checked="">
+                            <input class="custom-control-input" id="05" type="radio" :value=true>
                             <label class="custom-control-label" for="05">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="06" type="radio" name="question3" value="0">
+                            <input class="custom-control-input" id="06" type="radio" :value=false>
                             <label class="custom-control-label" for="06">Hayır</label>
                           </div>
                         </div>
@@ -502,11 +502,11 @@
                         <label class="custom-control-gender">Cihazda aşırı ısınma sorunu var mı ?<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="12" type="radio" name="question7" value="1" checked="">
+                            <input class="custom-control-input" id="12" type="radio" :value=true>
                             <label class="custom-control-label" for="12">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="13" type="radio" name="question7" value="0">
+                            <input class="custom-control-input" id="13" type="radio" :value=false>
                             <label class="custom-control-label" for="13">Hayır</label>
                           </div>
                         </div>
@@ -517,11 +517,11 @@
                         <label class="custom-control-gender">Cihaz çalışma esnasında normalin dışında sesler çıkarıyor mu ?<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="14" type="radio" name="question8" value="1" checked="">
+                            <input class="custom-control-input" id="14" type="radio" :value=true>
                             <label class="custom-control-label" for="14">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="15" type="radio" name="question8" value="0">
+                            <input class="custom-control-input" id="15" type="radio" :value=false>
                             <label class="custom-control-label" for="15">Hayır</label>
                           </div>
                         </div>
@@ -532,11 +532,11 @@
                         <label class="custom-control-gender">Dahili uydu alıcısı sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="16" type="radio" name="question9" value="1" checked="">
+                            <input class="custom-control-input" id="16" type="radio" :value=true>
                             <label class="custom-control-label" for="16">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="17" type="radio" name="question9" value="0">
+                            <input class="custom-control-input" id="17" type="radio" :value=false>
                             <label class="custom-control-label" for="17">Hayır</label>
                           </div>
                         </div>
@@ -547,11 +547,11 @@
                         <label class="custom-control-gender">Hoparlör sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="18" type="radio" name="question10" value="1" checked="">
+                            <input class="custom-control-input" id="18" type="radio" :value=true>
                             <label class="custom-control-label" for="18">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="19" type="radio" name="question10" value="0">
+                            <input class="custom-control-input" id="19" type="radio" :value=false>
                             <label class="custom-control-label" for="19">Hayır</label>
                           </div>
                         </div>
@@ -562,11 +562,11 @@
                         <label class="custom-control-gender">Screen Share sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="20" type="radio" name="question11" value="1" checked="">
+                            <input class="custom-control-input" id="20" type="radio" :value=true>
                             <label class="custom-control-label" for="20">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="21" type="radio" name="question11" value="0">
+                            <input class="custom-control-input" id="21" type="radio" :value=false>
                             <label class="custom-control-label" for="21">Hayır</label>
                           </div>
                         </div>
@@ -577,11 +577,11 @@
                         <label class="custom-control-gender">WiFi sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="22" type="radio" name="question12" value="1" checked="">
+                            <input class="custom-control-input" id="22" type="radio" :value=true>
                             <label class="custom-control-label" for="22">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="23" type="radio" name="question12" value="0">
+                            <input class="custom-control-input" id="23" type="radio" :value=false>
                             <label class="custom-control-label" for="23">Hayır</label>
                           </div>
                         </div>
@@ -592,11 +592,11 @@
                         <label class="custom-control-gender">RF Girişi sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="24" type="radio" name="question13" value="1" checked="">
+                            <input class="custom-control-input" id="24" type="radio" :value=true>
                             <label class="custom-control-label" for="24">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="25" type="radio" name="question13" value="0">
+                            <input class="custom-control-input" id="25" type="radio" :value=false>
                             <label class="custom-control-label" for="25">Hayır</label>
                           </div>
                         </div>
@@ -607,11 +607,11 @@
                         <label class="custom-control-gender">Ethernet girişi sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="26" type="radio" name="question14" value="1" checked="">
+                            <input class="custom-control-input" id="26" type="radio" :value=true>
                             <label class="custom-control-label" for="26">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="27" type="radio" name="question14" value="0">
+                            <input class="custom-control-input" id="27" type="radio" :value=false>
                             <label class="custom-control-label" for="27">Hayır</label>
                           </div>
                         </div>
@@ -622,11 +622,11 @@
                         <label class="custom-control-gender">Kulaklık Çıkışı sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="28" type="radio" name="question15" value="1" checked="">
+                            <input class="custom-control-input" id="28" type="radio" :value=true>
                             <label class="custom-control-label" for="28">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="29" type="radio" name="question15" value="0">
+                            <input class="custom-control-input" id="29" type="radio" :value=false>
                             <label class="custom-control-label" for="29">Hayır</label>
                           </div>
                         </div>
@@ -637,11 +637,11 @@
                         <label class="custom-control-gender">Bluetooth sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="30" type="radio" name="question16" value="1" checked="">
+                            <input class="custom-control-input" id="30" type="radio" :value=true>
                             <label class="custom-control-label" for="30">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="31" type="radio" name="question16" value="0">
+                            <input class="custom-control-input" id="31" type="radio" :value=false>
                             <label class="custom-control-label" for="31">Hayır</label>
                           </div>
                         </div>
@@ -652,11 +652,11 @@
                         <label class="custom-control-gender">HDMI Girişleri sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="32" type="radio" name="question17" value="1" checked="">
+                            <input class="custom-control-input" id="32" type="radio" :value=true>
                             <label class="custom-control-label" for="32">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="33" type="radio" name="question17" value="0">
+                            <input class="custom-control-input" id="33" type="radio" :value=false>
                             <label class="custom-control-label" for="33">Hayır</label>
                           </div>
                         </div>
@@ -667,11 +667,11 @@
                         <label class="custom-control-gender">USB Girişleri sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="34" type="radio" name="question18" value="1" checked="">
+                            <input class="custom-control-input" id="34" type="radio" :value=true>
                             <label class="custom-control-label" for="34">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="35" type="radio" name="question18" value="0">
+                            <input class="custom-control-input" id="35" type="radio" :value=false>
                             <label class="custom-control-label" for="35">Hayır</label>
                           </div>
                         </div>
@@ -682,11 +682,11 @@
                         <label class="custom-control-gender">Cihaz uzaktan kumandası sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="36" type="radio" name="question19" value="1" checked="">
+                            <input class="custom-control-input" id="36" type="radio" :value=true>
                             <label class="custom-control-label" for="36">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="37" type="radio" name="question19" value="0">
+                            <input class="custom-control-input" id="37" type="radio" :value=false>
                             <label class="custom-control-label" for="37">Hayır</label>
                           </div>
                         </div>
