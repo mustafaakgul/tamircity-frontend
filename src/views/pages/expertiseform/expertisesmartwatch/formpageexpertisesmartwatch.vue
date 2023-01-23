@@ -135,14 +135,14 @@
                       <div class="col-md-6">
                         <div class="form-group form-focus">
                           <label>İşlemci Frekansı<span class="text-danger">*</span></label>
-                          <input type="text" class="form-control floating">
+                          <input type="text" class="form-control floating" v-model="cpuFrequencyModel">
                           <label class="focus-label">1 inç-2 inç</label>
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group form-focus">
                           <label>Bellek (RAM)<span class="text-danger">*</span></label>
-                          <input type="text" class="form-control floating">
+                          <input type="text" class="form-control floating" v-model="memoryModel">
                           <label class="focus-label">16MB-2048MB</label>
                         </div>
                       </div>
@@ -151,14 +151,14 @@
                           <div class="col-md-6">
                             <div class="form-group form-focus">
                               <label>Ekran Çözünürlüğü<span class="text-danger">*</span></label>
-                              <input type="text" class="form-control floating">
+                              <input type="text" class="form-control floating" v-model="screenResolutionModel">
                               <label class="focus-label">190-500/200-600 piksel</label>
                             </div>
                           </div>
                           <div class="col-md-6">
                             <div class="form-group form-focus">
                               <label>Ekran Boyutu<span class="text-danger">*</span></label>
-                              <input type="text" class="form-control floating">
+                              <input type="text" class="form-control floating" v-model="screenSizeModel">
                               <label class="focus-label">1 inç-2 inç</label>
                             </div>
                           </div>
@@ -174,7 +174,7 @@
                       <div class="col-md-6">
                         <div class="form-group form-focus">
                           <label>Batarya Kapasitesi <span class="text-danger">*</span></label>
-                          <input type="text" class="form-control floating">
+                          <input type="text" class="form-control floating" v-model="batteryCapacityModel">
                           <label class="focus-label">180mAh-790mAh</label>
                         </div>
                       </div>

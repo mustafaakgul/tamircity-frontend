@@ -39,20 +39,20 @@
                     <div class="col-md-6">
                       <div class="form-group form-focus">
                         <label>Garanti süresi<span class="text-danger">*</span></label>
-                        <input type="text" class="form-control floating">
+                        <input type="text" class="form-control floating" v-model="guaranteeTermModel">
                         <label class="focus-label">1-24</label>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>Garanti Türü<span class="text-danger">*</span></label>
-                        <vue-select :options="guarantee" />
+                        <vue-select :options="guarantee" v-model="guaranteeTermTypeModel"/>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>Renk<span class="text-danger">*</span></label>
-                        <vue-select :options="color" />
+                        <vue-select :options="color" v-model="colorModel"/>
                       </div>
                     </div>
                     <div class="col-md-6">
@@ -62,11 +62,11 @@
                             <label class="custom-control-gender">Fatura <span class="text-danger">*</span></label>
                             <div class="custom-control-box">
                               <div class="custom-control custom-radios custom-control-inline">
-                                <input class="custom-control-input" id="billy" type="radio" v-model="" :value=true>
+                                <input class="custom-control-input" id="billy" type="radio" v-model="invoiceModel" :value=true>
                                 <label class="custom-control-label" for="billy">Var</label>
                               </div>
                               <div class="custom-control custom-radios custom-control-inline">
-                                <input class="custom-control-input" id="billn" type="radio" v-model="" :value=false>
+                                <input class="custom-control-input" id="billn" type="radio" v-model="invoiceModel" :value=false>
                                 <label class="custom-control-label" for="billn">Yok</label>
                               </div>
                             </div>
@@ -77,11 +77,11 @@
                             <label class="custom-control-gender">Kutu <span class="text-danger">*</span></label>
                             <div class="custom-control-box">
                               <div class="custom-control custom-radios custom-control-inline">
-                                <input class="custom-control-input" id="boxy" type="radio" v-model="" :value=true>
+                                <input class="custom-control-input" id="boxy" type="radio" v-model="boxModel" :value=true>
                                 <label class="custom-control-label" for="boxy">Var</label>
                               </div>
                               <div class="custom-control custom-radios custom-control-inline">
-                                <input class="custom-control-input" id="boxn" type="radio" v-model="" :value=false>
+                                <input class="custom-control-input" id="boxn" type="radio" v-model="boxModel" :value=false>
                                 <label class="custom-control-label" for="boxn">Yok</label>
                               </div>
                             </div>
@@ -149,21 +149,21 @@
                     <div class="col-md-6">
                       <div class="form-group form-focus">
                         <label>Ekran Boyutu<span class="text-danger">*</span></label>
-                        <input type="text" class="form-control floating">
+                        <input type="text" class="form-control floating" v-model="screenSizeModel">
                         <label class="focus-label">19 inç(48 Ekran)-77 inç (195 Ekran)</label>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group form-focus">
                         <label>Ekran Yenileme Hızı <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control floating">
+                        <input type="text" class="form-control floating" v-model="refreshRateModel">
                         <label class="focus-label">... Hz.</label>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group form-focus">
                         <label>Çıkış Yılı<span class="text-danger">*</span></label>
-                        <input type="text" class="form-control floating">
+                        <input type="text" class="form-control floating" v-model="releaseYearModel">
                         <label class="focus-label">2010-2023</label>
                       </div>
                     </div>
@@ -188,11 +188,11 @@
                         <label class="custom-control-gender">Kavisli ekran  <span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="screeny" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="screeny" type="radio" v-model="curvedScreenModel" :value=true>
                             <label class="custom-control-label" for="screeny">Var</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="screenn" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="screenn" type="radio" v-model="curvedScreenModel" :value=false>
                             <label class="custom-control-label" for="screenn">Yok</label>
                           </div>
                         </div>
@@ -203,11 +203,11 @@
                         <label class="custom-control-gender">Dahili Uydu Alıcısı<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="satellitey" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="satellitey" type="radio" v-model="internalSatalliteRecevierModel" :value=true>
                             <label class="custom-control-label" for="satellitey">Var</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="satelliten" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="satelliten" type="radio" v-model="internalSatalliteRecevierModel" :value=false>
                             <label class="custom-control-label" for="satelliten">Yok</label>
                           </div>
                         </div>
@@ -218,11 +218,11 @@
                         <label class="custom-control-gender">Ambilight<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="ambilighty" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="ambilighty" type="radio" v-model="ambilightModel" :value=true>
                             <label class="custom-control-label" for="ambilighty">Var</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="ambilightn" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="ambilightn" type="radio" v-model="ambilightModel" :value=false>
                             <label class="custom-control-label" for="ambilightn">Yok</label>
                           </div>
                         </div>
@@ -233,11 +233,11 @@
                         <label class="custom-control-gender">HDR<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="hdry" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="hdry" type="radio" v-model="hdrModel" :value=true>
                             <label class="custom-control-label" for="hdry">Var</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="hdrn" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="hdrn" type="radio" v-model="hdrModel" :value=false>
                             <label class="custom-control-label" for="hdrn">Yok</label>
                           </div>
                         </div>
@@ -248,11 +248,11 @@
                         <label class="custom-control-gender">Full Array<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="arrayy" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="arrayy" type="radio" v-model="fullArrayModel" :value=true>
                             <label class="custom-control-label" for="arrayy">Var</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="arrayn" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="arrayn" type="radio" v-model="fullArrayModel" :value=false>
                             <label class="custom-control-label" for="arrayn">Yok</label>
                           </div>
                         </div>
@@ -294,11 +294,11 @@
                         <label class="custom-control-gender">WiFi<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="wifiy" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="wifiy" type="radio" v-model="wifiModel" :value=true>
                             <label class="custom-control-label" for="wifiy">Var</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="wifin" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="wifin" type="radio" v-model="wifiModel" :value=false>
                             <label class="custom-control-label" for="wifin">Yok</label>
                           </div>
                         </div>
@@ -309,11 +309,11 @@
                         <label class="custom-control-gender">RF Girişi<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="rfy" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="rfy" type="radio" v-model="rfiInputModel" :value=true>
                             <label class="custom-control-label" for="rfy">Var</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="rfn" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="rfn" type="radio" v-model="rfiInputModel" :value=false>
                             <label class="custom-control-label" for="rfn">Yok</label>
                           </div>
                         </div>
