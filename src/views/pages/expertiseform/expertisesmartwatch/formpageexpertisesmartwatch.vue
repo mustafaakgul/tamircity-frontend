@@ -123,7 +123,7 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label>Ekran Şekli<span class="text-danger">*</span></label>
-                          <vue-select :options="displayshape"/>
+                          <vue-select :options="displayshape" v-model="screenTypeModel"/>
                         </div>
                       </div>
                       <div class="col-md-6">
@@ -581,7 +581,7 @@ async function requestExpertiseWatchInfo() {
         microphone : this.microphoneModel,
         screen_size : 3,
         memory : 2000,
-        screen_type : "curved",
+        screen_type : this.screenTypeModel,
         os_type : "intel",
         os_type_compatiple : "asdasf",
         screen_resolution : "1234",
