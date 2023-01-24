@@ -173,11 +173,11 @@
                         <label class="custom-control-gender">Smart TV<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="smarty" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="smarty" type="radio" v-model="smartTVModel" :value=true>
                             <label class="custom-control-label" for="smarty">Var</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="smartn" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="smartn" type="radio" v-model="smartTVModel" :value=false>
                             <label class="custom-control-label" for="smartn">Yok</label>
                           </div>
                         </div>
@@ -260,7 +260,7 @@
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label class="custom-control-gender">Hafıza Kartı Desteği <span class="text-danger">*</span></label>
+                        <label class="custom-control-gender">?Hafıza Kartı Desteği <span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
                             <input class="custom-control-input" id="memoryy" type="radio" v-model="" :value=true>
@@ -273,10 +273,10 @@
                         </div>
                       </div>
                     </div>
-                    <h4 class="mb-3 mt-1">Bağlantı/Arayüz</h4><hr>
+                    <h4 class="mb-3 mt-1">?Bağlantı/Arayüz</h4><hr>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label class="custom-control-gender">Screen Share <span class="text-danger">*</span></label>
+                        <label class="custom-control-gender">?Screen Share <span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
                             <input class="custom-control-input" id="ssy" type="radio" v-model="" :value=true>
@@ -324,11 +324,11 @@
                         <label class="custom-control-gender">LAN<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="lany" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="lany" type="radio" v-model="lanModel" :value=true>
                             <label class="custom-control-label" for="lany">Var</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="lann" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="lann" type="radio" v-model="lanModel" :value=false>
                             <label class="custom-control-label" for="lann">Yok</label>
                           </div>
                         </div>
@@ -339,11 +339,11 @@
                         <label class="custom-control-gender">Kulaklık Çıkışı<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="eary" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="eary" type="radio" v-model="headPhoneJackModel" :value=true>
                             <label class="custom-control-label" for="eary">Var</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="earn" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="earn" type="radio" v-model="headPhoneJackModel" :value=false>
                             <label class="custom-control-label" for="earn">Yok</label>
                           </div>
                         </div>
@@ -354,11 +354,11 @@
                         <label class="custom-control-gender">Bluetooth<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="bluetoothy" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="bluetoothy" type="radio" v-model="bluetoothModel" :value=true>
                             <label class="custom-control-label" for="bluetoothy">Var</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="bluetoothn" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="bluetoothn" type="radio" v-model="bluetoothModel" :value=false>
                             <label class="custom-control-label" for="bluetoothn">Yok</label>
                           </div>
                         </div>
@@ -369,11 +369,11 @@
                         <label class="custom-control-gender">HDMI Girişi<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="hdmıentery" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="hdmıentery" type="radio" v-model="hdmiModel" :value=true>
                             <label class="custom-control-label" for="hdmıentery">Var</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="hdmıentern" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="hdmıentern" type="radio" v-model="hdmiModel" :value=false>
                             <label class="custom-control-label" for="hdmıentern">Yok</label>
                           </div>
                         </div>
@@ -384,11 +384,11 @@
                         <label class="custom-control-gender">USB Girişi<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="usbentery" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="usbentery" type="radio" v-model="usbModel" :value=true>
                             <label class="custom-control-label" for="usbentery">Var</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="usbentern" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="usbentern" type="radio" v-model="usbModel" :value=false>
                             <label class="custom-control-label" for="usbentern">Yok</label>
                           </div>
                         </div>
@@ -412,11 +412,11 @@
                         <label class="custom-control-gender">Ekranda bölgesel veya tamamen kararma var mı ? <span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="01" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="01" type="radio" v-model="isScreenHasObscurationProblemModel" :value=true>
                             <label class="custom-control-label" for="01">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="02" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="02" type="radio" v-model="isScreenHasObscurationProblemModel" :value=false>
                             <label class="custom-control-label" for="02">Hayır</label>
                           </div>
                         </div>
@@ -427,11 +427,11 @@
                         <label class="custom-control-gender">Ekranda ölü piksel arızası var mı ? <span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="03" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="03" type="radio" v-model="isScreenHasDeadPixelProblemModel" :value=true>
                             <label class="custom-control-label" for="03">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="04" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="04" type="radio" v-model="isScreenHasDeadPixelProblemModel" :value=false>
                             <label class="custom-control-label" for="04">Hayır</label>
                           </div>
                         </div>
@@ -442,11 +442,11 @@
                         <label class="custom-control-gender">Ekranda kırık/çatlak/leke var mı ?<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="06" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="06" type="radio" v-model="isScreenHasBrokenProblemModel" :value=true>
                             <label class="custom-control-label" for="06">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="07" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="07" type="radio" v-model="isScreenHasBrokenProblemModel" :value=false>
                             <label class="custom-control-label" for="07">Hayır</label>
                           </div>
                         </div>
@@ -457,11 +457,11 @@
                         <label class="custom-control-gender">Ekranda darbeye bağlı çökme var mı ?<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="08" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="08" type="radio" v-model="isScreenHasDownFallProblemModel" :value=true>
                             <label class="custom-control-label" for="08">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="09" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="09" type="radio" v-model="isScreenHasDownFallProblemModel" :value=false>
                             <label class="custom-control-label" for="09">Hayır</label>
                           </div>
                         </div>
@@ -472,11 +472,11 @@
                         <label class="custom-control-gender">Ekranda yatay ve dikey bant arızası var mı ?<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="10" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="10" type="radio" v-model="isScreenHasBandProblemModel" :value=true>
                             <label class="custom-control-label" for="10">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="11" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="11" type="radio" v-model="isScreenHasBandProblemModel" :value=false>
                             <label class="custom-control-label" for="11">Hayır</label>
                           </div>
                         </div>
@@ -487,11 +487,11 @@
                         <label class="custom-control-gender">Görüntüde donma var mı ?<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="05" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="05" type="radio" v-model="isScreenHasFreezingProblemModel" :value=true>
                             <label class="custom-control-label" for="05">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="06" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="06" type="radio" v-model="isScreenHasFreezingProblemModel" :value=false>
                             <label class="custom-control-label" for="06">Hayır</label>
                           </div>
                         </div>
@@ -502,11 +502,11 @@
                         <label class="custom-control-gender">Cihazda aşırı ısınma sorunu var mı ?<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="12" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="12" type="radio" v-model="isDeviceHasHighHeatProblemModel" :value=true>
                             <label class="custom-control-label" for="12">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="13" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="13" type="radio" v-model="isDeviceHasHighHeatProblemModel" :value=false>
                             <label class="custom-control-label" for="13">Hayır</label>
                           </div>
                         </div>
@@ -517,11 +517,11 @@
                         <label class="custom-control-gender">Cihaz çalışma esnasında normalin dışında sesler çıkarıyor mu ?<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="14" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="14" type="radio" v-model="isDeviceHasSoundProblemModel" :value=true>
                             <label class="custom-control-label" for="14">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="15" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="15" type="radio" v-model="isDeviceHasSoundProblemModel" :value=false>
                             <label class="custom-control-label" for="15">Hayır</label>
                           </div>
                         </div>
@@ -532,11 +532,11 @@
                         <label class="custom-control-gender">Dahili uydu alıcısı sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="16" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="16" type="radio" v-model="isDeviceHasInternalReceiverProblemModel" :value=true>
                             <label class="custom-control-label" for="16">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="17" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="17" type="radio" v-model="isDeviceHasInternalReceiverProblemModel" :value=false>
                             <label class="custom-control-label" for="17">Hayır</label>
                           </div>
                         </div>
@@ -547,11 +547,11 @@
                         <label class="custom-control-gender">Hoparlör sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="18" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="18" type="radio" v-model="isDeviceHasSpeakerProblemModel" :value=true>
                             <label class="custom-control-label" for="18">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="19" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="19" type="radio" v-model="isDeviceHasSpeakerProblemModel" :value=false>
                             <label class="custom-control-label" for="19">Hayır</label>
                           </div>
                         </div>
@@ -562,11 +562,11 @@
                         <label class="custom-control-gender">Screen Share sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="20" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="20" type="radio" v-model="isScreenShareHasProblemModel" :value=true>
                             <label class="custom-control-label" for="20">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="21" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="21" type="radio" v-model="isScreenShareHasProblemModel" :value=false>
                             <label class="custom-control-label" for="21">Hayır</label>
                           </div>
                         </div>
@@ -577,11 +577,11 @@
                         <label class="custom-control-gender">WiFi sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="22" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="22" type="radio" v-model="isWifiHasProblemModel" :value=true>
                             <label class="custom-control-label" for="22">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="23" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="23" type="radio" v-model="isWifiHasProblemModel" :value=false>
                             <label class="custom-control-label" for="23">Hayır</label>
                           </div>
                         </div>
@@ -592,11 +592,11 @@
                         <label class="custom-control-gender">RF Girişi sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="24" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="24" type="radio" v-model="isRfiInputHasProblemModel" :value=true>
                             <label class="custom-control-label" for="24">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="25" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="25" type="radio" v-model="isRfiInputHasProblemModel" :value=false>
                             <label class="custom-control-label" for="25">Hayır</label>
                           </div>
                         </div>
@@ -607,11 +607,11 @@
                         <label class="custom-control-gender">Ethernet girişi sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="26" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="26" type="radio" v-model="isEthernetHasProblemModel" :value=true>
                             <label class="custom-control-label" for="26">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="27" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="27" type="radio" v-model="isEthernetHasProblemModel" :value=false>
                             <label class="custom-control-label" for="27">Hayır</label>
                           </div>
                         </div>
@@ -622,11 +622,11 @@
                         <label class="custom-control-gender">Kulaklık Çıkışı sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="28" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="28" type="radio" v-model="isHeadPhoneJackHasProblemModel" :value=true>
                             <label class="custom-control-label" for="28">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="29" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="29" type="radio" v-model="isHeadPhoneJackHasProblemModel" :value=false>
                             <label class="custom-control-label" for="29">Hayır</label>
                           </div>
                         </div>
@@ -637,11 +637,11 @@
                         <label class="custom-control-gender">Bluetooth sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="30" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="30" type="radio" v-model="isBluetoothHasProblemModel" :value=true>
                             <label class="custom-control-label" for="30">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="31" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="31" type="radio" v-model="isBluetoothHasProblemModel" :value=false>
                             <label class="custom-control-label" for="31">Hayır</label>
                           </div>
                         </div>
@@ -652,11 +652,11 @@
                         <label class="custom-control-gender">HDMI Girişleri sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="32" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="32" type="radio" v-model="isHdmiHasProblemModel" :value=true>
                             <label class="custom-control-label" for="32">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="33" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="33" type="radio" v-model="isHdmiHasProblemModel" :value=false>
                             <label class="custom-control-label" for="33">Hayır</label>
                           </div>
                         </div>
@@ -667,11 +667,11 @@
                         <label class="custom-control-gender">USB Girişleri sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="34" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="34" type="radio" v-model="isUsbHasProblemModel" :value=true>
                             <label class="custom-control-label" for="34">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="35" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="35" type="radio" v-model="isUsbHasProblemModel" :value=false>
                             <label class="custom-control-label" for="35">Hayır</label>
                           </div>
                         </div>
@@ -682,11 +682,11 @@
                         <label class="custom-control-gender">Cihaz uzaktan kumandası sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="36" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="36" type="radio" v-model="isRemoteControlHasProblemModel" :value=true>
                             <label class="custom-control-label" for="36">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="37" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="37" type="radio" v-model="isRemoteControlHasProblemModel" :value=false>
                             <label class="custom-control-label" for="37">Hayır</label>
                           </div>
                         </div>
