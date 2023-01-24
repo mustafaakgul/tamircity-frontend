@@ -32,7 +32,7 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label>Ürün Ailesi  <span class="text-danger">*</span></label>
-                          <vue-select :options="productfamily" />
+                          <vue-select :options="productfamily"/>
                         </div>
                       </div>
                       <div class="col-md-6">
@@ -45,7 +45,7 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label>Renk<span class="text-danger">*</span></label>
-                          <vue-select :options="colors" />
+                          <vue-select :options="colors" v-model="phoneColorModel"/>
                         </div>
                       </div>
                       <div class="col-md-6">
@@ -167,7 +167,7 @@
                       <div class="col-md-6">
                         <div class="form-group form-focus">
                           <label>CPU Frekansı<span class="text-danger">*</span></label>
-                          <input type="text" class="form-control floating">
+                          <input type="text" class="form-control floating" v-model="cpuFrequencyModel">
                           <label class="focus-label">1GHz-2GHz</label>
                         </div>
                       </div>
@@ -200,23 +200,24 @@
                           <div class="custom-control-box">
                             <div class="custom-control custom-radios custom-control-inline">
                               <label class="custom_check w-100">
-                                <input type="checkbox" name="location">
+                                <input type="checkbox" name="location" :value="android" v-model="os_type_compatiple">
                                 <span class="checkmark"></span> Android
                               </label>
                             </div>
                             <div class="custom-control custom-radios custom-control-inline">
                               <label class="custom_check w-100">
-                                <input type="checkbox" name="location">
+                                <input type="checkbox" name="location":value="ios" v-model="os_type_compatiple">
                                 <span class="checkmark"></span> iOS
                               </label>
                             </div>
                             <div class="custom-control custom-radios custom-control-inline">
                               <label class="custom_check w-100">
-                                <input class="custom-control-input" type="checkbox" name="location">
+                                <input class="custom-control-input" type="checkbox" name="location" :value="harmonyos" v-model="os_type_compatiple">
                                 <span class="checkmark"></span> HarmonyOS
                               </label>
                             </div>
                           </div>
+
                         </div>
                       </div>
                       <div class="col-md-6">
