@@ -45,7 +45,7 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label>Renk<span class="text-danger">*</span></label>
-                          <vue-select :options="color" />
+                          <vue-select :options="color" v-model="colorModel"/>
                         </div>
                       </div>
                       <div class="col-md-6">
@@ -159,13 +159,13 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label>Ekran Teknolojisi <span class="text-danger">*</span></label>
-                          <vue-select :options="displaytechnology"/>
+                          <vue-select :options="displaytechnology" v-model="screenTechnologyModel"/>
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
                           <label>Ekran Çözünürlüğü <span class="text-danger">*</span></label>
-                          <vue-select :options="screenresolution"/>
+                          <vue-select :options="screenresolution" v-model="screenResolutionModel"/>
                         </div>
                       </div>
                       <div class="col-md-6">
@@ -187,7 +187,7 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label>İşlemci Modeli <span class="text-danger">*</span></label>
-                          <vue-select :options="preprocessormodel" />
+                          <vue-select :options="preprocessormodel" v-model="cpuModelModel"/>
                         </div>
                       </div>
                       <div class="col-md-6">
@@ -207,13 +207,13 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label>İşletim Sistemi<span class="text-danger">*</span></label>
-                          <vue-select :options="operatingsystem" />
+                          <vue-select :options="operatingsystem" v-model="osTypeModel"/>
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
                           <label>İşletim Sistemi Versiyonu <span class="text-danger">*</span></label>
-                          <vue-select :options="operatingsystemversion" />
+                          <vue-select :options="operatingsystemversion" v-model="osTypeVersionModel"/>
                         </div>
                       </div>
                       <div class="col-md-6">
@@ -241,13 +241,13 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label>Video Kayıt Çözünürlüğü <span class="text-danger">*</span></label>
-                          <vue-select :options="videorecordingresolution" />
+                          <vue-select :options="videorecordingresolution" v-model="videoRecordResolutionModel"/>
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
                           <label>Video FPS Değeri<span class="text-danger">*</span></label>
-                          <vue-select :options="fps" />
+                          <vue-select :options="fps" v-model="videoFpsModel"/>
                         </div>
                       </div>
                       <div class="col-md-6">
@@ -472,7 +472,7 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label>Wi-Fi Frekansı<span class="text-danger">*</span></label>
-                          <vue-select :options="wififrequency"/>
+                          <vue-select :options="wififrequency" v-model="wifiFrequencyModel"/>
                         </div>
                       </div>
                       <div class="col-md-6">
@@ -509,7 +509,7 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label>Çıkış Yılı <span class="text-danger">*</span></label>
-                          <vue-select :options="releaseyear"/>
+                          <vue-select :options="releaseyear" v-model="releaseYearModel"/>
                         </div>
                       </div>
                       <div class="col-md-6">

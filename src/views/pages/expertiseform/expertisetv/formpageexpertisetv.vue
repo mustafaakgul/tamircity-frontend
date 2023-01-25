@@ -131,19 +131,19 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>Panel Teknolojisi<span class="text-danger">*</span></label>
-                        <vue-select :options="paneltechnology"/>
+                        <vue-select :options="paneltechnology" v-model="panelTechnologyModel"/>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>İşletim Sistemi<span class="text-danger">*</span></label>
-                        <vue-select :options="operatingsystem"/>
+                        <vue-select :options="operatingsystem" v-model="osTypeModel"/>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>Ekran Çözünürlüğü <span class="text-danger">*</span></label>
-                        <vue-select :options="screenresolution"/>
+                        <vue-select :options="screenresolution" v-model="screenResolutionModel"/>
                       </div>
                     </div>
                     <div class="col-md-6">

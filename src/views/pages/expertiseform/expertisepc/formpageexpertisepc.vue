@@ -45,7 +45,7 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>Renk<span class="text-danger">*</span></label>
-                        <vue-select :options="color" />
+                        <vue-select :options="color" v-model="phoneColorModel"/>
                       </div>
                     </div>
                     <div class="col-md-6">
@@ -124,7 +124,7 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>Ekran Boyutu <span class="text-danger">*</span></label>
-                        <vue-select :options="screensize"/>
+                        <vue-select :options="screensize" v-model="screenSizeModel"/>
                       </div>
                     </div>
                     <div class="col-md-6">
@@ -137,19 +137,19 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>Ekran Çözünürlük Biçimi<span class="text-danger">*</span></label>
-                        <vue-select :options="screenresolutionstyle"/>
+                        <vue-select :options="screenresolutionstyle" v-model="screenResolutionTypeModel"/>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>Ekran Panel Tipi<span class="text-danger">*</span></label>
-                        <vue-select :options="paneltype"/>
+                        <vue-select :options="paneltype" v-model="screenPanelTypeModel"/>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>İşletim Sistemi<span class="text-danger">*</span></label>
-                        <vue-select :options="operatingsystem"/>
+                        <vue-select :options="operatingsystem" v-model="operatingSystemModel"/>
                       </div>
                     </div>
                     <h4 class="mb-3 mt-1">Fiziksel Özellikler</h4><hr>
@@ -232,37 +232,37 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>İşlemci Markası <span class="text-danger">*</span></label>
-                        <vue-select :options="operatingbrand" />
+                        <vue-select :options="operatingbrand" v-model="cpuModel"/>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>İşlemci Serisi<span class="text-danger">*</span></label>
-                        <vue-select :options="operatingseries" />
+                        <vue-select :options="operatingseries" v-model="cpuSerieModel"/>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>İşlemci Çekirdek Sayısı <span class="text-danger">*</span></label>
-                        <vue-select :options="operatingsfrequency" />
+                        <vue-select :options="operatingsfrequency" v-model="cpuCoreNumberModel"/>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>İşlemci Temel Frekans<span class="text-danger">*</span></label>
-                        <vue-select :options="frequency" />
+                        <vue-select :options="frequency" v-model="cpuBaseFrequencyModel"/>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>İşlemci Ön Belleği<span class="text-danger">*</span></label>
-                        <vue-select :options="cash" />
+                        <vue-select :options="cash" v-model="cpuRamModel"/>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>Ram (Bellek) Boyutu <span class="text-danger">*</span></label>
-                        <vue-select :options="ram" />
+                        <vue-select :options="ram" v-model="ramModel"/>
                       </div>
                     </div>
                     <div class="col-md-6">
@@ -275,7 +275,7 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>Ram (Bellek) Türü <span class="text-danger">*</span></label>
-                        <vue-select :options="ramtype" />
+                        <vue-select :options="ramtype" v-model="ramTypeModel"/>
                       </div>
                     </div>
                     <div class="col-md-6">
@@ -297,12 +297,12 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>Sabit Disk (HDD) Boyutu<span class="text-danger">*</span></label>
-                        <vue-select :options="hddsize" />
+                        <vue-select :options="hddsize" v-model="hddCapacityModel"/>
                       </div>
                     </div> <div class="col-md-6">
                     <div class="form-group">
                       <label>SSD Boyutu<span class="text-danger">*</span></label>
-                      <vue-select :options="ssdsize" />
+                      <vue-select :options="ssdsize" v-model="ssdCapacityModel"/>
                     </div>
                   </div>
                     <div class="col-md-6">
@@ -339,25 +339,25 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>Harici Ekran Kartı<span class="text-danger">*</span></label>
-                        <vue-select :options="egcard"/>
+                        <vue-select :options="egcard" v-model="externalGraphicsCardModel"/>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>Harici Ekran Kartı Serisi<span class="text-danger">*</span></label>
-                        <vue-select :options="egcardseries"/>
+                        <vue-select :options="egcardseries" v-model="externalGraphicsCardSeriesModel"/>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>Harici Ekran Kartı Belleği <span class="text-danger">*</span></label>
-                        <vue-select :options="egcardmemory"/>
+                        <vue-select :options="egcardmemory" v-model="externalGraphicsCardMemoryModel"/>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>Harici Ekran Kartı Bit  <span class="text-danger">*</span></label>
-                        <vue-select :options="egcardbit"/>
+                        <vue-select :options="egcardbit" v-model="externalGraphicsCardBitModel"/>
                       </div>
                     </div>
                     <div class="col-md-6">
@@ -371,7 +371,7 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>İşlemci Grafik  <span class="text-danger">*</span></label>
-                        <vue-select :options="pgraphics"/>
+                        <vue-select :options="pgraphics" v-model="internalGraphicsCardCpuModel"/>
                       </div>
                     </div>
                     <div class="col-md-6">
@@ -428,13 +428,13 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>OpenGL<span class="text-danger">*</span></label>
-                        <vue-select :options="opengl"/>
+                        <vue-select :options="opengl" v-model="openGlModel"/>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>Desteklenen Ekran Sayısı <span class="text-danger">*</span></label>
-                        <vue-select :options="screenquantity"/>
+                        <vue-select :options="screenquantity" v-model="suppertedScreenNumberModel"/>
                       </div>
                     </div>
                     <h4 class="mb-3 mt-1">Bağlantı</h4><hr>
@@ -462,8 +462,8 @@
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label>Wİ-Fİ Versiyonu <span class="text-danger">*</span></label>
-                        <vue-select :options="wifiversion"/>
+                        <label>Wi-Fi Versiyonu <span class="text-danger">*</span></label>
+                        <vue-select :options="wifiversion" v-model="wifiVersionModel"/>
                       </div>
                     </div>
                     <div class="col-md-6">
@@ -499,19 +499,19 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>USB 2.0 Giriş Adedi<span class="text-danger">*</span></label>
-                        <vue-select :options="usb2enterquantity"/>
+                        <vue-select :options="usb2enterquantity" v-model="usb2NumberModel"/>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>USB 3.x Giriş Adedi<span class="text-danger">*</span></label>
-                        <vue-select :options="usb3enterquantity"/>
+                        <vue-select :options="usb3enterquantity" v-model="usb3NumberModel"/>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>USB Type-C Giriş Adedi<span class="text-danger">*</span></label>
-                        <vue-select :options="typec"/>
+                        <vue-select :options="typec" v-model="usbTypeCNumberModel"/>
                       </div>
                     </div>
                   </div>

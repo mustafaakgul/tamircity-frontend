@@ -45,7 +45,7 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label>Renk<span class="text-danger">*</span></label>
-                          <vue-select :options="color" />
+                          <vue-select :options="color" v-model="colorModel"/>
                         </div>
                       </div>
                       <div class="col-md-6">
@@ -123,7 +123,7 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label>Platform <span class="text-danger">*</span></label>
-                          <vue-select :options="platform" />
+                          <vue-select :options="platform" v-model="platformModel"/>
                         </div>
                       </div>
                       <div class="col-md-6">
@@ -136,55 +136,55 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label>İşletim Sistemi<span class="text-danger">*</span></label>
-                          <vue-select :options="operatingsystem"/>
+                          <vue-select :options="operatingsystem" v-model="osTypeModel"/>
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
                           <label>İşlemci Modeli <span class="text-danger">*</span></label>
-                          <vue-select :options="preprocessormodel" />
+                          <vue-select :options="preprocessormodel" v-model="cpuModelModel"/>
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
                           <label>Fps Değeri<span class="text-danger">*</span></label>
-                          <vue-select :options="fps" />
+                          <vue-select :options="fps" v-model="fpsValueModel"/>
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
                           <label>Bellek (Ram) <span class="text-danger">*</span></label>
-                          <vue-select :options="preprocessorfrequency" />
+                          <vue-select :options="preprocessorfrequency" v-model="ramModel"/>
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
                           <label>Bellek Tipi<span class="text-danger">*</span></label>
-                          <vue-select :options="ramtype" />
+                          <vue-select :options="ramtype" v-model="ramTypeModel"/>
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
                           <label>Oyun Çözünürlüğü <span class="text-danger">*</span></label>
-                          <vue-select :options="gamesolution" />
+                          <vue-select :options="gamesolution" v-model="gameResolutionModel"/>
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
                           <label>Video Çözünürlüğü <span class="text-danger">*</span></label>
-                          <vue-select :options="videosolution" />
+                          <vue-select :options="videosolution" v-model="videoResolutionModel"/>
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
                           <label>Ağ Bağlantı Türü <span class="text-danger">*</span></label>
-                          <vue-select :options="networkconnectiontype" />
+                          <vue-select :options="networkconnectiontype" v-model="networkTypeModel"/>
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
-                          <label>Video Kayıt Çözünürlüğü <span class="text-danger">*</span></label>
-                          <vue-select :options="videorecordingresolution" />
+                          <label>?Video Kayıt Çözünürlüğü <span class="text-danger">*</span></label>
+                          <vue-select :options="videorecordingresolution"/>
                         </div>
                       </div>
                       <div class="col-md-6">
@@ -197,37 +197,37 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label>HDMI Standardı<span class="text-danger">*</span></label>
-                          <vue-select :options="hdmı" />
+                          <vue-select :options="hdmi" v-model="hdmiStandartModel"/>
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
                           <label>USB Versiyonu <span class="text-danger">*</span></label>
-                          <vue-select :options="usbversion" />
+                          <vue-select :options="usbversion" v-model="usbVersionModel"/>
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
                           <label>Bluetooth Versiyonu<span class="text-danger">*</span></label>
-                          <vue-select :options="bluetoothversion" />
+                          <vue-select :options="bluetoothversion" v-model="bluetoothModel"/>
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
                           <label>Oyun Kumandası Adedi<span class="text-danger">*</span></label>
-                          <vue-select :options="controllerquantity" />
+                          <vue-select :options="controllerquantity" v-model="controllerNumberModel"/>
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
                           <label>Oyun Adedi<span class="text-danger">*</span></label>
-                          <vue-select :options="gamequantity"/>
+                          <vue-select :options="gamequantity" v-model="gameNumberModel"/>
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
                           <label>USB Giriş Adedi <span class="text-danger">*</span></label>
-                          <vue-select :options="usbquantity" />
+                          <vue-select :options="usbquantity" v-model="usbInputNumberModel"/>
                         </div>
                       </div>
 
@@ -681,7 +681,7 @@ export default {
       gamesolution: ["720p","1080p","2160p"],
       videosolution: ["720p","1080p","2160p","8K"],
       networkconnectiontype: ["Kablolu","Kablolu-Kablosuz"],
-      hdmı:["HDMI 1.2","HDMI 1.4","HDMI 2.0","HDMI 2.0b","HDMI 2.1"],
+      hdmi:["HDMI 1.2","HDMI 1.4","HDMI 2.0","HDMI 2.0b","HDMI 2.1"],
       usbversion: ["USB 2.0","USB 3.2 (1.Nesil)"],
       bluetoothversion:["Bluetooth 2.0","Bluetooth 2.1","Bluetooth 4.0","Bluetooth 4.1","Bluetooth 5.0"],
       controllerquantity: ["1","2","3","4"],
