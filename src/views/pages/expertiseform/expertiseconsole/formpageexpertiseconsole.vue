@@ -38,7 +38,7 @@
                       <div class="col-md-6">
                         <div class="form-group form-focus">
                           <label>Garanti Süresi <span class="text-danger">*</span></label>
-                          <input type="text" class="form-control floating">
+                          <input type="text" class="form-control floating" v-model="guaranteeTermModel">
                           <label class="focus-label">0 GB-2048 GB</label>
                         </div>
                       </div>
@@ -129,7 +129,7 @@
                       <div class="col-md-6">
                         <div class="form-group form-focus">
                           <label>Depolama Kapasitesi <span class="text-danger">*</span></label>
-                          <input type="text" class="form-control floating">
+                          <input type="text" class="form-control floating" v-model="storageCapacityModel">
                           <label class="focus-label">0 GB-2048 GB</label>
                         </div>
                       </div>
@@ -190,7 +190,7 @@
                       <div class="col-md-6">
                         <div class="form-group form-focus">
                           <label>Ethernet Hızı<span class="text-danger">*</span></label>
-                          <input type="text" class="form-control floating">
+                          <input type="text" class="form-control floating" v-model="ethernetSpeedModel">
                           <label class="focus-label">100Mbit-1000Mbit</label>
                         </div>
                       </div>

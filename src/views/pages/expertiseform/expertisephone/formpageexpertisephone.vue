@@ -38,7 +38,7 @@
                       <div class="col-md-6">
                         <div class="form-group form-focus">
                           <label>Garanti Süresi <span class="text-danger">*</span></label>
-                          <input type="text" class="form-control floating">
+                          <input type="text" class="form-control floating" v-model="guaranteeTermModel">
                           <label class="focus-label">1-24 aya kadar</label>
                         </div>
                       </div>
@@ -193,14 +193,14 @@
                       <div class="col-md-6">
                         <div class="form-group form-focus">
                           <label>İşlemci Frekansı<span class="text-danger">*</span></label>
-                          <input type="text" class="form-control floating">
+                          <input type="text" class="form-control floating" v-model="cpuFrequencyModel">
                           <label class="focus-label">2.3-8 inç</label>
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group form-focus">
                           <label>Ram Kapasitesi<span class="text-danger">*</span></label>
-                          <input type="text" class="form-control floating">
+                          <input type="text" class="form-control floating" v-model="ramModel">
                           <label class="focus-label">0-18 GB</label>
                         </div>
                       </div>
@@ -219,7 +219,7 @@
                       <div class="col-md-6">
                         <div class="form-group form-focus">
                           <label>İşlemci Çekirdek Sayısı <span class="text-danger">*</span></label>
-                          <input type="text" class="form-control floating">
+                          <input type="text" class="form-control floating" v-model="cpuCoreNumberModel">
                           <label class="focus-label">4-12</label>
                         </div>
                       </div>
@@ -227,14 +227,14 @@
                       <div class="col-md-6">
                         <div class="form-group form-focus">
                           <label>Kamera Çözünürlüğü<span class="text-danger">*</span></label>
-                          <input type="text" class="form-control floating">
+                          <input type="text" class="form-control floating" v-model="cameraResolutionModel">
                           <label class="focus-label">2-200 MP</label>
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group form-focus">
                           <label>Ön Kamera Çözünürlüğü<span class="text-danger">*</span></label>
-                          <input type="text" class="form-control floating">
+                          <input type="text" class="form-control floating" v-model="frontCameraResolutionModel">
                           <label class="focus-label">2-200 MP</label>
                         </div>
                       </div>
@@ -359,14 +359,14 @@
                       <div class="col-md-6">
                         <div class="form-group form-focus">
                           <label>Dahili Depolama<span class="text-danger">*</span></label>
-                          <input type="text" class="form-control floating">
+                          <input type="text" class="form-control floating" v-model="internalStorageModel">
                           <label class="focus-label">0-1024 GB</label>
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group form-focus">
-                          <label>Maksimum Hafıza Kartı Kapsitesi<span class="text-danger">*</span></label>
-                          <input type="text" class="form-control floating">
+                          <label>?Maksimum Hafıza Kartı Kapsitesi<span class="text-danger">*</span></label>
+                          <input type="text" class="form-control floating" v-model="maxExternalStorageModel">
                           <label class="focus-label">0-1024 GB</label>
                         </div>
                       </div>
@@ -375,11 +375,11 @@
                           <label class="custom-control-gender">?Hafıza Kartı Desteği <span class="text-danger">*</span></label>
                           <div class="custom-control-box">
                             <div class="custom-control custom-radios custom-control-inline">
-                              <input class="custom-control-input" id="memoryy" type="radio" v-model="" :value=true>
+                              <input class="custom-control-input" id="memoryy" type="radio" :value=true>
                               <label class="custom-control-label" for="memoryy">Var</label>
                             </div>
                             <div class="custom-control custom-radios custom-control-inline">
-                              <input class="custom-control-input" id="memoryz" type="radio" v-model="" :value=false>
+                              <input class="custom-control-input" id="memoryz" type="radio" :value=false>
                               <label class="custom-control-label" for="memoryz">Yok</label>
                             </div>
                           </div>
@@ -404,7 +404,7 @@
                       <div class="col-md-6">
                         <div class="form-group form-focus">
                           <label>Batarya Kapsitesi<span class="text-danger">*</span></label>
-                          <input type="text" class="form-control floating">
+                          <input type="text" class="form-control floating" v-model="batteryCapacityModel">
                           <label class="focus-label">2500mAh-7500mAh</label>
                         </div>
                       </div>

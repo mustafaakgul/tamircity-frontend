@@ -263,11 +263,11 @@
                         <label class="custom-control-gender">?Hafıza Kartı Desteği <span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="memoryy" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="memoryy" type="radio" :value=true>
                             <label class="custom-control-label" for="memoryy">Var</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="memoryz" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="memoryz" type="radio" :value=false>
                             <label class="custom-control-label" for="memoryz">Yok</label>
                           </div>
                         </div>
@@ -279,11 +279,11 @@
                         <label class="custom-control-gender">?Screen Share <span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="ssy" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="ssy" type="radio" :value=true>
                             <label class="custom-control-label" for="ssy">Var</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="ssn" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="ssn" type="radio" :value=false>
                             <label class="custom-control-label" for="ssn">Yok</label>
                           </div>
                         </div>

@@ -206,7 +206,7 @@
                             </div>
                             <div class="custom-control custom-radios custom-control-inline">
                               <label class="custom_check w-100">
-                                <input type="checkbox" name="location":value="ios" v-model="os_type_compatiple">
+                                <input type="checkbox" name="location" :value="ios" v-model="os_type_compatiple">
                                 <span class="checkmark"></span> iOS
                               </label>
                             </div>

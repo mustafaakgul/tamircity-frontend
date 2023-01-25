@@ -38,7 +38,7 @@
                     <div class="col-md-6">
                       <div class="form-group form-focus">
                         <label>Garanti Süresi <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control floating">
+                        <input type="text" class="form-control floating" v-model="guaranteeTermModel">
                         <label class="focus-label">1-24 aya kadar</label>
                       </div>
                     </div>
@@ -130,7 +130,7 @@
                     <div class="col-md-6">
                       <div class="form-group form-focus">
                         <label>Max. Ekran Çözünürlüğü<span class="text-danger">*</span></label>
-                        <input type="text" class="form-control floating">
+                        <input type="text" class="form-control floating" v-model="screenResolutionModel">
                         <label class="focus-label">1024 x 600 - 4096 x 2160</label>
                       </div>
                     </div>
@@ -268,7 +268,7 @@
                     <div class="col-md-6">
                       <div class="form-group form-focus">
                         <label>Ram (Bellek) Frekansı <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control floating">
+                        <input type="text" class="form-control floating" v-model="ramFrequencyModel">
                         <label class="focus-label">1066MHz-5200Mhz</label>
                       </div>
                     </div>
@@ -363,7 +363,7 @@
                     <div class="col-md-6">
                       <div class="form-group form-focus">
                         <label>Ekran Kartı Çekirdek Hızı <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control floating">
+                        <input type="text" class="form-control floating" v-model="externalGraphicsCardCoreSpeedModel">
                         <label class="focus-label">Ekran Kartı Çekirdek Hızı </label>
                       </div>
                     </div>
@@ -377,14 +377,14 @@
                     <div class="col-md-6">
                       <div class="form-group form-focus">
                         <label>Grafik Taban Frekansı<span class="text-danger">*</span></label>
-                        <input type="text" class="form-control floating">
+                        <input type="text" class="form-control floating" v-model="graphicBaseFrequencyModel">
                         <label class="focus-label">1MHz-1000GHz</label>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group form-focus">
                         <label>Grafik Maks. Dinamik Frekansı<span class="text-danger">*</span></label>
-                        <input type="text" class="form-control floating">
+                        <input type="text" class="form-control floating" v-model="graphicMaxDynamicFrequencyModel">
                         <label class="focus-label">1MHz-1000GHz</label>
                       </div>
                     </div>
@@ -421,7 +421,7 @@
                     <div class="col-md-6">
                       <div class="form-group form-focus">
                         <label>DirectX Diğer<span class="text-danger">*</span></label>
-                        <input type="text" class="form-control floating">
+                        <input type="text" class="form-control floating" v-model="directxModel">
                         <label class="focus-label"></label>
                       </div>
                     </div>
@@ -456,7 +456,7 @@
                     <div class="col-md-6">
                       <div class="form-group form-focus">
                         <label>Ethernet Versiyonu<span class="text-danger">*</span></label>
-                        <input type="text" class="form-control floating">
+                        <input type="text" class="form-control floating" v-model="ethernetVersionModel">
                         <label class="focus-label"></label>
                       </div>
                     </div>
@@ -1013,11 +1013,11 @@
                         <label class="custom-control-gender">? Dokunmatik Ekran <span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="touchy" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="touchy" type="radio" :value=true>
                             <label class="custom-control-label" for="touchy">Çalışır Durumda</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="touchn" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="touchn" type="radio" :value=false>
                             <label class="custom-control-label" for="touchn">Çalışır Durumda Değil</label>
                           </div>
                         </div>
