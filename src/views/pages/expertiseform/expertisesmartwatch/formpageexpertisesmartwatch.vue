@@ -32,7 +32,7 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label>Ürün Ailesi  <span class="text-danger">*</span></label>
-                          <vue-select :options="productfamily" />
+                          <vue-select :options="productfamily"/>
                         </div>
                       </div>
                       <div class="col-md-6">
@@ -45,7 +45,7 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label>Renk<span class="text-danger">*</span></label>
-                          <vue-select :options="colors" />
+                          <vue-select :options="colors" v-model="phoneColorModel"/>
                         </div>
                       </div>
                       <div class="col-md-6">
@@ -129,20 +129,20 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label>İşletim Sistemi <span class="text-danger">*</span></label>
-                          <vue-select :options="operatingsystem"/>
+                          <vue-select :options="operatingsystem" v-model="osTypeModel"/>
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group form-focus">
                           <label>İşlemci Frekansı<span class="text-danger">*</span></label>
-                          <input type="text" class="form-control floating">
+                          <input type="text" class="form-control floating" v-model="cpuFrequencyModel">
                           <label class="focus-label">1 inç-2 inç</label>
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group form-focus">
                           <label>Bellek (RAM)<span class="text-danger">*</span></label>
-                          <input type="text" class="form-control floating">
+                          <input type="text" class="form-control floating" v-model="memoryModel">
                           <label class="focus-label">16MB-2048MB</label>
                         </div>
                       </div>
@@ -151,14 +151,14 @@
                           <div class="col-md-6">
                             <div class="form-group form-focus">
                               <label>Ekran Çözünürlüğü<span class="text-danger">*</span></label>
-                              <input type="text" class="form-control floating">
+                              <input type="text" class="form-control floating" v-model="screenResolutionModel">
                               <label class="focus-label">190-500/200-600 piksel</label>
                             </div>
                           </div>
                           <div class="col-md-6">
                             <div class="form-group form-focus">
                               <label>Ekran Boyutu<span class="text-danger">*</span></label>
-                              <input type="text" class="form-control floating">
+                              <input type="text" class="form-control floating" v-model="screenSizeModel">
                               <label class="focus-label">1 inç-2 inç</label>
                             </div>
                           </div>
@@ -167,14 +167,14 @@
                       <div class="col-md-6">
                         <div class="form-group form-focus">
                           <label>CPU Frekansı<span class="text-danger">*</span></label>
-                          <input type="text" class="form-control floating">
+                          <input type="text" class="form-control floating" v-model="cpuFrequencyModel">
                           <label class="focus-label">1GHz-2GHz</label>
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group form-focus">
                           <label>Batarya Kapasitesi <span class="text-danger">*</span></label>
-                          <input type="text" class="form-control floating">
+                          <input type="text" class="form-control floating" v-model="batteryCapacityModel">
                           <label class="focus-label">180mAh-790mAh</label>
                         </div>
                       </div>
@@ -200,23 +200,24 @@
                           <div class="custom-control-box">
                             <div class="custom-control custom-radios custom-control-inline">
                               <label class="custom_check w-100">
-                                <input type="checkbox" name="location">
+                                <input type="checkbox" name="location" :value="android" v-model="os_type_compatiple">
                                 <span class="checkmark"></span> Android
                               </label>
                             </div>
                             <div class="custom-control custom-radios custom-control-inline">
                               <label class="custom_check w-100">
-                                <input type="checkbox" name="location">
+                                <input type="checkbox" name="location" :value="ios" v-model="os_type_compatiple">
                                 <span class="checkmark"></span> iOS
                               </label>
                             </div>
                             <div class="custom-control custom-radios custom-control-inline">
                               <label class="custom_check w-100">
-                                <input class="custom-control-input" type="checkbox" name="location">
+                                <input class="custom-control-input" type="checkbox" name="location" :value="harmonyos" v-model="os_type_compatiple">
                                 <span class="checkmark"></span> HarmonyOS
                               </label>
                             </div>
                           </div>
+
                         </div>
                       </div>
                       <div class="col-md-6">
@@ -577,16 +578,16 @@ async function requestExpertiseWatchInfo() {
         invoice : this.invoiceModel,
         box : this.boxModel,
         guarantee_term : this.guaranteeTermModel,
-        phone_color : "yellow",
+        phone_color : this.phoneColorModel,
         microphone : this.microphoneModel,
-        screen_size : 3,
-        memory : 2000,
+        screen_size : this.screenSizeModel,
+        memory : this.memoryModel,
         screen_type : this.screenTypeModel,
-        os_type : "intel",
-        os_type_compatiple : "asdasf",
-        screen_resolution : "1234",
-        cpu_frequency : 5,
-        battery_capacity : 3,
+        os_type : this.osTypeModel,
+        os_type_compatiple : this.osTypeCompatipleModel,
+        screen_resolution : this.screenResolutionModel,
+        cpu_frequency : this.cpuFrequencyModel,
+        battery_capacity : this.batteryCapacityModel,
         wifi : this.wifiModel,
         speaker : this.speakerModel,
         sim_support : this.simSupportModel,

@@ -38,14 +38,14 @@
                     <div class="col-md-6">
                       <div class="form-group form-focus">
                         <label>Garanti Süresi <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control floating">
+                        <input type="text" class="form-control floating" v-model="guaranteeTermModel">
                         <label class="focus-label">1-24 aya kadar</label>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>Renk<span class="text-danger">*</span></label>
-                        <vue-select :options="color" />
+                        <vue-select :options="color" v-model="phoneColorModel"/>
                       </div>
                     </div>
                     <div class="col-md-6">
@@ -55,11 +55,11 @@
                             <label class="custom-control-gender">Fatura <span class="text-danger">*</span></label>
                             <div class="custom-control-box">
                               <div class="custom-control custom-radios custom-control-inline">
-                                <input class="custom-control-input" id="billy" type="radio" v-model="" :value=true>
+                                <input class="custom-control-input" id="billy" type="radio" v-model="invoiceModel" :value=true>
                                 <label class="custom-control-label" for="billy">Var</label>
                               </div>
                               <div class="custom-control custom-radios custom-control-inline">
-                                <input class="custom-control-input" id="billn" type="radio" v-model="" :value=false>
+                                <input class="custom-control-input" id="billn" type="radio" v-model="invoiceModel" :value=false>
                                 <label class="custom-control-label" for="billn">Yok</label>
                               </div>
                             </div>
@@ -70,11 +70,11 @@
                             <label class="custom-control-gender">Kutu <span class="text-danger">*</span></label>
                             <div class="custom-control-box">
                               <div class="custom-control custom-radios custom-control-inline">
-                                <input class="custom-control-input" id="boxy" type="radio" v-model="" :value=true>
+                                <input class="custom-control-input" id="boxy" type="radio" v-model="boxModel" :value=true>
                                 <label class="custom-control-label" for="boxy">Var</label>
                               </div>
                               <div class="custom-control custom-radios custom-control-inline">
-                                <input class="custom-control-input" id="boxn" type="radio" v-model="" :value=false>
+                                <input class="custom-control-input" id="boxn" type="radio" v-model="boxModel" :value=false>
                                 <label class="custom-control-label" for="boxn">Yok</label>
                               </div>
                             </div>
@@ -124,32 +124,32 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>Ekran Boyutu <span class="text-danger">*</span></label>
-                        <vue-select :options="screensize"/>
+                        <vue-select :options="screensize" v-model="screenSizeModel"/>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group form-focus">
                         <label>Max. Ekran Çözünürlüğü<span class="text-danger">*</span></label>
-                        <input type="text" class="form-control floating">
+                        <input type="text" class="form-control floating" v-model="screenResolutionModel">
                         <label class="focus-label">1024 x 600 - 4096 x 2160</label>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>Ekran Çözünürlük Biçimi<span class="text-danger">*</span></label>
-                        <vue-select :options="screenresolutionstyle"/>
+                        <vue-select :options="screenresolutionstyle" v-model="screenResolutionTypeModel"/>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>Ekran Panel Tipi<span class="text-danger">*</span></label>
-                        <vue-select :options="paneltype"/>
+                        <vue-select :options="paneltype" v-model="screenPanelTypeModel"/>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>İşletim Sistemi<span class="text-danger">*</span></label>
-                        <vue-select :options="operatingsystem"/>
+                        <vue-select :options="operatingsystem" v-model="operatingSystemModel"/>
                       </div>
                     </div>
                     <h4 class="mb-3 mt-1">Fiziksel Özellikler</h4><hr>
@@ -158,11 +158,11 @@
                         <label class="custom-control-gender">Kart Okuyucu <span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="cardreadery" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="cardreadery" type="radio" v-model="cardReaderModel" :value=true>
                             <label class="custom-control-label" for="cardreadery">Var</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="cardreadern" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="cardreadern" type="radio" v-model="cardReaderModel" :value=false>
                             <label class="custom-control-label" for="cardreadern">Yok</label>
                           </div>
                         </div>
@@ -173,11 +173,11 @@
                         <label class="custom-control-gender">Kamera <span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="cameray" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="cameray" type="radio" v-model="cameraModel" :value=true>
                             <label class="custom-control-label" for="cameray">Var</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="cameran" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="cameran" type="radio" v-model="cameraModel" :value=false>
                             <label class="custom-control-label" for="cameran">Yok</label>
                           </div>
                         </div>
@@ -188,11 +188,11 @@
                         <label class="custom-control-gender">Parmak İzi Okuyucu <span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="fingerreadery" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="fingerreadery" type="radio" v-model="fingerPrintReaderModel" :value=true>
                             <label class="custom-control-label" for="fingerreadery">Var</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="fingerreadern" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="fingerreadern" type="radio" v-model="fingerPrintReaderModel" :value=false>
                             <label class="custom-control-label" for="fingerreadern">Yok</label>
                           </div>
                         </div>
@@ -203,11 +203,11 @@
                         <label class="custom-control-gender">Klavye Arka Aydınlatma <span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="ledy" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="ledy" type="radio" v-model="keyboardBacklightModel" :value=true>
                             <label class="custom-control-label" for="ledy">Var</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="ledn" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="ledn" type="radio" v-model="keyboardBacklightModel" :value=false>
                             <label class="custom-control-label" for="ledn">Yok</label>
                           </div>
                         </div>
@@ -218,11 +218,11 @@
                         <label class="custom-control-gender">Dokunmatik Ekran  <span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="tsy" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="tsy" type="radio" v-model="touchScreenModel" :value=true>
                             <label class="custom-control-label" for="tsy">Var</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="tsn" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="tsn" type="radio" v-model="touchScreenModel" :value=false>
                             <label class="custom-control-label" for="tsn">Yok</label>
                           </div>
                         </div>
@@ -232,50 +232,50 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>İşlemci Markası <span class="text-danger">*</span></label>
-                        <vue-select :options="operatingbrand" />
+                        <vue-select :options="operatingbrand" v-model="cpuModel"/>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>İşlemci Serisi<span class="text-danger">*</span></label>
-                        <vue-select :options="operatingseries" />
+                        <vue-select :options="operatingseries" v-model="cpuSerieModel"/>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>İşlemci Çekirdek Sayısı <span class="text-danger">*</span></label>
-                        <vue-select :options="operatingsfrequency" />
+                        <vue-select :options="operatingsfrequency" v-model="cpuCoreNumberModel"/>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>İşlemci Temel Frekans<span class="text-danger">*</span></label>
-                        <vue-select :options="frequency" />
+                        <vue-select :options="frequency" v-model="cpuBaseFrequencyModel"/>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>İşlemci Ön Belleği<span class="text-danger">*</span></label>
-                        <vue-select :options="cash" />
+                        <vue-select :options="cash" v-model="cpuRamModel"/>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>Ram (Bellek) Boyutu <span class="text-danger">*</span></label>
-                        <vue-select :options="ram" />
+                        <vue-select :options="ram" v-model="ramModel"/>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group form-focus">
                         <label>Ram (Bellek) Frekansı <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control floating">
+                        <input type="text" class="form-control floating" v-model="ramFrequencyModel">
                         <label class="focus-label">1066MHz-5200Mhz</label>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>Ram (Bellek) Türü <span class="text-danger">*</span></label>
-                        <vue-select :options="ramtype" />
+                        <vue-select :options="ramtype" v-model="ramTypeModel"/>
                       </div>
                     </div>
                     <div class="col-md-6">
@@ -283,11 +283,11 @@
                         <label class="custom-control-gender">Intel Turbo Boost <span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="aiy" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="aiy" type="radio" v-model="intelTurbaBoostModel" :value=true>
                             <label class="custom-control-label" for="aiy">Var</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="ain" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="ain" type="radio" v-model="intelTurbaBoostModel" :value=false>
                             <label class="custom-control-label" for="ain">Yok</label>
                           </div>
                         </div>
@@ -297,12 +297,12 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>Sabit Disk (HDD) Boyutu<span class="text-danger">*</span></label>
-                        <vue-select :options="hddsize" />
+                        <vue-select :options="hddsize" v-model="hddCapacityModel"/>
                       </div>
                     </div> <div class="col-md-6">
                     <div class="form-group">
                       <label>SSD Boyutu<span class="text-danger">*</span></label>
-                      <vue-select :options="ssdsize" />
+                      <vue-select :options="ssdsize" v-model="ssdCapacityModel"/>
                     </div>
                   </div>
                     <div class="col-md-6">
@@ -310,11 +310,11 @@
                         <label class="custom-control-gender">SSD<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="ssdy" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="ssdy" type="radio" v-model="ssdModel" :value=true>
                             <label class="custom-control-label" for="ssdy">Var</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="ssdn" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="ssdn" type="radio" v-model="ssdModel" :value=false>
                             <label class="custom-control-label" for="ssdn">Yok</label>
                           </div>
                         </div>
@@ -326,11 +326,11 @@
                         <label class="custom-control-gender">Harici Ekran Kartı  <span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="memoryy" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="memoryy" type="radio" v-model="externalGraphicsCardModel" :value=true>
                             <label class="custom-control-label" for="memoryy">Var</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="memoryz" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="memoryz" type="radio" v-model="externalGraphicsCardModel" :value=false>
                             <label class="custom-control-label" for="memoryz">Yok</label>
                           </div>
                         </div>
@@ -339,31 +339,31 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>Harici Ekran Kartı<span class="text-danger">*</span></label>
-                        <vue-select :options="egcard"/>
+                        <vue-select :options="egcard" v-model="externalGraphicsCardModel"/>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>Harici Ekran Kartı Serisi<span class="text-danger">*</span></label>
-                        <vue-select :options="egcardseries"/>
+                        <vue-select :options="egcardseries" v-model="externalGraphicsCardSeriesModel"/>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>Harici Ekran Kartı Belleği <span class="text-danger">*</span></label>
-                        <vue-select :options="egcardmemory"/>
+                        <vue-select :options="egcardmemory" v-model="externalGraphicsCardMemoryModel"/>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>Harici Ekran Kartı Bit  <span class="text-danger">*</span></label>
-                        <vue-select :options="egcardbit"/>
+                        <vue-select :options="egcardbit" v-model="externalGraphicsCardBitModel"/>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group form-focus">
                         <label>Ekran Kartı Çekirdek Hızı <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control floating">
+                        <input type="text" class="form-control floating" v-model="externalGraphicsCardCoreSpeedModel">
                         <label class="focus-label">Ekran Kartı Çekirdek Hızı </label>
                       </div>
                     </div>
@@ -371,20 +371,20 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>İşlemci Grafik  <span class="text-danger">*</span></label>
-                        <vue-select :options="pgraphics"/>
+                        <vue-select :options="pgraphics" v-model="internalGraphicsCardCpuModel"/>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group form-focus">
                         <label>Grafik Taban Frekansı<span class="text-danger">*</span></label>
-                        <input type="text" class="form-control floating">
+                        <input type="text" class="form-control floating" v-model="graphicBaseFrequencyModel">
                         <label class="focus-label">1MHz-1000GHz</label>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group form-focus">
                         <label>Grafik Maks. Dinamik Frekansı<span class="text-danger">*</span></label>
-                        <input type="text" class="form-control floating">
+                        <input type="text" class="form-control floating" v-model="graphicMaxDynamicFrequencyModel">
                         <label class="focus-label">1MHz-1000GHz</label>
                       </div>
                     </div>
@@ -393,11 +393,11 @@
                         <label class="custom-control-gender">4K Desteği<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="4ky" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="4ky" type="radio" v-model="fourKModel" :value=true>
                             <label class="custom-control-label" for="4ky">Var</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="4kz" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="4kz" type="radio" v-model="fourKModel" :value=false>
                             <label class="custom-control-label" for="4kz">Yok</label>
                           </div>
                         </div>
@@ -408,11 +408,11 @@
                         <label class="custom-control-gender">DirectX <span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="directy" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="directy" type="radio" v-model="directxModel" :value=true>
                             <label class="custom-control-label" for="directy">DirectX 12</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="directn" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="directn" type="radio" v-model="directxModel" :value=false>
                             <label class="custom-control-label" for="directn">DirectX 12.1</label>
                           </div>
                         </div>
@@ -421,20 +421,20 @@
                     <div class="col-md-6">
                       <div class="form-group form-focus">
                         <label>DirectX Diğer<span class="text-danger">*</span></label>
-                        <input type="text" class="form-control floating">
+                        <input type="text" class="form-control floating" v-model="directxModel">
                         <label class="focus-label"></label>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>OpenGL<span class="text-danger">*</span></label>
-                        <vue-select :options="opengl"/>
+                        <vue-select :options="opengl" v-model="openGlModel"/>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>Desteklenen Ekran Sayısı <span class="text-danger">*</span></label>
-                        <vue-select :options="screenquantity"/>
+                        <vue-select :options="screenquantity" v-model="suppertedScreenNumberModel"/>
                       </div>
                     </div>
                     <h4 class="mb-3 mt-1">Bağlantı</h4><hr>
@@ -443,11 +443,11 @@
                         <label class="custom-control-gender">Ethernet<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="ethernety" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="ethernety" type="radio" v-model="ethernetModel" :value=true>
                             <label class="custom-control-label" for="ethernety">Var</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="ethernetn" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="ethernetn" type="radio" v-model="ethernetModel" :value=false>
                             <label class="custom-control-label" for="ethernetn">Yok</label>
                           </div>
                         </div>
@@ -456,14 +456,14 @@
                     <div class="col-md-6">
                       <div class="form-group form-focus">
                         <label>Ethernet Versiyonu<span class="text-danger">*</span></label>
-                        <input type="text" class="form-control floating">
+                        <input type="text" class="form-control floating" v-model="ethernetVersionModel">
                         <label class="focus-label"></label>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label>Wİ-Fİ Versiyonu <span class="text-danger">*</span></label>
-                        <vue-select :options="wifiversion"/>
+                        <label>Wi-Fi Versiyonu <span class="text-danger">*</span></label>
+                        <vue-select :options="wifiversion" v-model="wifiVersionModel"/>
                       </div>
                     </div>
                     <div class="col-md-6">
@@ -471,11 +471,11 @@
                         <label class="custom-control-gender">HDMI<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="hdmıy" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="hdmıy" type="radio" v-model="hdmiModel" :value=true>
                             <label class="custom-control-label" for="hdmıy">Var</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="hdmın" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="hdmın" type="radio" v-model="hdmiModel" :value=false>
                             <label class="custom-control-label" for="hdmın">Yok</label>
                           </div>
                         </div>
@@ -486,11 +486,11 @@
                         <label class="custom-control-gender">Bluetooth<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="bluetoothy" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="bluetoothy" type="radio" v-model="bluetoothModel" :value=true>
                             <label class="custom-control-label" for="bluetoothy">Var</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="bluetoothn" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="bluetoothn" type="radio" v-model="bluetoothModel" :value=false>
                             <label class="custom-control-label" for="bluetoothn">Yok</label>
                           </div>
                         </div>
@@ -499,19 +499,19 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>USB 2.0 Giriş Adedi<span class="text-danger">*</span></label>
-                        <vue-select :options="usb2enterquantity"/>
+                        <vue-select :options="usb2enterquantity" v-model="usb2NumberModel"/>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>USB 3.x Giriş Adedi<span class="text-danger">*</span></label>
-                        <vue-select :options="usb3enterquantity"/>
+                        <vue-select :options="usb3enterquantity" v-model="usb3NumberModel"/>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>USB Type-C Giriş Adedi<span class="text-danger">*</span></label>
-                        <vue-select :options="typec"/>
+                        <vue-select :options="typec" v-model="usbTypeCNumberModel"/>
                       </div>
                     </div>
                   </div>
@@ -532,11 +532,11 @@
                         <label class="custom-control-gender">Ekranda kırıklar mevcut mu ? <span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="01" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="01" type="radio" v-model="isScreenHasBrokenProblemModel" :value=true>
                             <label class="custom-control-label" for="01">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="02" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="02" type="radio" v-model="isScreenHasBrokenProblemModel" :value=false>
                             <label class="custom-control-label" for="02">Hayır</label>
                           </div>
                         </div>
@@ -547,11 +547,11 @@
                         <label class="custom-control-gender">Ekran üzerinde leke veya deformasyon mevcut mu ? <span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="03" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="03" type="radio" v-model="isScreenHasLossProblemModel" :value=true>
                             <label class="custom-control-label" for="03">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="04" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="04" type="radio" v-model="isScreenHasLossProblemModel" :value=false>
                             <label class="custom-control-label" for="04">Hayır</label>
                           </div>
                         </div>
@@ -562,11 +562,11 @@
                         <label class="custom-control-gender">Ekranda ölü piksel hatası var mı ?<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="06" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="06" type="radio" v-model="isScreenHasDeadPixelProblemModel" :value=true>
                             <label class="custom-control-label" for="06">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="07" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="07" type="radio" v-model="isScreenHasDeadPixelProblemModel" :value=false>
                             <label class="custom-control-label" for="07">Hayır</label>
                           </div>
                         </div>
@@ -577,11 +577,11 @@
                         <label class="custom-control-gender">Cihazda herhangi bir kasa arızası var mı ?<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="08" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="08" type="radio" v-model="isDeviceHasCaseProblemModel" :value=true>
                             <label class="custom-control-label" for="08">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="09" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="09" type="radio" v-model="isDeviceHasCaseProblemModel" :value=false>
                             <label class="custom-control-label" for="09">Hayır</label>
                           </div>
                         </div>
@@ -592,11 +592,11 @@
                         <label class="custom-control-gender">Cihazda kapak veya menteşe arızası mevcut mu ?<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="10" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="10" type="radio" v-model="isDeviceHasCoverProblemModel" :value=true>
                             <label class="custom-control-label" for="10">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="11" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="11" type="radio" v-model="isDeviceHasCoverProblemModel" :value=false>
                             <label class="custom-control-label" for="11">Hayır</label>
                           </div>
                         </div>
@@ -604,14 +604,14 @@
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label class="custom-control-gender">Klavyede çalışmayan tuş var mı ?<span class="text-danger">*</span></label>
+                        <label class="custom-control-gender">? Klavyede çalışmayan tuş var mı ?<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="005" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="005" type="radio" v-model="isDeviceHasBrokenKeyProblemModel" :value=true>
                             <label class="custom-control-label" for="005">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="006" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="006" type="radio" v-model="isDeviceHasBrokenKeyProblemModel" :value=false>
                             <label class="custom-control-label" for="006">Hayır</label>
                           </div>
                         </div>
@@ -622,11 +622,11 @@
                         <label class="custom-control-gender">Cihaz şarj soketinde deformasyon veya arıza mevcut mu ?<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="12" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="12" type="radio" v-model="isDeviceHasChargeSocketProblemModel" :value=true>
                             <label class="custom-control-label" for="12">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="13" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="13" type="radio" v-model="isDeviceHasChargeSocketProblemModel" :value=false>
                             <label class="custom-control-label" for="13">Hayır</label>
                           </div>
                         </div>
@@ -637,11 +637,11 @@
                         <label class="custom-control-gender">Cihaz touchpad'i sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="14" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="14" type="radio" v-model="isDeviceHasTouchPadProblemModel" :value=true>
                             <label class="custom-control-label" for="14">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="15" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="15" type="radio" v-model="isDeviceHasTouchPadProblemModel" :value=false>
                             <label class="custom-control-label" for="15">Hayır</label>
                           </div>
                         </div>
@@ -652,11 +652,11 @@
                         <label class="custom-control-gender">Hoperlör sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="16" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="16" type="radio" v-model="isDeviceHasSpeakerProblemModel" :value=true>
                             <label class="custom-control-label" for="16">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="17" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="17" type="radio" v-model="isDeviceHasSpeakerProblemModel" :value=false>
                             <label class="custom-control-label" for="17">Hayır</label>
                           </div>
                         </div>
@@ -667,11 +667,11 @@
                         <label class="custom-control-gender">Cihazda aşırı ısınma sorunu var mı ?<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="18" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="18" type="radio" v-model="isDeviceHasHighHeatProblemModel" :value=true>
                             <label class="custom-control-label" for="18">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="19" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="19" type="radio" v-model="isDeviceHasHighHeatProblemModel" :value=false>
                             <label class="custom-control-label" for="19">Hayır</label>
                           </div>
                         </div>
@@ -682,11 +682,11 @@
                         <label class="custom-control-gender">Cihaz çalışma esnasında normalin dışında sesler çıkarıyor mu ?<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="20" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="20" type="radio" v-model="isDeviceHasHighSoundProblemModel" :value=true>
                             <label class="custom-control-label" for="20">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="21" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="21" type="radio" v-model="isDeviceHasHighSoundProblemModel" :value=false>
                             <label class="custom-control-label" for="21">Hayır</label>
                           </div>
                         </div>
@@ -697,11 +697,11 @@
                         <label class="custom-control-gender">DVD Sürücü (varsa) sorunsuz çalışıyor mu ?<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="22" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="22" type="radio" v-model="isDeviceHasDvdDriverProblemModel" :value=true>
                             <label class="custom-control-label" for="22">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="23" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="23" type="radio" v-model="isDeviceHasDvdDriverProblemModel" :value=false>
                             <label class="custom-control-label" for="23">Hayır</label>
                           </div>
                         </div>
@@ -712,11 +712,11 @@
                         <label class="custom-control-gender">USB Girişleri<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="24" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="24" type="radio" v-model="isDeviceHasUsbInputProblemModel" :value=true>
                             <label class="custom-control-label" for="24">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="25" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="25" type="radio" v-model="isDeviceHasUsbInputProblemModel" :value=false>
                             <label class="custom-control-label" for="25">Hayır</label>
                           </div>
                         </div>
@@ -727,11 +727,11 @@
                         <label class="custom-control-gender">USB Type-C Girişi<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="28" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="28" type="radio" v-model="isDeviceHasUsbTypeCProblemModel" :value=true>
                             <label class="custom-control-label" for="28">Çalışır Durumda</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="29" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="29" type="radio" v-model="isDeviceHasUsbTypeCProblemModel" :value=false>
                             <label class="custom-control-label" for="29">Çalışır Durumda Değil</label>
                           </div>
                         </div>
@@ -739,14 +739,14 @@
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label class="custom-control-gender">Kart Okuyucu <span class="text-danger">*</span></label>
+                        <label class="custom-control-gender">? Kart Okuyucu <span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="30" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="30" type="radio" v-model="isDeviceHasCardReaderProblemModel" :value=true>
                             <label class="custom-control-label" for="30">Evet</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="31" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="31" type="radio" v-model="isDeviceHasCardReaderProblemModel" :value=false>
                             <label class="custom-control-label" for="31">Hayır</label>
                           </div>
                         </div>
@@ -754,14 +754,14 @@
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label class="custom-control-gender">Kart Okuyucu<span class="text-danger">*</span></label>
+                        <label class="custom-control-gender">? Kart Okuyucu<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="32" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="32" type="radio" v-model="isDeviceHasCardReaderProblemModel" :value=true>
                             <label class="custom-control-label" for="32">Çalışır Durumda</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="33" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="33" type="radio" v-model="isDeviceHasCardReaderProblemModel" :value=false>
                             <label class="custom-control-label" for="33">Çalışır Durumda Değil</label>
                           </div>
                         </div>
@@ -772,11 +772,11 @@
                         <label class="custom-control-gender">Kamera<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="34" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="34" type="radio" v-model="isDeviceHasCameraProblemModel" :value=true>
                             <label class="custom-control-label" for="34">Çalışır Durumda</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="35" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="35" type="radio" v-model="isDeviceHasCameraProblemModel" :value=false>
                             <label class="custom-control-label" for="35">Çalışır Durumda Değil</label>
                           </div>
                         </div>
@@ -787,11 +787,11 @@
                         <label class="custom-control-gender">Parmak İzi Okuyucu<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="36" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="36" type="radio" v-model="isDeviceHasFingerPrintProblemModel" :value=true>
                             <label class="custom-control-label" for="36">Çalışır Durumda</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="37" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="37" type="radio" v-model="isDeviceHasFingerPrintProblemModel" :value=false>
                             <label class="custom-control-label" for="37">Çalışır Durumda Değil</label>
                           </div>
                         </div>
@@ -802,11 +802,11 @@
                         <label class="custom-control-gender">Anakart <span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="scratchy" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="scratchy" type="radio" v-model="isDeviceHasMotherBoardProblemModel" :value=true>
                             <label class="custom-control-label" for="scratchy">Çalışır Durumda</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="scratchn" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="scratchn" type="radio" v-model="isDeviceHasMotherBoardProblemModel" :value=false>
                             <label class="custom-control-label" for="scratchn">Çalışır Durumda Değil</label>
                           </div>
                         </div>
@@ -817,11 +817,11 @@
                         <label class="custom-control-gender">Ram (Bellek) <span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="ramy" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="ramy" type="radio" v-model="isDeviceHasRamProblemModel" :value=true>
                             <label class="custom-control-label" for="ramy">Çalışır Durumda</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="ramn" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="ramn" type="radio" v-model="isDeviceHasRamProblemModel" :value=false>
                             <label class="custom-control-label" for="ramn">Çalışır Durumda Değil</label>
                           </div>
                         </div>
@@ -832,11 +832,11 @@
                         <label class="custom-control-gender">Sabit Disk (HDD)<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="ay" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="ay" type="radio" v-model="isDeviceHasHddProblemModel" :value=true>
                             <label class="custom-control-label" for="ay">Çalışır Durumda</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="an" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="an" type="radio" v-model="isDeviceHasHddProblemModel" :value=false>
                             <label class="custom-control-label" for="an">Çalışır Durumda Değil</label>
                           </div>
                         </div>
@@ -847,11 +847,11 @@
                         <label class="custom-control-gender">Harici Disk (SSD)<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="hdisky" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="hdisky" type="radio" v-model="isDeviceHasSsdProblemModel" :value=true>
                             <label class="custom-control-label" for="hdisky">Çalışır Durumda</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="hdiskn" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="hdiskn" type="radio" v-model="isDeviceHasSsdProblemModel" :value=false>
                             <label class="custom-control-label" for="hdiskn">Çalışır Durumda Değil</label>
                           </div>
                         </div>
@@ -862,11 +862,11 @@
                         <label class="custom-control-gender">Harici Ekran Kartı<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="hscy" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="hscy" type="radio" v-model="isDeviceHasExternalGraphicCardProblemModel" :value=true>
                             <label class="custom-control-label" for="hscy">Çalışır Durumda</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="hscn" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="hscn" type="radio" v-model="isDeviceHasExternalGraphicCardProblemModel" :value=false>
                             <label class="custom-control-label" for="hscn">Çalışır Durumda Değil</label>
                           </div>
                         </div>
@@ -877,11 +877,11 @@
                         <label class="custom-control-gender">Dahili Ekran Kartı <span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="dscy" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="dscy" type="radio" v-model="isDeviceHasInternalGraphicCardProblemModel" :value=true>
                             <label class="custom-control-label" for="dscy">Çalışır Durumda</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="dscn" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="dscn" type="radio" v-model="isDeviceHasInternalGraphicCardProblemModel" :value=false>
                             <label class="custom-control-label" for="dscn">Çalışır Durumda Değil</label>
                           </div>
                         </div>
@@ -892,11 +892,11 @@
                         <label class="custom-control-gender">Optik Okuyucu<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="oy" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="oy" type="radio" v-model="isDeviceHasOpticalReaderProblemModel" :value=true>
                             <label class="custom-control-label" for="oy">Çalışır Durumda</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="on" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="on" type="radio" v-model="isDeviceHasOpticalReaderProblemModel" :value=false>
                             <label class="custom-control-label" for="on">Çalışır Durumda Değil</label>
                           </div>
                         </div>
@@ -907,11 +907,11 @@
                         <label class="custom-control-gender">Ethernet Girişi<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="ey" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="ey" type="radio" v-model="isDeviceHasEthernetConnectionProblemModel" :value=true>
                             <label class="custom-control-label" for="ey">Çalışır Durumda</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="en" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="en" type="radio" v-model="isDeviceHasEthernetConnectionProblemModel" :value=false>
                             <label class="custom-control-label" for="en">Çalışır Durumda Değil</label>
                           </div>
                         </div>
@@ -922,11 +922,11 @@
                         <label class="custom-control-gender">WiFi <span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="wy" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="wy" type="radio" v-model="isDeviceHasWifiProblemModel" :value=true>
                             <label class="custom-control-label" for="wy">Çalışır Durumda</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="wn" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="wn" type="radio" v-model="isDeviceHasWifiProblemModel" :value=false>
                             <label class="custom-control-label" for="wn">Çalışır Durumda Değil</label>
                           </div>
                         </div>
@@ -937,11 +937,11 @@
                         <label class="custom-control-gender">HDMI Girişi <span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="hy" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="hy" type="radio" v-model="isDeviceHasHdmiProblemModel" :value=true>
                             <label class="custom-control-label" for="hy">Çalışır Durumda</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="hn" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="hn" type="radio" v-model="isDeviceHasHdmiProblemModel" :value=false>
                             <label class="custom-control-label" for="hn">Çalışır Durumda Değil</label>
                           </div>
                         </div>
@@ -952,11 +952,11 @@
                         <label class="custom-control-gender">Bluetooth<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="bluetooty" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="bluetooty" type="radio" v-model="isDeviceHasBluetoothProblemModel" :value=true>
                             <label class="custom-control-label" for="bluetoothy">Çalışır Durumda</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="bluetootn" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="bluetootn" type="radio" v-model="isDeviceHasBluetoothProblemModel" :value=false>
                             <label class="custom-control-label" for="bluetootn">Çalışır Durumda Değil</label>
                           </div>
                         </div>
@@ -968,11 +968,11 @@
                         <label class="custom-control-gender">Dokunmatik Ekran<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="ty" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="ty" type="radio" v-model="isDeviceHasTouchScreenProblemModel" :value=true>
                             <label class="custom-control-label" for="ty">Çalışır Durumda</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="tn" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="tn" type="radio" v-model="isDeviceHasTouchScreenProblemModel" :value=false>
                             <label class="custom-control-label" for="tn">Çalışır Durumda Değil</label>
                           </div>
                         </div>
@@ -983,11 +983,11 @@
                         <label class="custom-control-gender">Klavye Aydınlatma<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="keyboardlighty" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="keyboardlighty" type="radio" v-model="isDeviceHasKeyboardBacklightProblemModel" :value=true>
                             <label class="custom-control-label" for="keyboardlighty">Çalışır Durumda</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="keyboardlightn" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="keyboardlightn" type="radio" v-model="isDeviceHasKeyboardBacklightProblemModel" :value=false>
                             <label class="custom-control-label" for="keyboardlightn">Çalışır Durumda Değil</label>
                           </div>
                         </div>
@@ -998,11 +998,11 @@
                         <label class="custom-control-gender">Kulaklık Girişi<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="eary" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="eary" type="radio" v-model="isDeviceHasHeadPhoneSocketProblemModel" :value=true>
                             <label class="custom-control-label" for="eary">Çalışır Durumda</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="earn" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="earn" type="radio" v-model="isDeviceHasHeadPhoneSocketProblemModel" :value=false>
                             <label class="custom-control-label" for="earn">Çalışır Durumda Değil</label>
                           </div>
                         </div>
@@ -1010,14 +1010,14 @@
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label class="custom-control-gender">Dokunmatik Ekran <span class="text-danger">*</span></label>
+                        <label class="custom-control-gender">? Dokunmatik Ekran <span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="touchy" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="touchy" type="radio" :value=true>
                             <label class="custom-control-label" for="touchy">Çalışır Durumda</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="touchn" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="touchn" type="radio" :value=false>
                             <label class="custom-control-label" for="touchn">Çalışır Durumda Değil</label>
                           </div>
                         </div>
@@ -1028,11 +1028,11 @@
                         <label class="custom-control-gender">Klavye Aydınlatma<span class="text-danger">*</span></label>
                         <div class="custom-control-box">
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="keyboardy" type="radio" v-model="" :value=true>
+                            <input class="custom-control-input" id="keyboardy" type="radio" v-model="isDeviceHasKeyboardBacklightProblemModel" :value=true>
                             <label class="custom-control-label" for="keyboardy">Çalışır Durumda</label>
                           </div>
                           <div class="custom-control custom-radios custom-control-inline">
-                            <input class="custom-control-input" id="keyboardn" type="radio" v-model="" :value=false>
+                            <input class="custom-control-input" id="keyboardn" type="radio" v-model="isDeviceHasKeyboardBacklightProblemModel" :value=false>
                             <label class="custom-control-label" for="keyboardn">Çalışır Durumda Değil</label>
                           </div>
                         </div>
@@ -1155,85 +1155,85 @@ async function requestExpertisePCInfo() {
       "http://157.230.124.187:8888/api/v1/expertise_pc_infos",
       {
         reservation_id : 1,
-        invoice : true,
-        box : false,
-        guarantee_term : 5,
-        phone_color : "red",
-        screen_size :20,
-        screen_resolution : "asd",
-        screen_resolution_type : "res",
-        screen_panel_type : "pal",
-        operating_system : "op",
-        card_reader : true,
-        camera : true,
-        finger_print_reader: true,
-        touch_screen : true,
-        keyboard_backlight : false,
-        cpu : "asd",
-        cpu_serie : "asd",
-        cpu_base_frequency :25,
-        cpu_core_number : 4,
-        cpu_ram : 12,
-        intel_turba_boost : true,
-        ram : 16,
-        ram_frequency : "asd",
-        ram_type : "asd",
-        hdd_capacity : 512,
-        ssd : true,
-        ssd_capacity : 200,
-        external_graphics_card : true,
-        external_graphics_card_brand : "asd",
-        external_graphics_card_series : "asd",
-        external_graphics_card_memory : "memo",
-        external_graphics_card_bit: 5,
-        external_graphics_card_core_speed : 3,
-        internal_graphics_card_cpu : "asd",
-        graphic_base_frequency : 5,
-        graphic_max_dynamic_frequency :5,
-        four_k : true,
-        directx : true,
-        open_gl : 20,
-        supperted_screen_number :2,
-        ethernet : true,
-        ethernet_version : true,
-        wifi_version : "asd",
-        hdmi : true,
-        bluetooth : false,
-        usb_2_number : 2,
-        usb_3_number : 2,
-        usb_type_c_number :1,
-        is_screen_has_broken_problem               :false,
-        is_screen_has_loss_problem                 :true,
-        is_screen_has_dead_pixel_problem           :false,
-        is_device_has_case_problem                 :true,
-        is_device_has_cover_problem                :false,
-        is_device_has_broken_key_problem           :true,
-        is_device_has_function_less_key_problem    :false,
-        is_device_has_charge_socket_problem        :true,
-        is_device_has_touch_pad_problem            :false,
-        is_device_has_speaker_problem              :true,
-        is_device_has_high_heat_problem            :false,
-        is_device_has_high_sound_problem           :true,
-        is_device_has_dvd_driver_problem           :false,
-        is_device_has_usb_input_problem            :true,
-        is_device_has_usb_type_c_problem           :false,
-        is_device_has_card_reader_problem          :true,
-        is_device_has_camera_problem               :false,
-        is_device_has_finger_print_problem         :true,
-        is_device_has_mother_board_problem         :false,
-        is_device_has_ram_problem                  :true,
-        is_device_has_hdd_problem                  :false,
-        is_device_has_ssd_problem                  :true,
-        is_device_has_external_graphic_card_problem:false,
-        is_device_has_internal_graphic_card_problem:true,
-        is_device_has_optical_reader_problem       :false,
-        is_device_has_ethernet_connection_problem  :true,
-        is_device_has_wifi_problem                 :false,
-        is_device_has_hdmi_problem                 :true,
-        is_device_has_bluetooth_problem            :false,
-        is_device_has_head_phone_socket_problem    :true,
-        is_device_has_touch_screen_problem         :false,
-        is_device_has_keyboard_backlight_problem   :true
+        invoice : this.invoiceModel,
+        box : this.boxModel,
+        guarantee_term : this.guaranteeTermModel,
+        phone_color : this.phoneColorModel,
+        screen_size : this.screenSizeModel,
+        screen_resolution : this.screenResolutionModel,
+        screen_resolution_type : this.screenResolutionTypeModel,
+        screen_panel_type : this.screenPanelTypeModel,
+        operating_system : this.operatingSystemModel,
+        card_reader : this.cardReaderModel,
+        camera : this.cameraModel,
+        finger_print_reader: this.fingerPrintReaderModel,
+        touch_screen : this.touchScreenModel,
+        keyboard_backlight : this.keyboardBacklightModel,
+        cpu : this.cpuModel,
+        cpu_serie : this.cpuSerieModel,
+        cpu_base_frequency : this.cpuBaseFrequencyModel,
+        cpu_core_number : this.cpuCoreNumberModel,
+        cpu_ram : this.cpuRamModel,
+        intel_turba_boost : this.intelTurbaBoostModel,
+        ram : this.ramModel,
+        ram_frequency : this.ramFrequencyModel,
+        ram_type : this.ramTypeModel,
+        hdd_capacity : this.hddCapacityModel,
+        ssd : this.ssdModel,
+        ssd_capacity : this.ssdCapacityModel,
+        external_graphics_card : this.externalGraphicsCardModel,
+        external_graphics_card_brand : this.externalGraphicsCardBrandModel,
+        external_graphics_card_series : this.externalGraphicsCardSeriesModel,
+        external_graphics_card_memory : this.externalGraphicsCardMemoryModel,
+        external_graphics_card_bit: this.externalGraphicsCardBitModel,
+        external_graphics_card_core_speed : this.externalGraphicsCardCoreSpeedModel,
+        internal_graphics_card_cpu : this.internalGraphicsCardCpuModel,
+        graphic_base_frequency : this.graphicBaseFrequencyModel,
+        graphic_max_dynamic_frequency : this.graphicMaxDynamicFrequencyModel,
+        four_k : this.fourKModel,
+        directx : this.directxModel,
+        open_gl : this.openGlModel,
+        supperted_screen_number : this.suppertedScreenNumberModel,
+        ethernet : this.ethernetModel,
+        ethernet_version : this.ethernetVersionModel,
+        wifi_version : this.wifiVersionModel,
+        hdmi : this.hdmiModel,
+        bluetooth : this.bluetoothModel,
+        usb_2_number : this.usb2NumberModel,
+        usb_3_number : this.usb3NumberModel,
+        usb_type_c_number : this.usbTypeCNumberModel,
+        is_screen_has_broken_problem : this.isScreenHasBrokenProblemModel,
+        is_screen_has_loss_problem : this.isScreenHasLossProblemModel,
+        is_screen_has_dead_pixel_problem : this.isScreenHasDeadPixelProblemModel,
+        is_device_has_case_problem : this.isDeviceHasCaseProblemModel,
+        is_device_has_cover_problem : this.isDeviceHasCoverProblemModel,
+        is_device_has_broken_key_problem : this.isDeviceHasBrokenKeyProblemModel,
+        is_device_has_function_less_key_problem : this.isDeviceHasFunctionLessKeyProblemModel,
+        is_device_has_charge_socket_problem : this.isDeviceHasChargeSocketProblemModel,
+        is_device_has_touch_pad_problem : this.isDeviceHasTouchPadProblemModel,
+        is_device_has_speaker_problem : this.isDeviceHasSpeakerProblemModel,
+        is_device_has_high_heat_problem : this.isDeviceHasHighHeatProblemModel,
+        is_device_has_high_sound_problem : this.isDeviceHasHighSoundProblemModel,
+        is_device_has_dvd_driver_problem : this.isDeviceHasDvdDriverProblemModel,
+        is_device_has_usb_input_problem : this.isDeviceHasUsbInputProblemModel,
+        is_device_has_usb_type_c_problem : this.isDeviceHasUsbTypeCProblemModel,
+        is_device_has_card_reader_problem : this.isDeviceHasCardReaderProblemModel,
+        is_device_has_camera_problem : this.isDeviceHasCameraProblemModel,
+        is_device_has_finger_print_problem : this.isDeviceHasFingerPrintProblemModel,
+        is_device_has_mother_board_problem : this.isDeviceHasMotherBoardProblemModel,
+        is_device_has_ram_problem : this.isDeviceHasRamProblemModel,
+        is_device_has_hdd_problem : this.isDeviceHasHddProblemModel,
+        is_device_has_ssd_problem : this.isDeviceHasSsdProblemModel,
+        is_device_has_external_graphic_card_problem : this.isDeviceHasExternalGraphicCardProblemModel,
+        is_device_has_internal_graphic_card_problem : this.isDeviceHasInternalGraphicCardProblemModel,
+        is_device_has_optical_reader_problem : this.isDeviceHasOpticalReaderProblemModel,
+        is_device_has_ethernet_connection_problem : this.isDeviceHasEthernetConnectionProblemModel,
+        is_device_has_wifi_problem : this.isDeviceHasWifiProblemModel,
+        is_device_has_hdmi_problem : this.isDeviceHasHdmiProblemModel,
+        is_device_has_bluetooth_problem : this.isDeviceHasBluetoothProblemModel,
+        is_device_has_head_phone_socket_problem : this.isDeviceHasHeadPhoneSocketProblemModel,
+        is_device_has_touch_screen_problem : this.isDeviceHasTouchScreenProblemModel,
+        is_device_has_keyboard_backlight_problem : this.isDeviceHasKeyboardBacklightProblemModel,
       },
       {
         headers: {
