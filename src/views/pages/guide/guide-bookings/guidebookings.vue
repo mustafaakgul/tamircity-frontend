@@ -67,10 +67,10 @@
                                         </td>
                                         <td>
                                             <div class="table-booking-btn">
-                                                <a href="javascript:void(0);" class="btn booking-btn-accept">
+                                                <a v-on:click="updateReservationStatus(item.reservation_id,2)" class="btn booking-btn-accept">
                                                     <i class="far fa-circle-check me-1"></i> Accept
                                                 </a>
-                                                <a href="javascript:void(0);" class="btn booking-btn-cancel mb-0">
+                                                <a v-on:click="updateReservationStatus(item.reservation_id,1)" href="javascript:void(0);" class="btn booking-btn-cancel mb-0">
                                                     <i class="far fa-circle-xmark me-1"></i> Cancel
                                                 </a>
                                             </div>
@@ -321,7 +321,15 @@ export default {
             } else if( message == "cancelled" ) {
                 this.getBookingCancelled()
             }
-        }
+        },
+       updateReservationStatus(reservationId, status){
+         axios.patch('http://157.230.124.187:8888/api/v1/reservations/query?reservation_id='+ reservationId +'&reservation_status=' +status)
+             .then(response => {
+               if(response.status == 200){
+                 this.pendingBookings.splice(this.pendingBookings.findIndex(x => x.reservation_id === reservationId),1);
+               }
+            })
+      }
     }
 }
 </script>
