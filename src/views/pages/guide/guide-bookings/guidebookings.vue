@@ -130,7 +130,7 @@
                         </td>
                         <td>
                          <div class="table-booking-btn">
-                            <a href="javascript:void(0);" class="btn booking-btn-accept">
+                            <a :href="'/formpageexpertise' + item.device_type_name" class="btn booking-btn-accept">
                               <i class="far fa-circle-info me-1"></i> Forma Git
                             </a>
                           </div>
