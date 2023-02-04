@@ -129,6 +129,20 @@
                           </div>
                         </td>
                         <td>
+                          <div class="table-booking-payment">
+                            <!--                        <div class="settings-info">-->
+                            <!--                          <div class="row">-->
+                            <div class="col-md-12">
+                              <div class="form-group">
+                                <vue-select :options="OperationStatus" v-model="item.operational_status" v-on:change="onChangeOperationalStatus(rowId, $event)"/>
+                                <!--                                <vue-select :options="OperationStatus" v-model="item.operational_status" v-bind="onChangeOperationalStatus($event)"/>-->
+                              </div>
+                            </div>
+                            <!--                          </div>-->
+                            <!--                        </div>-->
+                          </div>
+                        </td>
+                        <td>
                          <div class="table-booking-btn">
                             <a :href=getFormPageName(item.device_type_name) class="btn booking-btn-accept">
                               <i class="far fa-circle-info me-1"></i> Forma Git
@@ -279,6 +293,7 @@ export default {
         approvedBookings: [],
         cancelledBookings: [],
         completedBookings: [],
+        OperationStatus: ["WaitingforRepair", "InProgress", "Completed", "DeviceHasBeenDelivered"]
       }
     },
     mounted () {
@@ -342,6 +357,9 @@ export default {
         } else if( deviceTypeName == "TV" ) {
           return '/formpageexpertisetv'
         }
+      },
+      onChangeOperationalStatus: function(event){
+        console.log("asd");
       }
     }
 }
