@@ -25,7 +25,7 @@ const actions = {
     saveApplication({commit, state}) {
         this.axios
             .post(
-                "http://localhost:8888/api/v1/expertise-services-candidate/apply",
+                axios.defaults.baseURL + "/api/v1/expertise-services-candidate/apply",
                 state.application
             )
             .then((response) => {

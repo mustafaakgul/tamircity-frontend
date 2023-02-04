@@ -330,7 +330,7 @@
 
     function getProfile() {
       axios.get(
-          "http://localhost:8888/api/v1/technical-services/2",
+          axios.defaults.baseURL + "/api/v1/technical-services/2",
           {
             headers: {
               "Content-Type": "application/json",
@@ -346,7 +346,7 @@
     }
 
     async function updateProfile() {
-      await axios.put("http://localhost:8888/api/v1/technical-services/2",
+      await axios.put(axios.defaults.baseURL + "/api/v1/technical-services/2",
           {
              service_name: this.profile.ServiceName,
              name: this.profile.Name,

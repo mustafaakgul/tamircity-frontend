@@ -286,26 +286,26 @@ export default {
     },
     methods: {
         getBookingApproved() {
-          axios.get('http://157.230.124.187:8888/api/v1/reservations/approved?expertise_service_id=1')
+          axios.get(axios.defaults.baseURL + '/api/v1/reservations/approved?expertise_service_id=1')
               .then(response => {
                 this.approvedBookings = response.data.data
               })
         },
         getBookingCancelled() {
-          axios.get('http://157.230.124.187:8888/api/v1/reservations/cancelled?expertise_service_id=1')
+          axios.get(axios.defaults.baseURL + '/api/v1/reservations/cancelled?expertise_service_id=1')
               .then(response => {
                 this.cancelledBookings = response.data.data
               })
         },
         getBookingPending() {
-          axios.get('http://157.230.124.187:8888/api/v1/reservations/pending?expertise_service_id=1')
+          axios.get(axios.defaults.baseURL + '/api/v1/reservations/pending?expertise_service_id=1')
               .then(response => {
                 console.log(response.data.data)
                 this.pendingBookings = response.data.data
               })
         },
         getBookingCompleted() {
-          axios.get('http://157.230.124.187:8888/api/v1/reservations/completed?expertise_service_id=1')
+          axios.get(axios.defaults.baseURL + '/api/v1/reservations/completed?expertise_service_id=1')
               .then(response => {
                 console.log(response.data.data)
                 this.completedBookings = response.data.data
@@ -323,7 +323,7 @@ export default {
             }
         },
        updateReservationStatus(reservationId, status){
-         axios.patch('http://157.230.124.187:8888/api/v1/reservations/query?reservation_id='+ reservationId +'&reservation_status=' +status)
+         axios.patch(axios.defaults.baseURL + '/api/v1/reservations/query?reservation_id='+ reservationId +'&reservation_status=' +status)
              .then(response => {
                if(response.status == 200){
                  this.pendingBookings.splice(this.pendingBookings.findIndex(x => x.reservation_id === reservationId),1);
