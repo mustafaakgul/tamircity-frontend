@@ -130,7 +130,7 @@
                         </td>
                         <td>
                          <div class="table-booking-btn">
-                            <a :href="'/formpageexpertise' + item.device_type_name" class="btn booking-btn-accept">
+                            <a :href=getFormPageName(item.device_type_name) class="btn booking-btn-accept">
                               <i class="far fa-circle-info me-1"></i> Forma Git
                             </a>
                           </div>
@@ -329,6 +329,19 @@ export default {
                  this.pendingBookings.splice(this.pendingBookings.findIndex(x => x.reservation_id === reservationId),1);
                }
             })
+      },
+      getFormPageName(deviceTypeName){
+        if( deviceTypeName == "Console" ) {
+          return '/formpageexpertiseconsole'
+        } else if( deviceTypeName == "Personel Computer" ) {
+          return '/formpageexpertisepc'
+        }else if( deviceTypeName == "Phone" ) {
+          return '/formpageexpertisephone'
+        } else if( deviceTypeName == "Smart Watch" ) {
+          return '/formpageexpertisesmartwatch'
+        } else if( deviceTypeName == "TV" ) {
+          return '/formpageexpertisetv'
+        }
       }
     }
 }
