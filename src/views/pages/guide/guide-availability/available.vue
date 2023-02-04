@@ -249,7 +249,7 @@ export default {
 }
 
   function getAvailability() {
-     axios.get('http://localhost:8888/api/v1/technical-service-shifts/query?technical_service_id=1',
+     axios.get(axios.defaults.baseURL + '/api/v1/expertise-service-shifts/query?expertise_service_id=1',
          {
             headers: {
               "Content-Type": "application/json",
@@ -263,7 +263,7 @@ export default {
   }
 
   async function updateAvailability() {
-     axios.post('http://localhost:8888/api/v1/technical-service-shifts?technical_service_id=1',
+     axios.post(axios.defaults.baseURL + '/api/v1/technical-service-shifts?technical_service_id=1',
          [
            {
              day: 1,

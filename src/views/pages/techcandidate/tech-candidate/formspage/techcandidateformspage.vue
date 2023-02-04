@@ -108,7 +108,7 @@ export default {
 
 
 async function sendItem() {
-  await axios.post("http://localhost:8888/api/v1/expertise-services-candidate/apply",
+  await axios.post(axios.defaults.baseURL + "/api/v1/expertise-services-candidate/apply",
       {
         service_name: this.techServiceName,
         business_type: this.businessType,

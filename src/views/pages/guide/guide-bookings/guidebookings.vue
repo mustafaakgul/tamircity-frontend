@@ -67,10 +67,10 @@
                                         </td>
                                         <td>
                                             <div class="table-booking-btn">
-                                                <a href="javascript:void(0);" class="btn booking-btn-accept">
+                                                <a v-on:click="updateReservationStatus(item.reservation_id,2)" class="btn booking-btn-accept">
                                                     <i class="far fa-circle-check me-1"></i> Accept
                                                 </a>
-                                                <a href="javascript:void(0);" class="btn booking-btn-cancel mb-0">
+                                                <a v-on:click="updateReservationStatus(item.reservation_id,1)" href="javascript:void(0);" class="btn booking-btn-cancel mb-0">
                                                     <i class="far fa-circle-xmark me-1"></i> Cancel
                                                 </a>
                                             </div>
@@ -129,10 +129,10 @@
                           </div>
                         </td>
                         <td>
-                          <div class="table-booking-completed">
-                            <span>
-                                <i class="far fa-circle-check me-1"></i> Completed
-                            </span>
+                         <div class="table-booking-btn">
+                            <a :href="'/formpageexpertise' + item.device_type_name" class="btn booking-btn-accept">
+                              <i class="far fa-circle-info me-1"></i> Forma Git
+                            </a>
                           </div>
                         </td>
                       </tr>
@@ -286,26 +286,26 @@ export default {
     },
     methods: {
         getBookingApproved() {
-          axios.get('http://localhost:8888/api/v1/reservations/approved?expertise_service_id=1')
+          axios.get(axios.defaults.baseURL + '/api/v1/reservations/approved?expertise_service_id=1')
               .then(response => {
                 this.approvedBookings = response.data.data
               })
         },
         getBookingCancelled() {
-          axios.get('http://localhost:8888/api/v1/reservations/cancelled?expertise_service_id=1')
+          axios.get(axios.defaults.baseURL + '/api/v1/reservations/cancelled?expertise_service_id=1')
               .then(response => {
                 this.cancelledBookings = response.data.data
               })
         },
         getBookingPending() {
-          axios.get('http://localhost:8888/api/v1/reservations/pending?expertise_service_id=1')
+          axios.get(axios.defaults.baseURL + '/api/v1/reservations/pending?expertise_service_id=1')
               .then(response => {
                 console.log(response.data.data)
                 this.pendingBookings = response.data.data
               })
         },
         getBookingCompleted() {
-          axios.get('http://localhost:8888/api/v1/reservations/completed?expertise_service_id=1')
+          axios.get(axios.defaults.baseURL + '/api/v1/reservations/completed?expertise_service_id=1')
               .then(response => {
                 console.log(response.data.data)
                 this.completedBookings = response.data.data
@@ -321,7 +321,15 @@ export default {
             } else if( message == "cancelled" ) {
                 this.getBookingCancelled()
             }
-        }
+        },
+       updateReservationStatus(reservationId, status){
+         axios.patch(axios.defaults.baseURL + '/api/v1/reservations/query?reservation_id='+ reservationId +'&reservation_status=' +status)
+             .then(response => {
+               if(response.status == 200){
+                 this.pendingBookings.splice(this.pendingBookings.findIndex(x => x.reservation_id === reservationId),1);
+               }
+            })
+      }
     }
 }
 </script>

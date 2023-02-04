@@ -184,7 +184,7 @@ async function createReservation(){
   console.log(this.getServiceTypeId);
   console.log(this.getExpertiseServiceId);
 
-  axios.post('http://localhost:8888/api/v1/reservations',
+  axios.post(axios.defaults.baseURL +'/api/v1/reservations',
       {
         device_type_id: parseInt(this.getDeviceTypeId),
         brand_id: parseInt(this.getBrandId),
