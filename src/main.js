@@ -173,7 +173,8 @@ import FormPageExpertisetv from './views/pages/expertiseform/expertisetv/formpag
 import FormPageExpertiseconsole from './views/pages/expertiseform/expertiseconsole/formpageexpertiseconsole.vue'
 import FormPageExpertisesmartwatch from './views/pages/expertiseform/expertisesmartwatch/formpageexpertisesmartwatch.vue'
 
-
+/*********Auth component**********/
+import authsample from './views/pages/authsample/authsample.vue'
 
 /*******Plugin import***********/
 import VueSelect from 'vue3-select2-component'
@@ -420,6 +421,9 @@ app.component('walletmodal', UsersWalletModal)
 /*********Terms&Condition component**********/
 app.component('terms', Terms)
 app.component('termscondition', TermsCondition)
+
+/*********Auth component**********/
+app.component('authsample', authsample)
 
 app.component('vue3-autocounter', Vue3Autocounter)
 

@@ -104,7 +104,10 @@
 	import { Form, Field } from 'vee-validate';
 	import * as Yup from 'yup';
 	import Vue from 'vue'
+  import axios from 'axios';
+
 	export default {
+    name: "Login",
 	  data() {
 	  return {
 	  }
@@ -128,8 +131,10 @@
 		if (users === null) {
 		  let password = [
 			{
-			  email: 'admin@example.com',
-			  password: '123456',
+			  //email: 'admin@example.com',
+			  //password: '123456',
+        email: '',
+        password: ''
 			},
 		  ];
 		  const jsonData = JSON.stringify(password);
@@ -144,6 +149,7 @@
 					.required('Password is required'),
 			});
 		const onSubmit = (values) => {
+    console.log("clickec");
 		document.getElementById("email").innerHTML = ""
 		document.getElementById("password").innerHTML = ""
 		let data = localStorage.getItem('storedData');
@@ -151,7 +157,8 @@
 		  const Eresult= Pdata.find(({ email }) => email === values.email);
 		 if (Eresult) {
 		  if (Eresult.password === values.password) {
-		  router.push('/tech-dashboard')  
+		  //router.push('/tech-dashboard')
+        requestLogin(Eresult.email, Eresult.password)
 		  } else {
 			  document.getElementById("password").innerHTML = "Incorrect password"
 		  }
@@ -167,4 +174,24 @@
 		}
 
 	}
+
+    async function requestLogin(email, password) {
+      await axios.post("http://157.230.124.187:8888/api/v1/user/login-jwt",
+          {
+            email: email,
+            password: password
+          },
+          {
+            headers: {
+              'Content-Type': 'application/json'
+            }
+          }
+      ).then((response) => {
+        localStorage.setItem("jwtToken", response.data.token)
+        router.push('/tech-dashboard')
+
+      }).catch((error) => {
+        window.alert(`The API returned an error: ${error}`);
+      })
+    }
   </Script>

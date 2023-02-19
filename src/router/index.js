@@ -449,6 +449,14 @@ const routes = [
             requiresAuth: true
         }
     },
+    {
+        path: '/authsample',
+        name: 'authsample',
+        component: () => import('../views/pages/authsample/index'),
+        meta: {
+            requiresAuth: true
+        }
+    },
 ];
 export const router = createRouter({
     history: createWebHistory('tamircity'),
