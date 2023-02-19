@@ -185,6 +185,7 @@ async function requestLogin(email, password) {
       },
       {
         headers: {
+          'Accept': 'application/json',
           'Content-Type': 'application/json'
         }
       }
@@ -194,6 +195,6 @@ async function requestLogin(email, password) {
 
   }).catch((error) => {
     window.alert(`The API returned an error: ${error}`);
-  })
+  });
 }
-</Script>
+</script>
