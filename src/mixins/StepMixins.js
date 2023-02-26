@@ -1,4 +1,4 @@
-import store from "../store/store"
+import store from "../stores/store"
 
 export default function NextStep(beforeStepId, nextStepId) {
     let before_element = "#" + beforeStepId;

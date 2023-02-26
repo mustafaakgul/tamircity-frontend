@@ -3,7 +3,7 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 import App from "./App.vue";
 import config from "./public/config.json"
-import { store } from "./store/store"
+import { store } from "./stores/store"
 
 import { router } from './router';
 import Vue3Autocounter from 'vue3-autocounter';

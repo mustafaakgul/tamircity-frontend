@@ -278,9 +278,9 @@
             key: "_processCountryCodes",
             value: function _processCountryCodes() {
                 this.countryCodeMaxLen = 0;
-                // here we store just dial codes
+                // here we stores just dial codes
                 this.dialCodes = {};
-                // here we store "country codes" (both dial codes and their area codes)
+                // here we stores "country codes" (both dial codes and their area codes)
                 this.countryCodes = {};
                 // first: add dial codes
                 for (var i = 0; i < this.countries.length; i++) {
@@ -924,7 +924,7 @@
                 var prevCountry = this.selectedCountryData.iso2 ? this.selectedCountryData : {};
                 // do this first as it will throw an error and stop if countryCode is invalid
                 this.selectedCountryData = countryCode ? this._getCountryData(countryCode, false, false) : {};
-                // update the defaultCountry - we only need the iso2 from now on, so just store that
+                // update the defaultCountry - we only need the iso2 from now on, so just stores that
                 if (this.selectedCountryData.iso2) {
                     this.defaultCountry = this.selectedCountryData.iso2;
                 }
@@ -1104,7 +1104,7 @@
                             // if current numericChars make a valid dial code
                             if (includeAreaCode) {
                                 if (this.countryCodes[numericChars]) {
-                                    // store the actual raw string (useful for matching later)
+                                    // stores the actual raw string (useful for matching later)
                                     dialCode = number.substr(0, i + 1);
                                 }
                             } else {
