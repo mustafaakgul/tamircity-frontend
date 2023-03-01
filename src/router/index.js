@@ -14,10 +14,10 @@ import ExamResults from '../views/pages/guide/exam-results/index'
 import Guideavailability from '../views/pages/guide/guide-availability/index'
 import Guideboonkings from '../views/pages/guide/guide-bookings/index'
 import Guidechatcontent from '../views/pages/guide/guide-chat/index'
-import GuideDashboard from '../views/pages/TechPanel/tech-dashboard/index'
+import GuideDashboard from '../views/pages/techPanel/tech-dashboard/index'
 import GuideDetails from '../views/pages/guide/guide-details/index'
 import Guidelist from '../views/pages/guide/guide-list/index'
-import Guidenotification from '../views/pages/TechPanel/tech-notification/index'
+import Guidenotification from '../views/pages/techPanel/tech-notification/index'
 import Guidepayment from '../views/pages/guide/guide-payment/index'
 import Guidereview from '../views/pages/guide/guide-reviews/index'
 import Guidesettings from '../views/pages/guide/guide-settings/index'
@@ -268,7 +268,7 @@ const routes = [
     {
         path: '/tech-dashboard',
         name: 'tech-dashboard',
-        component: () => import('../views/pages/TechPanel/tech-dashboard/index'),
+        component: () => import('../views/pages/techPanel/tech-dashboard/index'),
         meta: {
             requiresAuth: true
         }
@@ -292,7 +292,7 @@ const routes = [
     {
         path: '/tech-notification',
         name: 'tech-notification',
-        component: () => import('../views/pages/TechPanel/tech-notification/index'),
+        component: () => import('../views/pages/techPanel/tech-notification/index'),
         meta: {
             requiresAuth: true
         }
@@ -457,9 +457,42 @@ const routes = [
             requiresAuth: true
         }
     },
+
+    //Redirect 404 otherwise
+    {
+        path: '/:pathMatch(.*)*', //path: '*',
+        redirect: '/404'
+    }
 ];
 export const router = createRouter({
     history: createWebHistory('tamircity'),
     linkActiveClass: 'active',
     routes
 });
+
+router.beforeEach((to, from, next) => {
+    if (to.matched.some(record => record.meta.requiresAuth)) {
+        if (store.getters['auth/isAuthenticated']) {
+            next();
+            return;
+        }
+        next('/login');
+    } else {
+        next();
+    }
+})
+
+/*
+router.beforeEach((to, from, next) => {
+  // redirect to login page if not logged in and trying to access a restricted page
+  const publicPages = ['/login', '/register'];
+  const authRequired = !publicPages.includes(to.path);
+  const loggedIn = localStorage.getItem('user');
+
+  if (authRequired && !loggedIn) {
+    return next('/login');
+  }
+
+  next();
+})
+ */

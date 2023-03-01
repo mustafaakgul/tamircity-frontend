@@ -69,8 +69,8 @@ import GuideChatuserlist from './views/pages/guide/guide-chat/chatuserlist.vue'
 import GuideChatcontent from './views/pages/guide/guide-chat/chatcontent.vue'
 /*********Guide Dashboard component**********/
 import GuideDashboard from './views/pages/breadcrumb/guidedashboard.vue'
-import TechDashboard from './views/pages/TechPanel/tech-dashboard/dashboardtech.vue'
-import TechDashboardModal from './views/pages/TechPanel/tech-dashboard/dashboardmodal.vue'
+import TechDashboard from './views/pages/techPanel/tech-dashboard/dashboardtech.vue'
+import TechDashboardModal from './views/pages/techPanel/tech-dashboard/dashboardmodal.vue'
 /*********Guide Details component**********/
 import GuideDetail from './views/pages/breadcrumb/guidedetail.vue'
 import TopSection from './views/pages/guide/guide-details/topsection.vue'
@@ -83,7 +83,7 @@ import GuideList from './views/pages/guide/guide-list/guidelist.vue'
 import GuideReport from './views/pages/guide/guide-list/report.vue'
 /*********Guide Notification component**********/
 import GuideNotification from './views/pages/breadcrumb/guidenotification.vue'
-import Notificationtech from './views/pages/TechPanel/tech-notification/notificationtech.vue'
+import Notificationtech from './views/pages/techPanel/tech-notification/notificationtech.vue'
 /*********Guide Payment component**********/
 import PaymentGuide from './views/pages/breadcrumb/paymentguide.vue'
 import GuidePayment from './views/pages/guide/guide-payment/guidepayment.vue'

@@ -99,6 +99,7 @@
     <!-- /Main Wrapper -->
   </div>
 </template>
+
 <script>
 import {ref} from 'vue'
 import {router} from '../../../../../router';
@@ -108,15 +109,47 @@ import {Form, Field} from 'vee-validate';
 import * as Yup from 'yup';
 import Vue from 'vue'
 import axios from 'axios';
+import { mapState, mapActions } from 'vuex'
 
 export default {
   name: "Login",
   data() {
-    return {}
+    return {
+      email: '',
+      password: '',
+      submitted: false
+    }
+  },
+  computed: {
+    ...mapState('account', ['status'])
   },
   components: {
     Form,
     Field,
+  },
+  created() {
+    //this.$store.dispatch('account/logout');
+    this.logout();
+  },
+  methods: {
+    ...mapActions('account', ['login', 'logout']),
+    onSubmit(e) {
+      this.submitted = true;
+      const {email, password} = this;
+      if (!email || !password) {
+        return;
+      }
+      else {
+        //this.$store.dispatch('account/login', {email, password});
+        this.login({email: this.email, password: this.password})
+            .then(() => {
+              this.$router.push('/dashboard');
+            })
+            .catch(() => {
+              this.submitted = false;
+            });
+      }
+    }
   },
   mounted() {
     $(function () {
