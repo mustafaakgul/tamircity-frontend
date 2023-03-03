@@ -1,5 +1,5 @@
 import axios from 'axios';
-import config from 'config';
+//import config from 'config';
 import { authHeader } from '../helpers/auth-header';
 
 const API_URL = 'http://localhost:8888/api/v1/user/';
