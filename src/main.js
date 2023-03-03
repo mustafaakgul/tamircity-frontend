@@ -434,7 +434,7 @@ app.use(router)
 app.use(store).mount('#app');
 
 
-router.beforeEach((to, from) => {
+/*router.beforeEach((to, from) => {
     if (from.name == "stepwizard" && to.name != "stepwizard") {
         store.state.selectedItems = {
             device: null,
@@ -447,5 +447,13 @@ router.beforeEach((to, from) => {
         }
     }
 
-})
+})*/
 
+/*
+ApiService.init(process.env.VUE_APP_ROOT_API)
+
+// If token exists set header
+if (TokenService.getToken()) {
+    ApiService.setHeader()
+}
+*/

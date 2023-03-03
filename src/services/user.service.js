@@ -1,6 +1,6 @@
 import axios from 'axios';
-import authHeader from '../helpers/auth-header';
-import config from 'config'
+import config from 'config';
+import { authHeader } from '../helpers/auth-header';
 
 const API_URL = 'http://localhost:8888/api/v1/user/';
 
@@ -21,7 +21,7 @@ function login(username, password) {
         body: JSON.stringify({ username, password })
     };
 
-    return fetch(`${config.apiUrl}/users/authenticate`, requestOptions)
+    return fetch(axios.defaults.baseURL + '/users/authenticate', requestOptions)
         .then(handleResponse)
         .then(user => {
             // login successful if there's a jwt token in the response
@@ -46,7 +46,7 @@ function register(user) {
         body: JSON.stringify(user)
     };
 
-    return fetch(`${config.apiUrl}/users/register`, requestOptions).then(handleResponse);
+    return fetch(axios.defaults.baseURL + `/users/register`, requestOptions).then(handleResponse);
 }
 
 function getAll() {
@@ -55,7 +55,7 @@ function getAll() {
         headers: authHeader()
     };
 
-    return fetch(`${config.apiUrl}/users`, requestOptions).then(handleResponse);
+    return fetch(axios.defaults.baseURL + `/users`, requestOptions).then(handleResponse);
 }
 
 
@@ -65,7 +65,7 @@ function getById(id) {
         headers: authHeader()
     };
 
-    return fetch(`${config.apiUrl}/users/${id}`, requestOptions).then(handleResponse);
+    return fetch(axios.defaults.baseURL + `/users/${id}`, requestOptions).then(handleResponse);
 }
 
 function update(user) {
@@ -75,7 +75,7 @@ function update(user) {
         body: JSON.stringify(user)
     };
 
-    return fetch(`${config.apiUrl}/users/${user.id}`, requestOptions).then(handleResponse);
+    return fetch(axios.defaults.baseURL + `/users/${user.id}`, requestOptions).then(handleResponse);
 }
 
 // prefixed function name with underscore because delete is a reserved word in javascript
@@ -85,7 +85,7 @@ function _delete(id) {
         headers: authHeader()
     };
 
-    return fetch(`${config.apiUrl}/users/${id}`, requestOptions).then(handleResponse);
+    return fetch(axios.defaults.baseURL + `/users/${id}`, requestOptions).then(handleResponse);
 }
 
 function handleResponse(response) {

@@ -1,3 +1,6 @@
+import {Vue} from 'vue';
+import {Router} from 'vue-router';
+
 import {createRouter, createWebHistory} from 'vue-router';
 import index from '../views/pages/dashboard/index'
 import aboutus from '../views/pages/pages/aboutus/index'
@@ -47,6 +50,10 @@ import FormPageExpertisephone from '../views/pages/expertiseform/expertisephone/
 import FormPageExpertisepc from '../views/pages/expertiseform/expertisepc/index.vue'
 import FormPageExpertiseconsole from '../views/pages/expertiseform/expertiseconsole/formpageexpertiseconsole.vue'
 import FormPageExpertisesmartwatch from '../views/pages/expertiseform/expertisesmartwatch/formpageexpertisesmartwatch.vue'
+import {TokenService} from "../services/storage.service";
+import {store} from "../stores/store";
+
+//Vue.use(Router);
 
 const routes = [
     {
@@ -142,7 +149,9 @@ const routes = [
         name: 'login',
         component: () => import('../views/pages/pages/auth/login/index'),
         meta: {
-            requiresAuth: true
+            requiresAuth: true,
+            public : true,
+            onlyWhenLoggedOut: true
         }
     },
     {
@@ -457,20 +466,93 @@ const routes = [
             requiresAuth: true
         }
     },
+    {
+        path: '/404',
+        name: 'blog-list',
+        component: () => import('../views/pages/blogs/blog-list/index'),
+        meta: {
+            requiresAuth: true
+        }
+    },
 
     //Redirect 404 otherwise
     {
-        path: '/:pathMatch(.*)*', //path: '*',
-        redirect: '/404'
+        path: '/:pathMatch(.*)*',
+        //path: '*',
+        //redirect: '/404'
+        redirect: '/'
     }
 ];
+
 export const router = createRouter({
-    history: createWebHistory('tamircity'),
+    history: createWebHistory(''),
     linkActiveClass: 'active',
     routes
 });
 
 router.beforeEach((to, from, next) => {
+    //const publicPages = ['/login', '/register'];
+    const publicPages = ['/login', '/'];
+    const authRequired = !publicPages.includes(to.path);
+    const loggedIn = localStorage.getItem('user');
+
+    if (from.name == "stepwizard" && to.name != "stepwizard") {
+        store.state.selectedItems = {
+            device: null,
+            brand: null,
+            model: null,
+            fixType: null,
+            serviceType: null,
+            extra: null,
+            techService: null
+        }
+    }
+
+    if (authRequired && !loggedIn) {
+        return next('/login');
+    }
+
+    next(); //TODO: check this
+
+})
+
+/*
+// router.beforeEach((to, from, next) => {
+//   const publicPages = ['/login', '/register', '/home'];
+//   const authRequired = !publicPages.includes(to.path);
+//   const loggedIn = localStorage.getItem('user');
+
+//   // trying to access a restricted page + not logged in
+//   // redirect to login page
+//   if (authRequired && !loggedIn) {
+//     next('/login');
+//   } else {
+//     next();
+//   }
+// });
+ */
+//router.beforeEach((to, from, next) => {
+    //const isPublic = to.matched.some(record => record.meta.public)
+    //const onlyWhenLoggedOut = to.matched.some(record => record.meta.onlyWhenLoggedOut)
+    //const loggedIn = !!TokenService.getToken();
+
+    /*
+    if (!isPublic && !loggedIn) {
+        return next({
+          path:'/login',
+          query: {redirect: to.fullPath}  // Store the full path to redirect the user to after login
+        });
+      }
+
+      // Do not allow user to visit login page or register page if they are logged in
+      if (loggedIn && onlyWhenLoggedOut) {
+        return next('/')
+      }
+
+      next();
+     */
+
+    /*
     if (to.matched.some(record => record.meta.requiresAuth)) {
         if (store.getters['auth/isAuthenticated']) {
             next();
@@ -480,7 +562,8 @@ router.beforeEach((to, from, next) => {
     } else {
         next();
     }
-})
+     */
+//})
 
 /*
 router.beforeEach((to, from, next) => {

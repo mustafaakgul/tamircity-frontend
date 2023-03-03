@@ -1,5 +1,5 @@
 import { userService } from '../../services/user.service';
-//import { router } from '../../helpers';
+import { router } from '../../router/index';
 
 const user = JSON.parse(localStorage.getItem('user'));
 const state = user
