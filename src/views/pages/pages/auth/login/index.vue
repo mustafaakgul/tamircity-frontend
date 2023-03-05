@@ -39,9 +39,9 @@
                     </li>
                   </ul>
                 </div>
-                <Form class="login account-form" @submit="onSubmit" :validation-schema="schema" v-slot="{ errors }">
+                <Form class="login account-form" @submit="handleSubmit" :validation-schema="schema" v-slot="{ errors }">
                   <div class="form-group form-focus">
-                    <Field name="email" type="text" value="admin@example.com" class="form-control floating"
+                    <Field name="email" type="text" v-model="email" value="admin@example.com" class="form-control floating"
                            :class="{ 'is-invalid': errors.email }"/>
                     <label class="focus-label">Enter your email</label>
                     <img src="../../../../../assets/img/icons/signin-icon2.svg" alt="">
@@ -49,7 +49,7 @@
                     <div class="emailshow text-danger" id="email"></div>
                   </div>
                   <div class="form-group form-focus">
-                    <Field name="password" type="password" value="123456" class="form-control floating pass-input"
+                    <Field name="password" type="password" v-model="password" value="123456" class="form-control floating pass-input"
                            :class="{ 'is-invalid': errors.password }"/>
                     <label class="focus-label">Enter your password</label>
                     <img src="../../../../../assets/img/icons/signin-icon4.svg" alt="">
@@ -133,6 +133,13 @@ export default {
   },
   methods: {
     ...mapActions('account', ['login', 'logout']),
+    handleSubmit (e){
+      this.submitted = true;
+      const {email, password} = this;
+      if (email && password) {
+        this.login({ email, password})
+      }
+    },
     onSubmit(e) {
       this.submitted = true;
       const {email, password} = this;

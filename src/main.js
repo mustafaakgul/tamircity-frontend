@@ -431,7 +431,8 @@ app.component('vue-select', VueSelect);
 
 app.use(VueAxios, axios)
 app.use(router)
-app.use(store).mount('#app');
+app.use(store)
+    .mount('#app');
 
 
 /*router.beforeEach((to, from) => {

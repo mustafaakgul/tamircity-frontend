@@ -7,10 +7,11 @@ const state = user
     : { status: {}, user: null };
 
 const actions = {
-    login({ dispatch, commit }, { username, password }) {
-        commit('loginRequest', { username });
+    login({ dispatch, commit }, { email, password }) {
+        console.log("store account login worked")
+        commit('loginRequest', { email });
 
-        userService.login(username, password)
+        userService.login(email, password)
             .then(
                 user => {
                     commit('loginSuccess', user);

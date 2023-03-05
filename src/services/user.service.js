@@ -14,14 +14,14 @@ export const userService = {
     delete: _delete
 }
 
-function login(username, password) {
+function login(email, password) {
     const requestOptions = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username, password })
+        body: JSON.stringify({ email, password })
     };
 
-    return fetch(axios.defaults.baseURL + '/users/authenticate', requestOptions)
+    return fetch(axios.defaults.baseURL + '/api/v1/user/login-jwt', requestOptions)
         .then(handleResponse)
         .then(user => {
             // login successful if there's a jwt token in the response
@@ -90,6 +90,7 @@ function _delete(id) {
 
 function handleResponse(response) {
     return response.text().then(text => {
+        console.log("handle response")
         const data = text && JSON.parse(text);
         if (!response.ok) {
             if (response.status === 401) {
