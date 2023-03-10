@@ -1,4 +1,4 @@
 {
-    "api_base_url_old":"http://104.248.17.57:8888",
-    "api_base_url":"http://157.230.124.187:8888"
+    "api_base_actual":"http://157.230.124.187:8888",
+    "api_base_url":"http://localhost:8888"
 }
