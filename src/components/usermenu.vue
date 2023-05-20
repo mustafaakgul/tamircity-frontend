@@ -38,9 +38,25 @@
             <i class="fas fa-credit-card"></i> Payment
         </router-link>
         <router-link class="dropdown-item" to="/">
-            <i class="fas fa-power-off"></i> Logout
+            <!--<i class="fas fa-power-off"></i> Logout-->
+            <button @click="Logout">Logout</button>
         </router-link>
     </div>
 </li>
 <!-- /User Menu -->
 </template>
+
+<script>
+import { mapActions } from 'vuex'
+
+export default {
+  methods: {
+    ...mapActions({
+      logout: 'account/logout'
+    }),
+    Logout () {
+      this.logout();
+    }
+  }
+}
+</script>

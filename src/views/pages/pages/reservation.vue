@@ -150,7 +150,7 @@ export default {
           return "Error";
     },
     // getFixTypeId() {
-    //     let selectedFixType = this.$store.getters.getSelectedFixTypeId
+    //     let selectedFixType = this.$stores.getters.getSelectedFixTypeId
     //     if( selectedFixType != null )
     //         return selectedFixType.id;
     //       return "Error";
@@ -162,7 +162,7 @@ export default {
           return "Error";
     },
     // getExtraServiceId() {
-    //     let selectedExtraService = this.$store.getters.getSelectedExtraService;
+    //     let selectedExtraService = this.$stores.getters.getSelectedExtraService;
     //     if( selectedExtraService != null )
     //         return selectedExtraService.id;
     //       return "Error";
@@ -204,7 +204,7 @@ async function createReservation(){
       {
         headers: {
           'Content-Type': 'application/json',
-          //'Authorization': 'Bearer ' + this.$store.getters.getToken
+          //'Authorization': 'Bearer ' + this.$stores.getters.getToken
         }
       }
   ).then( response => {

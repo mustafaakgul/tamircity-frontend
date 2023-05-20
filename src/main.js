@@ -3,7 +3,7 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 import App from "./App.vue";
 import config from "./public/config.json"
-import { store } from "./store/store"
+import { store } from "./stores/store"
 
 import { router } from './router';
 import Vue3Autocounter from 'vue3-autocounter';
@@ -69,8 +69,8 @@ import GuideChatuserlist from './views/pages/guide/guide-chat/chatuserlist.vue'
 import GuideChatcontent from './views/pages/guide/guide-chat/chatcontent.vue'
 /*********Guide Dashboard component**********/
 import GuideDashboard from './views/pages/breadcrumb/guidedashboard.vue'
-import TechDashboard from './views/pages/TechPanel/tech-dashboard/dashboardtech.vue'
-import TechDashboardModal from './views/pages/TechPanel/tech-dashboard/dashboardmodal.vue'
+import TechDashboard from './views/pages/techPanel/tech-dashboard/dashboardtech.vue'
+import TechDashboardModal from './views/pages/techPanel/tech-dashboard/dashboardmodal.vue'
 /*********Guide Details component**********/
 import GuideDetail from './views/pages/breadcrumb/guidedetail.vue'
 import TopSection from './views/pages/guide/guide-details/topsection.vue'
@@ -83,7 +83,7 @@ import GuideList from './views/pages/guide/guide-list/guidelist.vue'
 import GuideReport from './views/pages/guide/guide-list/report.vue'
 /*********Guide Notification component**********/
 import GuideNotification from './views/pages/breadcrumb/guidenotification.vue'
-import Notificationtech from './views/pages/TechPanel/tech-notification/notificationtech.vue'
+import Notificationtech from './views/pages/techPanel/tech-notification/notificationtech.vue'
 /*********Guide Payment component**********/
 import PaymentGuide from './views/pages/breadcrumb/paymentguide.vue'
 import GuidePayment from './views/pages/guide/guide-payment/guidepayment.vue'
@@ -173,7 +173,8 @@ import FormPageExpertisetv from './views/pages/expertiseform/expertisetv/formpag
 import FormPageExpertiseconsole from './views/pages/expertiseform/expertiseconsole/formpageexpertiseconsole.vue'
 import FormPageExpertisesmartwatch from './views/pages/expertiseform/expertisesmartwatch/formpageexpertisesmartwatch.vue'
 
-
+/*********Auth component**********/
+import authsample from './views/pages/authsample/authsample.vue'
 
 /*******Plugin import***********/
 import VueSelect from 'vue3-select2-component'
@@ -421,16 +422,20 @@ app.component('walletmodal', UsersWalletModal)
 app.component('terms', Terms)
 app.component('termscondition', TermsCondition)
 
+/*********Auth component**********/
+app.component('authsample', authsample)
+
 app.component('vue3-autocounter', Vue3Autocounter)
 
 app.component('vue-select', VueSelect);
 
 app.use(VueAxios, axios)
 app.use(router)
-app.use(store).mount('#app');
+app.use(store)
+    .mount('#app');
 
 
-router.beforeEach((to, from) => {
+/*router.beforeEach((to, from) => {
     if (from.name == "stepwizard" && to.name != "stepwizard") {
         store.state.selectedItems = {
             device: null,
@@ -443,5 +448,13 @@ router.beforeEach((to, from) => {
         }
     }
 
-})
+})*/
 
+/*
+ApiService.init(process.env.VUE_APP_ROOT_API)
+
+// If token exists set header
+if (TokenService.getToken()) {
+    ApiService.setHeader()
+}
+*/

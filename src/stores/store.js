@@ -1,4 +1,5 @@
 import Vuex from 'vuex'
+//import Vue from 'vue'
 
 import deviceTypeTech from "./modules/TechService/DeviceType";
 import brandTech from "./modules/TechService/Brand";
@@ -21,6 +22,11 @@ import reservationTech from './modules/TechService/Reservation';
 import reservation from './modules/ExpertiseService/Reservation';
 import panelDashboard from './modules/panelDashboard';
 import reservationTracking from './modules/reservationTracking';
+
+import { alert } from './modules/alert';
+import { account } from './modules/account';
+
+// ? Vue.use(Vuex);
 
 export const store = new Vuex.Store({
     state: {
@@ -55,8 +61,10 @@ export const store = new Vuex.Store({
         expertiseService : expertiseService,
         reservation : reservation,
 
-        reservationTracking:reservationTracking
+        reservationTracking:reservationTracking,
+
+        alert,
+        account
     }
-    // https://vuex.vuejs.org/guide/modules.html
 })
 
